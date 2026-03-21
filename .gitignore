@@ -1,0 +1,15 @@
+# Electron dependencies
+electron/node_modules/
+electron/dist/
+
+# Build outputs (wasm is checked in as a build artifact)
+*.o
+*.a
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp

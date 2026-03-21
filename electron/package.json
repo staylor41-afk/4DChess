@@ -1,0 +1,48 @@
+{
+  "name": "8d-chess",
+  "version": "45.68.0",
+  "description": "8D Chess by Samuel M G Taylor",
+  "author": "Samuel M G Taylor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.samueltaylor.8dchess",
+    "productName": "8D Chess",
+    "files": [
+      "main.js",
+      "preload.js",
+      "../8d-chess-v45.68-diplomacy-comms-visible.html",
+      "../render/**"
+    ],
+    "extraResources": [
+      {
+        "from": "../chess_engine.exe",
+        "to": "chess_engine.exe",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "../chess_engine",
+        "to": "chess_engine",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}

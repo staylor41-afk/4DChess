@@ -1,0 +1,14 @@
+node_modules/
+build/
+build-cl/
+build-codex/
+build-ninja/
+comparison_reports/
+html_reference_captures/
+iteration_cycle_reports/
+unity_bridge_bootstrap/
+*.obj
+*.pdb
+*.ilk
+*.exe
+!.gitkeep

@@ -82,7 +82,8 @@ body { background:#000; overflow:hidden; font-family:'Courier New',monospace; }
   <span style="color:#334">ALIVE ··</span> <span class="val" id="h-alive">—</span><span style="color:#334" id="h-np-label"></span><br>
   <span style="color:#334">CAPTURES</span> <span class="cap"  id="h-caps">0</span><br>
   <span style="color:#334">T/SEC ··</span> <span class="val" id="h-tps">—</span><br>
-  <span style="color:#334">ORBIT ··</span> <span class="val" id="h-orbit" style="color:#3af">ON</span>
+  <span style="color:#334">ORBIT ··</span> <span class="val" id="h-orbit" style="color:#3af">ON</span><br>
+  <span style="color:#334" id="gp-row" style="display:none">GAMEPAD ·</span><span class="val" id="h-gp" style="display:none"></span>
 </div>
 
 <div id="legend">
@@ -99,7 +100,8 @@ body { background:#000; overflow:hidden; font-family:'Courier New',monospace; }
 
 <div id="keys">
   ↑↓←→ strafe · Z/X up/down · drag rotate · scroll zoom<br>
-  R=orbit · T/Y/U zoom levels · click piece (human turn)
+  R=orbit · T/Y/U zoom levels · click piece (human turn)<br>
+  🎮 LS=orbit · RB=forward · RT=back · A=speed
 </div>
 <div id="movelog"></div>
 <div id="status">⬤ initializing…</div>
@@ -920,13 +922,144 @@ function handleMovement(){
 }
 
 // ═══════════════════════════════════════════════════════════
+// GAMEPAD  (Xbox / standard gamepad API)
+// ═══════════════════════════════════════════════════════════
+const GP_DEADZONE = 0.12;
+
+// Three speed tiers — orbit is angular (rad/frame), fly is world-units/frame
+// at unit distance; scaled by actual camera distance at runtime.
+const GP_SPEEDS = [
+  { name: 'SLOW',   orbit: 0.007, fly: 0.006 },
+  { name: 'NORMAL', orbit: 0.022, fly: 0.018 },
+  { name: 'FAST',   orbit: 0.065, fly: 0.055 },
+];
+let gpSpeedIdx  = 1;   // start at NORMAL
+let gpConnected = false;
+let gpAWasDown  = false;
+
+// Re-use Three.js objects to avoid per-frame allocations
+const _gpSph = new THREE.Spherical();
+const _gpOff = new THREE.Vector3();
+const _gpDir = new THREE.Vector3();
+
+function deadzone(v) {
+  // Apply deadzone then rescale so the full range is still 0→1
+  return Math.abs(v) < GP_DEADZONE
+    ? 0
+    : (v - Math.sign(v) * GP_DEADZONE) / (1 - GP_DEADZONE);
+}
+
+function handleGamepad() {
+  // navigator.getGamepads() returns a live list; must re-query every frame
+  const pads = navigator.getGamepads ? navigator.getGamepads() : [];
+  let pad = null;
+  for (const p of pads) { if (p && p.connected) { pad = p; break; } }
+
+  // ── connection state → HUD ───────────────────────────────
+  if (!!pad !== gpConnected) {
+    gpConnected = !!pad;
+    const row = document.getElementById('gp-row');
+    const el  = document.getElementById('h-gp');
+    if (gpConnected) {
+      row.style.display = ''; el.style.display = '';
+    } else {
+      row.style.display = 'none'; el.style.display = 'none';
+      gpAWasDown = false;
+      return;
+    }
+  }
+  if (!pad) return;
+
+  const speed    = GP_SPEEDS[gpSpeedIdx];
+  const camDist  = camera.position.distanceTo(controls.target);
+  // Fly speed scales with distance so it feels consistent at any zoom level
+  const flySpeed = speed.fly * Math.max(0.01, camDist * 0.08);
+
+  // ── Left Stick → orbit around target ────────────────────
+  // axes[0] = LS X  (-1=left, +1=right)
+  // axes[1] = LS Y  (-1=up,   +1=down )
+  const lx = deadzone(pad.axes[0] ?? 0);
+  const ly = deadzone(pad.axes[1] ?? 0);
+
+  if (lx !== 0 || ly !== 0) {
+    _gpOff.copy(camera.position).sub(controls.target);
+    _gpSph.setFromVector3(_gpOff);
+
+    // theta = azimuth (left/right), phi = polar (up/down)
+    _gpSph.theta -= lx * speed.orbit;
+    _gpSph.phi   += ly * speed.orbit;
+    // Clamp so camera never flips past the poles
+    _gpSph.phi = Math.max(0.04, Math.min(Math.PI - 0.04, _gpSph.phi));
+
+    _gpOff.setFromSpherical(_gpSph);
+    camera.position.copy(controls.target).add(_gpOff);
+    controls.update();
+
+    // Disable auto-rotate while the user is manually orbiting
+    if (controls.autoRotate) {
+      controls.autoRotate = false;
+      const el = document.getElementById('h-orbit');
+      el.textContent = 'OFF'; el.style.color = '#a33';
+    }
+  }
+
+  // ── RB (buttons[5]) = fly forward ───────────────────────
+  // ── RT (buttons[7]) = fly backward  (analog trigger → .value)
+  const rbPressed = pad.buttons[5]?.pressed ? 1 : 0;
+  const rtValue   = pad.buttons[7]?.value   // analog 0→1
+    ?? (pad.buttons[7]?.pressed ? 1 : 0);
+
+  const flyAmount = (rbPressed - rtValue) * flySpeed;
+  if (Math.abs(flyAmount) > 0.0001) {
+    camera.getWorldDirection(_gpDir);
+    camera.position.addScaledVector(_gpDir,    flyAmount);
+    controls.target.addScaledVector(_gpDir,    flyAmount);
+    controls.update();
+  }
+
+  // ── A (buttons[0]) → cycle speed on rising edge ─────────
+  const aDown = !!pad.buttons[0]?.pressed;
+  if (aDown && !gpAWasDown) {
+    gpSpeedIdx = (gpSpeedIdx + 1) % GP_SPEEDS.length;
+    const el = document.getElementById('h-gp');
+    el.textContent = GP_SPEEDS[gpSpeedIdx].name;
+    // Brief flash so user notices the change
+    el.style.color = '#ff0';
+    setTimeout(() => { el.style.color = '#0df'; }, 400);
+    dirty = true;
+  }
+  gpAWasDown = aDown;
+
+  // Update HUD speed label every frame (cheap)
+  document.getElementById('h-gp').textContent = GP_SPEEDS[gpSpeedIdx].name;
+}
+
+// Show/hide gamepad row on connect/disconnect events
+window.addEventListener('gamepadconnected', e => {
+  console.log('[gamepad] connected:', e.gamepad.id);
+  gpConnected = true;
+  document.getElementById('gp-row').style.display = '';
+  document.getElementById('h-gp').style.display   = '';
+  document.getElementById('h-gp').textContent     = GP_SPEEDS[gpSpeedIdx].name;
+  document.getElementById('h-gp').style.color     = '#0df';
+});
+window.addEventListener('gamepaddisconnected', e => {
+  console.log('[gamepad] disconnected:', e.gamepad.id);
+  gpConnected = false;
+  document.getElementById('gp-row').style.display = 'none';
+  document.getElementById('h-gp').style.display   = 'none';
+});
+
+// ═══════════════════════════════════════════════════════════
 // RENDER LOOP
 // ═══════════════════════════════════════════════════════════
 const DRAW_INTERVAL=1000/DRAW_FPS;
 let lastDraw=0;
 function animate(now){
   requestAnimationFrame(animate);
-  handleMovement(); controls.update();
+  handleMovement();
+  handleGamepad();   // runs every frame; no-ops if no controller connected
+  controls.update();
   if(now-lastDraw>=DRAW_INTERVAL){lastDraw=now;rebuildBuffers();}
   // Keep rebuilding while trails or highlights are live
   if(selectedPieceKey || trailBuf.length>0) dirty=true;

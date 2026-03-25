@@ -19,28 +19,36 @@
       "preload.js"
     ],
     "extraResources": [
-      { "from": "../start.html",       "to": "start.html"       },
-      { "from": "../visualizer.html",  "to": "visualizer.html"  },
-      { "from": "../engine_py.py",     "to": "engine_py.py"     },
-      { "from": "../render",           "to": "render"           },
-      { "from": "../chess_engine.exe",  "to": "chess_engine.exe",  "filter": ["**/*"] },
-      { "from": "../chess_engine",      "to": "chess_engine",      "filter": ["**/*"] },
-      { "from": "../puzzle_engine.exe", "to": "puzzle_engine.exe", "filter": ["**/*"] },
-      { "from": "../puzzle_engine",     "to": "puzzle_engine",     "filter": ["**/*"] },
-      { "from": "../puzzle.html",       "to": "puzzle.html"       }
+      { "from": "../start.html",      "to": "start.html"      },
+      { "from": "../visualizer.html", "to": "visualizer.html" },
+      { "from": "../engine_py.py",    "to": "engine_py.py"    },
+      { "from": "../render",          "to": "render"          },
+      { "from": "../puzzle.html",     "to": "puzzle.html"     }
     ],
     "mac": {
       "category": "public.app-category.games",
       "target": [
         { "target": "dmg", "arch": ["arm64", "x64"] }
       ],
-      "darkModeSupport": true
+      "darkModeSupport": true,
+      "extraResources": [
+        { "from": "../chess_engine",  "to": "chess_engine"  },
+        { "from": "../puzzle_engine", "to": "puzzle_engine" }
+      ]
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "extraResources": [
+        { "from": "../chess_engine.exe",  "to": "chess_engine.exe"  },
+        { "from": "../puzzle_engine.exe", "to": "puzzle_engine.exe" }
+      ]
     },
     "linux": {
-      "target": "AppImage"
+      "target": "AppImage",
+      "extraResources": [
+        { "from": "../chess_engine",  "to": "chess_engine"  },
+        { "from": "../puzzle_engine", "to": "puzzle_engine" }
+      ]
     },
     "dmg": {
       "title": "ND Chess",

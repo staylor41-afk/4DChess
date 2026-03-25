@@ -1,47 +1,51 @@
 /**
- * 8D Chess — Electron Main Process
+ * ND Chess — Electron Main Process
  * Samuel M G Taylor
  *
  * Architecture:
- *   1. Spin up a local HTTP file server (port 3000) serving the game root.
- *      This is CRITICAL — file:// cannot load .wasm reliably in Electron.
- *      HTTP lets chess_render.wasm stream correctly and avoids all CORS issues.
+ *   1. Local HTTP file-server (port 3000) serves the entire game root.
+ *      file:// cannot reliably load .wasm or make cross-origin fetch to engine;
+ *      HTTP solves both problems.
  *
- *   2. Spawn chess_engine.exe (port 8765) when available.
- *      The game's ENGINE_BRIDGE_URL points to 127.0.0.1:8765.
- *      Without the engine, the game falls back to its JS AI (slower).
+ *   2. Python engine (engine_py.py, port 8769) — committee AI, 2-128 players,
+ *      any dimension 2-8.  Started as a child process; killed on quit.
  *
- *   3. Open a BrowserWindow at http://localhost:3000/
+ *   3. C++ engine (chess_engine[.exe], port 8765) — legacy bridge for older
+ *      HTML game files.  Optional: app runs fine without it.
  *
- * Why the game froze before:
- *   - file:// loading silently broke wasm streaming → fell back to slow JS
- *   - JS AI for 12-player 8D runs on main thread → blocks rendering frames
- *   - HTTP serving + C++ engine offloads both problems
+ *   4. BrowserWindow → http://localhost:3000/start.html
+ *      The launcher lets the user pick dimensions and human player count,
+ *      then opens visualizer.html?dims=N&humans=M.
  */
 
-const { app, BrowserWindow, shell, dialog, Menu } = require('electron');
+const { app, BrowserWindow, shell, Menu, ipcMain } = require('electron');
 const path   = require('path');
 const fs     = require('fs');
 const http   = require('http');
 const { spawn } = require('child_process');
 
-// ─── Config ───────────────────────────────────────────────────────────────────
+// ─── Paths ────────────────────────────────────────────────────────────────────
 
-const GAME_ROOT    = path.resolve(__dirname, '..');
-const FILE_PORT    = 3000;
-const ENGINE_PORT  = 8765;
-const POLL_MS      = 100;
-const ENGINE_WAIT  = 8000;  // ms to wait for engine to bind
+// In packaged mode resources live at process.resourcesPath;
+// in dev mode they live one directory above the electron/ folder.
+const GAME_ROOT = app.isPackaged
+  ? process.resourcesPath
+  : path.resolve(__dirname, '..');
 
-// Always open the latest HTML
-const LATEST_HTML  = latestGameHtml();
+// ─── Ports ───────────────────────────────────────────────────────────────────
 
-// ─── MIME types ───────────────────────────────────────────────────────────────
+const FILE_PORT   = 3000;
+const ENGINE_PORT = 8765;   // C++ engine (legacy)
+const PY_PORT     = 8769;   // Python committee engine (new visualizer)
+const POLL_MS     = 120;
+const ENGINE_WAIT = 9000;
+
+// ─── MIME ─────────────────────────────────────────────────────────────────────
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
   '.js':   'application/javascript; charset=utf-8',
-  '.wasm': 'application/wasm',          // MUST be application/wasm for streaming compile
+  '.wasm': 'application/wasm',
   '.css':  'text/css',
   '.json': 'application/json',
   '.png':  'image/png',
@@ -51,6 +55,8 @@ const MIME = {
   '.woff2':'font/woff2',
   '.woff': 'font/woff',
   '.ttf':  'font/ttf',
+  '.csv':  'text/csv',
+  '.txt':  'text/plain',
 };
 
 // ─── Local file server ────────────────────────────────────────────────────────
@@ -60,47 +66,38 @@ let fileServer = null;
 function startFileServer() {
   return new Promise((resolve, reject) => {
     fileServer = http.createServer((req, res) => {
-      // Strip query string, decode URI
       let urlPath = req.url.split('?')[0];
       try { urlPath = decodeURIComponent(urlPath); } catch {}
-
-      // Root → latest game HTML
-      if (urlPath === '/' || urlPath === '') urlPath = '/' + LATEST_HTML;
+      if (urlPath === '/' || urlPath === '') urlPath = '/start.html';
 
       const filePath = path.join(GAME_ROOT, urlPath.replace(/\//g, path.sep));
-
-      // Security: must stay within GAME_ROOT
       if (!filePath.startsWith(GAME_ROOT)) {
         res.writeHead(403); res.end('Forbidden'); return;
       }
 
       fs.readFile(filePath, (err, data) => {
-        if (err) {
-          res.writeHead(404); res.end('Not found: ' + urlPath); return;
-        }
+        if (err) { res.writeHead(404); res.end('Not found: ' + urlPath); return; }
         const ext  = path.extname(filePath).toLowerCase();
         const mime = MIME[ext] || 'application/octet-stream';
         res.writeHead(200, {
-          'Content-Type':  mime,
-          // Allow the page to fetch from localhost:8765 (engine) without CORS error
+          'Content-Type':                mime,
           'Access-Control-Allow-Origin': '*',
-          // Needed for SharedArrayBuffer (future feature); harmless otherwise
           'Cross-Origin-Opener-Policy':  'same-origin',
-          'Cross-Origin-Embedder-Policy':'require-corp',
+          'Cross-Origin-Embedder-Policy':'unsafe-none',
         });
         res.end(data);
       });
     });
 
     fileServer.listen(FILE_PORT, '127.0.0.1', () => {
-      console.log(`[electron] File server: http://127.0.0.1:${FILE_PORT}/`);
+      console.log(`[electron] File server → http://127.0.0.1:${FILE_PORT}/`);
       resolve();
     });
     fileServer.on('error', reject);
   });
 }
 
-// ─── Engine binary ────────────────────────────────────────────────────────────
+// ─── C++ engine (legacy) ─────────────────────────────────────────────────────
 
 let engineProcess = null;
 
@@ -114,66 +111,58 @@ function findEngineBinary() {
   return candidates.find(p => { try { return fs.statSync(p).isFile(); } catch { return false; } }) || null;
 }
 
-function startEngine() {
+function startCppEngine() {
   const bin = findEngineBinary();
-  if (!bin) {
-    console.log('[electron] No chess_engine binary — engine bridge inactive (JS AI fallback).');
-    return null;
-  }
-  console.log(`[electron] Starting engine: ${bin}`);
-  const proc = spawn(bin, ['--port', String(ENGINE_PORT)], {
-    cwd: path.dirname(bin),
-    stdio: ['ignore', 'pipe', 'pipe'],
+  if (!bin) { console.log('[electron] No C++ engine — legacy bridge inactive.'); return null; }
+  console.log(`[electron] C++ engine: ${bin}`);
+  const proc = spawn(bin, [String(ENGINE_PORT)], {
+    cwd: path.dirname(bin), stdio: ['ignore','pipe','pipe'],
   });
-  proc.stdout.on('data', d => console.log('[engine]', d.toString().trimEnd()));
-  proc.stderr.on('data', d => console.error('[engine]', d.toString().trimEnd()));
-  proc.on('error', err => console.error('[engine] Failed to start:', err.message));
-  proc.on('exit', (code, sig) => {
-    console.log(`[engine] Exited code=${code} sig=${sig}`);
-    engineProcess = null;
-  });
+  proc.stdout.on('data', d => console.log('[cpp]', d.toString().trimEnd()));
+  proc.stderr.on('data', d => console.error('[cpp]', d.toString().trimEnd()));
+  proc.on('exit', (code) => { console.log(`[cpp] exit ${code}`); engineProcess = null; });
   return proc;
 }
 
-function waitForEngine(timeoutMs = ENGINE_WAIT) {
+// ─── Python committee engine ──────────────────────────────────────────────────
+
+let pyProcess = null;
+
+function startPyEngine() {
+  const candidates = [
+    path.join(GAME_ROOT, 'engine_py.py'),
+    path.join(process.resourcesPath || '', 'engine_py.py'),
+  ];
+  const script = candidates.find(p => { try { return fs.statSync(p).isFile(); } catch { return false; } });
+  if (!script) { console.log('[electron] engine_py.py not found.'); return null; }
+
+  const py = process.platform === 'win32' ? 'python' : 'python3';
+  console.log(`[electron] Python engine: ${script} :${PY_PORT}`);
+  const proc = spawn(py, [script, String(PY_PORT)], {
+    cwd: path.dirname(script), stdio: ['ignore','pipe','pipe'],
+  });
+  proc.stdout.on('data', d => console.log('[8d-py]', d.toString().trimEnd()));
+  proc.stderr.on('data', d => console.error('[8d-py]', d.toString().trimEnd()));
+  proc.on('error', err => console.error('[8d-py] start failed:', err.message));
+  proc.on('exit', (code) => { console.log(`[8d-py] exit ${code}`); pyProcess = null; });
+  return proc;
+}
+
+function waitForPort(port, timeoutMs) {
   return new Promise(resolve => {
     const deadline = Date.now() + timeoutMs;
-    function ping() {
-      http.get(`http://127.0.0.1:${ENGINE_PORT}/ping`, res => {
+    const ping = () => {
+      http.get(`http://127.0.0.1:${port}/ping`, res => {
         if (res.statusCode === 200) { resolve(true); return; }
         retry();
       }).on('error', retry);
-    }
-    function retry() {
+    };
+    const retry = () => {
       if (Date.now() >= deadline) { resolve(false); return; }
       setTimeout(ping, POLL_MS);
-    }
+    };
     ping();
   });
-}
-
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
-function latestGameHtml() {
-  try {
-    const files = fs.readdirSync(path.resolve(__dirname, '..'))
-      .filter(f => /^8d-chess-v[\d.]+.*\.html$/i.test(f))
-      .sort((a, b) => {
-        // Sort by version number
-        const va = a.match(/v([\d.]+)/)?.[1].split('.').map(Number) || [];
-        const vb = b.match(/v([\d.]+)/)?.[1].split('.').map(Number) || [];
-        for (let i = 0; i < Math.max(va.length, vb.length); i++) {
-          const d = (va[i] || 0) - (vb[i] || 0);
-          if (d) return d;
-        }
-        return 0;
-      });
-    const latest = files[files.length - 1];
-    console.log(`[electron] Latest game: ${latest}`);
-    return latest;
-  } catch {
-    return '8d-chess-v45.70-diplomacy-comms-visible.html';
-  }
 }
 
 // ─── Window ───────────────────────────────────────────────────────────────────
@@ -182,34 +171,37 @@ let mainWindow = null;
 
 async function createWindow() {
   mainWindow = new BrowserWindow({
-    width:           1440,
-    height:          920,
-    minWidth:        900,
-    minHeight:       600,
-    backgroundColor: '#07090f',
-    title:           '8D Chess',
+    width:  1440,
+    height: 920,
+    minWidth:  900,
+    minHeight: 600,
+    backgroundColor: '#010308',
+    title: 'ND Chess',
+    ...(process.platform === 'darwin' ? {
+      titleBarStyle: 'hiddenInset',
+      trafficLightPosition: { x: 14, y: 14 },
+    } : {}),
     webPreferences: {
-      preload:           path.join(__dirname, 'preload.js'),
-      contextIsolation:  true,
-      nodeIntegration:   false,
-      webSecurity:       true,   // safe — we're on localhost now, not file://
-      // Extra GPU/rendering flags for smooth WebGL
-      backgroundThrottling: false,  // don't throttle rAF when window is in bg
+      preload:              path.join(__dirname, 'preload.js'),
+      contextIsolation:     true,
+      nodeIntegration:      false,
+      webSecurity:          true,
+      backgroundThrottling: false,
     },
   });
 
-  // Remove default menu (saves screen space, avoids accidental keyboard nav)
-  Menu.setApplicationMenu(null);
+  Menu.setApplicationMenu(buildMenu());
 
-  // External links → OS browser
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
     if (url.startsWith('http')) shell.openExternal(url);
     return { action: 'deny' };
   });
 
-  // F12 opens DevTools for debugging
+  // Cmd+Option+I / F12 → DevTools
   mainWindow.webContents.on('before-input-event', (_, input) => {
-    if (input.key === 'F12' && input.type === 'keyDown') {
+    if (input.type !== 'keyDown') return;
+    const dev = input.key === 'F12' || (input.key === 'i' && input.meta && input.alt);
+    if (dev) {
       mainWindow.webContents.isDevToolsOpened()
         ? mainWindow.webContents.closeDevTools()
         : mainWindow.webContents.openDevTools({ mode: 'detach' });
@@ -217,40 +209,112 @@ async function createWindow() {
   });
 
   mainWindow.on('closed', () => { mainWindow = null; });
-
-  const url = `http://127.0.0.1:${FILE_PORT}/`;
-  console.log(`[electron] Loading: ${url}`);
-  await mainWindow.loadURL(url);
+  await mainWindow.loadURL(`http://127.0.0.1:${FILE_PORT}/start.html`);
 }
 
-// ─── App lifecycle ────────────────────────────────────────────────────────────
+// ─── Menu ─────────────────────────────────────────────────────────────────────
 
-app.commandLine.appendSwitch('enable-features', 'SharedArrayBuffer');
-app.commandLine.appendSwitch('ignore-gpu-blocklist');          // force GPU on
+function openVis(dims, humans = 0) {
+  mainWindow?.loadURL(
+    `http://127.0.0.1:${FILE_PORT}/visualizer.html?dims=${dims}&humans=${humans}`
+  );
+}
+
+async function restartPyEngine() {
+  if (pyProcess) { pyProcess.kill(); pyProcess = null; await new Promise(r => setTimeout(r, 600)); }
+  pyProcess = startPyEngine();
+  if (pyProcess) await waitForPort(PY_PORT, 8000);
+}
+
+function buildMenu() {
+  const mac = process.platform === 'darwin';
+  return Menu.buildFromTemplate([
+    ...(mac ? [{ label: app.name, submenu: [
+      { role: 'about' }, { type: 'separator' },
+      { role: 'hide' }, { role: 'hideOthers' }, { role: 'unhide' },
+      { type: 'separator' }, { role: 'quit' },
+    ]}] : []),
+    { label: 'Game', submenu: [
+      { label: 'Launcher',           accelerator: 'CmdOrCtrl+L',
+        click: () => mainWindow?.loadURL(`http://127.0.0.1:${FILE_PORT}/start.html`) },
+      { type: 'separator' },
+      { label: '2D chess  (2 players)',   click: () => openVis(2) },
+      { label: '3D chess  (4 players)',   click: () => openVis(3) },
+      { label: '4D chess  (8 players)',   click: () => openVis(4) },
+      { label: '5D chess  (16 players)',  click: () => openVis(5) },
+      { label: '6D chess  (32 players)',  click: () => openVis(6) },
+      { label: '7D chess  (64 players)',  click: () => openVis(7) },
+      { label: '8D chess  (128 players)', click: () => openVis(8) },
+      { type: 'separator' },
+      { label: 'Restart AI Engine', click: restartPyEngine },
+    ]},
+    { label: 'View', submenu: [
+      { role: 'reload' }, { role: 'forceReload' }, { type: 'separator' },
+      { role: 'resetZoom' }, { role: 'zoomIn' }, { role: 'zoomOut' },
+      { type: 'separator' }, { role: 'togglefullscreen' },
+    ]},
+    { label: 'Window', submenu: [
+      { role: 'minimize' }, { role: 'zoom' },
+      ...(mac ? [{ type: 'separator' }, { role: 'front' }] : []),
+    ]},
+  ]);
+}
+
+// ─── IPC ─────────────────────────────────────────────────────────────────────
+
+ipcMain.handle('bridge:status', async () => {
+  if (!pyProcess || pyProcess.killed) return { running: false, source: 'none' };
+  return new Promise(resolve => {
+    http.get(`http://127.0.0.1:${PY_PORT}/ping`, res => {
+      resolve({ running: res.statusCode === 200, source: 'spawned', port: PY_PORT });
+    }).on('error', err => resolve({ running: false, source: 'spawned', lastError: err.message }));
+  });
+});
+
+ipcMain.handle('bridge:restart', async () => {
+  await restartPyEngine();
+  return { ok: !!pyProcess, port: PY_PORT };
+});
+
+ipcMain.handle('window:captureClipboard', async () => {
+  if (!mainWindow) return false;
+  try { return (await mainWindow.webContents.capturePage()).toDataURL(); }
+  catch { return false; }
+});
+
+// ─── GPU ─────────────────────────────────────────────────────────────────────
+
+app.commandLine.appendSwitch('ignore-gpu-blocklist');
 app.commandLine.appendSwitch('enable-gpu-rasterization');
 app.commandLine.appendSwitch('enable-zero-copy');
+app.commandLine.appendSwitch('enable-features', 'SharedArrayBuffer');
+
+// ─── Lifecycle ────────────────────────────────────────────────────────────────
 
 app.whenReady().then(async () => {
-  // 1. Start local file server (must come first)
   await startFileServer();
 
-  // 2. Start engine (optional), wait for it to be ready
-  engineProcess = startEngine();
+  engineProcess = startCppEngine();
   if (engineProcess) {
-    console.log('[electron] Waiting for engine…');
-    const ok = await waitForEngine();
-    console.log(ok ? '[electron] Engine ready.' : '[electron] Engine timeout — using JS AI.');
+    const ok = await waitForPort(ENGINE_PORT, ENGINE_WAIT);
+    console.log(ok ? '[electron] C++ engine ready.' : '[electron] C++ engine timed out.');
   }
 
-  // 3. Open window
-  await createWindow();
+  pyProcess = startPyEngine();
+  if (pyProcess) {
+    console.log('[electron] Waiting for Python engine…');
+    const ok = await waitForPort(PY_PORT, ENGINE_WAIT);
+    console.log(ok ? `[electron] Python engine ready :${PY_PORT}` : '[electron] Python engine timed out.');
+  }
 
+  await createWindow();
   app.on('activate', () => { if (!mainWindow) createWindow(); });
 });
 
 function cleanup() {
-  if (engineProcess) { engineProcess.kill(); engineProcess = null; }
-  if (fileServer)    { fileServer.close();   fileServer    = null; }
+  try { if (engineProcess) engineProcess.kill(); } catch {}
+  try { if (pyProcess)     pyProcess.kill();     } catch {}
+  try { if (fileServer)    fileServer.close();   } catch {}
 }
 
 app.on('window-all-closed', () => { cleanup(); if (process.platform !== 'darwin') app.quit(); });

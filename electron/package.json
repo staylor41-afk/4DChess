@@ -1,35 +1,56 @@
 {
-  "name": "8d-chess",
-  "version": "45.70.0",
-  "description": "8D Chess by Samuel M G Taylor",
+  "name": "nd-chess",
+  "version": "47.0.0",
+  "description": "ND Chess — 2D through 8D, 2 to 128 players — by Samuel M G Taylor",
   "author": "Samuel M G Taylor",
   "main": "main.js",
   "scripts": {
-    "start": "electron . --enable-logging",
-    "build-win": "electron-builder --win",
-    "build-mac": "electron-builder --mac",
-    "build-linux": "electron-builder --linux"
+    "start":       "electron . --enable-logging",
+    "build-win":   "electron-builder --win",
+    "build-mac":   "electron-builder --mac",
+    "build-linux": "electron-builder --linux",
+    "build-all":   "electron-builder --mac --win --linux"
   },
   "build": {
-    "appId": "com.samueltaylor.8dchess",
-    "productName": "8D Chess",
+    "appId": "com.samueltaylor.ndchess",
+    "productName": "ND Chess",
     "files": [
       "main.js",
-      "preload.js",
-      "CODEX-ENGINE-SPEC.md"
+      "preload.js"
     ],
     "extraResources": [
-      { "from": "../render",     "to": "render" },
-      { "from": "../8d-chess-v45.70-diplomacy-comms-visible.html", "to": "8d-chess-v45.70-diplomacy-comms-visible.html" },
+      { "from": "../start.html",       "to": "start.html"       },
+      { "from": "../visualizer.html",  "to": "visualizer.html"  },
+      { "from": "../engine_py.py",     "to": "engine_py.py"     },
+      { "from": "../render",           "to": "render"           },
       { "from": "../chess_engine.exe", "to": "chess_engine.exe", "filter": ["**/*"] },
       { "from": "../chess_engine",     "to": "chess_engine",     "filter": ["**/*"] }
     ],
-    "win": { "target": "nsis" },
-    "mac": { "target": "dmg"  },
-    "linux": { "target": "AppImage" }
+    "mac": {
+      "category": "public.app-category.games",
+      "target": [
+        { "target": "dmg", "arch": ["arm64", "x64"] }
+      ],
+      "darkModeSupport": true
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "dmg": {
+      "title": "ND Chess",
+      "background": null,
+      "window": { "width": 540, "height": 380 }
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "devDependencies": {
-    "electron": "^28.0.0",
+    "electron": "^29.0.0",
     "electron-builder": "^24.0.0"
   }
 }

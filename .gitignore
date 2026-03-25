@@ -1,10 +1,22 @@
-# Electron dependencies
+# Electron
 electron/node_modules/
 electron/dist/
+electron/electron-out.log
 
-# Build outputs (wasm is checked in as a build artifact)
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# C++ build outputs (wasm binary is checked in intentionally)
 *.o
 *.a
+build/
+build_output.txt
+
+# Game data / logs (large, auto-generated)
+*.csv
+*.txt
 
 # OS
 .DS_Store
@@ -13,3 +25,4 @@ Thumbs.db
 # Editor
 .vscode/
 *.swp
+*.swo

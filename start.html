@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ND Chess — Launcher</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: #010308;
+  color: #8aa;
+  font-family: 'Courier New', monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 24px 16px;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: bold;
+  letter-spacing: 0.18em;
+  color: #a060ff;
+  text-shadow: 0 0 40px #6030cc88, 0 0 80px #3010aa44;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-size: 11px;
+  color: #2a3858;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* ── dimension cards ─────────────────────────────────────── */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  max-width: 980px;
+  margin-bottom: 36px;
+}
+
+.card {
+  width: 120px;
+  padding: 18px 12px 16px;
+  background: #060c1a;
+  border: 1px solid #0f1e40;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.18s, box-shadow 0.18s, transform 0.12s;
+  user-select: none;
+  position: relative;
+}
+.card:hover {
+  border-color: #2a50a0;
+  box-shadow: 0 0 18px #1020660a;
+  transform: translateY(-2px);
+}
+.card.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 28px var(--glow);
+  background: #0a1428;
+}
+
+.card-dim {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--accent);
+  text-shadow: 0 0 16px var(--glow);
+}
+.card-layout {
+  font-size: 9.5px;
+  color: #3a5080;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+.card-syms {
+  font-size: 16px;
+  color: #4060a0;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+.card-players {
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+/* ── bottom controls ─────────────────────────────────────── */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.ctrl-label {
+  font-size: 11px;
+  color: #2a3858;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+select#human-count {
+  background: #060c1a;
+  border: 1px solid #1a3060;
+  color: #0df;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  padding: 6px 14px 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  min-width: 120px;
+  text-align: center;
+}
+select#human-count:focus { border-color: #3070cc; }
+
+.launch-btn {
+  background: #060c1a;
+  border: 1px solid #1a4080;
+  color: #2a60cc;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 10px 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, box-shadow 0.15s;
+}
+.launch-btn:hover:not(:disabled) {
+  border-color: #4080ee;
+  color: #5090ff;
+  box-shadow: 0 0 20px #1040cc22;
+}
+.launch-btn:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+
+/* ── legend ──────────────────────────────────────────────── */
+.legend {
+  font-size: 10px;
+  color: #18284a;
+  text-align: center;
+  line-height: 2.0;
+  letter-spacing: 0.06em;
+}
+
+/* accent colours per dim */
+.d2  { --accent:#f08030; --glow:#f0803040; }
+.d3  { --accent:#f0c040; --glow:#f0c04040; }
+.d4  { --accent:#60d860; --glow:#60d86040; }
+.d5  { --accent:#40d8c8; --glow:#40d8c840; }
+.d6  { --accent:#40a8ff; --glow:#40a8ff40; }
+.d7  { --accent:#a060ff; --glow:#a060ff40; }
+.d8  { --accent:#ff60c0; --glow:#ff60c040; }
+</style>
+</head>
+<body>
+
+<h1>ND Chess</h1>
+<div class="subtitle">select dimensions · set human players · launch</div>
+
+<div class="cards" id="cards">
+  <div class="card d2" data-dims="2" data-np="2">
+    <div class="card-dim">2D</div>
+    <div class="card-layout">Classic board<br>8 × 8</div>
+    <div class="card-syms">♚♛♟</div>
+    <div class="card-players">2 players</div>
+  </div>
+  <div class="card d3" data-dims="3" data-np="4">
+    <div class="card-dim">3D</div>
+    <div class="card-layout">8×8×8 cube<br>3 axes</div>
+    <div class="card-syms">♚♛♟</div>
+    <div class="card-players">4 players</div>
+  </div>
+  <div class="card d4" data-dims="4" data-np="8">
+    <div class="card-dim">4D</div>
+    <div class="card-layout">Row of 8 cubes<br>4 axes</div>
+    <div class="card-syms">♚♛♟</div>
+    <div class="card-players">8 players</div>
+  </div>
+  <div class="card d5" data-dims="5" data-np="16">
+    <div class="card-dim">5D</div>
+    <div class="card-layout">8×8 wall<br>5 axes</div>
+    <div class="card-syms">♚♛♟</div>
+    <div class="card-players">16 players</div>
+  </div>
+  <div class="card d6" data-dims="6" data-np="32">
+    <div class="card-dim">6D</div>
+    <div class="card-layout">One building<br>6 axes</div>
+    <div class="card-syms">♚♛♟</div>
+    <div class="card-players">32 players</div>
+  </div>
+  <div class="card d7" data-dims="7" data-np="64">
+    <div class="card-dim">7D</div>
+    <div class="card-layout">8-building strip<br>7 axes</div>
+    <div class="card-syms">♚♛♟</div>
+    <div class="card-players">64 players</div>
+  </div>
+  <div class="card d8" data-dims="8" data-np="128">
+    <div class="card-dim">8D</div>
+    <div class="card-layout">8×8 city<br>64 buildings</div>
+    <div class="card-syms">♚♛♟</div>
+    <div class="card-players">128 players</div>
+  </div>
+</div>
+
+<div class="controls">
+  <span class="ctrl-label">Human players:</span>
+  <select id="human-count">
+    <option value="0">0 — full AI</option>
+  </select>
+  <button class="launch-btn" id="launch" disabled>▶ LAUNCH</button>
+</div>
+
+<div class="legend">
+  ↑↓←→ strafe &nbsp;·&nbsp; Z/X up/down &nbsp;·&nbsp; R toggle orbit &nbsp;·&nbsp; T/Y/U zoom levels<br>
+  Human: click piece → see legal moves → click destination
+</div>
+
+<script>
+let selectedDims = null;
+let selectedNP   = null;
+
+const humanSel  = document.getElementById('human-count');
+const launchBtn = document.getElementById('launch');
+
+document.getElementById('cards').addEventListener('click', e => {
+  const card = e.target.closest('.card');
+  if (!card) return;
+  document.querySelectorAll('.card.selected').forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+  selectedDims = parseInt(card.dataset.dims);
+  selectedNP   = parseInt(card.dataset.np);
+  rebuildDropdown(selectedNP);
+  launchBtn.disabled = false;
+});
+
+function rebuildDropdown(np) {
+  const prev = parseInt(humanSel.value);
+  humanSel.innerHTML = '<option value="0">0 — full AI</option>';
+  for (let i = 1; i <= np; i++) {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = i === 1 ? '1 — you vs AI' : `${i} — ${i} humans`;
+    humanSel.appendChild(opt);
+  }
+  humanSel.value = Math.min(prev, np);
+}
+
+launchBtn.addEventListener('click', () => {
+  if (!selectedDims) return;
+  const humans = parseInt(humanSel.value);
+  window.location.href = `visualizer.html?dims=${selectedDims}&humans=${humans}`;
+});
+
+// Allow Enter key to launch
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && selectedDims) launchBtn.click();
+});
+
+// Pre-select 8D
+const d8 = document.querySelector('.card[data-dims="8"]');
+if (d8) d8.click();
+</script>
+</body>
+</html>

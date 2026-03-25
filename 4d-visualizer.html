@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>4D Chess — Row Visualizer</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#000; overflow:hidden; font-family:'Courier New',monospace; }
+
+#hud {
+  position:fixed; top:14px; left:16px;
+  font-size:11px; line-height:2.0; color:#3a4a6a;
+  pointer-events:none; text-transform:uppercase; letter-spacing:.05em;
+  text-shadow:0 0 8px #0008;
+}
+.val  { color:#0df; font-weight:bold; }
+.cap  { color:#fa0; font-weight:bold; }
+.pid  { font-weight:bold; }
+.dim  { color:#a0f; font-size:13px; font-weight:bold; }
+
+#legend {
+  position:fixed; top:14px; right:16px;
+  font-size:10px; line-height:2.0; color:#2a3858;
+  text-align:right; pointer-events:none;
+}
+#keys {
+  position:fixed; bottom:14px; left:16px;
+  font-size:10px; line-height:1.8; color:#1e2c44;
+  pointer-events:none;
+}
+#status {
+  position:fixed; bottom:14px; right:16px;
+  font-size:10px; line-height:1.8; color:#1e2c44;
+  text-align:right; pointer-events:none;
+}
+#movelog {
+  position:fixed; right:16px; bottom:48px;
+  width:230px; max-height:340px; overflow:hidden;
+  font-size:10px; line-height:1.7; font-family:'Courier New',monospace;
+  pointer-events:none; text-align:right;
+  mask-image:linear-gradient(to bottom, transparent 0%, black 18%);
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 18%);
+}
+#dl-log {
+  position:fixed; bottom:14px; left:50%; transform:translateX(-50%);
+  background:#050d1c; border:1px solid #1e3868; color:#3a7;
+  padding:4px 14px; font-size:10px; font-family:'Courier New',monospace;
+  cursor:pointer; letter-spacing:.08em; z-index:10;
+  transition: border-color .2s, color .2s;
+}
+#dl-log:hover { border-color:#3a7; color:#6fd; }
+</style>
+</head>
+<body>
+
+<div id="hud">
+  <span class="dim">4D CHESS</span><br>
+  <span style="color:#334">TURN ···</span> <span class="val" id="h-turn">—</span><br>
+  <span style="color:#334">PLAYER ·</span> <span class="pid" id="h-pid">—</span><br>
+  <span style="color:#334">PIECES ·</span> <span class="val" id="h-pcs">—</span><br>
+  <span style="color:#334">ALIVE ··</span> <span class="val" id="h-alive">8</span><span style="color:#334">/8</span><br>
+  <span style="color:#334">CAPTURES</span> <span class="cap"  id="h-caps">0</span><br>
+  <span style="color:#334">T/SEC ··</span> <span class="val" id="h-tps">—</span><br>
+  <span style="color:#334">ORBIT ··</span> <span class="val" id="h-orbit" style="color:#3af">ON</span>
+</div>
+
+<div id="legend">
+  <span style="color:#1e3060">── LAYOUT ──────</span><br>
+  X·Y = board square<br>
+  Z·· = board height<br>
+  W·· = cube in row<br>
+  <br>
+  <span style="color:#1e3060">── SYMBOLS ─────</span><br>
+  ♚ King &nbsp; ♛ Queen<br>
+  ♜ Rook &nbsp; ♝ Bishop<br>
+  ♞ Knight ♟ Pawn
+</div>
+
+<div id="keys">
+  ↑↓←→ strafe · Z/X up/down · drag rotate · scroll zoom<br>
+  R=orbit · T=bldg · Y=floor · U=cube · 1/2/3 jump
+</div>
+<div id="movelog"></div>
+<div id="status">⬤ initializing…</div>
+<button id="dl-log" title="Download full move log as CSV">⬇ LOG</button>
+
+<script type="importmap">
+{ "imports": {
+    "three":         "https://cdn.jsdelivr.net/npm/three@0.163/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163/examples/jsm/"
+} }
+</script>
+
+<script type="module">
+import * as THREE        from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ═══════════════════════════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════════════════════════
+const ENGINE   = 'http://127.0.0.1:8769';
+const GAME_ID  = 'vis4d';
+const NDIM     = 4;
+const NP       = 8;
+const BSIZE    = 8;
+const DRAW_FPS = 4;
+
+// ═══════════════════════════════════════════════════════════
+// ROW LAYOUT  (engine axis order: X Y Z W)
+//   coords[0]=X  coords[1]=Y  coords[2]=Z
+//   coords[3]=W
+//
+//  World X = X + W*CUBE_STEP   (cube index along row)
+//  World Y = Z only            (board height)
+//  World Z = Y only            (board depth)
+// ═══════════════════════════════════════════════════════════
+const CELL       = 1;
+const CUBE_GAP   = 4;
+const FLOOR_GAP  = 10;
+const BLDG_GAP   = 32;
+
+const CUBE_STEP  = BSIZE * CELL + CUBE_GAP;           // 12
+const FLOOR_STEP = BSIZE * CELL + FLOOR_GAP;          // 18
+const BLDG_STEP  = BSIZE * CUBE_STEP + BLDG_GAP;     // 128
+
+const CUBE_SPAN  = (BSIZE-1)*CELL;                    // 7
+const FLOOR_SPAN = (BSIZE-1)*CUBE_STEP + CUBE_SPAN;  // 91
+const BLDG_H     = (BSIZE-1)*FLOOR_STEP + CUBE_SPAN; // 133
+
+// Single row of 8 cubes — only W dimension mapped
+const CITY_CX = FLOOR_SPAN / 2;  // 45.5
+const CITY_CY = CUBE_SPAN / 2;   // 3.5
+const CITY_CZ = CUBE_SPAN / 2;   // 3.5
+
+function proj(c) {
+  return [
+    c[0]*CELL + c[3]*CUBE_STEP,  // X + W*12
+    c[2]*CELL,                    // Z only
+    c[1]*CELL,                    // Y only
+  ];
+}
+
+// ═══════════════════════════════════════════════════════════
+// 8 DISTINCT COLORS — 3-bit reversal scramble
+// ═══════════════════════════════════════════════════════════
+const HUES = [0,22,45,65,90,120,150,178,200,225,240,258,272,290,312,335];
+const VARS = [
+  [1.00,0.56], // vivid
+  [0.95,0.70], // bright pastel
+  [1.00,0.41], // rich deep
+  [0.78,0.63], // medium
+  [0.60,0.76], // soft
+  [1.00,0.31], // dark
+  [0.50,0.81], // very pale
+  [0.88,0.50], // saturated mid
+];
+function bitRev3(n) { let r=0; for(let i=0;i<3;i++){r=(r<<1)|(n&1);n>>=1;} return r; }
+const PCOL = Array.from({length:8}, (_,p) => {
+  const ci = bitRev3(p);
+  return new THREE.Color().setHSL(HUES[ci*2]/360, 1.0, 0.58);
+});
+
+// ═══════════════════════════════════════════════════════════
+// CHESS PIECE SYMBOL TEXTURES
+// ═══════════════════════════════════════════════════════════
+const PIECE_SYM  = {P:'♟', R:'♜', N:'♞', B:'♝', Q:'♛', K:'♚'};
+const TYPE_MAP = {Pawn:'P',Rook:'R',Knight:'N',Bishop:'B',Queen:'Q',King:'K',
+                  P:'P',R:'R',N:'N',B:'B',Q:'Q',K:'K'};
+const PIECE_SIZE = {P:3.5, R:5.5, N:5.5, B:5.5, Q:8.0, K:11.0};
+const PIECE_TYPES = ['P','R','N','B','Q','K'];
+
+function makeSymTex(sym, sz=96) {
+  const cv = document.createElement('canvas');
+  cv.width = cv.height = sz;
+  const ctx = cv.getContext('2d');
+  const g = ctx.createRadialGradient(sz/2,sz/2,0,sz/2,sz/2,sz*0.48);
+  g.addColorStop(0, 'rgba(255,255,255,0.18)');
+  g.addColorStop(1, 'rgba(255,255,255,0)');
+  ctx.fillStyle = g; ctx.fillRect(0,0,sz,sz);
+  ctx.font = `${Math.floor(sz*0.74)}px "Segoe UI Symbol","Apple Symbols","Noto Chess",serif`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.shadowColor = 'rgba(255,255,255,0.55)'; ctx.shadowBlur = 10;
+  ctx.fillStyle = 'rgba(255,255,255,0.96)';
+  ctx.fillText(sym, sz/2, sz/2+2);
+  const t = new THREE.CanvasTexture(cv);
+  t.needsUpdate = true;
+  return t;
+}
+
+// ═══════════════════════════════════════════════════════════
+// CUBE LABEL SPRITES
+// ═══════════════════════════════════════════════════════════
+function makeLabel(text) {
+  const cv = document.createElement('canvas'); cv.width=64; cv.height=24;
+  const ctx = cv.getContext('2d');
+  ctx.font='bold 14px "Courier New",monospace';
+  ctx.fillStyle='rgba(60,120,220,0.8)';
+  ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText(text, 32, 12);
+  const tex = new THREE.CanvasTexture(cv); tex.needsUpdate=true;
+  const mat = new THREE.SpriteMaterial({map:tex, transparent:true, depthWrite:false});
+  const sp = new THREE.Sprite(mat); sp.scale.set(8,3,1);
+  return sp;
+}
+
+// ═══════════════════════════════════════════════════════════
+// THREE.JS SCENE
+// ═══════════════════════════════════════════════════════════
+const renderer = new THREE.WebGLRenderer({antialias:false, powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x010308);
+scene.fog = new THREE.Fog(0x010308, 150, 500);
+
+const camera = new THREE.PerspectiveCamera(52, innerWidth/innerHeight, 0.5, 700);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(CITY_CX, CITY_CY, CITY_CZ);
+controls.enableDamping   = true;
+controls.dampingFactor   = 0.07;
+controls.autoRotate      = true;
+controls.autoRotateSpeed = 0.18;
+controls.minDistance     = 5;
+controls.maxDistance     = 400;
+
+function resetCam() {
+  camera.position.set(CITY_CX, CITY_CY + 45, CITY_CZ + 160);
+  controls.target.set(CITY_CX, CITY_CY, CITY_CZ);
+  controls.update();
+}
+resetCam();
+
+window.addEventListener('resize', () => {
+  camera.aspect = innerWidth/innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+// ═══════════════════════════════════════════════════════════
+// WIREFRAME — row of 8 cubes (W dim only)
+// ═══════════════════════════════════════════════════════════
+function addBox(v, x0,y0,z0, x1,y1,z1) {
+  v.push(
+    x0,y0,z0, x1,y0,z0,  x1,y0,z0, x1,y0,z1,  x1,y0,z1, x0,y0,z1,  x0,y0,z1, x0,y0,z0,
+    x0,y1,z0, x1,y1,z0,  x1,y1,z0, x1,y1,z1,  x1,y1,z1, x0,y1,z1,  x0,y1,z1, x0,y1,z0,
+    x0,y0,z0, x0,y1,z0,  x1,y0,z0, x1,y1,z0,  x1,y0,z1, x1,y1,z1,  x0,y0,z1, x0,y1,z1,
+  );
+}
+function mkLines(verts, color, opacity) {
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(new Float32Array(verts), 3));
+  return new THREE.LineSegments(g,
+    new THREE.LineBasicMaterial({color, transparent:true, opacity, depthWrite:false}));
+}
+
+function buildWireframes() {
+  const cV=[], rV=[];
+  // 8 cube outlines — one per W value
+  for (let w=0; w<BSIZE; w++) {
+    addBox(cV, w*CUBE_STEP, 0, 0,
+               w*CUBE_STEP+CUBE_SPAN, CUBE_SPAN, CUBE_SPAN);
+  }
+  // Subtle rail: thin box around the whole row
+  addBox(rV, 0,0,0, FLOOR_SPAN, CUBE_SPAN, CUBE_SPAN);
+  scene.add(mkLines(cV, 0x3080ee, 0.85));
+  scene.add(mkLines(rV, 0x0f2a66, 0.30));
+}
+
+// ═══════════════════════════════════════════════════════════
+// PIECE POINTS
+// ═══════════════════════════════════════════════════════════
+const TYPE_MAX = {P:7000, R:110, N:110, B:110, Q:70, K:12};
+
+const symTex = {}, ptsObj = {};
+
+function initPiecePoints() {
+  for (const t of PIECE_TYPES) {
+    const mx = TYPE_MAX[t];
+    const pos = new Float32Array(mx*3);
+    const col = new Float32Array(mx*3);
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos,3).setUsage(THREE.DynamicDrawUsage));
+    geo.setAttribute('color',    new THREE.BufferAttribute(col,3).setUsage(THREE.DynamicDrawUsage));
+    geo.setDrawRange(0,0);
+    symTex[t] = makeSymTex(PIECE_SYM[t]);
+    const mat = new THREE.PointsMaterial({
+      size: PIECE_SIZE[t], map: symTex[t],
+      vertexColors: true, transparent: true,
+      alphaTest: 0.04, sizeAttenuation: true, depthWrite: false,
+    });
+    const pts = new THREE.Points(geo, mat);
+    scene.add(pts);
+    ptsObj[t] = {pts, pos, col, n:0};
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// LOCAL BOARD STATE
+// ═══════════════════════════════════════════════════════════
+const BACK = ['R','N','B','Q','K','B','N','R'];
+
+function ck(c){ return c.join('|'); }
+
+function homeFor(pid) {
+  const c=new Array(NDIM).fill(0);
+  for(let i=1;i<NDIM;i++) c[i]=(pid>>(i-1))&1 ? 7:0;
+  return c;
+}
+
+async function buildBoard() {
+  const bd = new Map();
+  const yield_ = () => new Promise(r => setTimeout(r, 0));
+  for (let pid=0;pid<NP;pid++) {
+    if (pid % 16 === 0) await yield_();
+    const h=homeFor(pid);
+    for (let x=0;x<BSIZE;x++) {
+      const c=[...h]; c[0]=x;
+      bd.set(ck(c),{pid,type:BACK[x],coords:c});
+    }
+    const seen=new Set();
+    for (let opp=0;opp<NP;opp++) {
+      if(opp===pid) continue;
+      const oh=homeFor(opp);
+      const dir=new Array(NDIM).fill(0);
+      let any=false;
+      for(let a=1;a<NDIM;a++){
+        const d=oh[a]-h[a]; dir[a]=d>0?1:d<0?-1:0; if(dir[a]) any=true;
+      }
+      if(!any) continue;
+      const dk=dir.join(',');
+      if(seen.has(dk)) continue;
+      seen.add(dk);
+      for(let x=0;x<BSIZE;x++){
+        const c=h.map((v,i)=>i===0?x:v+dir[i]);
+        if(c.some(v=>v<0||v>=BSIZE)) continue;
+        const k=ck(c);
+        if(!bd.has(k)) bd.set(k,{pid,type:'P',coords:c});
+      }
+    }
+  }
+  return bd;
+}
+
+// ═══════════════════════════════════════════════════════════
+// GAME STATE
+// ═══════════════════════════════════════════════════════════
+let board    = new Map();
+let alive    = new Array(NP).fill(true);
+let activePid= 0;
+let turnNum  = 0;
+let capCount = 0;
+let dirty    = false;
+let running  = false;
+let turnCount= 0, tpsTimer = Date.now();
+let lastTPS  = 0;
+
+const MAX_LOG = 28;
+const moveLog = [];
+const fullLog = [];
+const recentMoves = new Map();
+
+// ═══════════════════════════════════════════════════════════
+// GPU REBUILD
+// ═══════════════════════════════════════════════════════════
+const FLASH_MS = 1400;
+
+function rebuildBuffers() {
+  const now = Date.now();
+  if (!dirty && recentMoves.size === 0) return;
+  dirty = false;
+  for (const [k,t] of recentMoves) { if (now-t > FLASH_MS) recentMoves.delete(k); }
+
+  for (const t of PIECE_TYPES) ptsObj[t].n = 0;
+
+  for (const pc of board.values()) {
+    const o = ptsObj[pc.type];
+    if (!o) continue;
+    const i = o.n++;
+    if (i >= TYPE_MAX[pc.type]) { o.n = TYPE_MAX[pc.type]; continue; }
+    const [wx,wy,wz] = proj(pc.coords);
+    o.pos[i*3]=wx; o.pos[i*3+1]=wy; o.pos[i*3+2]=wz;
+    const col = PCOL[pc.pid];
+    const moveTime = recentMoves.get(ck(pc.coords));
+    const flash = moveTime ? Math.exp(-(now-moveTime)/400) : 0;
+    const br = pc.pid === activePid ? 1.55 : 1.0 + flash*2.2;
+    o.col[i*3]  =Math.min(1,col.r*br+flash*0.55);
+    o.col[i*3+1]=Math.min(1,col.g*br+flash*0.55);
+    o.col[i*3+2]=Math.min(1,col.b*br+flash*0.55);
+  }
+
+  for (const t of PIECE_TYPES) {
+    const o = ptsObj[t];
+    o.pts.geometry.setDrawRange(0, o.n);
+    o.pts.geometry.attributes.position.needsUpdate = true;
+    o.pts.geometry.attributes.color.needsUpdate    = true;
+  }
+
+  document.getElementById('h-turn').textContent  = turnNum.toLocaleString();
+  document.getElementById('h-pcs').textContent   = board.size.toLocaleString();
+  document.getElementById('h-alive').textContent = alive.filter(Boolean).length;
+  document.getElementById('h-caps').textContent  = capCount.toLocaleString();
+  document.getElementById('h-tps').textContent   = lastTPS.toFixed(1)+'/s';
+  const el = document.getElementById('h-pid');
+  const col = PCOL[activePid];
+  el.textContent = `P${activePid+1}`;
+  el.style.color = col.getStyle();
+
+  const logEl = document.getElementById('movelog');
+  let html = '';
+  for (const m of moveLog) {
+    const c  = PCOL[m.pid].getStyle();
+    const cn = m.capPid != null ? PCOL[m.capPid].getStyle() : '#fa0';
+    if (m.cap) {
+      html += `<div><span style="color:${c}">P${m.pid+1} ${m.sym}</span>`
+            + ` <span style="color:#f60">×</span>`
+            + ` <span style="color:${cn}">${m.capSym}</span></div>`;
+    } else {
+      html += `<div style="color:${c}">P${m.pid+1} ${m.sym} →</div>`;
+    }
+  }
+  logEl.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════
+// GAME LOOP
+// ═══════════════════════════════════════════════════════════
+function applyMove(from, to, ptype, capType, capPid) {
+  const fk = from.join('|'), tk = to.join('|');
+  const pc  = board.get(fk);
+  if (!pc) return;
+  board.delete(fk);
+  const victim = board.get(tk);
+  const isCapture = !!victim;
+  if (isCapture) { capCount++; board.delete(tk); }
+  if (ptype) pc.type = ptype;
+  pc.coords = to;
+  board.set(tk, pc);
+  recentMoves.set(tk, Date.now());
+  const ct = capType ? (TYPE_MAP[capType] ?? capType) : (victim?.type ?? 'P');
+  const entry = {
+    pid: pc.pid, sym: PIECE_SYM[pc.type] ?? pc.type,
+    cap: isCapture, capSym: PIECE_SYM[ct] ?? ct,
+    capPid: victim?.pid ?? capPid ?? null, turn: turnNum,
+  };
+  moveLog.push(entry); fullLog.push(entry);
+  if (moveLog.length > MAX_LOG) moveLog.shift();
+  dirty = true;
+}
+
+async function gameLoop() {
+  running = true;
+  let cur = 0;
+  const status = document.getElementById('status');
+
+  while (running) {
+    if (!alive[cur]) { cur = (cur+1) % NP; continue; }
+    try {
+      const r = await fetch(
+        `${ENGINE}/apply_ai_turn?player=${cur}&game_id=${GAME_ID}`,
+        { signal: AbortSignal.timeout(8000) }
+      );
+      if (!r.ok) {
+        status.textContent = '⬤ restarting game…'; status.style.color = '#a80';
+        await fetch(`${ENGINE}/new_game`, {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({dims:4, players:8, game_id:GAME_ID}),
+          signal: AbortSignal.timeout(5000),
+        }).catch(()=>{});
+        board = await buildBoard(); alive = new Array(NP).fill(true);
+        turnNum = 0; capCount = 0; cur = 0; dirty = true; moveLog.length = 0;
+        continue;
+      }
+      const d = await r.json();
+      if (!d.ok || d.turn?.pass) { cur = (cur+1) % NP; continue; }
+
+      const t = d.turn;
+      if (t.move?.from && t.move?.to) {
+        applyMove(t.move.from, t.move.to, TYPE_MAP[t.piece_type]??t.piece_type, t.captured_type, t.captured_pid);
+      }
+      activePid = t.player ?? cur;
+      turnNum   = t.turn_number ?? turnNum + 1;
+      turnCount++;
+      const now = Date.now();
+      if (now - tpsTimer >= 2000) {
+        lastTPS = turnCount / ((now-tpsTimer)/1000);
+        turnCount = 0; tpsTimer = now;
+      }
+      if (t.game_over) {
+        status.textContent = `★ GAME OVER · winner P${(t.winner??0)+1}`;
+        status.style.color = '#fa0'; running = false; break;
+      }
+      status.textContent = `⬤ running · 4D · ${ENGINE.split('//')[1]}`;
+      status.style.color = '#1a6';
+    } catch(e) {
+      status.textContent = `⬤ engine error: ${e.message} — retrying…`;
+      status.style.color = '#a33';
+      await new Promise(r => setTimeout(r, 1000));
+    }
+    cur = (cur+1) % NP;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// KEYBOARD
+// ═══════════════════════════════════════════════════════════
+const keysDown = new Set();
+const MOVE_KEYS = new Set(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','KeyZ','KeyX']);
+
+const OT_ROW  = new THREE.Vector3(CITY_CX, CITY_CY, CITY_CZ);
+const OT_CUBE = new THREE.Vector3(CUBE_SPAN/2, CUBE_SPAN/2, CUBE_SPAN/2);
+
+window.addEventListener('keydown', e => {
+  if (MOVE_KEYS.has(e.code)) e.preventDefault();
+  keysDown.add(e.code);
+  const setOrbit = (on) => {
+    controls.autoRotate = on;
+    const el = document.getElementById('h-orbit');
+    el.textContent = on ? 'ON' : 'OFF'; el.style.color = on ? '#3af' : '#a33';
+  };
+  switch (e.code) {
+    case 'Space': e.preventDefault();
+    // falls through
+    case 'KeyR':
+      setOrbit(!controls.autoRotate); break;
+    case 'KeyT':  // Whole row
+      controls.target.copy(OT_ROW);
+      camera.position.set(CITY_CX, CITY_CY+45, CITY_CZ+160);
+      setOrbit(true); break;
+    case 'KeyY':  // No floor concept — same as T
+      controls.target.copy(OT_ROW);
+      camera.position.set(CITY_CX, CITY_CY+45, CITY_CZ+160);
+      setOrbit(true); break;
+    case 'KeyU':  // First cube
+      controls.target.copy(OT_CUBE);
+      camera.position.set(CUBE_SPAN/2, CUBE_SPAN+10, CUBE_SPAN+20);
+      setOrbit(true); break;
+    case 'Digit1':  // Top-down
+      camera.position.set(CITY_CX, CITY_CY+100, CITY_CZ+20);
+      controls.target.copy(OT_ROW); break;
+    case 'Digit2':  // Default view
+      camera.position.set(CITY_CX, CITY_CY+45, CITY_CZ+160);
+      controls.target.copy(OT_ROW); break;
+    case 'Digit3':  // Close cube view
+      camera.position.set(CUBE_SPAN/2, CUBE_SPAN+15, CUBE_SPAN+35);
+      controls.target.copy(OT_CUBE); break;
+  }
+});
+
+window.addEventListener('keyup', e => keysDown.delete(e.code));
+
+const _fwd = new THREE.Vector3(), _right = new THREE.Vector3(), _delta = new THREE.Vector3();
+
+function handleMovement() {
+  if (keysDown.size === 0) return;
+  const dist  = camera.position.distanceTo(controls.target);
+  const speed = Math.max(0.5, dist * 0.025);
+  camera.getWorldDirection(_fwd); _fwd.y = 0; _fwd.normalize();
+  _right.crossVectors(_fwd, camera.up).normalize();
+  _delta.set(0,0,0);
+  if (keysDown.has('ArrowUp'))    _delta.addScaledVector(_fwd,    speed);
+  if (keysDown.has('ArrowDown'))  _delta.addScaledVector(_fwd,   -speed);
+  if (keysDown.has('ArrowLeft'))  _delta.addScaledVector(_right, -speed);
+  if (keysDown.has('ArrowRight')) _delta.addScaledVector(_right,  speed);
+  if (keysDown.has('KeyZ'))       _delta.y +=  speed;
+  if (keysDown.has('KeyX'))       _delta.y += -speed;
+  if (_delta.lengthSq() > 0) { camera.position.add(_delta); controls.target.add(_delta); }
+}
+
+// ═══════════════════════════════════════════════════════════
+// RENDER LOOP
+// ═══════════════════════════════════════════════════════════
+const DRAW_INTERVAL = 1000 / DRAW_FPS;
+let lastDraw = 0;
+
+function animate(now) {
+  requestAnimationFrame(animate);
+  handleMovement();
+  controls.update();
+  if (now - lastDraw >= DRAW_INTERVAL) { lastDraw = now; rebuildBuffers(); }
+  renderer.render(scene, camera);
+}
+
+// ═══════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════
+(async () => {
+  const status = document.getElementById('status');
+
+  status.textContent = '⬤ building structure geometry…';
+  initPiecePoints();
+  buildWireframes();
+
+  // W=0..7 labels floating above each cube
+  for (let w=0; w<BSIZE; w++) {
+    const lbl = makeLabel(`W=${w}`);
+    lbl.position.set(w*CUBE_STEP+CUBE_SPAN/2, CUBE_SPAN+3.5, CUBE_SPAN/2);
+    scene.add(lbl);
+  }
+
+  status.textContent = '⬤ building starting board…';
+  board = await buildBoard();
+  dirty = true;
+  rebuildBuffers();
+
+  status.textContent = '⬤ starting 4D game on engine…';
+  try {
+    const r = await fetch(`${ENGINE}/new_game`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({dims:4, players:8, game_id:GAME_ID}),
+      signal: AbortSignal.timeout(5000),
+    });
+    const d = await r.json();
+    if (d.ok) {
+      board = await buildBoard();
+      alive = new Array(NP).fill(true);
+      turnNum = 0; capCount = 0; activePid = 0; dirty = true;
+      status.textContent = '⬤ 4D game started!';
+    }
+  } catch(e) {
+    status.textContent = '⬤ could not start game — engine may not be ready';
+    status.style.color = '#a33';
+    await new Promise(r=>setTimeout(r,2000));
+  }
+
+  document.getElementById('dl-log').addEventListener('click', () => {
+    const lines = ['turn,player,piece,capture,captured_piece,captured_player'];
+    fullLog.forEach((m,i) => {
+      lines.push([m.turn??i+1,`P${m.pid+1}`,m.sym,m.cap?1:0,m.cap?m.capSym:'',m.capPid!=null?`P${m.capPid+1}`:''].join(','));
+    });
+    const blob = new Blob([lines.join('\n')], {type:'text/csv'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `4d-chess-log-t${fullLog.length}-${Date.now()}.csv`;
+    a.click(); URL.revokeObjectURL(a.href);
+  });
+
+  gameLoop();
+  requestAnimationFrame(animate);
+})();
+</script>
+</body>
+</html>

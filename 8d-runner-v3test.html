@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>8D Chess Runner</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07090f;--bg2:#0d1020;--bg3:#111828;
+  --border:#1a2035;--gold:#c8a84b;--cyan:#3ecfcf;
+  --red:#e05060;--green:#3ecf7e;--muted:#4a5878;
+  --ink:#c8d0e0;--mono:'Share Tech Mono',monospace;
+}
+html,body{height:100%;background:var(--bg);color:var(--ink);font-family:var(--mono);font-size:13px}
+body{display:flex;flex-direction:column;overflow:hidden}
+
+/* ── Header ── */
+#hdr{
+  display:flex;align-items:center;gap:16px;padding:10px 18px;
+  background:var(--bg2);border-bottom:1px solid var(--border);flex-shrink:0;
+}
+#hdr h1{font-family:monospace;font-size:15px;color:var(--gold);letter-spacing:.12em;white-space:nowrap}
+#status-dot{width:9px;height:9px;border-radius:50%;background:var(--muted);flex-shrink:0;transition:background .3s}
+#status-dot.ok{background:var(--green)}
+#status-dot.err{background:var(--red)}
+#status-dot.warn{background:var(--gold)}
+#status-txt{color:var(--muted);font-size:11px}
+
+/* ── Config bar ── */
+#cfg{
+  display:flex;align-items:center;gap:12px;padding:8px 18px;
+  background:var(--bg3);border-bottom:1px solid var(--border);flex-shrink:0;flex-wrap:wrap;
+}
+.cfg-lbl{color:var(--muted);font-size:11px;white-space:nowrap}
+.cfg-num{
+  width:54px;background:var(--bg);border:1px solid var(--border);
+  color:var(--ink);font-family:var(--mono);font-size:12px;
+  padding:3px 6px;border-radius:3px;text-align:center;
+}
+.cfg-num:focus{outline:none;border-color:var(--cyan)}
+btn,button{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+  padding:4px 14px;border-radius:3px;cursor:pointer;border:1px solid;transition:all .12s;
+}
+#btn-start{background:transparent;border-color:var(--green);color:var(--green)}
+#btn-start:hover{background:rgba(62,207,126,.1)}
+#btn-start:disabled{opacity:.35;cursor:default}
+#btn-stop{background:transparent;border-color:var(--red);color:var(--red)}
+#btn-stop:hover{background:rgba(224,80,96,.1)}
+#btn-stop:disabled{opacity:.35;cursor:default}
+#btn-restart{background:transparent;border-color:var(--gold);color:var(--gold)}
+#btn-restart:hover{background:rgba(200,168,75,.1)}
+#cfg-sep{width:1px;height:22px;background:var(--border)}
+
+/* ── Stats bar ── */
+#stats{
+  display:flex;align-items:center;gap:0;padding:0;
+  background:var(--bg2);border-bottom:1px solid var(--border);flex-shrink:0;
+}
+.stat{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:6px 16px;border-right:1px solid var(--border);min-width:90px;
+}
+.stat-lbl{font-size:9px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.stat-val{font-size:16px;color:var(--cyan);font-weight:700;letter-spacing:.04em}
+.stat-val.gold{color:var(--gold)}
+.stat-val.green{color:var(--green)}
+.stat-val.red{color:var(--red)}
+.stat-val.dim{color:var(--muted)}
+
+/* ── Player strip ── */
+#players{
+  display:flex;gap:0;flex-shrink:0;overflow-x:auto;
+  background:var(--bg);border-bottom:1px solid var(--border);
+}
+.pl{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:4px 10px;border-right:1px solid var(--border);min-width:68px;
+  font-size:10px;transition:background .2s;
+}
+.pl.active{background:rgba(62,207,207,.08)}
+.pl.out{opacity:.35}
+.pl-name{font-size:10px;letter-spacing:.06em;white-space:nowrap}
+.pl-turns{color:var(--muted);font-size:9px}
+.pl-ms{color:var(--gold);font-size:9px}
+
+/* ── Log ── */
+#log-wrap{flex:1;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+#log{
+  flex:1;overflow-y:scroll;padding:6px 14px;
+  font-size:11.5px;line-height:1.6;
+  scroll-behavior:smooth;
+}
+#log::-webkit-scrollbar{width:4px}
+#log::-webkit-scrollbar-thumb{background:rgba(62,207,207,.15);border-radius:2px}
+.log-row{display:flex;gap:10px;align-items:baseline;border-bottom:1px solid rgba(26,32,53,.5);padding:1px 0}
+.log-row:hover{background:rgba(62,207,207,.02)}
+.log-n{color:var(--muted);font-size:10px;min-width:42px;text-align:right;flex-shrink:0}
+.log-p{min-width:28px;font-size:10px;font-weight:700;flex-shrink:0}
+.log-move{color:var(--ink);flex:1;font-size:11px;word-break:break-all}
+.log-ms{color:var(--muted);font-size:10px;text-align:right;flex-shrink:0;min-width:48px}
+.log-piece{color:var(--gold);font-size:11px;min-width:72px;flex-shrink:0;white-space:nowrap}
+.log-cap{color:var(--red);font-size:10px;margin-left:4px}
+.log-err{color:var(--red)}
+.log-info{color:var(--muted)}
+.log-ok{color:var(--green)}
+
+/* scrollbar-gutter for log so content doesn't shift */
+#log{scrollbar-gutter:stable}
+
+/* player colors */
+.pc0{color:#3ecfcf} .pc1{color:#c8a84b} .pc2{color:#7b68ee} .pc3{color:#3ecf7e}
+.pc4{color:#e05060} .pc5{color:#ff9f40} .pc6{color:#ff6eb4} .pc7{color:#a0d8ef}
+.pc8{color:#bfff00} .pc9{color:#ff4500} .pc10{color:#9acd32} .pc11{color:#dda0dd}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div id="hdr">
+  <h1>8D CHESS</h1>
+  <div id="status-dot"></div>
+  <div id="status-txt">connecting…</div>
+  <div style="flex:1"></div>
+  <div style="color:var(--muted);font-size:10px" id="engine-url">engine: 127.0.0.1:8767 (8D-py v3 parallel)</div>
+</div>
+
+<!-- Config -->
+<div id="cfg">
+  <span class="cfg-lbl">Dimensions</span>
+  <input class="cfg-num" id="inp-dim" type="number" min="2" max="8" value="8">
+  <span class="cfg-lbl">Players</span>
+  <input class="cfg-num" id="inp-plr" type="number" min="2" max="128" value="128" readonly style="opacity:.6;cursor:default">
+  <div class="cfg-sep"></div>
+  <span class="cfg-lbl">Speed</span>
+  <select id="inp-speed" class="cfg-num" style="width:90px;padding:2px 4px">
+    <option value="0">Instant</option>
+    <option value="80">Fast</option>
+    <option value="150">Medium</option>
+    <option value="300" selected>Normal</option>
+    <option value="700">Slow</option>
+    <option value="1500">Very slow</option>
+  </select>
+  <div class="cfg-sep"></div>
+  <button id="btn-start" onclick="startGame()">▶ START</button>
+  <button id="btn-stop"  onclick="stopGame()" disabled>■ STOP</button>
+  <button id="btn-restart" onclick="restartEngine()">↺ ENGINE</button>
+  <button id="btn-download" onclick="downloadLog()" style="background:transparent;border:1px solid var(--cyan);color:var(--cyan)">⬇ LOG</button>
+  <button id="btn-rawdump" onclick="dumpRawResponse()" style="background:transparent;border:1px solid var(--muted);color:var(--muted)">🔍 RAW</button>
+  <div style="flex:1"></div>
+  <span id="game-id-lbl" style="color:var(--muted);font-size:10px"></span>
+</div>
+
+<!-- Stats -->
+<div id="stats">
+  <div class="stat"><div class="stat-lbl">Turn</div><div class="stat-val dim" id="st-turn">—</div></div>
+  <div class="stat"><div class="stat-lbl">Player</div><div class="stat-val gold" id="st-player">—</div></div>
+  <div class="stat"><div class="stat-lbl">Turns/sec</div><div class="stat-val green" id="st-tps">—</div></div>
+  <div class="stat"><div class="stat-lbl">Avg ms</div><div class="stat-val" id="st-avg">—</div></div>
+  <div class="stat"><div class="stat-lbl">Last ms</div><div class="stat-val" id="st-last">—</div></div>
+  <div class="stat"><div class="stat-lbl">Ping</div><div class="stat-val" id="st-ping">—</div></div>
+  <div class="stat"><div class="stat-lbl">Errors</div><div class="stat-val" id="st-err">0</div></div>
+  <div class="stat"><div class="stat-lbl">Captures</div><div class="stat-val" id="st-cap">0</div></div>
+</div>
+
+<!-- Player strip -->
+<div id="players"></div>
+
+<!-- Log -->
+<div id="log-wrap">
+  <div id="log"></div>
+</div>
+
+<script>
+'use strict';
+
+const ENGINE = 'http://127.0.0.1:8767';  // Python 8D engine (128-player)
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let gameId     = null;
+let numDim     = 8;
+let numPlayers = 4;
+let curPlayer  = 0;
+let turnCount  = 0;
+let errCount   = 0;
+let capCount   = 0;
+let running    = false;
+let gameOver   = false;
+let pingMs     = -1;
+let startTime  = 0;
+let latencies  = [];          // ring of last 20 turn ms
+const MAX_LAT  = 20;
+let perPlayer  = [];          // [{turns, totalMs, lastMs, alive}]
+let autoScroll = true;
+let lastRawResponse = null;   // last full engine response for debug
+let logLines   = [];          // plain-text log (legacy, kept for logInfo rows)
+let logData    = [];          // structured move records for CSV export
+// logData entry: {n, pid, piece, from:[], to:[], cap_piece, cap_pid, ms}
+
+// ── Local piece tracker ───────────────────────────────────────────────────────
+// pieceMap: coordKey → {type, pid}   (coordKey = coords.join(','))
+let pieceMap = {};
+function coordKey(c) { return c.join(','); }
+function pieceMove(from, to) {
+  const k = coordKey(from);
+  const piece = pieceMap[k] || null;
+  delete pieceMap[k];
+  if (piece) pieceMap[coordKey(to)] = piece;
+  return piece;
+}
+function pieceAt(coords) { return pieceMap[coordKey(coords)] || null; }
+// Seed piece map from engine state blob (state.pieces or state.board)
+function seedPieceMap(stateBlob) {
+  pieceMap = {};
+  if (!stateBlob) return;
+  // format 1: {pieces: [{coords, type, pid}, ...]}
+  const arr = stateBlob.pieces || stateBlob.board || stateBlob;
+  if (!Array.isArray(arr)) return;
+  for (const p of arr) {
+    if (p && p.coords && p.type !== undefined) {
+      pieceMap[coordKey(p.coords)] = { type: p.type, pid: p.pid ?? p.player ?? null };
+    }
+  }
+}
+
+// ── Move-geometry inference ────────────────────────────────────────────────────
+// Only Knight is geometrically unambiguous. Everything else returns a move-type
+// label so the display is honest rather than guessing wrong piece names.
+function inferMoveType(from, to) {
+  if (!from || !to) return null;
+  const deltas  = from.map((v, i) => to[i] - v);
+  const abs     = deltas.map(Math.abs);
+  const nonZero = abs.filter(v => v > 0);
+  if (nonZero.length === 0) return null;
+
+  // Knight: L-shape (one axis ±2, another ±1, rest 0) — 100% unambiguous
+  const sorted = abs.slice().sort((a,b)=>a-b);
+  const top2   = sorted.slice(-2);
+  if (nonZero.length === 2 && top2[1] === 2 && top2[0] === 1) return 'Knight';
+
+  const d0 = abs[0] ?? 0, d1 = abs[1] ?? 0;
+  const maxD = Math.max(...abs);
+
+  if (nonZero.length === 1) {
+    // Pure straight line
+    return maxD === 1 ? 'Step' : `Straight×${maxD}`;
+  }
+  if (nonZero.length === 2 && d0 === d1) {
+    // Pure diagonal
+    return d0 === 1 ? 'Diag×1' : `Diag×${d0}`;
+  }
+  if (nonZero.length >= 3) return `Multi-D(${nonZero.length})`;
+  return `Mixed(${abs.filter(v=>v>0).join(',')})`;
+}
+
+// Returns a display label {sym, label} for use in the log.
+// Uses move geometry to name pieces as specifically as possible:
+//   Knight  → 100% certain (unique L-shape)
+//   Rook    → long straight (dist ≥ 3) — very unlikely to be King/Pawn
+//   Bishop  → long diagonal (dist ≥ 3) — very unlikely to be King/Pawn
+//   Queen   → straight or diagonal dist 2 (ambiguous rook/queen/pawn-capture)
+//   Pawn    → straight forward 1-2 from rank 1 or 6 (opening pawn push)
+//   King    → single step any direction (late game, conservative label)
+function moveTypeLabel(from, to) {
+  const t = inferMoveType(from, to);
+  if (!t) return null;
+  if (t === 'Knight') return { sym:'♞', label:'Knight' };
+
+  const abs  = from.map((v,i) => Math.abs(to[i] - v));
+  const dx   = abs[0] ?? 0;
+  const dy   = abs[1] ?? 0;
+  const dist = Math.max(dx, dy);
+  const isDiag     = dx === dy && dx > 0;
+  const isStraight = (dx === 0 || dy === 0) && dist > 0;
+
+  // Long-range moves — almost certainly rook/bishop/queen
+  if (dist >= 3) {
+    if (isDiag)     return { sym:'♝', label:'Bishop' };
+    if (isStraight) return { sym:'♜', label:'Rook'   };
+    return { sym:'♛', label:'Queen' };
+  }
+
+  // dist 2 straight — pawn push (rank 1 or 6) OR rook/queen
+  if (dist === 2 && isStraight) {
+    const fromRow = from[1] ?? -1;
+    if (dy === 2 && dx === 0 && (fromRow === 1 || fromRow === 6))
+      return { sym:'♟', label:'Pawn' };
+    return { sym:'♜', label:'Rook' };
+  }
+
+  // dist 2 diagonal
+  if (dist === 2 && isDiag)   return { sym:'♝', label:'Bishop' };
+
+  // dist 1 — single step, could be King, Pawn, or any piece moving 1 square
+  if (dist === 1) {
+    if (isStraight) return { sym:'♚', label:'King/Pawn' };
+    if (isDiag)     return { sym:'♚', label:'King/Bish' };
+  }
+
+  // Mixed or multi-D
+  if (t.startsWith('Multi')) return { sym:'✦', label:t };
+  return { sym:'?', label:t };
+}
+
+// ── Piece helpers ─────────────────────────────────────────────────────────────
+const PIECE_SYMS = {
+  k:'♚', q:'♛', r:'♜', b:'♝', n:'♞', p:'♟',
+  king:'♚', queen:'♛', rook:'♜', bishop:'♝', knight:'♞', pawn:'♟',
+};
+function pieceLabel(t) {
+  if (!t) return '';
+  const s = PIECE_SYMS[String(t).toLowerCase()];
+  const name = String(t).charAt(0).toUpperCase() + String(t).slice(1).toLowerCase();
+  return s ? s + '\u202f' + name : name;
+}
+
+// ── Dimension → player count mapping ─────────────────────────────────────────
+// User formula: 2D=2, 3D=4, 4D=8, 5D=16, 6D=32, 7D=64, 8D=128
+// Python engine supports all 128 — no cap needed.
+function playersForDim(d) { return Math.pow(2, d - 1); }
+
+// ── DOM refs ──────────────────────────────────────────────────────────────────
+const $dot     = document.getElementById('status-dot');
+const $stTxt   = document.getElementById('status-txt');
+const $log     = document.getElementById('log');
+const $stTurn  = document.getElementById('st-turn');
+const $stPlayer= document.getElementById('st-player');
+const $stTps   = document.getElementById('st-tps');
+const $stAvg   = document.getElementById('st-avg');
+const $stLast  = document.getElementById('st-last');
+const $stPing  = document.getElementById('st-ping');
+const $stErr   = document.getElementById('st-err');
+const $stCap   = document.getElementById('st-cap');
+const $players = document.getElementById('players');
+const $btnStart= document.getElementById('btn-start');
+const $btnStop = document.getElementById('btn-stop');
+const $gameId  = document.getElementById('game-id-lbl');
+const $inpDim  = document.getElementById('inp-dim');
+const $inpPlr  = document.getElementById('inp-plr');
+
+// ── HTTP helpers ──────────────────────────────────────────────────────────────
+async function get(path, timeout=3000) {
+  const r = await fetch(ENGINE + path, { signal: AbortSignal.timeout(timeout) });
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  return r.json();
+}
+async function post(path, body, timeout=30000) {
+  const r = await fetch(ENGINE + path, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(timeout),
+  });
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  return r.json();
+}
+
+// ── Ping / status ─────────────────────────────────────────────────────────────
+async function ping() {
+  const t0 = performance.now();
+  try {
+    await get('/ping', 2000);
+    pingMs = Math.round(performance.now() - t0);
+    setStatus('ok', `engine online  ${pingMs}ms`);
+    return true;
+  } catch {
+    pingMs = -1;
+    setStatus('err', 'engine offline');
+    return false;
+  }
+}
+
+function setStatus(state, msg) {
+  $dot.className = state === 'ok' ? 'ok' : state === 'warn' ? 'warn' : 'err';
+  $stTxt.textContent = msg;
+  $stPing.textContent = pingMs >= 0 ? pingMs + 'ms' : '—';
+}
+
+// ── Log helpers ───────────────────────────────────────────────────────────────
+let logCount = 0;
+
+// logRow now accepts raw from/to coord arrays for structured CSV export
+function logRow(pid, piece, moveStr, ms, cap, cls, fromCoords, toCoords, capPid) {
+  logCount++;
+  const row = document.createElement('div');
+  row.className = 'log-row';
+  const pcls      = pid >= 0 ? 'log-p pc' + (pid % 12) : 'log-p';
+  const pieceHtml = piece ? `<span class="log-piece">${piece}</span>` : '<span class="log-piece"></span>';
+  const capHtml   = cap   ? `<span class="log-cap"> ✗ ${cap}</span>` : '';
+  row.innerHTML =
+    `<span class="log-n">#${logCount}</span>` +
+    `<span class="${pcls}">${pid >= 0 ? 'P'+(pid+1) : ''}</span>` +
+    `${pieceHtml}` +
+    `<span class="log-move ${cls||''}">${moveStr}${capHtml}</span>` +
+    `<span class="log-ms">${ms != null ? ms+'ms' : ''}</span>`;
+  $log.appendChild(row);
+
+  // Structured record for CSV
+  logData.push({
+    n:        logCount,
+    pid:      pid + 1,
+    piece:    piece || '',
+    from:     fromCoords || null,
+    to:       toCoords   || null,
+    cap:      cap  || '',
+    cap_pid:  capPid != null ? capPid + 1 : '',
+    ms:       ms != null ? ms : '',
+  });
+  if (autoScroll) $log.scrollTop = $log.scrollHeight;
+}
+
+function logInfo(msg) {
+  const row = document.createElement('div');
+  row.className = 'log-row';
+  row.innerHTML = `<span class="log-n">#${++logCount}</span><span class="log-p"></span><span class="log-piece"></span><span class="log-move log-info">${msg}</span><span class="log-ms"></span>`;
+  $log.appendChild(row);
+  logLines.push(msg);   // info lines still go to text array
+  if (autoScroll) $log.scrollTop = $log.scrollHeight;
+}
+
+// ── Log download — compact CSV ────────────────────────────────────────────────
+function downloadLog() {
+  const NDIM = 8;
+  // Header row
+  const dimCols = Array.from({length: NDIM}, (_,i) => ['X','Y','Z','W','V','U','T','S'][i]);
+  const fromCols = dimCols.map(d => 'f'+d);  // fX fY fZ fW fV fU fT fS
+  const toCols   = dimCols.map(d => 't'+d);  // tX tY tZ tW tV tU tT tS
+  const hdr = ['n','pid','piece', ...fromCols, ...toCols, 'cap','cap_pid','ms'].join(',');
+
+  const rows = logData.map(r => {
+    const f = r.from ? r.from.concat(Array(NDIM).fill('')).slice(0, NDIM) : Array(NDIM).fill('');
+    const t = r.to   ? r.to.concat(Array(NDIM).fill('')).slice(0, NDIM)   : Array(NDIM).fill('');
+    // Escape piece/cap fields (may contain commas if multi-word)
+    const piece  = r.piece  ? `"${r.piece}"`  : '';
+    const cap    = r.cap    ? `"${r.cap}"`    : '';
+    return [r.n, r.pid, piece, ...f, ...t, cap, r.cap_pid, r.ms].join(',');
+  });
+
+  // Compact metadata comment block at top (# prefix so pandas/Excel skip it)
+  const meta = [
+    `# 8D Chess  game=${gameId||'?'}  dims=${numDim}  players=${numPlayers}`,
+    `# turns=${turnCount}  captures=${capCount}  errors=${errCount}`,
+    `# exported=${new Date().toISOString()}`,
+  ].join('\n');
+
+  const csv  = meta + '\n' + hdr + '\n' + rows.join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const a    = document.createElement('a');
+  a.href     = URL.createObjectURL(blob);
+  a.download = `8d-chess-${gameId||'game'}-t${turnCount}.csv`;
+  a.click();
+}
+
+// ── Raw response dump ─────────────────────────────────────────────────────────
+async function dumpRawResponse() {
+  if (!gameId) { logInfo('No game running'); return; }
+  logInfo('Fetching raw response for current player…');
+  try {
+    const data = await post('/apply_ai_turn', { player: curPlayer, game_id: gameId });
+    lastRawResponse = data;
+    // Show top-level keys and sizes
+    const keys = Object.keys(data).map(k => {
+      const v = data[k];
+      const sz = v == null ? 'null' :
+                 typeof v === 'object' ? JSON.stringify(v).length + 'B' :
+                 String(v);
+      return `${k}: ${sz}`;
+    });
+    logInfo('RAW KEYS → ' + keys.join('  |  '));
+    // Show turn sub-keys if present
+    if (data.turn) {
+      const tk = Object.keys(data.turn).map(k => {
+        const v = data.turn[k];
+        return `turn.${k}=${typeof v==='object'?JSON.stringify(v):v}`;
+      });
+      logInfo('TURN → ' + tk.join('  |  '));
+    }
+    // Show move sub-keys
+    const mv = (data.turn&&data.turn.move)||data.move;
+    if (mv) {
+      logInfo('MOVE → ' + JSON.stringify(mv));
+    }
+  } catch(e) {
+    logInfo('RAW dump error: ' + e.message);
+  }
+}
+
+// ── Player strip ──────────────────────────────────────────────────────────────
+function buildPlayerStrip() {
+  $players.innerHTML = '';
+  for (let i = 0; i < numPlayers; i++) {
+    const el = document.createElement('div');
+    el.className = 'pl pc' + (i % 12);
+    el.id = 'pl-' + i;
+    el.innerHTML = `<div class="pl-name pc${i%12}">P${i+1}</div><div class="pl-turns" id="plt-${i}">0 turns</div><div class="pl-ms" id="plms-${i}">—</div>`;
+    $players.appendChild(el);
+  }
+}
+function updatePlayerStrip() {
+  for (let i = 0; i < numPlayers; i++) {
+    const el = document.getElementById('pl-' + i);
+    if (!el) continue;
+    el.className = 'pl pc' + (i % 12) + (i === curPlayer ? ' active' : '') + (!perPlayer[i]?.alive ? ' out' : '');
+    const pt = document.getElementById('plt-' + i);
+    const pm = document.getElementById('plms-' + i);
+    if (pt) pt.textContent = (perPlayer[i]?.turns || 0) + ' turns';
+    if (pm) pm.textContent = perPlayer[i]?.lastMs != null ? perPlayer[i].lastMs + 'ms' : '—';
+  }
+}
+
+// ── Stats bar update ──────────────────────────────────────────────────────────
+function updateStats() {
+  $stTurn.textContent  = turnCount || '—';
+  $stPlayer.textContent= turnCount ? 'P' + (curPlayer + 1) : '—';
+  $stErr.textContent   = errCount;
+  $stCap.textContent   = capCount;
+  $stPing.textContent  = pingMs >= 0 ? pingMs + 'ms' : '—';
+
+  // turns/sec
+  if (startTime && turnCount > 0) {
+    const elapsed = (performance.now() - startTime) / 1000;
+    $stTps.textContent = elapsed > 0 ? (turnCount / elapsed).toFixed(2) : '—';
+  }
+
+  // avg / last latency
+  if (latencies.length) {
+    const avg = Math.round(latencies.reduce((a,b)=>a+b,0) / latencies.length);
+    $stAvg.textContent = avg + 'ms';
+    $stLast.textContent= latencies[latencies.length-1] + 'ms';
+    // color code
+    const color = avg < 200 ? 'green' : avg < 1000 ? '' : 'red';
+    $stAvg.className   = 'stat-val ' + color;
+    $stLast.className  = 'stat-val ' + color;
+  }
+}
+
+// ── Start game ────────────────────────────────────────────────────────────────
+async function startGame() {
+  if (running) return;
+  numDim     = Math.max(2, Math.min(8, parseInt($inpDim.value) || 8));
+  numPlayers = playersForDim(numDim);
+
+  $btnStart.disabled = true;
+  $btnStop.disabled  = false;
+  $log.innerHTML = '';
+  logCount   = 0;
+  logLines   = [];
+  logData    = [];
+  turnCount  = 0;
+  errCount   = 0;
+  capCount   = 0;
+  curPlayer  = 0;
+  latencies  = [];
+  gameOver   = false;
+  gameId     = null;
+  perPlayer  = Array.from({length: numPlayers}, () => ({turns:0, totalMs:0, lastMs:null, alive:true}));
+
+  setStatus('warn', 'pinging engine…');
+  const alive = await ping();
+  if (!alive) {
+    logInfo('ERROR: engine not reachable at ' + ENGINE);
+    $btnStart.disabled = false;
+    $btnStop.disabled  = true;
+    return;
+  }
+
+  buildPlayerStrip();
+  setStatus('warn', `starting ${numDim}D ${numPlayers}-player game…`);
+  logInfo(`Starting ${numDim}D chess, ${numPlayers} players…`);
+
+  try {
+    const data = await post('/new_game', { dimensions: numDim, players: numPlayers }, 15000);
+    if (data.ok === false) throw new Error(data.error || 'engine rejected new_game');
+    gameId = (data.state && data.state.gameId) || data.gameId || 'game1';
+    // Engine may cap player count — read actual value back
+    const actualPlayers = data.players || (data.state && data.state.players) || (data.state && data.state.num_players) || numPlayers;
+    if (actualPlayers !== numPlayers) {
+      logInfo(`Engine capped players: ${numPlayers} → ${actualPlayers}`);
+      numPlayers = actualPlayers;
+      $inpPlr.value = numPlayers;
+      perPlayer = Array.from({length: numPlayers}, () => ({turns:0, totalMs:0, lastMs:null, alive:true}));
+      buildPlayerStrip();
+    }
+    $gameId.textContent = 'game: ' + gameId;
+    // Seed piece map from new_game response
+    seedPieceMap(data.state || data.board || data.pieces || null);
+    // If new_game didn't include board state, try fetching it separately
+    if (Object.keys(pieceMap).length === 0) {
+      try {
+        const sd = await post('/state', { game_id: gameId }, 10000);
+        seedPieceMap(sd.state || sd.board || sd.pieces || sd || null);
+      } catch { /* /state may not exist */ }
+    }
+    // Try additional endpoints if piece map still empty
+    if (Object.keys(pieceMap).length === 0) {
+      for (const ep of ['/board', '/get_state', '/game_state', '/pieces']) {
+        try {
+          const sd = await post(ep, { game_id: gameId }, 4000);
+          seedPieceMap(sd.state || sd.board || sd.pieces || sd || null);
+          if (Object.keys(pieceMap).length > 0) { logInfo(`Pieces from ${ep}: ${Object.keys(pieceMap).length}`); break; }
+        } catch { /* try next */ }
+      }
+    }
+    logInfo(`Game started — id:${gameId}  pieces:${Object.keys(pieceMap).length}${Object.keys(pieceMap).length===0?' (geometry inference active)':''}`);
+    setStatus('ok', `${numDim}D ${numPlayers}p  game running`);
+  } catch(e) {
+    logInfo('ERROR starting game: ' + e.message);
+    setStatus('err', 'start failed: ' + e.message);
+    $btnStart.disabled = false;
+    $btnStop.disabled  = true;
+    return;
+  }
+
+  running   = true;
+  startTime = performance.now();
+  updateStats();
+  runLoop();
+}
+
+// ── Stop ──────────────────────────────────────────────────────────────────────
+function stopGame() {
+  running = false;
+  $btnStop.disabled  = true;
+  $btnStart.disabled = false;
+  setStatus('warn', 'stopped');
+  logInfo('— game stopped —');
+}
+
+// ── Restart engine ────────────────────────────────────────────────────────────
+async function restartEngine() {
+  stopGame();
+  setStatus('warn', 'restarting engine…');
+  try {
+    await post('/restart', {}, 5000);
+    logInfo('Engine restart requested');
+  } catch { /* endpoint may not exist, that's fine */ }
+  await new Promise(r => setTimeout(r, 1000));
+  await ping();
+}
+
+// ── Main loop ─────────────────────────────────────────────────────────────────
+function getThinkMs() {
+  return parseInt(document.getElementById('inp-speed')?.value ?? 250) || 0;
+}
+
+async function runLoop() {
+  while (running && !gameOver) {
+    await doOneTurn();
+    const delay = getThinkMs();
+    if (delay > 0) await new Promise(r => setTimeout(r, delay));
+  }
+}
+
+async function doOneTurn() {
+  const pid = curPlayer;
+  const t0  = performance.now();
+
+  try {
+    const data = await post('/apply_ai_turn', {
+      player:  pid,
+      game_id: gameId,
+    }, 60000);
+
+    const ms = Math.round(performance.now() - t0);
+    latencies.push(ms);
+    if (latencies.length > MAX_LAT) latencies.shift();
+    lastRawResponse = data;
+
+    // extract move from compact or full response
+    const turn = data.turn || {};
+    const move = turn.move || data.move || null;
+
+    // detect game over
+    if (data.ok === false || data.game_over || turn.game_over) {
+      const winner = data.winner ?? turn.winner ?? null;
+      gameOver = true;
+      running  = false;
+      const msg = winner != null ? `GAME OVER — Winner: P${winner+1}` : 'GAME OVER';
+      logInfo(msg);
+      setStatus('ok', msg);
+      $btnStop.disabled  = true;
+      $btnStart.disabled = false;
+      updateStats();
+      return;
+    }
+
+    if (!data.ok && data.ok !== undefined) {
+      throw new Error(data.error || 'engine returned ok=false');
+    }
+
+    // build move string + piece tracking
+    let moveStr  = '(no move)';
+    let pieceStr = '';
+    let capStr   = null;
+
+    if (move && move.from && move.to) {
+      const fmtCoord = c => '[' + c.join(',') + ']';
+
+      // piece type from engine (authoritative if present)
+      const engPieceType =
+        turn.piece_type || turn.pieceType || turn.piece ||
+        move.piece_type || move.pieceType || move.piece || null;
+      const engCapType =
+        turn.captured_type || turn.capturedType || turn.captured ||
+        move.capType || move.cap_type || null;
+
+      // look up destination and source in local map BEFORE applying move
+      const localCap   = pieceAt(move.to);    // what's being captured
+      const localPiece = pieceAt(move.from);  // what's moving
+
+      // apply move to local map (move piece, remove captured)
+      delete pieceMap[coordKey(move.from)];
+      delete pieceMap[coordKey(move.to)];
+      if (localPiece) pieceMap[coordKey(move.to)] = localPiece;
+      // if engine returned updated state, reseed
+      if (data.state) seedPieceMap(data.state);
+
+      // determine piece being moved: engine > local map > move-type geometry
+      const mtl = moveTypeLabel(move.from, move.to);
+      let pieceType = engPieceType || localPiece?.type || null;
+      if (pieceType) {
+        pieceStr = pieceLabel(pieceType);
+      } else if (mtl) {
+        pieceStr = mtl.sym + '\u202f' + mtl.label;
+      }
+
+      // determine captured piece: engine > local map
+      const capType = engCapType || localCap?.type || null;
+      const isCapture = !!(capType || move.capture || move.cap || turn.capture);
+      moveStr = fmtCoord(move.from) + ' → ' + fmtCoord(move.to);
+
+      if (isCapture) {
+        capStr = capType ? pieceLabel(capType) : (localCap ? `P${(localCap.pid??'')+1}` : '×');
+        capCount++;
+      }
+
+      // per-player tracking
+      const pp = perPlayer[pid];
+      pp.turns++;
+      pp.totalMs += ms;
+      pp.lastMs   = ms;
+
+      turnCount++;
+      logRow(pid, pieceStr, moveStr, ms, capStr, null, move.from, move.to,
+             turn.captured_pid ?? data.captured_pid ?? (localCap ? localCap.pid : null));
+    } else {
+      if (turn.pass || data.pass) moveStr = '(pass)';
+
+      // per-player tracking
+      const pp = perPlayer[pid];
+      pp.turns++;
+      pp.totalMs += ms;
+      pp.lastMs   = ms;
+
+      turnCount++;
+      logRow(pid, pieceStr, moveStr, ms, capStr, null,
+             (move && move.from) ? move.from : null,
+             (move && move.to)   ? move.to   : null,
+             turn.captured_pid ?? data.captured_pid ?? null);
+    }
+
+    // advance player
+    curPlayer = (curPlayer + 1) % numPlayers;
+
+    // update UI
+    updatePlayerStrip();
+    updateStats();
+
+  } catch(e) {
+    const ms = Math.round(performance.now() - t0);
+    errCount++;
+    logRow(pid, '', 'ERROR: ' + e.message, ms, null, 'log-err', null, null, null);
+    updateStats();
+
+    // back-off on errors
+    if (!running) return;
+    await new Promise(r => setTimeout(r, 1500));
+
+    // re-ping
+    const alive = await ping();
+    if (!alive) {
+      logInfo('Engine went offline — retrying…');
+      await new Promise(r => setTimeout(r, 3000));
+    }
+  }
+}
+
+// ── Dimension input → auto-fill players ──────────────────────────────────────
+$inpDim.addEventListener('input', () => {
+  const d = Math.max(2, Math.min(8, parseInt($inpDim.value) || 8));
+  $inpPlr.value = playersForDim(d);
+});
+
+// ── Auto-scroll toggle (click log to pause) ───────────────────────────────────
+$log.addEventListener('wheel', () => {
+  const atBottom = $log.scrollHeight - $log.scrollTop - $log.clientHeight < 40;
+  autoScroll = atBottom;
+});
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+(async () => {
+  // Sync players field to current dim on load (capped at 12)
+  $inpPlr.value = playersForDim(Math.max(2, Math.min(8, parseInt($inpDim.value) || 8)));
+  // Also clamp the stored default
+  numPlayers = parseInt($inpPlr.value);
+
+  const alive = await ping();
+  if (alive) {
+    logInfo('Engine online — configure and press START, or auto-starting…');
+    // Auto-start with defaults after a brief moment so user can see the page
+    setTimeout(() => { if (!running) startGame(); }, 400);
+  } else {
+    logInfo('Engine offline. Start chess_engine.exe then press ↺ ENGINE or refresh.');
+  }
+})();
+</script>
+</body>
+</html>

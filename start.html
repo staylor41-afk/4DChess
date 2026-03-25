@@ -180,7 +180,19 @@ select#human-count:focus { border-color: #3070cc; }
 <h1>ND Chess</h1>
 <div class="subtitle">select dimensions · set human players · launch</div>
 
-<div class="cards" id="cards">
+<!-- ── Mode tabs ─────────────────────────────────────────── -->
+<div style="display:flex;gap:12px;margin-bottom:28px;">
+  <button id="tab-game"   onclick="setMode('game')"
+    style="background:#0a1628;border:1px solid #2a50a0;color:#5090ff;font-family:'Courier New',monospace;font-size:11px;padding:5px 18px;border-radius:3px;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;">
+    ♚ GAME
+  </button>
+  <button id="tab-puzzle" onclick="setMode('puzzle')"
+    style="background:#060c1a;border:1px solid #1e3060;color:#2a4880;font-family:'Courier New',monospace;font-size:11px;padding:5px 18px;border-radius:3px;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;">
+    ✦ PUZZLES
+  </button>
+</div>
+
+<div id="cards">
   <div class="card d2" data-dims="2" data-np="2">
     <div class="card-dim">2D</div>
     <div class="card-layout">Classic board<br>8 × 8</div>
@@ -233,9 +245,68 @@ select#human-count:focus { border-color: #3070cc; }
   <button class="launch-btn" id="launch" disabled>▶ LAUNCH</button>
 </div>
 
-<div class="legend">
+<!-- ── Puzzle mode controls (hidden by default) ───────── -->
+<div id="puzzle-controls" style="display:none;flex-direction:column;align-items:center;gap:18px;">
+  <div style="font-size:10px;color:#2a3858;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;">
+    COLLAPSE PUZZLES — every move must be a capture — last piece wins
+  </div>
+  <!-- Puzzle dimension cards (same visual style, no player count) -->
+  <div class="cards" id="puzzle-cards">
+    <div class="card d2" data-dims="2" onclick="launchPuzzle(2)" style="cursor:pointer">
+      <div class="card-dim">2D</div>
+      <div class="card-layout">Classic board<br>8 × 8</div>
+      <div class="card-syms">♟♜♞</div>
+      <div class="card-players">all piece types</div>
+    </div>
+    <div class="card d3" data-dims="3" onclick="launchPuzzle(3)" style="cursor:pointer">
+      <div class="card-dim">3D</div>
+      <div class="card-layout">8×8×8 cube<br>3 axes</div>
+      <div class="card-syms">♟♜♞</div>
+      <div class="card-players">Z depth</div>
+    </div>
+    <div class="card d4" data-dims="4" onclick="launchPuzzle(4)" style="cursor:pointer">
+      <div class="card-dim">4D</div>
+      <div class="card-layout">Row of cubes<br>4 axes</div>
+      <div class="card-syms">♟♜♞</div>
+      <div class="card-players">W axis</div>
+    </div>
+    <div class="card d5" data-dims="5" onclick="launchPuzzle(5)" style="cursor:pointer">
+      <div class="card-dim">5D</div>
+      <div class="card-layout">Wall of cubes<br>5 axes</div>
+      <div class="card-syms">♟♜♞</div>
+      <div class="card-players">W+V axes</div>
+    </div>
+    <div class="card d6" data-dims="6" onclick="launchPuzzle(6)" style="cursor:pointer">
+      <div class="card-dim">6D</div>
+      <div class="card-layout">One building<br>6 axes</div>
+      <div class="card-syms">♟♜♞</div>
+      <div class="card-players">W+V+U axes</div>
+    </div>
+    <div class="card d7" data-dims="7" onclick="launchPuzzle(7)" style="cursor:pointer">
+      <div class="card-dim">7D</div>
+      <div class="card-layout">8-bldg strip<br>7 axes</div>
+      <div class="card-syms">♟♜♞</div>
+      <div class="card-players">+T axis</div>
+    </div>
+    <div class="card d8" data-dims="8" onclick="launchPuzzle(8)" style="cursor:pointer">
+      <div class="card-dim">8D</div>
+      <div class="card-layout">Full city<br>8 axes</div>
+      <div class="card-syms">♟♜♞</div>
+      <div class="card-players">+S axis</div>
+    </div>
+  </div>
+  <div style="font-size:10px;color:#1e3060;letter-spacing:.06em;">
+    click a dimension card to launch puzzle mode with default settings
+  </div>
+</div>
+
+<div class="legend" id="game-legend">
   ↑↓←→ strafe &nbsp;·&nbsp; Z/X up/down &nbsp;·&nbsp; R toggle orbit &nbsp;·&nbsp; T/Y/U zoom levels<br>
   Human: click piece → see legal moves → click destination
+</div>
+<div class="legend" id="puzzle-legend" style="display:none">
+  every move must be a capture &nbsp;·&nbsp; reduce to 1 piece to win<br>
+  difficulty · piece count · hints all configurable in the puzzle UI
 </div>
 
 <script>
@@ -282,6 +353,31 @@ document.addEventListener('keydown', e => {
 // Pre-select 8D
 const d8 = document.querySelector('.card[data-dims="8"]');
 if (d8) d8.click();
+
+// ── Mode switching ────────────────────────────────────────────────────────
+let currentMode = 'game';
+
+function setMode(mode) {
+  currentMode = mode;
+  const isGame = mode === 'game';
+
+  // Cards / controls visibility
+  document.getElementById('cards').style.display           = isGame ? '' : 'none';
+  document.querySelector('.controls').style.display        = isGame ? '' : 'none';
+  document.getElementById('game-legend').style.display     = isGame ? '' : 'none';
+  document.getElementById('puzzle-controls').style.display = isGame ? 'none' : 'flex';
+  document.getElementById('puzzle-legend').style.display   = isGame ? 'none' : '';
+
+  // Tab button styles
+  const activeStyle   = 'background:#0a1628;border:1px solid #2a50a0;color:#5090ff;';
+  const inactiveStyle = 'background:#060c1a;border:1px solid #1e3060;color:#2a4880;';
+  document.getElementById('tab-game').style.cssText   += isGame  ? activeStyle : inactiveStyle;
+  document.getElementById('tab-puzzle').style.cssText += !isGame ? activeStyle : inactiveStyle;
+}
+
+function launchPuzzle(dims) {
+  window.location.href = `puzzle.html?dims=${dims}`;
+}
 </script>
 </body>
 </html>

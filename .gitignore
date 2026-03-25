@@ -1,7 +1,7 @@
 # Electron
 electron/node_modules/
 electron/dist/
-electron/electron-out.log
+electron-out.log
 
 # Python
 __pycache__/
@@ -16,7 +16,10 @@ build_output.txt
 
 # Game data / logs (large, auto-generated)
 *.csv
-*.txt
+# *.txt — intentionally excluded; CMakeLists.txt and build_output.txt handled below
+build_output.txt
+electron/electron-out.log
+game_log_*.txt
 
 # OS
 .DS_Store

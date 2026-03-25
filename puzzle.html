@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ND Collapse Puzzle</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background:#010308; color:#8aa; font-family:'Courier New',monospace;
+  height:100vh; display:flex; flex-direction:column; overflow:hidden;
+}
+/* ── top bar ── */
+#topbar {
+  display:flex; align-items:center; gap:14px; padding:8px 16px;
+  background:#050c1a; border-bottom:1px solid #0f1e38; flex-shrink:0;
+  flex-wrap:wrap;
+}
+#topbar h1 { font-size:15px; letter-spacing:.16em; color:#a060ff;
+  text-shadow:0 0 20px #6030cc88; text-transform:uppercase; white-space:nowrap; }
+#backBtn { background:none; border:1px solid #1a2a50; color:#4a6090; padding:4px 10px;
+  font:inherit; font-size:11px; cursor:pointer; border-radius:3px; letter-spacing:.08em; }
+#backBtn:hover { border-color:#3a5090; color:#7a90c0; }
+.sep { flex:1; }
+#statusLine { font-size:11px; color:#2a4060; letter-spacing:.08em; white-space:nowrap; }
+
+/* ── main layout ── */
+#layout { display:flex; flex:1; overflow:hidden; }
+
+/* ── left panel ── */
+#leftPanel {
+  width:260px; flex-shrink:0; background:#040a18; border-right:1px solid #0c1830;
+  padding:14px 12px; overflow-y:auto; display:flex; flex-direction:column; gap:10px;
+}
+.panel-section { display:flex; flex-direction:column; gap:6px; }
+.panel-label { font-size:10px; color:#2a3858; letter-spacing:.14em; text-transform:uppercase; }
+.btn-group { display:flex; flex-wrap:wrap; gap:4px; }
+.dim-btn {
+  padding:5px 10px; font:inherit; font-size:11px; cursor:pointer;
+  border-radius:3px; border:1px solid #0f1e38; background:#060c1a;
+  transition:all .15s; letter-spacing:.04em;
+}
+.dim-btn:hover { filter:brightness(1.4); }
+.dim-btn.active { filter:brightness(1.6); box-shadow:0 0 10px currentColor; border-color:currentColor; }
+.diff-btn {
+  flex:1; padding:5px 8px; font:inherit; font-size:11px; cursor:pointer;
+  border-radius:3px; border:1px solid #0f1e38; background:#060c1a;
+  color:#6080a0; transition:all .15s; letter-spacing:.04em;
+}
+.diff-btn:hover { border-color:#2a4080; color:#8aaccc; }
+.diff-btn.active { border-color:#4060a0; color:#c0d8ff; background:#0a1428; box-shadow:0 0 8px #204060; }
+.slider-row { display:flex; align-items:center; gap:8px; }
+.slider-row input { flex:1; accent-color:#4060a0; }
+.slider-val { font-size:11px; color:#4060a0; min-width:20px; text-align:right; }
+#generateBtn {
+  width:100%; padding:9px; font:inherit; font-size:12px; cursor:pointer;
+  border-radius:4px; border:1px solid #2040a0; background:#0a1848;
+  color:#80a8ff; letter-spacing:.1em; text-transform:uppercase;
+  transition:all .18s;
+}
+#generateBtn:hover { background:#102060; box-shadow:0 0 16px #1030803a; }
+#generateBtn:active { transform:scale(.98); }
+#generateBtn:disabled { opacity:.4; cursor:not-allowed; }
+
+.stat-row { display:flex; justify-content:space-between; align-items:center; }
+.stat-label { font-size:10px; color:#1a2a48; letter-spacing:.1em; text-transform:uppercase; }
+.stat-val { font-size:14px; color:#4a6888; font-weight:bold; }
+
+.action-btn {
+  flex:1; padding:7px 8px; font:inherit; font-size:11px; cursor:pointer;
+  border-radius:3px; border:1px solid #1a2840; background:#060c1a;
+  color:#4a6888; letter-spacing:.06em; transition:all .15s;
+}
+.action-btn:hover { border-color:#304060; color:#7a9ab8; }
+.action-btn:disabled { opacity:.3; cursor:not-allowed; }
+
+/* ── center board area ── */
+#boardArea {
+  flex:1; display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden;
+}
+#threeCanvas { display:block; width:100%; height:100%; }
+
+/* ── 2D grid board ── */
+#board2d {
+  display:none;
+}
+.cell {
+  width:56px; height:56px; display:flex; align-items:center; justify-content:center;
+  position:relative; cursor:default; font-size:32px; line-height:1;
+  transition:background .12s, box-shadow .12s;
+}
+.cell.dark  { background:#0a1628; }
+.cell.light { background:#162444; }
+.cell.capture-target {
+  background:#0a2a10 !important;
+  box-shadow:inset 0 0 14px #00ff6044, inset 0 0 4px #00cc4022;
+  cursor:pointer;
+}
+.cell.piece-cell { cursor:pointer; }
+.piece-glyph {
+  user-select:none; pointer-events:none;
+  filter:drop-shadow(0 0 4px currentColor);
+  position:relative; z-index:1;
+}
+.piece-selected .piece-glyph {
+  filter:drop-shadow(0 0 8px currentColor) drop-shadow(0 0 16px currentColor);
+}
+.piece-selected::after {
+  content:''; position:absolute; inset:3px; border-radius:50%;
+  border:2px solid currentColor; opacity:.7;
+}
+
+/* ── right panel ── */
+#rightPanel {
+  width:190px; flex-shrink:0; background:#040a18; border-left:1px solid #0c1830;
+  padding:12px 10px; overflow-y:auto; display:flex; flex-direction:column; gap:10px;
+}
+#moveHistory { display:flex; flex-direction:column; gap:3px; }
+.move-entry {
+  font-size:10px; color:#2a3858; letter-spacing:.04em; padding:2px 4px;
+  border-left:2px solid #0f1e38;
+}
+.move-entry.latest { color:#4a6888; border-left-color:#2a4070; }
+#capturedList { display:flex; flex-wrap:wrap; gap:4px; }
+.cap-piece { font-size:20px; opacity:.5;
+  filter:drop-shadow(0 0 3px currentColor); }
+
+/* ── overlays ── */
+#overlay {
+  display:none; position:absolute; inset:0; background:#010308cc;
+  align-items:center; justify-content:center; z-index:100;
+}
+#overlay.active { display:flex; }
+.overlay-box {
+  background:#050d20; border:1px solid #1a3060; border-radius:8px;
+  padding:32px 40px; text-align:center; max-width:360px;
+}
+.overlay-title { font-size:22px; letter-spacing:.14em; text-transform:uppercase;
+  margin-bottom:12px; }
+.overlay-sub { font-size:12px; color:#2a4060; margin-bottom:20px; letter-spacing:.06em; }
+.overlay-btn {
+  padding:10px 28px; font:inherit; font-size:12px; cursor:pointer;
+  border-radius:4px; border:1px solid #2040a0; background:#0a1848;
+  color:#80a8ff; letter-spacing:.1em; text-transform:uppercase; margin:4px;
+}
+.overlay-btn:hover { background:#102060; }
+.won-title { color:#ffd700; text-shadow:0 0 30px #ffd70088, 0 0 60px #ffd70044; }
+.stuck-title { color:#ff4444; text-shadow:0 0 20px #ff444466; }
+
+/* confetti canvas */
+#confetti { position:absolute; inset:0; pointer-events:none; z-index:99; }
+
+/* generating spinner */
+#genOverlay {
+  display:none; position:absolute; inset:0; align-items:center; justify-content:center;
+  background:#010308aa; z-index:50;
+}
+#genOverlay.active { display:flex; }
+.spinner { font-size:13px; color:#4060a0; letter-spacing:.2em; animation:blink 1s step-end infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <button id="backBtn" onclick="window.location.href='start.html'">← Back</button>
+  <h1>ND Collapse Puzzle</h1>
+  <div class="sep"></div>
+  <span id="statusLine">Select settings and generate a puzzle</span>
+</div>
+
+<div id="layout">
+  <!-- LEFT PANEL -->
+  <div id="leftPanel">
+    <div class="panel-section">
+      <div class="panel-label">Dimension</div>
+      <div class="btn-group" id="dimBtns"></div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-label">Difficulty</div>
+      <div class="btn-group" id="diffBtns">
+        <button class="diff-btn" data-d="easy">Easy</button>
+        <button class="diff-btn active" data-d="medium">Medium</button>
+        <button class="diff-btn" data-d="hard">Hard</button>
+        <button class="diff-btn" data-d="expert">Expert</button>
+      </div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-label">Piece count</div>
+      <div class="slider-row">
+        <input type="range" id="pieceSlider" min="3" max="15" value="6">
+        <span class="stat-val slider-val" id="pieceVal">6</span>
+      </div>
+    </div>
+    <button id="generateBtn">Generate Puzzle</button>
+
+    <div class="panel-section">
+      <div class="stat-row">
+        <span class="stat-label">Time</span>
+        <span class="stat-val" id="timerDisplay">0:00</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Moves</span>
+        <span class="stat-val" id="moveDisplay">0</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Pieces left</span>
+        <span class="stat-val" id="piecesLeft">—</span>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <button class="action-btn" id="hintBtn" disabled>Hint</button>
+      <button class="action-btn" id="solveBtn" disabled>Solution</button>
+    </div>
+    <div class="btn-group">
+      <button class="action-btn" id="resetBtn" disabled>Reset</button>
+      <button class="action-btn" id="undoBtn" disabled>Undo</button>
+    </div>
+  </div>
+
+  <!-- BOARD AREA -->
+  <div id="boardArea">
+    <canvas id="threeCanvas"></canvas>
+    <div id="board2d"></div>
+    <div id="genOverlay"><div class="spinner">GENERATING…</div></div>
+    <canvas id="confetti"></canvas>
+    <div id="overlay">
+      <div class="overlay-box" id="overlayBox"></div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div id="rightPanel">
+    <div class="panel-label">Move History</div>
+    <div id="moveHistory"></div>
+    <div class="panel-label" style="margin-top:8px">Captured</div>
+    <div id="capturedList"></div>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.163/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Constants & config
+// ─────────────────────────────────────────────────────────────────────────────
+const PUZZLE_ENGINE = 'http://127.0.0.1:8770';
+const MAX_DIAG_PAIRS = 12;
+const MAX_K_PAIRS    = 8;
+
+const DIM_COLORS = {
+  2:'#f08030', 3:'#f0c040', 4:'#60d860', 5:'#40d8c8',
+  6:'#40a8ff', 7:'#a060ff', 8:'#ff60c0'
+};
+const PIECE_COLORS = {
+  K:'#ffd700', Q:'#cc44ff', R:'#00ccff', B:'#ff8800', N:'#ffee00', P:'#88aacc'
+};
+const PIECE_GLYPHS = { K:'♚', Q:'♛', R:'♜', B:'♝', N:'♞', P:'♟' };
+
+// ─────────────────────────────────────────────────────────────────────────────
+// State
+// ─────────────────────────────────────────────────────────────────────────────
+let state   = 'IDLE'; // IDLE | GENERATING | PLAYING | WON | STUCK
+let ndim    = 3;
+let diff    = 'medium';
+let pcount  = 6;
+
+let board        = null;   // current board {ndim, bsize, pieces:[{id,type,pos}]}
+let origBoard    = null;   // initial board for reset
+let history      = [];     // stack of boards for undo
+let moveLog      = [];     // array of move strings
+let capturedLog  = [];     // captured piece types
+let selectedIdx  = -1;     // index in board.pieces of selected piece
+let legalMoves   = [];     // [{capturerIdx,capturedIdx,from,to}]
+let hintCapture  = null;   // captured piece idx to flash
+let moveCount    = 0;
+let timerStart   = 0;
+let timerID      = null;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Dimension buttons
+// ─────────────────────────────────────────────────────────────────────────────
+const dimBtns = document.getElementById('dimBtns');
+for (let d = 2; d <= 8; ++d) {
+  const btn = document.createElement('button');
+  btn.className = 'dim-btn' + (d === ndim ? ' active' : '');
+  btn.style.color = DIM_COLORS[d];
+  btn.style.borderColor = d === ndim ? DIM_COLORS[d] : '#0f1e38';
+  btn.textContent = d + 'D';
+  btn.addEventListener('click', () => setNdim(d));
+  dimBtns.appendChild(btn);
+}
+function setNdim(d) {
+  ndim = d;
+  dimBtns.querySelectorAll('.dim-btn').forEach((b,i) => {
+    const active = (i+2) === d;
+    b.classList.toggle('active', active);
+    b.style.borderColor = active ? DIM_COLORS[d] : '#0f1e38';
+  });
+}
+
+// Difficulty buttons
+document.querySelectorAll('.diff-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.diff-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    diff = btn.dataset.d;
+  });
+});
+
+// Piece slider
+const pieceSlider = document.getElementById('pieceSlider');
+const pieceVal    = document.getElementById('pieceVal');
+pieceSlider.addEventListener('input', () => {
+  pcount = +pieceSlider.value;
+  pieceVal.textContent = pcount;
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Timer
+// ─────────────────────────────────────────────────────────────────────────────
+function startTimer() {
+  timerStart = Date.now();
+  clearInterval(timerID);
+  timerID = setInterval(updateTimerDisplay, 500);
+}
+function stopTimer() { clearInterval(timerID); }
+function updateTimerDisplay() {
+  if (state !== 'PLAYING') return;
+  const s = Math.floor((Date.now() - timerStart) / 1000);
+  document.getElementById('timerDisplay').textContent =
+    Math.floor(s/60) + ':' + String(s%60).padStart(2,'0');
+}
+function getFinalTime() {
+  const s = Math.floor((Date.now() - timerStart) / 1000);
+  return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// JS move generation (mirrors C++ logic)
+// ─────────────────────────────────────────────────────────────────────────────
+function posEq(a, b) { return a.every((v,i) => v === b[i]); }
+
+function inBounds(pos, bsize) { return pos.every(v => v >= 0 && v < bsize); }
+
+function pieceAt(brd, pos) {
+  return brd.pieces.findIndex(p => posEq(p.pos, pos));
+}
+
+function rookCaptures(brd, idx) {
+  const moves = [], p = brd.pieces[idx];
+  for (let axis = 0; axis < brd.ndim; ++axis) {
+    for (const dir of [-1, 1]) {
+      const cur = [...p.pos];
+      while (true) {
+        cur[axis] += dir;
+        if (!inBounds(cur, brd.bsize)) break;
+        const hit = pieceAt(brd, cur);
+        if (hit >= 0) { moves.push({capturerIdx:idx,capturedIdx:hit,from:[...p.pos],to:[...cur]}); break; }
+      }
+    }
+  }
+  return moves;
+}
+
+function bishopCaptures(brd, idx) {
+  const moves = [], p = brd.pieces[idx];
+  let pairs = 0;
+  for (let a = 0; a < brd.ndim && pairs < MAX_DIAG_PAIRS; ++a)
+    for (let b = a+1; b < brd.ndim && pairs < MAX_DIAG_PAIRS; ++b, ++pairs)
+      for (const da of [-1,1]) for (const db of [-1,1]) {
+        const cur = [...p.pos];
+        while (true) {
+          cur[a] += da; cur[b] += db;
+          if (!inBounds(cur, brd.bsize)) break;
+          const hit = pieceAt(brd, cur);
+          if (hit >= 0) { moves.push({capturerIdx:idx,capturedIdx:hit,from:[...p.pos],to:[...cur]}); break; }
+        }
+      }
+  return moves;
+}
+
+function knightCaptures(brd, idx) {
+  const moves = [], p = brd.pieces[idx];
+  for (let a = 0; a < brd.ndim; ++a)
+    for (let b = 0; b < brd.ndim; ++b) {
+      if (a === b) continue;
+      for (const da of [-2,2]) for (const db of [-1,1]) {
+        const cur = [...p.pos]; cur[a] += da; cur[b] += db;
+        if (!inBounds(cur, brd.bsize)) continue;
+        const hit = pieceAt(brd, cur);
+        if (hit >= 0) moves.push({capturerIdx:idx,capturedIdx:hit,from:[...p.pos],to:[...cur]});
+      }
+    }
+  return moves;
+}
+
+function kingCaptures(brd, idx) {
+  const moves = [], p = brd.pieces[idx];
+  for (let axis = 0; axis < brd.ndim; ++axis)
+    for (const dir of [-1,1]) {
+      const cur = [...p.pos]; cur[axis] += dir;
+      if (!inBounds(cur, brd.bsize)) continue;
+      const hit = pieceAt(brd, cur);
+      if (hit >= 0) moves.push({capturerIdx:idx,capturedIdx:hit,from:[...p.pos],to:[...cur]});
+    }
+  let pairs = 0;
+  for (let a = 0; a < brd.ndim && pairs < MAX_K_PAIRS; ++a)
+    for (let b = a+1; b < brd.ndim && pairs < MAX_K_PAIRS; ++b, ++pairs)
+      for (const da of [-1,1]) for (const db of [-1,1]) {
+        const cur = [...p.pos]; cur[a] += da; cur[b] += db;
+        if (!inBounds(cur, brd.bsize)) continue;
+        const hit = pieceAt(brd, cur);
+        if (hit >= 0) moves.push({capturerIdx:idx,capturedIdx:hit,from:[...p.pos],to:[...cur]});
+      }
+  return moves;
+}
+
+function pawnCaptures(brd, idx) {
+  const moves = [], p = brd.pieces[idx];
+  for (let axis = 0; axis < brd.ndim; ++axis)
+    for (const dir of [-1,1]) {
+      const cur = [...p.pos]; cur[axis] += dir;
+      if (!inBounds(cur, brd.bsize)) continue;
+      const hit = pieceAt(brd, cur);
+      if (hit >= 0) moves.push({capturerIdx:idx,capturedIdx:hit,from:[...p.pos],to:[...cur]});
+    }
+  return moves;
+}
+
+function getLegalCaptures(brd, pieceId) {
+  const idx = brd.pieces.findIndex(p => p.id === pieceId);
+  if (idx < 0) return [];
+  switch (brd.pieces[idx].type) {
+    case 'R': return rookCaptures(brd, idx);
+    case 'B': return bishopCaptures(brd, idx);
+    case 'Q': return [...rookCaptures(brd,idx), ...bishopCaptures(brd,idx)];
+    case 'N': return knightCaptures(brd, idx);
+    case 'K': return kingCaptures(brd, idx);
+    case 'P': return pawnCaptures(brd, idx);
+  }
+  return [];
+}
+
+function getAllCaptures(brd) {
+  const all = [];
+  for (let i = 0; i < brd.pieces.length; ++i) {
+    switch (brd.pieces[i].type) {
+      case 'R': all.push(...rookCaptures(brd,i)); break;
+      case 'B': all.push(...bishopCaptures(brd,i)); break;
+      case 'Q': all.push(...rookCaptures(brd,i), ...bishopCaptures(brd,i)); break;
+      case 'N': all.push(...knightCaptures(brd,i)); break;
+      case 'K': all.push(...kingCaptures(brd,i)); break;
+      case 'P': all.push(...pawnCaptures(brd,i)); break;
+    }
+  }
+  return all;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Apply move
+// ─────────────────────────────────────────────────────────────────────────────
+function applyMove(brd, mv) {
+  const nb = { ndim:brd.ndim, bsize:brd.bsize, pieces: brd.pieces.map(p=>({...p,pos:[...p.pos]})) };
+  nb.pieces.splice(mv.capturedIdx, 1);
+  let ci = mv.capturerIdx;
+  if (mv.capturedIdx < mv.capturerIdx) --ci;
+  nb.pieces[ci].pos = [...mv.to];
+  return nb;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Generate puzzle
+// ─────────────────────────────────────────────────────────────────────────────
+document.getElementById('generateBtn').addEventListener('click', generatePuzzle);
+
+async function generatePuzzle() {
+  if (state === 'GENERATING') return;
+  setState('GENERATING');
+  document.getElementById('genOverlay').classList.add('active');
+  document.getElementById('overlay').classList.remove('active');
+  stopTimer();
+
+  try {
+    const res = await fetch(PUZZLE_ENGINE + '/generate', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ ndim, difficulty:diff, piece_count:pcount, seed:null })
+    });
+    const data = await res.json();
+    if (!data.ok) throw new Error('Engine error');
+    initPuzzle(data.board);
+  } catch(e) {
+    // Fallback: generate a simple 2-piece local puzzle
+    console.warn('Engine unavailable, using fallback:', e);
+    initPuzzle(generateFallback());
+  }
+  document.getElementById('genOverlay').classList.remove('active');
+}
+
+function generateFallback() {
+  // Simple 3-piece rook puzzle: R at 0→captures R at 2→captures R at 4
+  const bsize = Math.min(8, 4 + Math.floor(ndim/2));
+  const pieces = [];
+  let id = 0;
+  // Place 3 rooks along axis 0
+  for (let i = 0; i < 3; ++i) {
+    const pos = new Array(ndim).fill(0);
+    pos[0] = i * 2;
+    pieces.push({ id: id++, type:'R', pos });
+  }
+  return { ndim, bsize, pieces };
+}
+
+function initPuzzle(brd) {
+  board      = brd;
+  origBoard  = JSON.parse(JSON.stringify(brd));
+  history    = [];
+  moveLog    = [];
+  capturedLog= [];
+  moveCount  = 0;
+  selectedIdx= -1;
+  legalMoves = [];
+  hintCapture= null;
+  document.getElementById('moveDisplay').textContent = '0';
+  document.getElementById('piecesLeft').textContent = brd.pieces.length;
+  document.getElementById('timerDisplay').textContent = '0:00';
+  document.getElementById('moveHistory').innerHTML = '';
+  document.getElementById('capturedList').innerHTML = '';
+
+  document.getElementById('hintBtn').disabled  = false;
+  document.getElementById('solveBtn').disabled = false;
+  document.getElementById('resetBtn').disabled = false;
+  document.getElementById('undoBtn').disabled  = true;
+
+  setState('PLAYING');
+  startTimer();
+  renderBoard();
+  setStatus(`${brd.pieces.length} pieces · ${ndim}D · ${diff}`);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// State management
+// ─────────────────────────────────────────────────────────────────────────────
+function setState(s) {
+  state = s;
+}
+
+function setStatus(msg) {
+  document.getElementById('statusLine').textContent = msg;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Action buttons
+// ─────────────────────────────────────────────────────────────────────────────
+document.getElementById('hintBtn').addEventListener('click', async () => {
+  if (state !== 'PLAYING' || !board) return;
+  try {
+    const res = await fetch(PUZZLE_ENGINE + '/solve', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(board)
+    });
+    const data = await res.json();
+    if (data.ok && data.solvable && data.solution.length > 0) {
+      const mv = data.solution[0];
+      hintCapture = mv.captured_idx;
+      renderBoard();
+      setTimeout(() => { hintCapture = null; renderBoard(); }, 1800);
+    } else {
+      setStatus('No solution found from engine');
+    }
+  } catch(e) {
+    // local fallback hint
+    const all = getAllCaptures(board);
+    if (all.length > 0) {
+      hintCapture = all[0].capturedIdx;
+      renderBoard();
+      setTimeout(() => { hintCapture = null; renderBoard(); }, 1800);
+    }
+  }
+});
+
+document.getElementById('solveBtn').addEventListener('click', async () => {
+  if (state !== 'PLAYING' || !board) return;
+  try {
+    const res = await fetch(PUZZLE_ENGINE + '/solve', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(board)
+    });
+    const data = await res.json();
+    if (data.ok && data.solvable) {
+      showSolutionOverlay(data.solution);
+    } else {
+      showOverlay('stuck-title', 'UNSOLVABLE', 'This position cannot be solved.', true, false);
+    }
+  } catch(e) {
+    setStatus('Engine unavailable for solve');
+  }
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  if (!origBoard) return;
+  initPuzzle(JSON.parse(JSON.stringify(origBoard)));
+});
+
+document.getElementById('undoBtn').addEventListener('click', () => {
+  if (history.length === 0) return;
+  board = history.pop();
+  moveLog.pop();
+  capturedLog.pop();
+  --moveCount;
+  selectedIdx = -1;
+  legalMoves  = [];
+  updateMoveUI();
+  if (state !== 'PLAYING') setState('PLAYING');
+  renderBoard();
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Overlay helpers
+// ─────────────────────────────────────────────────────────────────────────────
+function showOverlay(titleClass, title, sub, showRestart, showNew) {
+  const box = document.getElementById('overlayBox');
+  box.innerHTML = `
+    <div class="overlay-title ${titleClass}">${title}</div>
+    <div class="overlay-sub">${sub}</div>
+    ${showRestart ? '<button class="overlay-btn" id="restartOvBtn">Restart</button>' : ''}
+    ${showNew     ? '<button class="overlay-btn" id="newOvBtn">New Puzzle</button>' : ''}
+  `;
+  document.getElementById('overlay').classList.add('active');
+  box.querySelector('#restartOvBtn')?.addEventListener('click', () => {
+    document.getElementById('overlay').classList.remove('active');
+    initPuzzle(JSON.parse(JSON.stringify(origBoard)));
+  });
+  box.querySelector('#newOvBtn')?.addEventListener('click', () => {
+    document.getElementById('overlay').classList.remove('active');
+    generatePuzzle();
+  });
+}
+
+function showSolutionOverlay(solution) {
+  const lines = solution.map((mv,i) =>
+    `${i+1}. piece@[${mv.from}] captures [${mv.to}]`).join('<br>');
+  const box = document.getElementById('overlayBox');
+  box.innerHTML = `
+    <div class="overlay-title" style="color:#60d860">SOLUTION</div>
+    <div class="overlay-sub" style="text-align:left;max-height:200px;overflow-y:auto;font-size:10px;line-height:1.7">${lines}</div>
+    <button class="overlay-btn" id="closeSolBtn">Close</button>
+  `;
+  document.getElementById('overlay').classList.add('active');
+  box.querySelector('#closeSolBtn').addEventListener('click', () => {
+    document.getElementById('overlay').classList.remove('active');
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Make a move
+// ─────────────────────────────────────────────────────────────────────────────
+function doMove(mv) {
+  history.push(JSON.parse(JSON.stringify(board)));
+  const captured = board.pieces[mv.capturedIdx];
+  const capturer = board.pieces[mv.capturerIdx];
+  capturedLog.push(captured.type);
+  moveLog.push(`${capturer.type}[${mv.from}]×${captured.type}[${mv.to}]`);
+  board = applyMove(board, mv);
+  ++moveCount;
+  selectedIdx = -1;
+  legalMoves  = [];
+  hintCapture = null;
+  updateMoveUI();
+
+  if (board.pieces.length === 1) {
+    stopTimer();
+    setState('WON');
+    const t = getFinalTime();
+    celebrateWin();
+    setTimeout(() => showOverlay('won-title', 'SOLVED!',
+      `${moveCount} moves · ${t}`, false, true), 600);
+  } else {
+    const remaining = getAllCaptures(board);
+    if (remaining.length === 0) {
+      setState('STUCK');
+      showOverlay('stuck-title', 'STUCK!',
+        'No captures remain. Restart or undo?', true, false);
+    }
+  }
+  renderBoard();
+}
+
+function updateMoveUI() {
+  document.getElementById('moveDisplay').textContent = moveCount;
+  document.getElementById('piecesLeft').textContent  = board ? board.pieces.length : '—';
+  document.getElementById('undoBtn').disabled = history.length === 0;
+
+  const mh = document.getElementById('moveHistory');
+  mh.innerHTML = '';
+  moveLog.slice(-20).forEach((m, i) => {
+    const d = document.createElement('div');
+    d.className = 'move-entry' + (i === moveLog.slice(-20).length-1 ? ' latest' : '');
+    d.textContent = (moveLog.length - moveLog.slice(-20).length + i + 1) + '. ' + m;
+    mh.appendChild(d);
+  });
+
+  const cl = document.getElementById('capturedList');
+  cl.innerHTML = '';
+  capturedLog.forEach(t => {
+    const sp = document.createElement('span');
+    sp.className = 'cap-piece';
+    sp.style.color = PIECE_COLORS[t] || '#8aa';
+    sp.textContent = PIECE_GLYPHS[t] || '?';
+    cl.appendChild(sp);
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Confetti
+// ─────────────────────────────────────────────────────────────────────────────
+function celebrateWin() {
+  const cv = document.getElementById('confetti');
+  cv.width  = cv.parentElement.offsetWidth;
+  cv.height = cv.parentElement.offsetHeight;
+  const ctx = cv.getContext('2d');
+  const particles = Array.from({length:120}, () => ({
+    x: Math.random() * cv.width,
+    y: -10 - Math.random() * 60,
+    vx: (Math.random() - .5) * 3,
+    vy: 2 + Math.random() * 3,
+    color: ['#ffd700','#a060ff','#00ccff','#60d860','#ff8800'][Math.floor(Math.random()*5)],
+    r: 4 + Math.random() * 5,
+    spin: Math.random() * Math.PI * 2,
+    dspin: (Math.random()-.5)*.2
+  }));
+  let frame = 0;
+  function tick() {
+    ctx.clearRect(0,0,cv.width,cv.height);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.spin += p.dspin; p.vy += .05;
+      if (p.y > cv.height + 20) { p.y = -10; p.x = Math.random()*cv.width; }
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.spin);
+      ctx.fillStyle = p.color; ctx.fillRect(-p.r/2,-p.r/4,p.r,p.r/2);
+      ctx.restore();
+    });
+    ++frame;
+    if (frame < 180) requestAnimationFrame(tick);
+    else ctx.clearRect(0,0,cv.width,cv.height);
+  }
+  tick();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Rendering dispatcher
+// ─────────────────────────────────────────────────────────────────────────────
+function renderBoard() {
+  if (!board) return;
+  if (board.ndim === 2) render2D();
+  else render3D();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 2D renderer
+// ─────────────────────────────────────────────────────────────────────────────
+const board2d  = document.getElementById('board2d');
+const threeCV  = document.getElementById('threeCanvas');
+
+function render2D() {
+  threeCV.style.display  = 'none';
+  board2d.style.display  = 'grid';
+  const bs = board.bsize;
+  board2d.style.gridTemplateColumns = `repeat(${bs}, 56px)`;
+  board2d.style.gridTemplateRows    = `repeat(${bs}, 56px)`;
+  board2d.innerHTML = '';
+
+  // build piece lookup
+  const pieceMap = {};
+  board.pieces.forEach((p, idx) => { pieceMap[p.pos[0] + ',' + p.pos[1]] = {p, idx}; });
+
+  // capture targets
+  const captureTargets = new Set();
+  if (selectedIdx >= 0) {
+    legalMoves.forEach(mv => captureTargets.add(mv.to[0]+','+mv.to[1]));
+  }
+
+  for (let row = 0; row < bs; ++row) {
+    for (let col = 0; col < bs; ++col) {
+      const cell = document.createElement('div');
+      const key  = col + ',' + row;
+      const isCapture = captureTargets.has(key);
+      const entry = pieceMap[key];
+      const isDark = (row + col) % 2 === 0;
+      cell.className = 'cell ' + (isDark ? 'dark' : 'light');
+      if (isCapture) cell.classList.add('capture-target');
+
+      if (entry) {
+        const { p, idx } = entry;
+        const isSelected = idx === selectedIdx;
+        if (isSelected) cell.classList.add('piece-selected');
+        cell.classList.add('piece-cell');
+        cell.style.color = PIECE_COLORS[p.type] || '#8aa';
+
+        // hint flash
+        if (hintCapture !== null && idx === hintCapture) {
+          cell.style.boxShadow = '0 0 20px #ffee00, 0 0 40px #ffee0066';
+          cell.style.background = '#1a1a00';
+        }
+
+        const glyph = document.createElement('span');
+        glyph.className = 'piece-glyph';
+        glyph.textContent = PIECE_GLYPHS[p.type] || '?';
+        cell.appendChild(glyph);
+
+        cell.addEventListener('click', () => onCell2DClick(idx, isCapture, col, row));
+      } else if (isCapture) {
+        cell.addEventListener('click', () => onCaptureSquareClick(col, row));
+      }
+
+      board2d.appendChild(cell);
+    }
+  }
+}
+
+function onCell2DClick(idx, isCapture, col, row) {
+  if (state !== 'PLAYING') return;
+  if (isCapture && selectedIdx >= 0) {
+    // try to make capture
+    const mv = legalMoves.find(m => m.to[0]===col && m.to[1]===row);
+    if (mv) { doMove(mv); return; }
+  }
+  // select or deselect
+  if (selectedIdx === idx) { selectedIdx = -1; legalMoves = []; }
+  else {
+    selectedIdx = idx;
+    legalMoves  = getLegalCaptures(board, board.pieces[idx].id);
+  }
+  render2D();
+}
+
+function onCaptureSquareClick(col, row) {
+  if (state !== 'PLAYING' || selectedIdx < 0) return;
+  const mv = legalMoves.find(m => m.to[0]===col && m.to[1]===row);
+  if (mv) doMove(mv);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 3D renderer (Three.js)
+// ─────────────────────────────────────────────────────────────────────────────
+let renderer, scene, camera, controls, raycaster, mouse;
+let pieceSprites = []; // {mesh, pieceIdx}
+
+function proj(c, ndim) {
+  const CELL=1, CUBE_STEP=12, FLOOR_STEP=18, BLDG_STEP=128;
+  return new THREE.Vector3(
+    c[0]*CELL + (ndim>3 ? c[3]*CUBE_STEP : 0) + (ndim>6 ? c[6]*BLDG_STEP : 0),
+    (ndim>2 ? c[2]*CELL : 0) + (ndim>4 ? c[4]*FLOOR_STEP : 0),
+    c[1]*CELL + (ndim>5 ? c[5]*CUBE_STEP : 0) + (ndim>7 ? c[7]*BLDG_STEP : 0)
+  );
+}
+
+function initThree() {
+  if (renderer) return;
+  const cv = threeCV;
+  renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setClearColor(0x010308, 1);
+
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(60, 1, 0.01, 5000);
+  camera.position.set(10, 12, 18);
+
+  controls = new OrbitControls(camera, cv);
+  controls.enableDamping = true;
+  controls.dampingFactor = .08;
+
+  raycaster = new THREE.Raycaster();
+  mouse     = new THREE.Vector2();
+
+  cv.addEventListener('click', onThreeClick);
+  window.addEventListener('resize', onResize);
+  onResize();
+  animate();
+}
+
+function onResize() {
+  if (!renderer) return;
+  const W = threeCV.parentElement.clientWidth;
+  const H = threeCV.parentElement.clientHeight;
+  renderer.setSize(W, H);
+  camera.aspect = W / H;
+  camera.updateProjectionMatrix();
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  if (controls) controls.update();
+  // flash selected piece
+  const t = Date.now() * 0.003;
+  pieceSprites.forEach(({mesh, pieceIdx}) => {
+    if (pieceIdx === selectedIdx) {
+      mesh.material.opacity = 0.6 + 0.4 * Math.sin(t);
+    } else if (hintCapture !== null && pieceIdx === hintCapture) {
+      mesh.material.color.setHex(0xffee00);
+      mesh.material.opacity = 0.5 + 0.5 * Math.sin(t * 2);
+    } else {
+      mesh.material.opacity = 1.0;
+    }
+  });
+  renderer.render(scene, camera);
+}
+
+function makePieceTexture(type, color) {
+  const cv = document.createElement('canvas');
+  cv.width = cv.height = 128;
+  const ctx = cv.getContext('2d');
+  ctx.clearRect(0,0,128,128);
+  ctx.shadowBlur = 24; ctx.shadowColor = color;
+  ctx.fillStyle = color;
+  ctx.font = 'bold 72px serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(PIECE_GLYPHS[type] || '?', 64, 68);
+  return new THREE.CanvasTexture(cv);
+}
+
+function makeRingTexture(color) {
+  const cv = document.createElement('canvas');
+  cv.width = cv.height = 128;
+  const ctx = cv.getContext('2d');
+  ctx.beginPath();
+  ctx.arc(64,64,48,0,Math.PI*2);
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 12;
+  ctx.shadowBlur = 20;
+  ctx.shadowColor = color;
+  ctx.stroke();
+  return new THREE.CanvasTexture(cv);
+}
+
+function render3D() {
+  threeCV.style.display  = 'block';
+  board2d.style.display  = 'none';
+  initThree();
+
+  // clear scene
+  while (scene.children.length) scene.remove(scene.children[0]);
+  pieceSprites = [];
+
+  const nd = board.ndim;
+  const bs = board.bsize;
+
+  // draw board wireframe dots at corners
+  const geo   = new THREE.BufferGeometry();
+  const verts = [];
+  for (let i = 0; i < bs; ++i) {
+    const p0 = proj([i,0,0,0,0,0,0,0].slice(0,nd).concat(new Array(Math.max(0,nd)).fill(0)), nd);
+    const p1 = proj([i,bs-1,0,0,0,0,0,0].slice(0,nd).concat(new Array(Math.max(0,nd)).fill(0)), nd);
+    verts.push(p0.x,p0.y,p0.z, p1.x,p1.y,p1.z);
+    const p2 = proj([0,i,0,0,0,0,0,0].slice(0,nd).concat(new Array(Math.max(0,nd)).fill(0)), nd);
+    const p3 = proj([bs-1,i,0,0,0,0,0,0].slice(0,nd).concat(new Array(Math.max(0,nd)).fill(0)), nd);
+    verts.push(p2.x,p2.y,p2.z, p3.x,p3.y,p3.z);
+    if (nd >= 3) {
+      const p4 = proj([i,0,0,0,0,0,0,0].slice(0,nd).concat(new Array(Math.max(0,nd)).fill(0)), nd);
+      const p5 = proj([i,0,bs-1,0,0,0,0,0].slice(0,nd).concat(new Array(Math.max(0,nd)).fill(0)), nd);
+      verts.push(p4.x,p4.y,p4.z, p5.x,p5.y,p5.z);
+    }
+  }
+  geo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+  const wire = new THREE.LineSegments(geo,
+    new THREE.LineBasicMaterial({ color:0x0f2040, transparent:true, opacity:0.3 }));
+  scene.add(wire);
+
+  // lighting
+  scene.add(new THREE.AmbientLight(0x203060, 0.6));
+  const dl = new THREE.DirectionalLight(0x6080ff, 0.8);
+  dl.position.set(10,20,10);
+  scene.add(dl);
+
+  // pieces as sprites
+  const spriteSize = Math.max(8, 16 - board.pieces.length * 0.5);
+  const captureSet = new Set(legalMoves.map(m => m.capturedIdx));
+
+  board.pieces.forEach((p, idx) => {
+    const pos3 = proj(p.pos.concat(new Array(Math.max(0,8-p.pos.length)).fill(0)), nd);
+    const tex = makePieceTexture(p.type, PIECE_COLORS[p.type] || '#8aa');
+    const mat = new THREE.SpriteMaterial({
+      map: tex, transparent: true, opacity: 1.0,
+      blending: THREE.AdditiveBlending, depthWrite: false
+    });
+    const sprite = new THREE.Sprite(mat);
+    sprite.position.copy(pos3);
+    sprite.scale.setScalar(spriteSize);
+    sprite.userData.pieceIdx = idx;
+    scene.add(sprite);
+    pieceSprites.push({ mesh: sprite, pieceIdx: idx });
+
+    // capture ring
+    if (captureSet.has(idx)) {
+      const rt = makeRingTexture('#00ff88');
+      const rm = new THREE.SpriteMaterial({
+        map:rt, transparent:true, opacity:0.85,
+        blending: THREE.AdditiveBlending, depthWrite: false
+      });
+      const ring = new THREE.Sprite(rm);
+      ring.position.copy(pos3);
+      ring.scale.setScalar(spriteSize * 1.4);
+      scene.add(ring);
+    }
+
+    // hint flash
+    if (hintCapture !== null && idx === hintCapture) {
+      const ht = makeRingTexture('#ffee00');
+      const hm = new THREE.SpriteMaterial({
+        map:ht, transparent:true, opacity:0.9,
+        blending: THREE.AdditiveBlending, depthWrite: false
+      });
+      const hr = new THREE.Sprite(hm);
+      hr.position.copy(pos3);
+      hr.scale.setScalar(spriteSize * 1.6);
+      scene.add(hr);
+    }
+  });
+}
+
+function onThreeClick(event) {
+  if (state !== 'PLAYING' || !board || board.ndim === 2) return;
+  const rect = threeCV.getBoundingClientRect();
+  mouse.x = ((event.clientX - rect.left) / rect.width)  * 2 - 1;
+  mouse.y =-((event.clientY - rect.top)  / rect.height) * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
+
+  const hits = raycaster.intersectObjects(pieceSprites.map(s=>s.mesh));
+  if (hits.length === 0) { selectedIdx = -1; legalMoves = []; render3D(); return; }
+
+  const hitIdx = hits[0].object.userData.pieceIdx;
+
+  // is this a capture target?
+  if (selectedIdx >= 0 && legalMoves.some(m => m.capturedIdx === hitIdx)) {
+    const mv = legalMoves.find(m => m.capturedIdx === hitIdx);
+    if (mv) { doMove(mv); return; }
+  }
+
+  // select / deselect
+  if (selectedIdx === hitIdx) { selectedIdx = -1; legalMoves = []; }
+  else {
+    selectedIdx = hitIdx;
+    legalMoves  = getLegalCaptures(board, board.pieces[hitIdx].id);
+  }
+  render3D();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Resize observer
+// ─────────────────────────────────────────────────────────────────────────────
+new ResizeObserver(onResize).observe(document.getElementById('boardArea'));
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Initial render
+// ─────────────────────────────────────────────────────────────────────────────
+// Show empty board placeholder
+threeCV.style.display = 'block';
+board2d.style.display = 'none';
+initThree();
+
+</script>
+</body>
+</html>

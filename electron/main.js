@@ -34,11 +34,12 @@ const GAME_ROOT = app.isPackaged
 
 // ─── Ports ───────────────────────────────────────────────────────────────────
 
-const FILE_PORT   = 3000;
-const ENGINE_PORT = 8765;   // C++ engine (legacy)
-const PY_PORT     = 8769;   // Python committee engine (new visualizer)
-const POLL_MS     = 120;
-const ENGINE_WAIT = 9000;
+const FILE_PORT    = 3000;
+const ENGINE_PORT  = 8765;   // C++ engine (legacy)
+const PY_PORT      = 8769;   // Python committee engine (new visualizer)
+const PUZZLE_PORT  = 8770;   // C++ collapse-puzzle engine
+const POLL_MS      = 120;
+const ENGINE_WAIT  = 9000;
 
 // ─── MIME ─────────────────────────────────────────────────────────────────────
 
@@ -121,6 +122,30 @@ function startCppEngine() {
   proc.stdout.on('data', d => console.log('[cpp]', d.toString().trimEnd()));
   proc.stderr.on('data', d => console.error('[cpp]', d.toString().trimEnd()));
   proc.on('exit', (code) => { console.log(`[cpp] exit ${code}`); engineProcess = null; });
+  return proc;
+}
+
+// ─── Collapse puzzle engine (C++) ────────────────────────────────────────────
+
+let puzzleProcess = null;
+
+function startPuzzleEngine() {
+  const candidates = [
+    path.join(GAME_ROOT, 'puzzle_engine.exe'),
+    path.join(GAME_ROOT, 'puzzle_engine'),
+    path.join(process.resourcesPath || '', 'puzzle_engine.exe'),
+    path.join(process.resourcesPath || '', 'puzzle_engine'),
+  ];
+  const bin = candidates.find(p => { try { return fs.statSync(p).isFile(); } catch { return false; } });
+  if (!bin) { console.log('[electron] puzzle_engine not found — puzzle mode unavailable.'); return null; }
+  console.log(`[electron] Puzzle engine: ${bin}`);
+  const proc = spawn(bin, [String(PUZZLE_PORT)], {
+    cwd: path.dirname(bin), stdio: ['ignore', 'pipe', 'pipe'],
+  });
+  proc.stdout.on('data', d => console.log('[puzzle]', d.toString().trimEnd()));
+  proc.stderr.on('data', d => console.error('[puzzle]', d.toString().trimEnd()));
+  proc.on('error', err => console.error('[puzzle] start failed:', err.message));
+  proc.on('exit', code => { console.log(`[puzzle] exit ${code}`); puzzleProcess = null; });
   return proc;
 }
 
@@ -226,6 +251,12 @@ async function restartPyEngine() {
   if (pyProcess) await waitForPort(PY_PORT, 8000);
 }
 
+async function restartPuzzleEngine() {
+  if (puzzleProcess) { puzzleProcess.kill(); puzzleProcess = null; await new Promise(r => setTimeout(r, 400)); }
+  puzzleProcess = startPuzzleEngine();
+  if (puzzleProcess) await waitForPort(PUZZLE_PORT, 6000);
+}
+
 function buildMenu() {
   const mac = process.platform === 'darwin';
   return Menu.buildFromTemplate([
@@ -247,6 +278,18 @@ function buildMenu() {
       { label: '8D chess  (128 players)', click: () => openVis(8) },
       { type: 'separator' },
       { label: 'Restart AI Engine', click: restartPyEngine },
+      { type: 'separator' },
+      { label: 'Collapse Puzzles', submenu: [
+        { label: '2D Puzzles', click: () => mainWindow?.loadURL(`http://127.0.0.1:${FILE_PORT}/puzzle.html?dims=2`) },
+        { label: '3D Puzzles', click: () => mainWindow?.loadURL(`http://127.0.0.1:${FILE_PORT}/puzzle.html?dims=3`) },
+        { label: '4D Puzzles', click: () => mainWindow?.loadURL(`http://127.0.0.1:${FILE_PORT}/puzzle.html?dims=4`) },
+        { label: '5D Puzzles', click: () => mainWindow?.loadURL(`http://127.0.0.1:${FILE_PORT}/puzzle.html?dims=5`) },
+        { label: '6D Puzzles', click: () => mainWindow?.loadURL(`http://127.0.0.1:${FILE_PORT}/puzzle.html?dims=6`) },
+        { label: '7D Puzzles', click: () => mainWindow?.loadURL(`http://127.0.0.1:${FILE_PORT}/puzzle.html?dims=7`) },
+        { label: '8D Puzzles', click: () => mainWindow?.loadURL(`http://127.0.0.1:${FILE_PORT}/puzzle.html?dims=8`) },
+        { type: 'separator' },
+        { label: 'Restart Puzzle Engine', click: restartPuzzleEngine },
+      ]},
     ]},
     { label: 'View', submenu: [
       { role: 'reload' }, { role: 'forceReload' }, { type: 'separator' },
@@ -274,6 +317,20 @@ ipcMain.handle('bridge:status', async () => {
 ipcMain.handle('bridge:restart', async () => {
   await restartPyEngine();
   return { ok: !!pyProcess, port: PY_PORT };
+});
+
+ipcMain.handle('puzzle:status', async () => {
+  if (!puzzleProcess || puzzleProcess.killed) return { running: false };
+  return new Promise(resolve => {
+    http.get(`http://127.0.0.1:${PUZZLE_PORT}/ping`, res => {
+      resolve({ running: res.statusCode === 200, port: PUZZLE_PORT });
+    }).on('error', err => resolve({ running: false, lastError: err.message }));
+  });
+});
+
+ipcMain.handle('puzzle:restart', async () => {
+  await restartPuzzleEngine();
+  return { ok: !!puzzleProcess, port: PUZZLE_PORT };
 });
 
 ipcMain.handle('window:captureClipboard', async () => {
@@ -307,14 +364,22 @@ app.whenReady().then(async () => {
     console.log(ok ? `[electron] Python engine ready :${PY_PORT}` : '[electron] Python engine timed out.');
   }
 
+  puzzleProcess = startPuzzleEngine();
+  if (puzzleProcess) {
+    console.log('[electron] Waiting for puzzle engine…');
+    const ok = await waitForPort(PUZZLE_PORT, ENGINE_WAIT);
+    console.log(ok ? `[electron] Puzzle engine ready :${PUZZLE_PORT}` : '[electron] Puzzle engine timed out.');
+  }
+
   await createWindow();
   app.on('activate', () => { if (!mainWindow) createWindow(); });
 });
 
 function cleanup() {
-  try { if (engineProcess) engineProcess.kill(); } catch {}
-  try { if (pyProcess)     pyProcess.kill();     } catch {}
-  try { if (fileServer)    fileServer.close();   } catch {}
+  try { if (engineProcess)  engineProcess.kill();  } catch {}
+  try { if (pyProcess)      pyProcess.kill();      } catch {}
+  try { if (puzzleProcess)  puzzleProcess.kill();  } catch {}
+  try { if (fileServer)     fileServer.close();    } catch {}
 }
 
 app.on('window-all-closed', () => { cleanup(); if (process.platform !== 'darwin') app.quit(); });

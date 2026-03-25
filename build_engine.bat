@@ -11,6 +11,7 @@ echo === BUILD OK ===
 for %%f in (eightd_bridge.exe bridge.exe chess_bridge.exe) do (
   if exist %%f copy /Y %%f "..\chess_engine.exe" && echo Copied %%f to chess_engine.exe
 )
+if exist puzzle_engine.exe copy /Y puzzle_engine.exe "..\puzzle_engine.exe" && echo Copied puzzle_engine.exe
 goto end
 :fail
 echo === BUILD FAILED ===

@@ -443,32 +443,44 @@ class Game:
         return self._apply(pid, frm, to, captured)
 
     def apply_move(self, pid, frm, to):
+        if not self.alive[pid]: return None          # dead players can't move
         fk = ckey(frm); tk = ckey(to)
         piece    = self.board.get(fk)
         if not piece or piece.pid != pid: return None
         captured = self.board.get(tk)
-        if captured and captured.pid == pid: return None
+        if captured and captured.pid == pid: return None  # no self-capture
         return self._apply(pid, frm, to, captured)
 
     def _apply(self, pid, frm, to, captured):
         fk, tk = ckey(frm), ckey(to)
         piece = self.board.pop(fk, None)
         if not piece: return None
+
+        transferred_from = None  # pid whose pieces were transferred to `pid`
         if captured:
             self.board.pop(tk, None)
             if captured.type == 'K':
-                self.alive[captured.pid] = False
+                loser = captured.pid
+                # Only eliminate + transfer if loser is genuinely a different player
+                # and not already dead (prevents double-transfer edge cases)
+                if loser != pid and self.alive[loser]:
+                    self.alive[loser] = False
+                    transferred_from  = loser
+                    # Transfer ALL of the loser's remaining pieces to the capturing player
+                    for p in self.board.values():
+                        if p.pid == loser:
+                            p.pid = pid
 
         piece.coords = list(to)
         self.board[tk] = piece
         self.turn_number += 1
         self.last_player = pid
         self.move_log.append({
-            'f':  list(frm),
-            't':  list(to),
-            'pt': piece.type,
-            'ct': captured.type if captured else None,
-            'cp': captured.pid  if captured else None,
+            'f':   list(frm),
+            't':   list(to),
+            'pt':  piece.type,
+            'ct':  captured.type if captured else None,
+            'cp':  captured.pid  if captured else None,
             'pid': pid,
         })
 
@@ -477,14 +489,16 @@ class Game:
         winner    = list(alive_with_pieces)[0] if game_over and alive_with_pieces else None
 
         return {
-            'move':          {'from': list(frm), 'to': list(to)},
-            'piece_type':    FULL_NAME.get(piece.type, piece.type),
-            'captured_type': FULL_NAME.get(captured.type, captured.type) if captured else None,
-            'captured_pid':  captured.pid  if captured else None,
-            'player':        pid,
-            'turn_number':   self.turn_number,
-            'game_over':     game_over,
-            'winner':        winner,
+            'move':             {'from': list(frm), 'to': list(to)},
+            'piece_type':       FULL_NAME.get(piece.type, piece.type),
+            'captured_type':    FULL_NAME.get(captured.type, captured.type) if captured else None,
+            'captured_pid':     captured.pid  if captured else None,
+            'transferred_from': transferred_from,  # non-None when a king was captured
+            'player':           pid,
+            'turn_number':      self.turn_number,
+            'alive':            self.alive[:],  # full alive snapshot for client sync
+            'game_over':        game_over,
+            'winner':           winner,
         }
 
     def state_summary(self, include_pieces=False):

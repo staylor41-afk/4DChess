@@ -643,7 +643,7 @@ async function applyHumanMove(fromKey, to) {
     const d = await r.json();
     if (d.ok && d.turn) {
       const pt = TYPE_MAP[d.turn.piece_type] ?? d.turn.piece_type;
-      applyMove(pc.coords, to, pt, d.turn.captured_type, d.turn.captured_pid);
+      applyMove(pc.coords, to, pt, d.turn.captured_type, d.turn.captured_pid, d.turn.alive);
       activePid = humanTurnPid;
       turnNum   = d.turn.turn_number ?? turnNum+1;
     }
@@ -769,7 +769,7 @@ function rebuildBuffers() {
 // ═══════════════════════════════════════════════════════════
 // APPLY MOVE
 // ═══════════════════════════════════════════════════════════
-function applyMove(from,to,ptype,capType,capPid){
+function applyMove(from,to,ptype,capType,capPid,engineAlive){
   const fk=from.join('|'),tk=to.join('|');
   const pc=board.get(fk); if(!pc) return;
   board.delete(fk);
@@ -780,8 +780,22 @@ function applyMove(from,to,ptype,capType,capPid){
   pc.coords=to; board.set(tk,pc);
   recentMoves.set(tk,Date.now());
   const ct=capType?(TYPE_MAP[capType]??capType):(victim?.type??'P');
+  const resolvedCapPid = victim?.pid ?? capPid ?? null;
+
+  // ── King captured: eliminate loser + transfer their client-side pieces ──────
+  if(ct==='K' && resolvedCapPid!==null && resolvedCapPid!==pc.pid){
+    alive[resolvedCapPid] = false;
+    for(const [,p] of board){
+      if(p.pid===resolvedCapPid) p.pid=pc.pid;
+    }
+  }
+  // Hard-sync alive[] from engine snapshot if provided (authoritative)
+  if(engineAlive){
+    for(let i=0;i<engineAlive.length&&i<alive.length;i++) alive[i]=engineAlive[i];
+  }
+
   const entry={pid:pc.pid,sym:PIECE_SYM[pc.type]??pc.type,cap:isCapture,
-               capSym:PIECE_SYM[ct]??ct,capPid:victim?.pid??capPid??null,turn:turnNum};
+               capSym:PIECE_SYM[ct]??ct,capPid:resolvedCapPid,turn:turnNum};
   moveLog.push(entry); fullLog.push(entry);
   if(moveLog.length>MAX_LOG) moveLog.shift();
   dirty=true;
@@ -843,7 +857,7 @@ async function gameLoop() {
 
       const t=d.turn;
       if(t.move?.from&&t.move?.to){
-        applyMove(t.move.from,t.move.to,TYPE_MAP[t.piece_type]??t.piece_type,t.captured_type,t.captured_pid);
+        applyMove(t.move.from,t.move.to,TYPE_MAP[t.piece_type]??t.piece_type,t.captured_type,t.captured_pid,t.alive);
       }
       activePid = t.player??cur;
       turnNum   = t.turn_number??turnNum+1;

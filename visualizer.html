@@ -673,6 +673,29 @@ function homeFor(pid) {
 }
 
 async function buildBoard() {
+  // ── Try to load actual state from engine (handles mid-game reconnects) ─────
+  try {
+    const r = await fetch(`${ENGINE}/state?game_id=${GAME_ID}`,
+                          {signal: AbortSignal.timeout(4000)});
+    if (r.ok) {
+      const d = await r.json();
+      if (d.ok && d.state?.pieces?.length) {
+        const bd = new Map();
+        const TYPE_REV = {Pawn:'P',Rook:'R',Knight:'N',Bishop:'B',Queen:'Q',King:'K'};
+        for(const p of d.state.pieces){
+          const coords = p.coords.length >= NDIM ? p.coords.slice(0,NDIM)
+                       : [...p.coords, ...new Array(NDIM-p.coords.length).fill(0)];
+          bd.set(ck(coords), {pid:p.pid, type:TYPE_REV[p.type]??p.type, coords});
+        }
+        // Sync alive[] and turn from the engine snapshot
+        if(d.state.alive) for(let i=0;i<d.state.alive.length&&i<alive.length;i++) alive[i]=d.state.alive[i];
+        if(d.state.turn_number) turnNum = d.state.turn_number;
+        return bd;
+      }
+    }
+  } catch(_) { /* engine not ready yet — fall through to local reconstruction */ }
+
+  // ── Fallback: reconstruct initial board locally (new game or engine offline) ─
   const bd = new Map();
   const yield_ = ()=>new Promise(r=>setTimeout(r,0));
   for(let pid=0;pid<NP;pid++){
@@ -852,8 +875,10 @@ async function gameLoop() {
           body:JSON.stringify({dims:NDIM,players:NP,game_id:GAME_ID}),
           signal:AbortSignal.timeout(5000),
         }).catch(()=>{});
-        board=await buildBoard(); alive=new Array(NP).fill(true);
-        turnNum=0;capCount=0;cur=0;dirty=true;moveLog.length=0;
+        // buildBoard() syncs alive[] and turnNum from engine state snapshot
+        alive=new Array(NP).fill(true);
+        board=await buildBoard();
+        capCount=0;cur=0;dirty=true;moveLog.length=0;
         continue;
       }
       const d = await r.json();
@@ -1124,8 +1149,9 @@ function animate(now){
     });
     const d=await r.json();
     if(d.ok){
-      board=await buildBoard(); alive=new Array(NP).fill(true);
-      turnNum=0;capCount=0;activePid=0;dirty=true;
+      alive=new Array(NP).fill(true);
+      board=await buildBoard();  // syncs alive[] + turnNum from engine
+      capCount=0;activePid=0;dirty=true;
       status.textContent=`⬤ ${NDIM}D game ready!`;
     }
   } catch(e){

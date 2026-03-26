@@ -594,6 +594,17 @@ class Handler(BaseHTTPRequestHandler):
                         'moves': [list(to) for (_, to, _) in moves],
                         'count': len(moves)})
 
+        elif ep == '/state':
+            # Full board snapshot — used by client on init/reconnect so it
+            # can sync to the engine's actual piece positions rather than
+            # reconstructing from scratch (which would be wrong mid-game).
+            gid = qs.get('game_id', 'game1')
+            with games_lock:
+                g = games.get(gid)
+            if not g:
+                self._send({'ok': False, 'error': 'game not found'}); return
+            self._send({'ok': True, 'state': g.state_summary(include_pieces=True)})
+
         elif ep == '/moves':
             # Lightweight delta feed for the 3-D visualiser.
             # Client sends since=N (index into move_log).

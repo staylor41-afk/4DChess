@@ -2,197 +2,230 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>ND Chess — Launcher</title>
+<title>ND Chess</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap"></noscript>
 <style>
+:root {
+  --bg:     #04060c;
+  --panel:  #080d18;
+  --border: #141e34;
+  --gold:   #c8a84b;
+  --cyan:   #3ecfcf;
+  --muted:  #4a607a;
+  --ink:    #8aaccc;
+  --rose:   #e05060;
+}
 * { margin:0; padding:0; box-sizing:border-box; }
-
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
+  font-size: .92rem;
+  overflow-x: hidden;
+}
 body {
-  background: #010308;
-  color: #8aa;
-  font-family: 'Courier New', monospace;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden;
-  padding: 24px 16px;
+  min-height: 100vh;
+  padding: 28px 16px;
+  gap: 0;
 }
 
+/* ── Title ─────────────────────────────────────────────── */
 h1 {
-  font-size: clamp(28px, 5vw, 52px);
-  font-weight: bold;
-  letter-spacing: 0.18em;
-  color: #a060ff;
-  text-shadow: 0 0 40px #6030cc88, 0 0 80px #3010aa44;
+  font-family: 'Orbitron', 'Segoe UI', 'Arial Black', Arial, sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: .18em;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  text-shadow: 0 0 32px rgba(200,168,75,.35), 0 0 64px rgba(200,168,75,.15);
+  margin-bottom: 4px;
 }
-.subtitle {
-  font-size: 11px;
-  color: #2a3858;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin-bottom: 40px;
+.copyright {
+  font-size: .54rem;
+  color: var(--muted);
+  letter-spacing: .1em;
+  margin-bottom: 26px;
 }
 
-/* ── dimension cards ─────────────────────────────────────── */
+/* ── Mode tabs ─────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.tab-btn {
+  font-family: 'Orbitron', 'Segoe UI', 'Arial Black', Arial, sans-serif;
+  font-size: .6rem;
+  padding: .32rem .9rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: 3px;
+  letter-spacing: .08em;
+  transition: all .14s;
+}
+.tab-btn.active {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(200,168,75,.07);
+}
+
+/* ── Dimension cards ───────────────────────────────────── */
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
   justify-content: center;
-  max-width: 980px;
-  margin-bottom: 36px;
+  max-width: 940px;
+  margin-bottom: 24px;
 }
-
 .card {
-  width: 120px;
-  padding: 18px 12px 16px;
-  background: #060c1a;
-  border: 1px solid #0f1e40;
-  border-radius: 6px;
+  width: 116px;
+  padding: 16px 10px 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  transition: border-color 0.18s, box-shadow 0.18s, transform 0.12s;
+  transition: border-color .15s, box-shadow .15s, transform .1s;
   user-select: none;
   position: relative;
 }
-.card:hover {
-  border-color: #2a50a0;
-  box-shadow: 0 0 18px #1020660a;
-  transform: translateY(-2px);
-}
+.card:hover { border-color: var(--cyan); transform: translateY(-2px); box-shadow: 0 0 18px rgba(62,207,207,.08); }
 .card.selected {
-  border-color: var(--accent);
-  box-shadow: 0 0 28px var(--glow);
-  background: #0a1428;
+  border-color: var(--gold);
+  box-shadow: 0 0 24px rgba(200,168,75,.18);
+  background: rgba(200,168,75,.04);
 }
-
 .card-dim {
-  font-size: 30px;
-  font-weight: bold;
+  font-family: 'Orbitron', 'Segoe UI', 'Arial Black', Arial, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 900;
   line-height: 1;
-  margin-bottom: 8px;
-  color: var(--accent);
-  text-shadow: 0 0 16px var(--glow);
+  margin-bottom: 7px;
+  color: var(--gold);
 }
+.card.selected .card-dim { text-shadow: 0 0 14px rgba(200,168,75,.5); }
 .card-layout {
-  font-size: 9.5px;
-  color: #3a5080;
-  line-height: 1.6;
-  margin-bottom: 8px;
-  letter-spacing: 0.04em;
+  font-size: .56rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 7px;
+  letter-spacing: .04em;
 }
-.card-syms {
-  font-size: 16px;
-  color: #4060a0;
-  margin-bottom: 8px;
-  letter-spacing: 2px;
-}
+.card-syms { font-size: 15px; color: var(--muted); margin-bottom: 6px; letter-spacing: 2px; }
 .card-players {
-  font-size: 10px;
-  font-weight: bold;
-  color: var(--accent);
-  letter-spacing: 0.06em;
+  font-family: 'Orbitron', 'Segoe UI', 'Arial Black', Arial, sans-serif;
+  font-size: .52rem;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: .06em;
 }
 
-/* ── bottom controls ─────────────────────────────────────── */
+/* ── Controls row ──────────────────────────────────────── */
 .controls {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 18px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
 }
-
 .ctrl-label {
-  font-size: 11px;
-  color: #2a3858;
-  letter-spacing: 0.14em;
+  font-family: 'Orbitron', 'Segoe UI', 'Arial Black', Arial, sans-serif;
+  font-size: .56rem;
+  color: var(--muted);
+  letter-spacing: .1em;
   text-transform: uppercase;
   white-space: nowrap;
 }
-
 select#human-count {
-  background: #060c1a;
-  border: 1px solid #1a3060;
-  color: #0df;
-  font-family: 'Courier New', monospace;
-  font-size: 12px;
-  padding: 6px 14px 6px 10px;
-  border-radius: 4px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--cyan);
+  font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
+  font-size: .75rem;
+  padding: .3rem .7rem;
+  border-radius: 3px;
   cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
   outline: none;
-  min-width: 120px;
-  text-align: center;
+  min-width: 130px;
 }
-select#human-count:focus { border-color: #3070cc; }
+select#human-count:focus { border-color: var(--cyan); }
 
 .launch-btn {
-  background: #060c1a;
-  border: 1px solid #1a4080;
-  color: #2a60cc;
-  font-family: 'Courier New', monospace;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  padding: 10px 36px;
-  border-radius: 4px;
+  font-family: 'Orbitron', 'Segoe UI', 'Arial Black', Arial, sans-serif;
+  font-size: .72rem;
+  padding: .52rem 1.7rem;
+  border: 2px solid var(--gold);
+  background: rgba(200,168,75,.08);
+  color: var(--gold);
   cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, box-shadow 0.15s;
+  border-radius: 4px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  transition: all .15s;
 }
-.launch-btn:hover:not(:disabled) {
-  border-color: #4080ee;
-  color: #5090ff;
-  box-shadow: 0 0 20px #1040cc22;
+.launch-btn:hover:not(:disabled) { background: rgba(200,168,75,.22); }
+.launch-btn:disabled { opacity: .25; cursor: default; }
+
+/* ── Puzzle controls ───────────────────────────────────── */
+#puzzle-controls {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
-.launch-btn:disabled {
-  opacity: 0.28;
-  cursor: default;
+.puzzle-hint {
+  font-family: 'Orbitron', 'Segoe UI', 'Arial Black', Arial, sans-serif;
+  font-size: .52rem;
+  color: var(--muted);
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
 
-/* ── legend ──────────────────────────────────────────────── */
+/* ── Legend ────────────────────────────────────────────── */
 .legend {
-  font-size: 10px;
-  color: #18284a;
+  font-size: .58rem;
+  color: var(--muted);
   text-align: center;
-  line-height: 2.0;
-  letter-spacing: 0.06em;
+  line-height: 2.1;
+  letter-spacing: .06em;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  max-width: 680px;
+  width: 100%;
+  margin-top: 4px;
 }
-
-/* accent colours per dim */
-.d2  { --accent:#f08030; --glow:#f0803040; }
-.d3  { --accent:#f0c040; --glow:#f0c04040; }
-.d4  { --accent:#60d860; --glow:#60d86040; }
-.d5  { --accent:#40d8c8; --glow:#40d8c840; }
-.d6  { --accent:#40a8ff; --glow:#40a8ff40; }
-.d7  { --accent:#a060ff; --glow:#a060ff40; }
-.d8  { --accent:#ff60c0; --glow:#ff60c040; }
+.tagline {
+  font-size: .56rem;
+  color: rgba(100,120,160,.4);
+  letter-spacing: .08em;
+  text-align: center;
+  margin-top: 14px;
+}
 </style>
 </head>
 <body>
 
 <h1>ND Chess</h1>
-<div class="subtitle">select dimensions · set human players · launch</div>
+<div class="copyright">© Samuel M G Taylor, 2003 &nbsp;·&nbsp; Original concept &amp; implementation</div>
 
 <!-- ── Mode tabs ─────────────────────────────────────────── -->
-<div style="display:flex;gap:12px;margin-bottom:28px;">
-  <button id="tab-game"   onclick="setMode('game')"
-    style="background:#0a1628;border:1px solid #2a50a0;color:#5090ff;font-family:'Courier New',monospace;font-size:11px;padding:5px 18px;border-radius:3px;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;">
-    ♚ GAME
-  </button>
-  <button id="tab-puzzle" onclick="setMode('puzzle')"
-    style="background:#060c1a;border:1px solid #1e3060;color:#2a4880;font-family:'Courier New',monospace;font-size:11px;padding:5px 18px;border-radius:3px;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;">
-    ✦ PUZZLES
-  </button>
+<div class="tabs">
+  <button class="tab-btn active" id="tab-game"   onclick="setMode('game')">♚ GAME</button>
+  <button class="tab-btn"        id="tab-puzzle" onclick="setMode('puzzle')">✦ PUZZLES</button>
 </div>
 
-<div id="cards">
+<!-- ── Game mode: dimension cards ─────────────────────────── -->
+<div id="cards" class="cards">
   <div class="card d2" data-dims="2" data-np="2">
     <div class="card-dim">2D</div>
     <div class="card-layout">Classic board<br>8 × 8</div>
@@ -237,77 +270,76 @@ select#human-count:focus { border-color: #3070cc; }
   </div>
 </div>
 
-<div class="controls">
-  <span class="ctrl-label">Human players:</span>
+<!-- ── Game controls ──────────────────────────────────────── -->
+<div class="controls" id="game-controls">
+  <span class="ctrl-label">Human players</span>
   <select id="human-count">
     <option value="0">0 — full AI</option>
   </select>
-  <button class="launch-btn" id="launch" disabled>▶ LAUNCH</button>
+  <button class="launch-btn" id="launch" disabled>▶ START GAME</button>
 </div>
 
-<!-- ── Puzzle mode controls (hidden by default) ───────── -->
-<div id="puzzle-controls" style="display:none;flex-direction:column;align-items:center;gap:18px;">
-  <div style="font-size:10px;color:#2a3858;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;">
-    COLLAPSE PUZZLES — every move must be a capture — last piece wins
-  </div>
-  <!-- Puzzle dimension cards (same visual style, no player count) -->
+<!-- ── Puzzle mode ─────────────────────────────────────────── -->
+<div id="puzzle-controls" style="display:none;flex-direction:column;align-items:center;gap:16px;">
+  <div class="puzzle-hint">collapse puzzles — every move must be a capture — last piece wins</div>
   <div class="cards" id="puzzle-cards">
-    <div class="card d2" data-dims="2" onclick="launchPuzzle(2)" style="cursor:pointer">
+    <div class="card d2" data-dims="2" onclick="launchPuzzle(2)">
       <div class="card-dim">2D</div>
       <div class="card-layout">Classic board<br>8 × 8</div>
       <div class="card-syms">♟♜♞</div>
       <div class="card-players">all piece types</div>
     </div>
-    <div class="card d3" data-dims="3" onclick="launchPuzzle(3)" style="cursor:pointer">
+    <div class="card d3" data-dims="3" onclick="launchPuzzle(3)">
       <div class="card-dim">3D</div>
       <div class="card-layout">8×8×8 cube<br>3 axes</div>
       <div class="card-syms">♟♜♞</div>
       <div class="card-players">Z depth</div>
     </div>
-    <div class="card d4" data-dims="4" onclick="launchPuzzle(4)" style="cursor:pointer">
+    <div class="card d4" data-dims="4" onclick="launchPuzzle(4)">
       <div class="card-dim">4D</div>
       <div class="card-layout">Row of cubes<br>4 axes</div>
       <div class="card-syms">♟♜♞</div>
       <div class="card-players">W axis</div>
     </div>
-    <div class="card d5" data-dims="5" onclick="launchPuzzle(5)" style="cursor:pointer">
+    <div class="card d5" data-dims="5" onclick="launchPuzzle(5)">
       <div class="card-dim">5D</div>
       <div class="card-layout">Wall of cubes<br>5 axes</div>
       <div class="card-syms">♟♜♞</div>
       <div class="card-players">W+V axes</div>
     </div>
-    <div class="card d6" data-dims="6" onclick="launchPuzzle(6)" style="cursor:pointer">
+    <div class="card d6" data-dims="6" onclick="launchPuzzle(6)">
       <div class="card-dim">6D</div>
       <div class="card-layout">One building<br>6 axes</div>
       <div class="card-syms">♟♜♞</div>
       <div class="card-players">W+V+U axes</div>
     </div>
-    <div class="card d7" data-dims="7" onclick="launchPuzzle(7)" style="cursor:pointer">
+    <div class="card d7" data-dims="7" onclick="launchPuzzle(7)">
       <div class="card-dim">7D</div>
       <div class="card-layout">8-bldg strip<br>7 axes</div>
       <div class="card-syms">♟♜♞</div>
       <div class="card-players">+T axis</div>
     </div>
-    <div class="card d8" data-dims="8" onclick="launchPuzzle(8)" style="cursor:pointer">
+    <div class="card d8" data-dims="8" onclick="launchPuzzle(8)">
       <div class="card-dim">8D</div>
       <div class="card-layout">Full city<br>8 axes</div>
       <div class="card-syms">♟♜♞</div>
       <div class="card-players">+S axis</div>
     </div>
   </div>
-  <div style="font-size:10px;color:#1e3060;letter-spacing:.06em;">
-    click a dimension card to launch puzzle mode with default settings
-  </div>
+  <div class="puzzle-hint" style="font-size:.5rem;color:rgba(74,96,122,.5)">click a dimension card to open puzzle mode</div>
 </div>
 
+<!-- ── Legend ─────────────────────────────────────────────── -->
 <div class="legend" id="game-legend">
   ↑↓←→ strafe &nbsp;·&nbsp; Z/X up/down &nbsp;·&nbsp; R toggle orbit &nbsp;·&nbsp; T/Y/U zoom levels<br>
-  Human: click piece → see legal moves → click destination
+  Human: click piece → legal moves highlight → click destination &nbsp;·&nbsp; Capture a King to inherit all their pieces
 </div>
 <div class="legend" id="puzzle-legend" style="display:none">
   every move must be a capture &nbsp;·&nbsp; reduce to 1 piece to win<br>
-  difficulty · piece count · hints all configurable in the puzzle UI
+  difficulty · piece count · hints · timer — all configurable in the puzzle UI
 </div>
+
+<div class="tagline">P1 moves first &nbsp;·&nbsp; All rights reserved</div>
 
 <script>
 let selectedDims = null;
@@ -319,7 +351,7 @@ const launchBtn = document.getElementById('launch');
 document.getElementById('cards').addEventListener('click', e => {
   const card = e.target.closest('.card');
   if (!card) return;
-  document.querySelectorAll('.card.selected').forEach(c => c.classList.remove('selected'));
+  document.querySelectorAll('#cards .card.selected').forEach(c => c.classList.remove('selected'));
   card.classList.add('selected');
   selectedDims = parseInt(card.dataset.dims);
   selectedNP   = parseInt(card.dataset.np);
@@ -341,38 +373,30 @@ function rebuildDropdown(np) {
 
 launchBtn.addEventListener('click', () => {
   if (!selectedDims) return;
-  const humans = parseInt(humanSel.value);
-  window.location.href = `visualizer.html?dims=${selectedDims}&humans=${humans}`;
+  window.location.href = `visualizer.html?dims=${selectedDims}&humans=${parseInt(humanSel.value)}`;
 });
 
-// Allow Enter key to launch
 document.addEventListener('keydown', e => {
   if (e.key === 'Enter' && selectedDims) launchBtn.click();
 });
 
-// Pre-select 8D
-const d8 = document.querySelector('.card[data-dims="8"]');
+// Pre-select 8D on load
+const d8 = document.querySelector('#cards .card[data-dims="8"]');
 if (d8) d8.click();
 
-// ── Mode switching ────────────────────────────────────────────────────────
+// ── Mode switching ─────────────────────────────────────────
 let currentMode = 'game';
 
 function setMode(mode) {
   currentMode = mode;
   const isGame = mode === 'game';
-
-  // Cards / controls visibility
-  document.getElementById('cards').style.display           = isGame ? '' : 'none';
-  document.querySelector('.controls').style.display        = isGame ? '' : 'none';
-  document.getElementById('game-legend').style.display     = isGame ? '' : 'none';
-  document.getElementById('puzzle-controls').style.display = isGame ? 'none' : 'flex';
-  document.getElementById('puzzle-legend').style.display   = isGame ? 'none' : '';
-
-  // Tab button styles
-  const activeStyle   = 'background:#0a1628;border:1px solid #2a50a0;color:#5090ff;';
-  const inactiveStyle = 'background:#060c1a;border:1px solid #1e3060;color:#2a4880;';
-  document.getElementById('tab-game').style.cssText   += isGame  ? activeStyle : inactiveStyle;
-  document.getElementById('tab-puzzle').style.cssText += !isGame ? activeStyle : inactiveStyle;
+  document.getElementById('cards').style.display            = isGame ? '' : 'none';
+  document.getElementById('game-controls').style.display    = isGame ? '' : 'none';
+  document.getElementById('game-legend').style.display      = isGame ? '' : 'none';
+  document.getElementById('puzzle-controls').style.display  = isGame ? 'none' : 'flex';
+  document.getElementById('puzzle-legend').style.display    = isGame ? 'none' : '';
+  document.getElementById('tab-game').classList.toggle('active',  isGame);
+  document.getElementById('tab-puzzle').classList.toggle('active', !isGame);
 }
 
 function launchPuzzle(dims) {

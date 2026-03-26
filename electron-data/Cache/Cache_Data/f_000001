@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ND Chess — Visualizer</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#000; overflow:hidden; font-family:'Courier New',monospace; }
+
+#hud {
+  position:fixed; top:14px; left:16px;
+  font-size:11px; line-height:2.0; color:#3a4a6a;
+  pointer-events:none; text-transform:uppercase; letter-spacing:.05em;
+  text-shadow:0 0 8px #0008;
+}
+.val  { color:#0df; font-weight:bold; }
+.cap  { color:#fa0; font-weight:bold; }
+.pid  { font-weight:bold; }
+.dim  { color:#a0f; font-size:13px; font-weight:bold; }
+
+#legend {
+  position:fixed; top:14px; right:16px;
+  font-size:10px; line-height:2.0; color:#2a3858;
+  text-align:right; pointer-events:none;
+}
+#keys {
+  position:fixed; bottom:14px; left:16px;
+  font-size:10px; line-height:1.8; color:#1e2c44;
+  pointer-events:none;
+}
+#status {
+  position:fixed; bottom:14px; right:16px;
+  font-size:10px; line-height:1.8; color:#1e2c44;
+  text-align:right; pointer-events:none;
+}
+#movelog {
+  position:fixed; right:16px; bottom:48px;
+  width:230px; max-height:340px; overflow:hidden;
+  font-size:10px; line-height:1.7; font-family:'Courier New',monospace;
+  pointer-events:none; text-align:right;
+  mask-image:linear-gradient(to bottom, transparent 0%, black 18%);
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 18%);
+}
+#dl-log {
+  position:fixed; bottom:14px; left:50%; transform:translateX(-50%);
+  background:#050d1c; border:1px solid #1e3868; color:#3a7;
+  padding:4px 14px; font-size:10px; font-family:'Courier New',monospace;
+  cursor:pointer; letter-spacing:.08em; z-index:10;
+  transition: border-color .2s, color .2s;
+}
+#dl-log:hover { border-color:#3a7; color:#6fd; }
+
+/* human-turn banner */
+#human-banner {
+  display:none;
+  position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+  background:rgba(0,0,0,0.82); border:1px solid #3a7;
+  padding:18px 36px; text-align:center;
+  font-size:13px; color:#3af; pointer-events:none;
+  letter-spacing:.1em; z-index:20;
+}
+#human-banner.active { display:block; }
+
+/* back-to-menu */
+#menu-btn {
+  position:fixed; top:14px; left:50%; transform:translateX(-50%);
+  background:#050d1c; border:1px solid #1e3060; color:#2a4880;
+  padding:3px 12px; font-size:10px; font-family:'Courier New',monospace;
+  cursor:pointer; letter-spacing:.08em; z-index:10;
+  transition: border-color .2s, color .2s;
+}
+#menu-btn:hover { border-color:#4060a0; color:#5080cc; }
+</style>
+</head>
+<body>
+
+<div id="hud">
+  <span class="dim" id="h-title">ND CHESS</span><br>
+  <span style="color:#334">TURN ···</span> <span class="val" id="h-turn">—</span><br>
+  <span style="color:#334">PLAYER ·</span> <span class="pid" id="h-pid">—</span><br>
+  <span style="color:#334">PIECES ·</span> <span class="val" id="h-pcs">—</span><br>
+  <span style="color:#334">ALIVE ··</span> <span class="val" id="h-alive">—</span><span style="color:#334" id="h-np-label"></span><br>
+  <span style="color:#334">CAPTURES</span> <span class="cap"  id="h-caps">0</span><br>
+  <span style="color:#334">T/SEC ··</span> <span class="val" id="h-tps">—</span><br>
+  <span style="color:#334">ORBIT ··</span> <span class="val" id="h-orbit" style="color:#3af">ON</span><br>
+  <span style="color:#334" id="gp-row" style="display:none">GAMEPAD ·</span><span class="val" id="h-gp" style="display:none"></span>
+</div>
+
+<div id="legend">
+  <span style="color:#1e3060">── LAYOUT ──────</span><br>
+  X·Y = board square<br>
+  Z·· = board height<br>
+  <span id="leg-extra"></span>
+  <br>
+  <span style="color:#1e3060">── SYMBOLS ─────</span><br>
+  ♚ King &nbsp; ♛ Queen<br>
+  ♜ Rook &nbsp; ♝ Bishop<br>
+  ♞ Knight ♟ Pawn
+</div>
+
+<div id="keys">
+  ↑↓←→ strafe · Z/X up/down · drag rotate · scroll zoom<br>
+  R=orbit · T/Y/U zoom levels · click piece (human turn)<br>
+  🎮 LS=orbit · RB=forward · RT=back · A=speed
+</div>
+<div id="movelog"></div>
+<div id="status">⬤ initializing…</div>
+<button id="dl-log" title="Download full move log as CSV">⬇ LOG</button>
+<button id="menu-btn" onclick="window.location.href='start.html'">← MENU</button>
+
+<div id="human-banner">
+  <span id="banner-text">YOUR TURN — click a piece</span>
+</div>
+
+<script type="importmap">
+{ "imports": {
+    "three":         "https://cdn.jsdelivr.net/npm/three@0.163/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163/examples/jsm/"
+} }
+</script>
+
+<script type="module">
+import * as THREE        from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ═══════════════════════════════════════════════════════════
+// URL PARAMS → CONFIG
+// ═══════════════════════════════════════════════════════════
+const params      = new URLSearchParams(location.search);
+const NDIM        = Math.min(8, Math.max(2, parseInt(params.get('dims') || '8')));
+const HUMAN_COUNT = Math.max(0, parseInt(params.get('humans') || '0'));
+const NP          = 1 << (NDIM - 1);          // 2^(NDIM-1)
+const GAME_ID     = `vis${NDIM}d`;
+const HUMAN_PLAYERS = new Set(Array.from({length: Math.min(HUMAN_COUNT, NP)}, (_,i) => i));
+
+const ENGINE   = 'http://127.0.0.1:8769';
+const BSIZE    = 8;
+const DRAW_FPS = 4;
+
+document.getElementById('h-title').textContent   = `${NDIM}D CHESS`;
+document.getElementById('h-alive').textContent   = NP;
+document.getElementById('h-np-label').textContent = `/${NP}`;
+
+// ── Legend extras ──────────────────────────────────────────
+{
+  const extras = {
+    4: 'W·· = cube in row',
+    5: 'W·· = cube in row<br>V·· = floor/level',
+    6: 'W·U = cube in floor<br>V·· = floor in bldg',
+    7: 'W·U = cube in floor<br>V·· = floor in bldg<br>T·· = bldg in strip',
+    8: 'W·U = cube in floor<br>V·· = floor in bldg<br>T·S = bldg in city',
+  };
+  document.getElementById('leg-extra').innerHTML = extras[NDIM] || '';
+}
+
+// ═══════════════════════════════════════════════════════════
+// LAYOUT CONSTANTS
+// ═══════════════════════════════════════════════════════════
+const CELL       = 1;
+const CUBE_GAP   = 4;
+const FLOOR_GAP  = 10;
+const BLDG_GAP   = 32;
+const CUBE_STEP  = BSIZE*CELL + CUBE_GAP;           // 12
+const FLOOR_STEP = BSIZE*CELL + FLOOR_GAP;          // 18
+const BLDG_STEP  = BSIZE*CUBE_STEP + BLDG_GAP;     // 128
+const CUBE_SPAN  = (BSIZE-1)*CELL;                  // 7
+const FLOOR_SPAN = (BSIZE-1)*CUBE_STEP + CUBE_SPAN; // 91
+const BLDG_H     = (BSIZE-1)*FLOOR_STEP + CUBE_SPAN;// 133
+const CITY_W     = (BSIZE-1)*BLDG_STEP  + FLOOR_SPAN;// 987
+
+// World extents per dim
+const EXT_X = NDIM<=3 ? CUBE_SPAN : NDIM<=6 ? FLOOR_SPAN : CITY_W;
+const EXT_Y = NDIM<=2 ? 0.5 : NDIM<=4 ? CUBE_SPAN : BLDG_H;
+const EXT_Z = NDIM<=5 ? CUBE_SPAN : NDIM<=7 ? FLOOR_SPAN : CITY_W;
+const CX = EXT_X/2, CY = EXT_Y/2, CZ = EXT_Z/2;
+const MAX_EXT = Math.max(EXT_X, EXT_Y, EXT_Z);
+
+// ── Projection ─────────────────────────────────────────────
+function proj(c) {
+  return [
+    c[0]*CELL + (NDIM>3 ? c[3]*CUBE_STEP : 0) + (NDIM>6 ? c[6]*BLDG_STEP : 0),
+    (NDIM>2  ? c[2]*CELL : 0) + (NDIM>4  ? c[4]*FLOOR_STEP : 0),
+    c[1]*CELL + (NDIM>5  ? c[5]*CUBE_STEP : 0) + (NDIM>7 ? c[7]*BLDG_STEP : 0),
+  ];
+}
+
+// ═══════════════════════════════════════════════════════════
+// COLORS  (bit-reversal scramble, auto-scaled to NP)
+// ═══════════════════════════════════════════════════════════
+const HUES=[0,22,45,65,90,120,150,178,200,225,240,258,272,290,312,335];
+const VARS=[[1.00,0.56],[0.95,0.70],[1.00,0.41],[0.78,0.63],
+            [0.60,0.76],[1.00,0.31],[0.50,0.81],[0.88,0.50]];
+const BITS = Math.max(1, NDIM - 1);
+function bitRevN(n, bits) { let r=0; for(let i=0;i<bits;i++){r=(r<<1)|(n&1);n>>=1;} return r; }
+
+const PCOL = Array.from({length:NP}, (_,p) => {
+  const ci = bitRevN(p, BITS);
+  // Expand ci (0..NP-1) into the 128-slot HUES×VARS table
+  const slot = NP < 128 ? Math.floor(ci * 128 / NP) : ci;
+  const [s,l] = VARS[Math.floor(slot/16) % 8];
+  return new THREE.Color().setHSL(HUES[slot%16]/360, s, l);
+});
+// Override for 2-player: max contrast
+if (NP === 2) {
+  PCOL[0] = new THREE.Color().setHSL(0/360,   1.0, 0.56); // vivid red
+  PCOL[1] = new THREE.Color().setHSL(200/360,  1.0, 0.60); // vivid cyan
+}
+
+// ═══════════════════════════════════════════════════════════
+// PIECE SYMBOLS & SIZES  (scaled larger for fewer players)
+// ═══════════════════════════════════════════════════════════
+const PIECE_SYM  = {P:'♟', R:'♜', N:'♞', B:'♝', Q:'♛', K:'♚'};
+const TYPE_MAP   = {Pawn:'P',Rook:'R',Knight:'N',Bishop:'B',Queen:'Q',King:'K',
+                    P:'P',R:'R',N:'N',B:'B',Q:'Q',K:'K'};
+const PIECE_TYPES = ['P','R','N','B','Q','K'];
+const SM = Math.sqrt(128/NP);  // size multiplier: 1× at 128 players, 8× at 2 players
+const PIECE_SIZE = {P:2.2*SM, R:3.2*SM, N:3.2*SM, B:3.2*SM, Q:4.8*SM, K:6.0*SM};
+const TYPE_MAX   = {P:Math.min(130000,NP*1020), R:Math.min(2000,NP*16),
+                    N:Math.min(2000,NP*16), B:Math.min(2000,NP*16),
+                    Q:Math.min(1200,NP*10), K:Math.min(200,NP*2)};
+
+function makeSymTex(sym, sz=96) {
+  const cv = document.createElement('canvas'); cv.width=cv.height=sz;
+  const ctx = cv.getContext('2d');
+  const g = ctx.createRadialGradient(sz/2,sz/2,0,sz/2,sz/2,sz*0.48);
+  g.addColorStop(0,'rgba(255,255,255,0.18)'); g.addColorStop(1,'rgba(255,255,255,0)');
+  ctx.fillStyle=g; ctx.fillRect(0,0,sz,sz);
+  ctx.font=`${Math.floor(sz*0.74)}px "Segoe UI Symbol","Apple Symbols","Noto Chess",serif`;
+  ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.shadowColor='rgba(255,255,255,0.55)'; ctx.shadowBlur=10;
+  ctx.fillStyle='rgba(255,255,255,0.96)'; ctx.fillText(sym,sz/2,sz/2+2);
+  const t = new THREE.CanvasTexture(cv); t.needsUpdate=true; return t;
+}
+
+// ═══════════════════════════════════════════════════════════
+// THREE.JS SCENE
+// ═══════════════════════════════════════════════════════════
+const renderer = new THREE.WebGLRenderer({antialias:false, powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x010308);
+const fogNear = MAX_EXT * 0.55, fogFar = MAX_EXT * 2.8;
+scene.fog = NDIM > 2 ? new THREE.Fog(0x010308, fogNear, fogFar) : null;
+
+const camera = new THREE.PerspectiveCamera(52, innerWidth/innerHeight, 0.1, MAX_EXT*5);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(CX, CY, CZ);
+controls.enableDamping   = true;
+controls.dampingFactor   = 0.07;
+controls.autoRotate      = true;
+controls.autoRotateSpeed = Math.max(0.08, 0.35 - NDIM*0.04);
+controls.minDistance     = MAX_EXT * 0.01;
+controls.maxDistance     = MAX_EXT * 3.5;
+
+function resetCam() {
+  camera.position.set(CX - MAX_EXT*0.4, CY + MAX_EXT*0.32, CZ + MAX_EXT*0.62);
+  controls.target.set(CX, CY, CZ);
+  controls.update();
+}
+resetCam();
+
+window.addEventListener('resize', () => {
+  camera.aspect = innerWidth/innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+// ═══════════════════════════════════════════════════════════
+// WIREFRAMES (dynamic per NDIM)
+// ═══════════════════════════════════════════════════════════
+function addBox(v,x0,y0,z0,x1,y1,z1){
+  v.push(x0,y0,z0,x1,y0,z0, x1,y0,z0,x1,y0,z1, x1,y0,z1,x0,y0,z1, x0,y0,z1,x0,y0,z0,
+         x0,y1,z0,x1,y1,z0, x1,y1,z0,x1,y1,z1, x1,y1,z1,x0,y1,z1, x0,y1,z1,x0,y1,z0,
+         x0,y0,z0,x0,y1,z0, x1,y0,z0,x1,y1,z0, x1,y0,z1,x1,y1,z1, x0,y0,z1,x0,y1,z1);
+}
+function mkLines(verts, color, opacity) {
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(new Float32Array(verts),3));
+  return new THREE.LineSegments(g,
+    new THREE.LineBasicMaterial({color, transparent:true, opacity, depthWrite:false}));
+}
+
+function buildWireframes() {
+  const bV=[], fV=[];
+
+  if (NDIM === 2) {
+    // Checkerboard tiles
+    for (let x=0;x<8;x++) for (let z=0;z<8;z++) {
+      const geo = new THREE.PlaneGeometry(CELL*0.96, CELL*0.96);
+      const mat = new THREE.MeshBasicMaterial({
+        color:(x+z)%2===0?0x0a1628:0x162444, transparent:true, opacity:0.65, depthWrite:false,
+      });
+      const m = new THREE.Mesh(geo, mat);
+      m.rotation.x=-Math.PI/2; m.position.set(x+0.5, 0, z+0.5); scene.add(m);
+    }
+    // Grid lines
+    const gV=[];
+    for(let i=0;i<=8;i++){gV.push(i*CELL,0,0,i*CELL,0,8*CELL);gV.push(0,0,i*CELL,8*CELL,0,i*CELL);}
+    scene.add(mkLines(gV,0x1a3060,0.55));
+    // Board border
+    addBox(bV,-0.15,-0.05,-0.15, 8*CELL+0.15,0.05,8*CELL+0.15);
+
+  } else if (NDIM === 3) {
+    // Cube outline
+    addBox(bV,-0.1,-0.1,-0.1, CUBE_SPAN+0.1,CUBE_SPAN+0.1,CUBE_SPAN+0.1);
+    // Z-level planes
+    for(let z=0;z<BSIZE;z++) addBox(fV, 0,z*CELL,0, CUBE_SPAN,z*CELL+0.05,CUBE_SPAN);
+    // Bottom grid
+    const gV=[];
+    for(let i=0;i<=8;i++){gV.push(i*CELL,0,0,i*CELL,0,BSIZE*CELL);gV.push(0,0,i*CELL,BSIZE*CELL,0,i*CELL);}
+    scene.add(mkLines(gV,0x061830,0.40));
+
+  } else if (NDIM === 4) {
+    // 8 cubes in a row, cube labels, rail box
+    for(let w=0;w<BSIZE;w++) addBox(bV, w*CUBE_STEP,0,0, w*CUBE_STEP+CUBE_SPAN,CUBE_SPAN,CUBE_SPAN);
+    addBox(fV, -0.5,-0.5,-0.5, FLOOR_SPAN+0.5,CUBE_SPAN+0.5,CUBE_SPAN+0.5);
+    // Cube labels
+    for(let w=0;w<BSIZE;w++){
+      const sp = makeLabel(`W=${w}`);
+      sp.position.set(w*CUBE_STEP+CUBE_SPAN/2, CUBE_SPAN+3.5, CUBE_SPAN/2);
+      scene.add(sp);
+    }
+
+  } else if (NDIM === 5) {
+    // Wall of W×V cubes (8×8), single deep
+    addBox(bV, 0,0,0, FLOOR_SPAN,BLDG_H,CUBE_SPAN);
+    for(let v=0;v<BSIZE;v++) addBox(fV, 0,v*FLOOR_STEP,0, FLOOR_SPAN,v*FLOOR_STEP+CUBE_SPAN,CUBE_SPAN);
+    const cV=[];
+    for(let v=0;v<BSIZE;v++) for(let w=0;w<BSIZE;w++)
+      addBox(cV, w*CUBE_STEP,v*FLOOR_STEP,0, w*CUBE_STEP+CUBE_SPAN,v*FLOOR_STEP+CUBE_SPAN,CUBE_SPAN);
+    scene.add(mkLines(cV,0x061830,0.30));
+
+  } else if (NDIM === 6) {
+    // One building
+    addBox(bV, 0,0,0, FLOOR_SPAN,BLDG_H,FLOOR_SPAN);
+    for(let v=0;v<BSIZE;v++) addBox(fV, 0,v*FLOOR_STEP,0, FLOOR_SPAN,v*FLOOR_STEP+CUBE_SPAN,FLOOR_SPAN);
+    // Cube grid (sync, 512 cubes)
+    const cV=[];
+    for(let v=0;v<BSIZE;v++) for(let w=0;w<BSIZE;w++) for(let u=0;u<BSIZE;u++)
+      addBox(cV, w*CUBE_STEP,v*FLOOR_STEP,u*CUBE_STEP, w*CUBE_STEP+CUBE_SPAN,v*FLOOR_STEP+CUBE_SPAN,u*CUBE_STEP+CUBE_SPAN);
+    scene.add(mkLines(cV,0x06121e,0.28));
+
+  } else if (NDIM === 7) {
+    // Strip of 8 buildings (T)
+    for(let t=0;t<BSIZE;t++){
+      const bx=t*BLDG_STEP;
+      addBox(bV, bx,0,0, bx+FLOOR_SPAN,BLDG_H,FLOOR_SPAN);
+      for(let v=0;v<BSIZE;v++) addBox(fV, bx,v*FLOOR_STEP,0, bx+FLOOR_SPAN,v*FLOOR_STEP+CUBE_SPAN,FLOOR_SPAN);
+    }
+
+  } else { // 8D
+    // 8×8 city
+    for(let t=0;t<BSIZE;t++) for(let s=0;s<BSIZE;s++){
+      const bx=t*BLDG_STEP, bz=s*BLDG_STEP;
+      addBox(bV, bx,0,bz, bx+FLOOR_SPAN,BLDG_H,bz+FLOOR_SPAN);
+      for(let v=0;v<BSIZE;v++) addBox(fV, bx,v*FLOOR_STEP,bz, bx+FLOOR_SPAN,v*FLOOR_STEP+CUBE_SPAN,bz+FLOOR_SPAN);
+    }
+  }
+
+  if (bV.length) scene.add(mkLines(bV, 0x2060cc, NDIM<=4?0.92:0.72));
+  if (fV.length) scene.add(mkLines(fV, 0x0f2a66, NDIM<=4?0.55:0.40));
+}
+
+// Async cube grid for 7D/8D (too large to do sync)
+async function addCubeGrid() {
+  if (NDIM < 7) return;
+  const cV = [], yield_ = ()=>new Promise(r=>setTimeout(r,0));
+  const tMax = NDIM>=8 ? BSIZE : BSIZE;
+  const sMax = NDIM>=8 ? BSIZE : 1;
+  for(let t=0;t<tMax;t++){
+    for(let s=0;s<sMax;s++){
+      const bx=t*BLDG_STEP, bz=s*BLDG_STEP;
+      for(let v=0;v<BSIZE;v++) for(let w=0;w<BSIZE;w++) for(let u=0;u<BSIZE;u++)
+        addBox(cV, bx+w*CUBE_STEP,v*FLOOR_STEP,bz+u*CUBE_STEP,
+                   bx+w*CUBE_STEP+CUBE_SPAN,v*FLOOR_STEP+CUBE_SPAN,bz+u*CUBE_STEP+CUBE_SPAN);
+    }
+    await yield_();
+  }
+  scene.add(mkLines(cV, 0x06121e, 0.18));
+}
+
+function makeLabel(text) {
+  const cv = document.createElement('canvas'); cv.width=64; cv.height=24;
+  const ctx = cv.getContext('2d');
+  ctx.font='bold 14px "Courier New",monospace'; ctx.fillStyle='rgba(60,120,220,0.8)';
+  ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(text,32,12);
+  const tex = new THREE.CanvasTexture(cv); tex.needsUpdate=true;
+  const sp  = new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true,depthWrite:false}));
+  sp.scale.set(8,3,1); return sp;
+}
+
+// ═══════════════════════════════════════════════════════════
+// PIECE POINTS
+// ═══════════════════════════════════════════════════════════
+const symTex={}, ptsObj={};
+
+function initPiecePoints() {
+  for (const t of PIECE_TYPES) {
+    const mx  = TYPE_MAX[t];
+    const pos = new Float32Array(mx*3);
+    const col = new Float32Array(mx*3);
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position',new THREE.BufferAttribute(pos,3).setUsage(THREE.DynamicDrawUsage));
+    geo.setAttribute('color',   new THREE.BufferAttribute(col,3).setUsage(THREE.DynamicDrawUsage));
+    geo.setDrawRange(0,0);
+    symTex[t] = makeSymTex(PIECE_SYM[t]);
+    const mat = new THREE.PointsMaterial({
+      size:PIECE_SIZE[t], map:symTex[t], vertexColors:true, transparent:true,
+      alphaTest:0.04, sizeAttenuation:true, depthWrite:false,
+    });
+    const pts = new THREE.Points(geo, mat);
+    scene.add(pts);
+    ptsObj[t] = {pts, pos, col, n:0};
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// TRAIL SYSTEM  — one LineSegments + one Points, single shared ring-buffer
+// ═══════════════════════════════════════════════════════════
+// Trail life scales down with player count so fast games don't flood:
+//   2 players → 10 s   |   128 players → ~2.5 s
+const TRAIL_LIFE = Math.min(10000, Math.max(2500, 10000 / Math.sqrt(NP/2)));
+const TRAIL_MAX  = 600;   // hard cap on stored segments
+
+// Ring buffer: each entry is [fx,fy,fz, tx,ty,tz, r,g,b, bornMs]
+const trailBuf = [];
+
+// ── Line geometry (from → to) ──────────────────────────────
+const trlLPos = new Float32Array(TRAIL_MAX * 6);   // 2 verts × 3
+const trlLCol = new Float32Array(TRAIL_MAX * 6);
+const trlLGeo = new THREE.BufferGeometry();
+trlLGeo.setAttribute('position', new THREE.BufferAttribute(trlLPos,3).setUsage(THREE.DynamicDrawUsage));
+trlLGeo.setAttribute('color',    new THREE.BufferAttribute(trlLCol,3).setUsage(THREE.DynamicDrawUsage));
+trlLGeo.setDrawRange(0,0);
+scene.add(new THREE.LineSegments(trlLGeo, new THREE.LineBasicMaterial({
+  vertexColors:true, transparent:true, opacity:1.0,
+  depthWrite:false, blending:THREE.AdditiveBlending,
+})));
+
+// ── Ghost-origin dots (small glow at "from" square) ─────────
+const trlDPos = new Float32Array(TRAIL_MAX * 3);
+const trlDCol = new Float32Array(TRAIL_MAX * 3);
+const trlDGeo = new THREE.BufferGeometry();
+trlDGeo.setAttribute('position', new THREE.BufferAttribute(trlDPos,3).setUsage(THREE.DynamicDrawUsage));
+trlDGeo.setAttribute('color',    new THREE.BufferAttribute(trlDCol,3).setUsage(THREE.DynamicDrawUsage));
+trlDGeo.setDrawRange(0,0);
+// Re-use the piece symbol texture for origin ghost (same art, just dimmer)
+const _trailDotTex = (() => {
+  const cv=document.createElement('canvas'); cv.width=cv.height=32;
+  const ctx=cv.getContext('2d');
+  const g=ctx.createRadialGradient(16,16,0,16,16,14);
+  g.addColorStop(0,'rgba(255,255,255,0.9)'); g.addColorStop(1,'rgba(255,255,255,0)');
+  ctx.fillStyle=g; ctx.fillRect(0,0,32,32);
+  const t=new THREE.CanvasTexture(cv); t.needsUpdate=true; return t;
+})();
+scene.add(new THREE.Points(trlDGeo, new THREE.PointsMaterial({
+  size: PIECE_SIZE.P * 0.6, map:_trailDotTex, vertexColors:true,
+  transparent:true, alphaTest:0.01, sizeAttenuation:true,
+  depthWrite:false, blending:THREE.AdditiveBlending,
+})));
+
+function addTrail(from, to, pid) {
+  const [fx,fy,fz] = proj(from);
+  const [tx,ty,tz] = proj(to);
+  const c = PCOL[pid];
+  trailBuf.push({fx,fy,fz, tx,ty,tz, r:c.r, g:c.g, b:c.b, born:Date.now()});
+  if (trailBuf.length > TRAIL_MAX) trailBuf.shift();
+  dirty = true;
+}
+
+function updateTrails() {
+  const now = Date.now();
+  // Expire oldest entries (buffer is time-ordered, so trim from front)
+  while (trailBuf.length > 0 && now - trailBuf[0].born > TRAIL_LIFE) trailBuf.shift();
+
+  const n = trailBuf.length;
+  for (let i=0; i<n; i++) {
+    const tr = trailBuf[i];
+    const t  = (now - tr.born) / TRAIL_LIFE;   // 0=fresh → 1=expired
+    const a  = (1-t)*(1-t);                     // quadratic ease-out
+
+    // Line: dim "from" end, bright "to" end (shows direction)
+    trlLPos[i*6]   = tr.fx; trlLPos[i*6+1] = tr.fy; trlLPos[i*6+2] = tr.fz;
+    trlLCol[i*6]   = tr.r*a*0.18; trlLCol[i*6+1] = tr.g*a*0.18; trlLCol[i*6+2] = tr.b*a*0.18;
+    trlLPos[i*6+3] = tr.tx; trlLPos[i*6+4] = tr.ty; trlLPos[i*6+5] = tr.tz;
+    trlLCol[i*6+3] = tr.r*a;     trlLCol[i*6+4] = tr.g*a;     trlLCol[i*6+5] = tr.b*a;
+
+    // Ghost dot at origin — fades 2× faster so it reads as "departed"
+    const ao = Math.max(0, (1 - t*2)) * (1 - t*2);
+    trlDPos[i*3]   = tr.fx; trlDPos[i*3+1] = tr.fy; trlDPos[i*3+2] = tr.fz;
+    trlDCol[i*3]   = tr.r*ao*0.55; trlDCol[i*3+1] = tr.g*ao*0.55; trlDCol[i*3+2] = tr.b*ao*0.55;
+  }
+  trlLGeo.setDrawRange(0, n*2);
+  trlDGeo.setDrawRange(0, n);
+  trlLGeo.attributes.position.needsUpdate = true;
+  trlLGeo.attributes.color.needsUpdate    = true;
+  trlDGeo.attributes.position.needsUpdate = true;
+  trlDGeo.attributes.color.needsUpdate    = true;
+}
+
+// ═══════════════════════════════════════════════════════════
+// HUMAN PLAYER — LEGAL MOVE HIGHLIGHTS
+// ═══════════════════════════════════════════════════════════
+const HL_MAX    = 1000;
+const hlPos     = new Float32Array(HL_MAX*3);
+const hlGeo     = new THREE.BufferGeometry();
+hlGeo.setAttribute('position', new THREE.BufferAttribute(hlPos,3).setUsage(THREE.DynamicDrawUsage));
+hlGeo.setDrawRange(0,0);
+// Use a glowing circle texture for highlights
+function makeHlTex() {
+  const cv=document.createElement('canvas'); cv.width=cv.height=64;
+  const ctx=cv.getContext('2d');
+  const g=ctx.createRadialGradient(32,32,0,32,32,30);
+  g.addColorStop(0,'rgba(0,255,140,0.95)'); g.addColorStop(0.5,'rgba(0,255,140,0.45)');
+  g.addColorStop(1,'rgba(0,255,140,0)');
+  ctx.fillStyle=g; ctx.fillRect(0,0,64,64);
+  const t=new THREE.CanvasTexture(cv); t.needsUpdate=true; return t;
+}
+const hlPts = new THREE.Points(hlGeo, new THREE.PointsMaterial({
+  size: PIECE_SIZE.K * 1.4, map:makeHlTex(), transparent:true,
+  alphaTest:0.01, sizeAttenuation:true, depthWrite:false,
+}));
+scene.add(hlPts);
+
+let humanTurnActive = false;
+let humanTurnPid    = -1;
+let resolveHumanMove = null;
+let selectedPieceKey = null;
+let legalMoves       = [];   // array of to-coord arrays
+
+function showHighlights(moves) {
+  const n = Math.min(moves.length, HL_MAX);
+  for (let i=0; i<n; i++) {
+    const [wx,wy,wz] = proj(moves[i]);
+    hlPos[i*3]=wx; hlPos[i*3+1]=wy+0.3; hlPos[i*3+2]=wz;
+  }
+  hlGeo.setDrawRange(0,n);
+  hlGeo.attributes.position.needsUpdate=true;
+}
+function clearHighlights() {
+  legalMoves=[]; selectedPieceKey=null;
+  hlGeo.setDrawRange(0,0);
+  hlGeo.attributes.position.needsUpdate=true;
+}
+
+// Project world pos to NDC [-1,1]
+const _projMat = new THREE.Matrix4();
+const _v4      = new THREE.Vector4();
+function worldToNDC(wx,wy,wz) {
+  _projMat.multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse);
+  _v4.set(wx,wy,wz,1).applyMatrix4(_projMat);
+  if (_v4.w === 0) return null;
+  return {x:_v4.x/_v4.w, y:_v4.y/_v4.w, z:_v4.z/_v4.w};
+}
+
+// Pick threshold in NDC (scales with zoom)
+const PICK_THRESH = 0.04;
+const HL_THRESH   = 0.035;
+
+renderer.domElement.addEventListener('pointerdown', async e => {
+  if (!humanTurnActive) return;
+  if (e.button !== 0) return;
+
+  const rect = renderer.domElement.getBoundingClientRect();
+  const mx = ((e.clientX - rect.left)/rect.width) * 2 - 1;
+  const my = -((e.clientY - rect.top)/rect.height) * 2 + 1;
+
+  // ── 1. Check if clicking on a legal move highlight ─────────────
+  if (selectedPieceKey && legalMoves.length > 0) {
+    let bestDist=Infinity, bestMove=null;
+    for (const to of legalMoves) {
+      const [wx,wy,wz] = proj(to);
+      const n = worldToNDC(wx,wy,wz);
+      if (!n || n.z > 1) continue;
+      const d = (n.x-mx)**2 + (n.y-my)**2;
+      if (d < bestDist) { bestDist=d; bestMove=to; }
+    }
+    if (bestDist < HL_THRESH**2 && bestMove) {
+      await applyHumanMove(selectedPieceKey, bestMove);
+      return;
+    }
+  }
+
+  // ── 2. Select a piece belonging to the human player ────────────
+  let bestDist=Infinity, bestKey=null;
+  for (const [k, pc] of board) {
+    if (pc.pid !== humanTurnPid) continue;
+    const [wx,wy,wz] = proj(pc.coords);
+    const n = worldToNDC(wx,wy,wz);
+    if (!n || n.z > 1) continue;
+    const d = (n.x-mx)**2 + (n.y-my)**2;
+    if (d < bestDist) { bestDist=d; bestKey=k; }
+  }
+  if (bestDist < PICK_THRESH**2 && bestKey) {
+    await selectPiece(bestKey);
+  }
+});
+
+async function selectPiece(key) {
+  const pc = board.get(key);
+  if (!pc) return;
+  selectedPieceKey = key;
+  clearHighlights(); // clear old highlights first
+
+  // Fetch legal moves from engine
+  try {
+    const fromStr = pc.coords.join(',');
+    const r = await fetch(
+      `${ENGINE}/legal_moves?game_id=${GAME_ID}&from=${fromStr}`,
+      {signal: AbortSignal.timeout(2000)}
+    );
+    const d = await r.json();
+    if (d.ok && d.moves?.length > 0) {
+      legalMoves = d.moves;
+      showHighlights(d.moves);
+      document.getElementById('banner-text').textContent =
+        `P${pc.pid+1} ${PIECE_SYM[pc.type]} — ${d.moves.length} legal moves · click destination`;
+    } else {
+      legalMoves=[];
+      document.getElementById('banner-text').textContent = `P${pc.pid+1} — no legal moves for this piece`;
+    }
+  } catch(e) {
+    legalMoves=[];
+    document.getElementById('banner-text').textContent = 'could not fetch moves — engine may need restart';
+  }
+}
+
+async function applyHumanMove(fromKey, to) {
+  const pc = board.get(fromKey);
+  if (!pc) return;
+  clearHighlights();
+  document.getElementById('banner-text').textContent = 'applying move…';
+
+  try {
+    const r = await fetch(`${ENGINE}/apply_move`, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({player:humanTurnPid, game_id:GAME_ID, from:pc.coords, to:to}),
+      signal: AbortSignal.timeout(3000),
+    });
+    const d = await r.json();
+    if (d.ok && d.turn) {
+      const pt = TYPE_MAP[d.turn.piece_type] ?? d.turn.piece_type;
+      applyMove(pc.coords, to, pt, d.turn.captured_type, d.turn.captured_pid, d.turn.alive);
+      activePid = humanTurnPid;
+      turnNum   = d.turn.turn_number ?? turnNum+1;
+    }
+  } catch(e) {
+    console.warn('apply_move failed:', e);
+  }
+
+  humanTurnActive = false;
+  if (resolveHumanMove) { resolveHumanMove(); resolveHumanMove=null; }
+  document.getElementById('human-banner').classList.remove('active');
+}
+
+// ═══════════════════════════════════════════════════════════
+// LOCAL BOARD STATE
+// ═══════════════════════════════════════════════════════════
+const BACK = ['R','N','B','Q','K','B','N','R'];
+function ck(c){ return c.join('|'); }
+
+function homeFor(pid) {
+  const c = new Array(NDIM).fill(0);
+  for(let i=1;i<NDIM;i++) c[i]=(pid>>(i-1))&1?7:0;
+  return c;
+}
+
+async function buildBoard() {
+  const bd = new Map();
+  const yield_ = ()=>new Promise(r=>setTimeout(r,0));
+  for(let pid=0;pid<NP;pid++){
+    if(pid%16===0) await yield_();
+    const h=homeFor(pid);
+    for(let x=0;x<BSIZE;x++){const c=[...h];c[0]=x;bd.set(ck(c),{pid,type:BACK[x],coords:c});}
+    const seen=new Set();
+    for(let opp=0;opp<NP;opp++){
+      if(opp===pid) continue;
+      const oh=homeFor(opp);const dir=new Array(NDIM).fill(0);let any=false;
+      for(let a=1;a<NDIM;a++){const d=oh[a]-h[a];dir[a]=d>0?1:d<0?-1:0;if(dir[a])any=true;}
+      if(!any) continue;const dk=dir.join(',');if(seen.has(dk)) continue;seen.add(dk);
+      for(let x=0;x<BSIZE;x++){
+        const c=h.map((v,i)=>i===0?x:v+dir[i]);
+        if(c.some(v=>v<0||v>=BSIZE)) continue;
+        const k=ck(c);if(!bd.has(k)) bd.set(k,{pid,type:'P',coords:c});
+      }
+    }
+  }
+  return bd;
+}
+
+// ═══════════════════════════════════════════════════════════
+// GAME STATE
+// ═══════════════════════════════════════════════════════════
+let board     = new Map();
+let alive     = new Array(NP).fill(true);
+let activePid = 0;
+let turnNum   = 0;
+let capCount  = 0;
+let dirty     = false;
+let running   = false;
+let turnCount = 0, tpsTimer = Date.now(), lastTPS = 0;
+
+const MAX_LOG = 28;
+const moveLog = [], fullLog = [];
+const recentMoves = new Map();
+
+// ═══════════════════════════════════════════════════════════
+// GPU REBUILD (4fps)
+// ═══════════════════════════════════════════════════════════
+const FLASH_MS = 1400;
+
+function rebuildBuffers() {
+  const now = Date.now();
+  if (!dirty && recentMoves.size===0 && trailBuf.length===0) return;
+  dirty = false;
+  for(const [k,t] of recentMoves){if(now-t>FLASH_MS) recentMoves.delete(k);}
+  updateTrails();
+
+  for(const t of PIECE_TYPES) ptsObj[t].n=0;
+
+  for(const pc of board.values()){
+    const o=ptsObj[pc.type]; if(!o) continue;
+    const i=o.n++;
+    if(i>=TYPE_MAX[pc.type]){o.n=TYPE_MAX[pc.type];continue;}
+    const [wx,wy,wz]=proj(pc.coords);
+    o.pos[i*3]=wx;o.pos[i*3+1]=wy;o.pos[i*3+2]=wz;
+    const col=PCOL[pc.pid];
+    const mt=recentMoves.get(ck(pc.coords));
+    const flash=mt?Math.exp(-(now-mt)/400):0;
+    const isSelected = (pc.pid===humanTurnPid && ck(pc.coords)===selectedPieceKey);
+    const br = isSelected ? 2.2 : (pc.pid===activePid ? 1.55 : 1.0+flash*2.2);
+    o.col[i*3]  =Math.min(1,col.r*br+flash*0.55+(isSelected?0.4:0));
+    o.col[i*3+1]=Math.min(1,col.g*br+flash*0.55+(isSelected?0.4:0));
+    o.col[i*3+2]=Math.min(1,col.b*br+flash*0.55+(isSelected?0.4:0));
+  }
+
+  for(const t of PIECE_TYPES){
+    const o=ptsObj[t];
+    o.pts.geometry.setDrawRange(0,o.n);
+    o.pts.geometry.attributes.position.needsUpdate=true;
+    o.pts.geometry.attributes.color.needsUpdate=true;
+  }
+
+  document.getElementById('h-turn').textContent  = turnNum.toLocaleString();
+  document.getElementById('h-pcs').textContent   = board.size.toLocaleString();
+  document.getElementById('h-alive').textContent = alive.filter(Boolean).length;
+  document.getElementById('h-caps').textContent  = capCount.toLocaleString();
+  document.getElementById('h-tps').textContent   = lastTPS.toFixed(1)+'/s';
+  const el=document.getElementById('h-pid'); const col=PCOL[activePid];
+  el.textContent=`P${activePid+1}`; el.style.color=col.getStyle();
+
+  const logEl=document.getElementById('movelog');
+  let html='';
+  for(const m of moveLog){
+    const c=PCOL[m.pid].getStyle();
+    const cn=m.capPid!=null?PCOL[m.capPid].getStyle():'#fa0';
+    const tag = HUMAN_PLAYERS.has(m.pid) ? '★' : '';
+    if(m.cap)
+      html+=`<div><span style="color:${c}">${tag}P${m.pid+1} ${m.sym}</span> <span style="color:#f60">×</span> <span style="color:${cn}">${m.capSym}</span></div>`;
+    else
+      html+=`<div style="color:${c}">${tag}P${m.pid+1} ${m.sym} →</div>`;
+  }
+  logEl.innerHTML=html;
+}
+
+// ═══════════════════════════════════════════════════════════
+// APPLY MOVE
+// ═══════════════════════════════════════════════════════════
+function applyMove(from,to,ptype,capType,capPid,engineAlive){
+  const fk=from.join('|'),tk=to.join('|');
+  const pc=board.get(fk); if(!pc) return;
+  board.delete(fk);
+  const victim=board.get(tk); const isCapture=!!victim;
+  if(isCapture){capCount++;board.delete(tk);}
+  if(ptype) pc.type=ptype;
+  addTrail(from, to, pc.pid);   // trail: from square → to square
+  pc.coords=to; board.set(tk,pc);
+  recentMoves.set(tk,Date.now());
+  const ct=capType?(TYPE_MAP[capType]??capType):(victim?.type??'P');
+  const resolvedCapPid = victim?.pid ?? capPid ?? null;
+
+  // ── King captured: eliminate loser + transfer their client-side pieces ──────
+  if(ct==='K' && resolvedCapPid!==null && resolvedCapPid!==pc.pid){
+    alive[resolvedCapPid] = false;
+    for(const [,p] of board){
+      if(p.pid===resolvedCapPid) p.pid=pc.pid;
+    }
+  }
+  // Hard-sync alive[] from engine snapshot if provided (authoritative)
+  if(engineAlive){
+    for(let i=0;i<engineAlive.length&&i<alive.length;i++) alive[i]=engineAlive[i];
+  }
+
+  const entry={pid:pc.pid,sym:PIECE_SYM[pc.type]??pc.type,cap:isCapture,
+               capSym:PIECE_SYM[ct]??ct,capPid:resolvedCapPid,turn:turnNum};
+  moveLog.push(entry); fullLog.push(entry);
+  if(moveLog.length>MAX_LOG) moveLog.shift();
+  dirty=true;
+}
+
+// ═══════════════════════════════════════════════════════════
+// GAME LOOP
+// ═══════════════════════════════════════════════════════════
+async function gameLoop() {
+  running = true;
+  let cur = 0;
+  const status = document.getElementById('status');
+  const banner = document.getElementById('human-banner');
+
+  while (running) {
+    if (!alive[cur]) { cur=(cur+1)%NP; continue; }
+
+    // ── Human turn ─────────────────────────────────────────
+    if (HUMAN_PLAYERS.has(cur)) {
+      humanTurnPid    = cur;
+      humanTurnActive = true;
+      activePid       = cur;
+      dirty = true;
+      status.textContent = `★ YOUR TURN · P${cur+1}`;
+      status.style.color = PCOL[cur].getStyle();
+      banner.classList.add('active');
+      document.getElementById('banner-text').textContent = `YOUR TURN · P${cur+1} — click one of your pieces`;
+
+      // Disable orbit while picking
+      controls.autoRotate = false;
+      document.getElementById('h-orbit').textContent='OFF';
+      document.getElementById('h-orbit').style.color='#a33';
+
+      await new Promise(resolve => { resolveHumanMove = resolve; });
+
+      cur = (cur+1)%NP;
+      continue;
+    }
+
+    // ── AI turn ────────────────────────────────────────────
+    try {
+      const r = await fetch(
+        `${ENGINE}/apply_ai_turn?player=${cur}&game_id=${GAME_ID}`,
+        {signal: AbortSignal.timeout(8000)}
+      );
+      if (!r.ok) {
+        status.textContent='⬤ restarting game…'; status.style.color='#a80';
+        await fetch(`${ENGINE}/new_game`,{
+          method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({dims:NDIM,players:NP,game_id:GAME_ID}),
+          signal:AbortSignal.timeout(5000),
+        }).catch(()=>{});
+        board=await buildBoard(); alive=new Array(NP).fill(true);
+        turnNum=0;capCount=0;cur=0;dirty=true;moveLog.length=0;
+        continue;
+      }
+      const d = await r.json();
+      if (!d.ok||d.turn?.pass){cur=(cur+1)%NP;continue;}
+
+      const t=d.turn;
+      if(t.move?.from&&t.move?.to){
+        applyMove(t.move.from,t.move.to,TYPE_MAP[t.piece_type]??t.piece_type,t.captured_type,t.captured_pid,t.alive);
+      }
+      activePid = t.player??cur;
+      turnNum   = t.turn_number??turnNum+1;
+      turnCount++;
+      const now=Date.now();
+      if(now-tpsTimer>=2000){lastTPS=turnCount/((now-tpsTimer)/1000);turnCount=0;tpsTimer=now;}
+      if(t.game_over){
+        status.textContent=`★ GAME OVER · winner P${(t.winner??0)+1}`;
+        status.style.color='#fa0'; running=false; break;
+      }
+      status.textContent=`⬤ ${NDIM}D · ${ENGINE.split('//')[1]}`;
+      status.style.color='#1a6';
+    } catch(e){
+      status.textContent=`⬤ engine error: ${e.message} — retrying…`;
+      status.style.color='#a33';
+      await new Promise(r=>setTimeout(r,1000));
+    }
+    cur=(cur+1)%NP;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// KEYBOARD
+// ═══════════════════════════════════════════════════════════
+const keysDown = new Set();
+const MOVE_KEYS = new Set(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','KeyZ','KeyX']);
+
+// Orbit presets (scale with scene size)
+const OT_FULL  = new THREE.Vector3(CX, CY, CZ);
+const OT_MID   = new THREE.Vector3(NDIM>=7?FLOOR_SPAN/2:CX, CY, NDIM>=7?FLOOR_SPAN/2:CZ);
+const OT_SMALL = new THREE.Vector3(CUBE_SPAN/2, CY*0.5, CUBE_SPAN/2);
+
+window.addEventListener('keydown', e => {
+  if(MOVE_KEYS.has(e.code)) e.preventDefault();
+  keysDown.add(e.code);
+  const setOrbit = on => {
+    controls.autoRotate=on;
+    const el=document.getElementById('h-orbit');
+    el.textContent=on?'ON':'OFF'; el.style.color=on?'#3af':'#a33';
+  };
+  switch(e.code){
+    case 'Space': e.preventDefault(); // falls through
+    case 'KeyR': setOrbit(!controls.autoRotate); break;
+    case 'KeyT': controls.target.copy(OT_FULL);
+      camera.position.set(CX-MAX_EXT*0.4,CY+MAX_EXT*0.32,CZ+MAX_EXT*0.62);
+      setOrbit(true); break;
+    case 'KeyY': controls.target.copy(OT_MID);
+      camera.position.set(OT_MID.x-MAX_EXT*0.1,OT_MID.y+MAX_EXT*0.15,OT_MID.z+MAX_EXT*0.3);
+      setOrbit(true); break;
+    case 'KeyU': controls.target.copy(OT_SMALL);
+      camera.position.set(OT_SMALL.x-8,OT_SMALL.y+15,OT_SMALL.z+30);
+      setOrbit(true); break;
+    case 'Digit1': camera.position.set(CX,CY+MAX_EXT*0.8,CZ+5); controls.target.copy(OT_FULL); break;
+    case 'Digit2': resetCam(); break;
+    case 'Digit3': camera.position.set(OT_MID.x,OT_MID.y+MAX_EXT*0.2,OT_MID.z+MAX_EXT*0.35);
+      controls.target.copy(OT_MID); break;
+    case 'Escape': clearHighlights(); break;
+  }
+});
+window.addEventListener('keyup', e=>keysDown.delete(e.code));
+
+const _fwd=new THREE.Vector3(),_right=new THREE.Vector3(),_delta=new THREE.Vector3();
+function handleMovement(){
+  if(keysDown.size===0) return;
+  const speed=Math.max(0.2,camera.position.distanceTo(controls.target)*0.025);
+  camera.getWorldDirection(_fwd); _fwd.y=0; _fwd.normalize();
+  _right.crossVectors(_fwd,camera.up).normalize();
+  _delta.set(0,0,0);
+  if(keysDown.has('ArrowUp'))    _delta.addScaledVector(_fwd,   speed);
+  if(keysDown.has('ArrowDown'))  _delta.addScaledVector(_fwd,  -speed);
+  if(keysDown.has('ArrowLeft'))  _delta.addScaledVector(_right,-speed);
+  if(keysDown.has('ArrowRight')) _delta.addScaledVector(_right, speed);
+  if(keysDown.has('KeyZ'))       _delta.y+=speed;
+  if(keysDown.has('KeyX'))       _delta.y-=speed;
+  if(_delta.lengthSq()>0){camera.position.add(_delta);controls.target.add(_delta);}
+}
+
+// ═══════════════════════════════════════════════════════════
+// GAMEPAD  (Xbox / standard gamepad API)
+// ═══════════════════════════════════════════════════════════
+const GP_DEADZONE = 0.12;
+
+// Three speed tiers — orbit is angular (rad/frame), fly is world-units/frame
+// at unit distance; scaled by actual camera distance at runtime.
+const GP_SPEEDS = [
+  { name: 'SLOW',   orbit: 0.007, fly: 0.006 },
+  { name: 'NORMAL', orbit: 0.022, fly: 0.018 },
+  { name: 'FAST',   orbit: 0.065, fly: 0.055 },
+];
+let gpSpeedIdx  = 1;   // start at NORMAL
+let gpConnected = false;
+let gpAWasDown  = false;
+
+// Re-use Three.js objects to avoid per-frame allocations
+const _gpSph = new THREE.Spherical();
+const _gpOff = new THREE.Vector3();
+const _gpDir = new THREE.Vector3();
+
+function deadzone(v) {
+  // Apply deadzone then rescale so the full range is still 0→1
+  return Math.abs(v) < GP_DEADZONE
+    ? 0
+    : (v - Math.sign(v) * GP_DEADZONE) / (1 - GP_DEADZONE);
+}
+
+function handleGamepad() {
+  // navigator.getGamepads() returns a live list; must re-query every frame
+  const pads = navigator.getGamepads ? navigator.getGamepads() : [];
+  let pad = null;
+  for (const p of pads) { if (p && p.connected) { pad = p; break; } }
+
+  // ── connection state → HUD ───────────────────────────────
+  if (!!pad !== gpConnected) {
+    gpConnected = !!pad;
+    const row = document.getElementById('gp-row');
+    const el  = document.getElementById('h-gp');
+    if (gpConnected) {
+      row.style.display = ''; el.style.display = '';
+    } else {
+      row.style.display = 'none'; el.style.display = 'none';
+      gpAWasDown = false;
+      return;
+    }
+  }
+  if (!pad) return;
+
+  const speed    = GP_SPEEDS[gpSpeedIdx];
+  const camDist  = camera.position.distanceTo(controls.target);
+  // Fly speed scales with distance so it feels consistent at any zoom level
+  const flySpeed = speed.fly * Math.max(0.01, camDist * 0.08);
+
+  // ── Left Stick → orbit around target ────────────────────
+  // axes[0] = LS X  (-1=left, +1=right)
+  // axes[1] = LS Y  (-1=up,   +1=down )
+  const lx = deadzone(pad.axes[0] ?? 0);
+  const ly = deadzone(pad.axes[1] ?? 0);
+
+  if (lx !== 0 || ly !== 0) {
+    _gpOff.copy(camera.position).sub(controls.target);
+    _gpSph.setFromVector3(_gpOff);
+
+    // theta = azimuth (left/right), phi = polar (up/down)
+    _gpSph.theta -= lx * speed.orbit;
+    _gpSph.phi   += ly * speed.orbit;
+    // Clamp so camera never flips past the poles
+    _gpSph.phi = Math.max(0.04, Math.min(Math.PI - 0.04, _gpSph.phi));
+
+    _gpOff.setFromSpherical(_gpSph);
+    camera.position.copy(controls.target).add(_gpOff);
+    controls.update();
+
+    // Disable auto-rotate while the user is manually orbiting
+    if (controls.autoRotate) {
+      controls.autoRotate = false;
+      const el = document.getElementById('h-orbit');
+      el.textContent = 'OFF'; el.style.color = '#a33';
+    }
+  }
+
+  // ── RB (buttons[5]) = fly forward ───────────────────────
+  // ── RT (buttons[7]) = fly backward  (analog trigger → .value)
+  const rbPressed = pad.buttons[5]?.pressed ? 1 : 0;
+  const rtValue   = pad.buttons[7]?.value   // analog 0→1
+    ?? (pad.buttons[7]?.pressed ? 1 : 0);
+
+  const flyAmount = (rbPressed - rtValue) * flySpeed;
+  if (Math.abs(flyAmount) > 0.0001) {
+    camera.getWorldDirection(_gpDir);
+    camera.position.addScaledVector(_gpDir,    flyAmount);
+    controls.target.addScaledVector(_gpDir,    flyAmount);
+    controls.update();
+  }
+
+  // ── A (buttons[0]) → cycle speed on rising edge ─────────
+  const aDown = !!pad.buttons[0]?.pressed;
+  if (aDown && !gpAWasDown) {
+    gpSpeedIdx = (gpSpeedIdx + 1) % GP_SPEEDS.length;
+    const el = document.getElementById('h-gp');
+    el.textContent = GP_SPEEDS[gpSpeedIdx].name;
+    // Brief flash so user notices the change
+    el.style.color = '#ff0';
+    setTimeout(() => { el.style.color = '#0df'; }, 400);
+    dirty = true;
+  }
+  gpAWasDown = aDown;
+
+  // Update HUD speed label every frame (cheap)
+  document.getElementById('h-gp').textContent = GP_SPEEDS[gpSpeedIdx].name;
+}
+
+// Show/hide gamepad row on connect/disconnect events
+window.addEventListener('gamepadconnected', e => {
+  console.log('[gamepad] connected:', e.gamepad.id);
+  gpConnected = true;
+  document.getElementById('gp-row').style.display = '';
+  document.getElementById('h-gp').style.display   = '';
+  document.getElementById('h-gp').textContent     = GP_SPEEDS[gpSpeedIdx].name;
+  document.getElementById('h-gp').style.color     = '#0df';
+});
+window.addEventListener('gamepaddisconnected', e => {
+  console.log('[gamepad] disconnected:', e.gamepad.id);
+  gpConnected = false;
+  document.getElementById('gp-row').style.display = 'none';
+  document.getElementById('h-gp').style.display   = 'none';
+});
+
+// ═══════════════════════════════════════════════════════════
+// RENDER LOOP
+// ═══════════════════════════════════════════════════════════
+const DRAW_INTERVAL=1000/DRAW_FPS;
+let lastDraw=0;
+function animate(now){
+  requestAnimationFrame(animate);
+  handleMovement();
+  handleGamepad();   // runs every frame; no-ops if no controller connected
+  controls.update();
+  if(now-lastDraw>=DRAW_INTERVAL){lastDraw=now;rebuildBuffers();}
+  // Keep rebuilding while trails or highlights are live
+  if(selectedPieceKey || trailBuf.length>0) dirty=true;
+  renderer.render(scene,camera);
+}
+
+// ═══════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════
+(async()=>{
+  const status=document.getElementById('status');
+
+  status.textContent='⬤ building geometry…';
+  initPiecePoints();
+  buildWireframes();
+
+  if (NDIM === 2) {
+    // For 2D, add file/rank labels
+    function makeLabel2D(text, color='rgba(80,140,240,0.85)'){
+      const cv=document.createElement('canvas');cv.width=32;cv.height=32;
+      const ctx=cv.getContext('2d');
+      ctx.font='bold 18px "Courier New",monospace'; ctx.fillStyle=color;
+      ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(text,16,16);
+      const tex=new THREE.CanvasTexture(cv);tex.needsUpdate=true;
+      const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true,depthWrite:false}));
+      sp.scale.set(1.2,1.2,1); return sp;
+    }
+    const files='abcdefgh',ranks='12345678';
+    for(let i=0;i<8;i++){
+      const fs=makeLabel2D(files[i]); fs.position.set(i+0.5,0.25,8.8); scene.add(fs);
+      const rs=makeLabel2D(ranks[i]); rs.position.set(-0.9,0.25,i+0.5); scene.add(rs);
+    }
+  }
+
+  status.textContent=`⬤ building ${NP}-player board…`;
+  board=await buildBoard(); dirty=true; rebuildBuffers();
+
+  status.textContent=`⬤ starting ${NDIM}D game…`;
+  try {
+    const r=await fetch(`${ENGINE}/new_game`,{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({dims:NDIM,players:NP,game_id:GAME_ID}),
+      signal:AbortSignal.timeout(5000),
+    });
+    const d=await r.json();
+    if(d.ok){
+      board=await buildBoard(); alive=new Array(NP).fill(true);
+      turnNum=0;capCount=0;activePid=0;dirty=true;
+      status.textContent=`⬤ ${NDIM}D game ready!`;
+    }
+  } catch(e){
+    status.textContent='⬤ engine not found — start engine_py.py 8769';
+    status.style.color='#a33';
+    await new Promise(r=>setTimeout(r,2000));
+  }
+
+  // Download button
+  document.getElementById('dl-log').addEventListener('click',()=>{
+    const lines=['turn,player,piece,capture,captured_piece,captured_player'];
+    fullLog.forEach((m,i)=>{
+      lines.push([m.turn??i+1,`P${m.pid+1}`,m.sym,m.cap?1:0,m.cap?m.capSym:'',m.capPid!=null?`P${m.capPid+1}`:''].join(','));
+    });
+    const blob=new Blob([lines.join('\n')],{type:'text/csv'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download=`${NDIM}d-chess-t${fullLog.length}-${Date.now()}.csv`;
+    a.click(); URL.revokeObjectURL(a.href);
+  });
+
+  gameLoop();
+  requestAnimationFrame(animate);
+  addCubeGrid();   // async background task for large scenes
+})();
+</script>
+</body>
+</html>

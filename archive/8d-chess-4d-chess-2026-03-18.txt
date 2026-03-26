@@ -1,0 +1,1537 @@
+8D Chess & Games — Move Record
+© Samuel M G Taylor, 2003
+────────────────────────────────────────
+Game: 4D Chess
+Date: 2026-03-18 23:03:07
+Players: 8 | Dimensions: 4D
+
+Players:
+  P 1 ABIGAIL
+       Aggression:7 Foresight:8 Defensiveness:6 Patience:5
+       Regicide:4 Vendetta:3 Greed:4 Chaos:1 Attention:7  Nemesis:P8
+  P 2 ENOCH
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:6 Vendetta:4 Greed:6 Chaos:5 Attention:7  Nemesis:P3
+  P 3 LYDIA
+       Aggression:5 Foresight:8 Defensiveness:5 Patience:6
+       Regicide:3 Vendetta:3 Greed:8 Chaos:3 Attention:8  Nemesis:P5
+  P 4 JOAB
+       Aggression:8 Foresight:5 Defensiveness:5 Patience:3
+       Regicide:7 Vendetta:6 Greed:5 Chaos:6 Attention:8  Nemesis:P2
+  P 5 HEL
+       Aggression:4 Foresight:6 Defensiveness:5 Patience:4
+       Regicide:4 Vendetta:3 Greed:4 Chaos:8 Attention:5  Nemesis:P3
+  P 6 LUKE
+       Aggression:4 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:6 Vendetta:1 Greed:3 Chaos:1 Attention:8  Nemesis:P3
+  P 7 ORION
+       Aggression:6 Foresight:7 Defensiveness:5 Patience:5
+       Regicide:8 Vendetta:4 Greed:3 Chaos:3 Attention:8  Nemesis:P6
+  P 8 JOSIAH
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:2 Greed:4 Chaos:1 Attention:8  Nemesis:P6
+
+────────────────────────────────────────
+Snapshot: Final
+Current Turn: P5
+Move Log:
+
+    1. P1 P[Y:2→4]
+    2. P2 P[Y:7→5]
+    3. P3 P[Z:7→5]
+    4. 💬 P4 → P1: “P1, let us spare one another for a few turns.”
+    5. P4 P[Y:7→5 Z:7→5]
+    6. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+    7. P5 P[W:7→6]
+    8. P6 P[Y:7→5 W:7→5]
+    9. P7 P[Z:7→5 W:7→5]
+   10. P8 P[Y:7→5 Z:7→5 W:7→5]
+   11. 💬 P1 📢 ALL: “All hands against P4.”
+   12. ✕ P1 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:5→6 Y:4→5]
+   13. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+   14. P2 P[Y:7→5]
+   15. P3 P[Y:2→4 Z:7→5]
+   16. 💬 P4 → P2: “Turn on P5; I will not trouble you meanwhile.”
+   17. P4 P[Y:5→4 Z:5→4]
+   18. P5 P[Z:2→4 W:7→5]
+   19. P6 P[Y:7→5 Z:2→4 W:7→5]
+   20. P7 P[Y:2→4 Z:7→5 W:7→5]
+   21. P8 P[Y:7→5 Z:7→5 W:7→5]
+   22. P1 P[W:2→4]
+   23. P2 P[Y:5→4]
+   24. P3 P[Y:2→4 Z:7→5]
+   25. P4 P[Y:4→3 Z:4→3]
+   26. P5 P[Y:2→4 W:7→5]
+   27. 💬 P6 → P2: “P2, let us spare one another for a few turns.”
+   28. P6 P[Y:7→5 W:7→5]
+   29. P7 P[Y:4→5 Z:5→4 W:5→4]
+   30. P8 P[Y:7→5 Z:7→5 W:7→5]
+   31. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:6→5 Y:2→3 Z:2→3]
+   32. P2 P[Y:4→3]
+   33. P3 P[Z:7→5]
+   34. P4 P[Y:7→5 Z:7→5]
+   35. P5 P[W:7→5]
+   36. P6 P[Y:7→5 W:7→5]
+   37. P7 P[Y:5→6 Z:4→3 W:4→3]
+   38. P8 P[Z:7→5 W:7→5]
+   39. 💬 P1 📢 ALL: “All hands against P5.”
+   40. ✕ P1 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:5→4 W:4→5]
+   41. ✕ P2 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [Y:3→2 W:1→2]
+   42. P3 P[Z:7→5]
+   43. 💬 P4 📢 ALL: “P1, let us spare one another for a few turns.”
+   44. P4 P[Y:7→5 Z:7→5 W:2→4]
+   45. ✕ P5 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:5→4 W:6→5]
+   46. P6 P[Y:5→4 W:5→4]
+   47. ✕ P7 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:5→6 Y:6→7 Z:3→2 W:3→2]
+   48. P8 P[Y:7→5 W:7→5]
+   49. ✕ P1 ♚ ✕ ♟ P2 ♚ King took Pawn! [Y:1→2 W:1→2]
+   50. 💬 P2 📢 ALL: “All hands against P6.”
+   51. P2 K[Y:8→7]
+   52. P3 P[Y:2→4 Z:7→5]
+   53. P4 P[Y:5→4 Z:5→4 W:4→5]
+   54. P5 P[Y:2→4 W:7→5]
+   55. P6 P[Y:4→3 W:4→3]
+   56. ✕ P7 ♟ ✕ ♞ P2 ♟ Pawn took Knight! [X:6→7 Y:7→8 Z:2→1 W:2→1]
+   57. P7 ♟→♞
+   58. P8 P[Y:7→5 Z:7→5]
+   59. ✕ P1 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:4→5 Y:2→3 W:2→3]
+   60. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+   61. ✕ P2 ♜ ✕ ♞ P7 ♜ Rook took Knight! [X:8→7]
+   62. ☠ DIPLOMACY: P2 betrayed P7
+   63. 💬 P3 → P2: “Turn on P8; I will not trouble you meanwhile.”
+   64. P3 P[Z:7→5]
+   65. P4 P[Y:4→3 Z:4→3 W:5→6]
+   66. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+   67. ✕ P5 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:4→5 Y:2→3 Z:2→3 W:7→6]
+   68. ☠ DIPLOMACY: P5 betrayed P4
+   69. P6 P[Y:7→5]
+   70. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+   71. P7 P[Y:2→4 Z:7→5]
+   72. P8 P[Y:7→5 Z:7→5]
+   73. P1 P[Z:2→3]
+   74. P2 P[Y:7→5 Z:2→4 W:2→4]
+   75. P3 P[Z:7→5 W:2→4]
+   76. 💬 P4 📢 ALL: “All hands against P3.”
+   77. P4 P[Y:7→5 Z:7→5 W:2→4]
+   78. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:5→4 Z:4→5 W:5→4]
+   79. P6 P[Y:7→5 Z:2→4 W:7→5]
+   80. P7 P[Z:7→5 W:7→5]
+   81. P8 P[Y:7→5 Z:7→5]
+   82. P1 P[Y:3→4 W:3→4]
+   83. P2 P[Y:5→4 Z:4→5 W:4→5]
+   84. P3 P[Z:7→5 W:2→4]
+   85. P4 P[Y:7→5 Z:7→5 W:2→4]
+   86. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+   87. P5 P[Y:2→4 W:7→5]
+   88. ✕ P6 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→5 Y:5→4 W:5→4]
+   89. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+   90. P7 P[Z:5→4 W:5→4]
+   91. P8 P[Y:7→5 Z:7→5 W:7→5]
+   92. 💬 P1 📢 ALL: “P2, let us spare one another for a few turns.”
+   93. ✕ P1 ♛ ✕ ♛ P6 ♛ Queen took Queen! [Y:1→8 W:1→8]
+   94. ☠ DIPLOMACY: P1 betrayed P6
+   95. P2 P[Y:4→3 Z:5→6 W:5→6]
+   96. P3 P[Z:5→4 W:4→5]
+   97. P4 P[Y:5→4 Z:5→4 W:4→5]
+   98. 💬 P5 📢 ALL: “All hands against P8.”
+   99. ✕ P5 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:5→4 Y:3→4 Z:3→4 W:6→5]
+  100. ✕ P6 ♚ ✕ ♛ P1 ♚ King took Queen! [X:5→4]
+  101. ✕ P7 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:6→5 Y:2→3 Z:7→6 W:7→6]
+  102. P8 P[Y:7→5 Z:7→5 W:7→5]
+  103. P1 P[W:2→4]
+  104. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+  105. P2 P[Y:7→5]
+  106. P3 P[Z:4→3 W:5→6]
+  107. P4 P[Y:5→4 Z:5→4 W:4→5]
+  108. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:4→5 Z:2→3 W:7→6]
+  109. P6 P[Y:4→3 W:4→3]
+  110. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  111. P7 P[Z:4→3 W:4→3]
+  112. P8 P[Y:7→5 W:7→5]
+  113. ✕ P1 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:6→5 Z:2→3 W:2→3]
+  114. P2 P[Y:7→6 W:2→3]
+  115. P3 P[Z:7→5 W:2→4]
+  116. 💬 P4 📢 ALL: “All hands against P8.”
+  117. P4 P[Y:4→3 Z:4→3 W:5→6]
+  118. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  119. ✕ P5 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:7→6 Y:2→3 Z:2→3 W:7→6]
+  120. ✕ P6 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [Y:3→2 Z:1→2 W:3→2]
+  121. P7 P[Y:3→4 Z:6→5 W:6→5]
+  122. P8 P[Y:5→4 Z:5→4 W:5→4]
+  123. P1 P[Y:2→4]
+  124. P2 P[Y:7→6 Z:2→3]
+  125. P3 P[Z:7→5]
+  126. 💬 P4 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  127. P4 P[Y:5→4 Z:5→4]
+  128. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  129. P5 P[Y:4→5 Z:4→5 W:5→4]
+  130. ✕ P6 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [Y:2→1 Z:2→3 W:2→1]
+  131. P6 ♟→♛
+  132. P7 P[Y:4→5 Z:5→4 W:5→4]
+  133. P8 P[Y:4→3 Z:4→3 W:4→3]
+  134. ✕ P1 ♟ ✕ ♛ P6 ♟ Pawn took Queen! [X:4→5 Z:2→3]
+  135. 💬 P2 📢 ALL: “All hands against P5.”
+  136. P2 P[Y:7→5 Z:2→4 W:2→4]
+  137. P3 P[Z:5→4]
+  138. 💬 P4 → P2: “P2, let us spare one another for a few turns.”
+  139. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→5 Y:4→3 Z:4→3]
+  140. P5 P[Y:5→6 Z:5→6 W:4→3]
+  141. P6 P[Y:7→5 Z:2→4 W:7→5]
+  142. P7 P[Y:5→6 Z:4→3 W:4→3]
+  143. ✕ P8 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:5→4 Y:3→2 Z:3→2 W:3→2]
+  144. ✕ P1 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:5→4 Z:3→4]
+  145. P2 P[W:2→4]
+  146. ✕ P3 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:3→4 Z:5→4]
+  147. ✕ P4 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:3→4 Y:7→6 Z:7→6 W:2→3]
+  148. P5 P[Z:3→4 W:6→5]
+  149. P6 P[Z:2→4 W:7→5]
+  150. 💬 P7 📢 ALL: “P1, let us spare one another for a few turns.”
+  151. P7 P[Y:6→7 Z:3→2 W:3→2]
+  152. ✕ P8 ♟ ✕ ♝ P1 ♟ Pawn took Bishop! [X:4→3 Y:2→1 Z:2→1 W:2→1]
+  153. P8 ♟→♞
+  154. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:4→5 Y:2→3 Z:2→3]
+  155. 💬 P2 📢 ALL: “All hands against P8.”
+  156. P2 P[Y:7→6 W:2→3]
+  157. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:6→5 Z:5→4 W:4→5]
+  158. 💬 P4 📢 ALL: “P1, let us spare one another for a few turns.”
+  159. P4 P[Y:6→5 Z:6→5 W:3→4]
+  160. 💬 P5 📢 ALL: “All hands against P8.”
+  161. P5 P[Y:2→4 Z:2→4 W:7→5]
+  162. P6 P[W:7→6]
+  163. ✕ P7 ♟ ✕ ♛ P2 ♟ Pawn took Queen! [X:5→4 Y:7→8 Z:2→1 W:2→1]
+  164. P7 ♟→♞
+  165. 💬 P8 → P4: “P4, let us spare one another for a few turns.”
+  166. P8 P[Y:5→4 Z:5→4 W:5→4]
+  167. P1 P[Z:3→4 W:3→4]
+  168. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+  169. ✕ P2 ♚ ✕ ♞ P7 ♚ King took Knight! [X:5→4 Y:7→8]
+  170. ☠ DIPLOMACY: P2 betrayed P7
+  171. P3 P[Z:4→3 W:5→6]
+  172. ✕ P4 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:4→5 Y:5→4 Z:5→4 W:4→5]
+  173. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:6→5 Z:2→3 W:7→6]
+  174. P6 P[Y:5→4 Z:4→5 W:5→4]
+  175. ✕ P7 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→5 Z:5→4 W:5→4]
+  176. P8 P[Y:4→3 Z:4→3 W:4→3]
+  177. 💬 P1 📢 ALL: “P2, let us spare one another for a few turns.”
+  178. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:3→4 Y:2→3 Z:2→3 W:2→3]
+  179. ☠ DIPLOMACY: P1 betrayed P8
+  180. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+  181. P2 P[Y:7→6 W:2→3]
+  182. ✕ P3 ♝ ✕ ♝ P5 ♝ Bishop took Bishop! [Z:8→1 W:1→8]
+  183. 💬 P4 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  184. ✕ P4 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:5→6 Y:4→3 Z:4→3 W:5→6]
+  185. ✕ P5 ♚ ✕ ♝ P3 ♚ King took Bishop! [X:5→6]
+  186. 💬 P6 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  187. P6 P[Y:4→3 Z:5→6 W:4→3]
+  188. P7 P[Z:4→3 W:4→3]
+  189. P8 P[Y:5→4 Z:5→4 W:5→4]
+  190. ✕ P1 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:4→5 Z:2→3 W:2→3]
+  191. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+  192. P2 P[Y:7→5]
+  193. ✕ P3 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:4→5 Y:2→3 Z:7→6 W:2→3]
+  194. P4 P[Z:7→5]
+  195. P5 P[W:7→6]
+  196. P6 P[Y:5→4 Z:4→5 W:5→4]
+  197. P7 P[W:7→5]
+  198. ✕ P8 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:3→4 Y:4→3 Z:4→3 W:4→3]
+  199. 💬 P1 📢 ALL: “All hands against P2.”
+  200. ✕ P1 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:6→7 Y:4→5]
+  201. 💬 P2 📢 ALL: “All hands against P8.”
+  202. P2 P[Y:7→5]
+  203. ✕ P3 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:5→4 Y:3→4 Z:6→5 W:3→4]
+  204. P4 P[Y:7→5 W:2→4]
+  205. P5 P[Z:3→4 W:6→5]
+  206. P6 P[Y:7→5 W:7→5]
+  207. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  208. P7 P[Z:7→5]
+  209. P8 P[Y:3→2 Z:3→2 W:3→2]
+  210. P1 P[Y:5→6]
+  211. P2 P[Y:7→5 W:2→4]
+  212. P3 P[Z:5→4]
+  213. P4 P[Z:7→5]
+  214. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:6→7 Y:4→5 W:5→4]
+  215. P6 P[Y:7→5 W:7→5]
+  216. P7 P[Y:2→4 W:7→5]
+  217. P8 P[Y:2→1 Z:2→1 W:2→1]
+  218. P8 ♟→♞
+  219. 💬 P1 📢 ALL: “All hands against P8.”
+  220. ✕ P1 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:6→7 Z:1→2]
+  221. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:6→7 Y:6→5 W:3→4]
+  222. 💬 P3 → P2: “P2, let us spare one another for a few turns.”
+  223. P3 P[Y:4→5 Z:5→4]
+  224. ✕ P4 ♛ ✕ ♞ P8 ♛ Queen took Knight! [Y:8→1 Z:8→1]
+  225. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  226. P5 K[X:6→5 W:8→7]
+  227. P6 K[X:4→5 W:8→7]
+  228. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  229. ✕ P7 ♛ ✕ ♛ P4 ♛ Queen took Queen! [Z:8→1 W:8→1]
+  230. P8 P[Z:7→5 W:7→5]
+  231. ✕ P1 ♟ ✕ ♝ P2 ♟ Pawn took Bishop! [Y:7→8 Z:2→1]
+  232. P1 ♟→♛
+  233. ✕ P2 ♜ ✕ ♛ P1 ♜ Rook took Queen! [X:7→6]
+  234. 💬 P3 📢 ALL: “P1, let us spare one another for a few turns.”
+  235. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:6→5 Y:5→6 Z:4→3]
+  236. ☠ DIPLOMACY: P3 betrayed P2
+  237. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:5→4 Y:5→4 W:4→5]
+  238. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  239. P5 P[Z:4→5 W:5→4]
+  240. P6 P[W:7→5]
+  241. ✕ P7 ♛ ✕ ♞ P8 ♛ Queen took Knight! [X:4→3]
+  242. P8 P[Z:7→5 W:7→5]
+  243. P1 P[Y:5→6]
+  244. 💬 P2 📢 ALL: “All hands against P8.”
+  245. ✕ P2 ♜ ✕ ♝ P1 ♜ Rook took Bishop! [Y:8→1]
+  246. 💬 P3 📢 ALL: “P1, let us spare one another for a few turns.”
+  247. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:5→4 Y:6→7 Z:3→2]
+  248. 💬 P4 → P3: “P3, let us spare one another for a few turns.”
+  249. P4 P[Y:4→3 W:5→6]
+  250. P5 P[Z:5→6 W:4→3]
+  251. ✕ P6 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:4→5 W:5→4]
+  252. ✕ P7 ♛ ✕ ♜ P2 ♛ Queen took Rook! [X:3→6]
+  253. P8 P[Y:7→5 W:7→5]
+  254. ✕ P1 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:6→7 Z:1→2]
+  255. P2 P[Z:2→3]
+  256. 💬 P3 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  257. ✕ P3 ♟ ✕ ♝ P2 ♟ Pawn took Bishop! [X:4→3 Y:7→8 Z:2→1]
+  258. P3 ♟→♞
+  259. 💬 P4 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  260. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:4→5 Y:3→2 W:6→7]
+  261. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [Y:1→2 Z:6→7 W:3→2]
+  262. P6 P[W:4→3]
+  263. 💬 P7 📢 ALL: “P1, let us spare one another for a few turns.”
+  264. ✕ P7 ♛ ✕ ♞ P1 ♛ Queen took Knight! [X:6→7]
+  265. ☠ DIPLOMACY: P7 betrayed P1
+  266. 💬 P8 → P2: “P2, let us spare one another for a few turns.”
+  267. P8 P[W:7→5]
+  268. 💬 P1 📢 ALL: “All hands against P4.”
+  269. ✕ P1 ♜ ✕ ♛ P7 ♜ Rook took Queen! [X:8→7]
+  270. 💬 P2 📢 ALL: “All hands against P8.”
+  271. ✕ P2 ♚ ✕ ♞ P3 ♚ King took Knight! [X:4→3]
+  272. 💬 P3 → P7: “Turn on P8; I will not trouble you meanwhile.”
+  273. P3 K[Y:1→2 Z:8→7]
+  274. 💬 P4 → P2: “P2, let us spare one another for a few turns.”
+  275. ✕ P4 ♟ ✕ ♝ P7 ♟ Pawn took Bishop! [X:5→6 Y:2→1 W:7→8]
+  276. P4 ♟→♛
+  277. ☠ DIPLOMACY: P4 betrayed P7
+  278. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:5→6 Z:7→8 W:2→1]
+  279. P5 ♟→♞
+  280. ✕ P6 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Z:1→2 W:3→2]
+  281. ✕ P7 ♚ ✕ ♛ P4 ♚ King took Queen! [X:5→6]
+  282. P8 P[Z:5→4 W:5→4]
+  283. ✕ P1 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:7→8 W:1→2]
+  284. P1 ♟→♛
+  285. P2 P[Y:7→5 W:2→4]
+  286. 💬 P3 → P1: “P1, let us spare one another for a few turns.”
+  287. ✕ P3 ♚ ✕ ♞ P5 ♚ King took Knight! [X:5→6 Z:7→8]
+  288. P4 P[Y:7→5 Z:7→5]
+  289. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:4→3 Y:4→5 W:5→4]
+  290. 💬 P6 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  291. ✕ P6 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Z:2→3 W:2→1]
+  292. P6 ♟→♛
+  293. P7 P[Z:7→5 W:7→5]
+  294. P8 P[Y:7→5 Z:7→5 W:7→5]
+  295. 💬 P1 📢 ALL: “All hands against P8.”
+  296. P1 P[Y:3→4 Z:3→4]
+  297. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+  298. ✕ P2 ♟ ✕ ♛ P6 ♟ Pawn took Queen! [X:6→5 Z:2→3]
+  299. ☠ DIPLOMACY: P2 betrayed P6
+  300. P3 P[Z:4→3]
+  301. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:6→5 Y:5→4 Z:5→4]
+  302. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  303. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:3→4 Y:5→6 W:4→3]
+  304. ☠ DIPLOMACY: P5 betrayed P2
+  305. P6 P[W:6→5]
+  306. P7 P[Z:5→4 W:5→4]
+  307. 💬 P8 → P2: “Turn on P6; I will not trouble you meanwhile.”
+  308. P8 P[Z:4→3 W:4→3]
+  309. ✕ P1 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:3→4 Z:2→3]
+  310. ✕ P2 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:6→5 Z:2→3 W:2→3]
+  311. ✕ P3 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:5→4 Z:4→3]
+  312. P4 P[Y:4→3 Z:4→3]
+  313. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  314. P5 P[Y:6→7 W:3→2]
+  315. P6 P[W:5→4]
+  316. ✕ P7 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:6→5 Z:4→3 W:4→3]
+  317. P8 P[Z:5→4 W:5→4]
+  318. 💬 P1 📢 ALL: “All hands against P8.”
+  319. P1 P[Z:2→3]
+  320. P2 K[Y:8→7 W:1→2]
+  321. P3 P[Y:4→5 Z:5→4 W:4→5]
+  322. 💬 P4 📢 ALL: “P1, let us spare one another for a few turns.”
+  323. P4 P[Y:7→5 Z:7→5 W:2→4]
+  324. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:7→8 Z:1→2 W:2→1]
+  325. P5 ♟→♞
+  326. P6 P[W:4→3]
+  327. P7 P[Y:2→4 Z:7→5 W:7→5]
+  328. ✕ P8 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:6→5 Z:4→3 W:4→3]
+  329. 💬 P1 📢 ALL: “All hands against P8.”
+  330. P1 P[W:2→3]
+  331. ✕ P2 ♞ ✕ ♞ P5 ♞ Knight took Knight! [X:2→4 Z:1→2]
+  332. P3 P[Y:5→6 Z:4→3 W:5→6]
+  333. 💬 P4 → P2: “P2, let us spare one another for a few turns.”
+  334. P4 P[Y:5→4 Z:5→4 W:4→5]
+  335. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  336. P5 P[Y:2→4 W:7→5]
+  337. ✕ P6 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:5→4 W:3→2]
+  338. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  339. ✕ P7 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:3→4 Y:4→5 Z:5→4 W:5→4]
+  340. ✕ P8 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:5→4 Z:3→2 W:3→2]
+  341. P1 P[Y:2→3]
+  342. P2 P[W:2→4]
+  343. 💬 P3 → P2: “P2, let us spare one another for a few turns.”
+  344. ✕ P3 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:4→3 Y:6→7 Z:3→2 W:6→7]
+  345. P4 P[Y:4→3 Z:4→3 W:5→6]
+  346. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  347. ✕ P5 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:6→7 Y:2→3 Z:2→3 W:7→6]
+  348. 💬 P6 → P5: “Turn on P8; I will not trouble you meanwhile.”
+  349. ✕ P6 ♟ ✕ ♞ P2 ♟ Pawn took Knight! [Z:1→2 W:2→1]
+  350. P6 ♟→♛
+  351. P7 P[Y:5→6 Z:4→3 W:4→3]
+  352. P8 P[Z:5→4 W:5→4]
+  353. 💬 P1 📢 ALL: “All hands against P8.”
+  354. P1 P[W:2→4]
+  355. ✕ P2 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:3→4 Y:7→6 Z:2→3 W:2→3]
+  356. ✕ P3 ♟ ✕ ♞ P6 ♟ Pawn took Knight! [X:3→2 Y:7→8 Z:2→1 W:7→8]
+  357. P3 ♟→♞
+  358. 💬 P4 📢 ALL: “All hands against P8.”
+  359. P4 P[Y:3→2 Z:3→2 W:6→7]
+  360. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  361. ✕ P5 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→3 W:5→4]
+  362. ✕ P6 ♜ ✕ ♞ P3 ♜ Rook took Knight! [X:1→2]
+  363. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  364. P7 P[Y:2→4 Z:7→5 W:7→5]
+  365. P8 P[Z:4→3 W:4→3]
+  366. ✕ P1 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:4→3 W:3→4]
+  367. ✕ P2 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:3→4 Z:2→3 W:2→3]
+  368. P3 P[Y:4→5 Z:5→4]
+  369. ✕ P4 ♟ ✕ ♞ P5 ♟ Pawn took Knight! [X:6→7 Y:2→1 Z:2→1 W:7→8]
+  370. P4 ♟→♛
+  371. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  372. ✕ P5 ♛ ✕ ♛ P4 ♛ Queen took Queen! [X:4→7]
+  373. P6 P[Y:7→5 Z:2→4 W:7→5]
+  374. 💬 P7 → P5: “Turn on P8; I will not trouble you meanwhile.”
+  375. P7 P[Y:4→5 Z:5→4 W:5→4]
+  376. P8 P[Y:7→5 Z:7→5 W:7→5]
+  377. P1 P[Y:2→4]
+  378. P2 P[Y:7→5 Z:2→4 W:2→4]
+  379. P3 P[Y:5→6 Z:4→3]
+  380. P4 P[Y:7→5 Z:7→5]
+  381. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  382. P5 P[Y:4→5 W:5→4]
+  383. 💬 P6 → P5: “P5, let us spare one another for a few turns.”
+  384. P6 P[Y:7→5]
+  385. P7 P[Z:7→5 W:7→5]
+  386. P8 P[Y:5→4 Z:5→4 W:5→4]
+  387. P1 P[Y:4→5]
+  388. P2 P[Y:7→5]
+  389. P3 P[Y:4→5 Z:5→4]
+  390. P4 P[Y:7→5 Z:7→5]
+  391. P5 P[W:7→5]
+  392. P6 P[W:7→6]
+  393. P7 P[Y:2→4 W:7→5]
+  394. P8 P[Y:4→3 Z:4→3 W:4→3]
+  395. 💬 P1 📢 ALL: “All hands against P8.”
+  396. ✕ P1 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:6→7 W:4→5]
+  397. 💬 P2 📢 ALL: “All hands against P4.”
+  398. P2 P[Y:7→5 W:2→4]
+  399. P3 P[Y:5→6 Z:4→3]
+  400. P4 P[Y:7→5 W:2→4]
+  401. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  402. ✕ P5 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:6→7 W:6→5]
+  403. P6 P[Y:7→5 Z:2→4]
+  404. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:5→6 Y:4→5 Z:5→4]
+  405. 💬 P8 → P5: “P5, let us spare one another for a few turns.”
+  406. ✕ P8 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:6→7 Y:3→2 Z:3→2 W:3→2]
+  407. 💬 P1 📢 ALL: “All hands against P8.”
+  408. P1 P[Y:5→6]
+  409. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:3→4 Y:7→6 Z:2→3]
+  410. P3 P[Y:6→7 Z:3→2]
+  411. 💬 P4 📢 ALL: “All hands against P8.”
+  412. P4 P[Y:5→4 W:4→5]
+  413. P5 P[W:7→6]
+  414. 💬 P6 → P5: “P5, let us spare one another for a few turns.”
+  415. P6 P[Y:7→5 Z:2→4]
+  416. P7 P[Y:2→4 Z:7→5]
+  417. P8 P[Y:5→4 Z:5→4 W:5→4]
+  418. 💬 P1 📢 ALL: “All hands against P8.”
+  419. P1 P[Y:6→7]
+  420. P2 P[Y:6→5 W:3→4]
+  421. P3 P[Y:7→8 Z:2→1]
+  422. P3 ♟→♞
+  423. P4 P[Y:4→3 W:5→6]
+  424. P5 P[Z:2→4 W:7→5]
+  425. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:5→6 Y:5→4 Z:4→5]
+  426. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→4 Y:2→3 W:7→6]
+  427. ✕ P8 ♟ ✕ ♞ P3 ♟ Pawn took Knight! [X:4→5 Z:2→1 W:2→1]
+  428. P8 ♟→♞
+  429. 💬 P1 📢 ALL: “P2, let us spare one another for a few turns.”
+  430. ✕ P1 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:7→8 W:1→2]
+  431. P1 ♟→♞
+  432. ✕ P2 ♜ ✕ ♞ P8 ♜ Rook took Knight! [X:1→5]
+  433. 💬 P3 → P1: “P1, let us spare one another for a few turns.”
+  434. P3 P[Z:7→5]
+  435. P4 P[Y:7→5]
+  436. P5 P[Y:2→3]
+  437. 💬 P6 → P5: “P5, let us spare one another for a few turns.”
+  438. ✕ P6 ♛ ✕ ♜ P2 ♛ Queen took Rook! [X:4→5 Z:2→1]
+  439. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  440. P7 P[Y:3→4 W:6→5]
+  441. P8 K[Y:8→7 W:8→7]
+  442. 💬 P1 📢 ALL: “All hands against P8.”
+  443. ✕ P1 ♞ ✕ ♛ P6 ♞ Knight took Queen! [X:7→5 W:2→1]
+  444. P2 P[Y:7→5]
+  445. P3 P[Y:2→4 Z:7→5]
+  446. 💬 P4 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  447. P4 P[Z:7→5 W:2→4]
+  448. P5 P[Y:3→4 Z:3→4 W:6→5]
+  449. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:5→4 Z:4→5 W:5→4]
+  450. 💬 P7 → P5: “Turn on P8; I will not trouble you meanwhile.”
+  451. P7 P[Y:4→5 W:5→4]
+  452. 💬 P8 → P2: “Turn on P6; I will not trouble you meanwhile.”
+  453. P8 P[Y:4→3 Z:4→3 W:4→3]
+  454. 💬 P1 📢 ALL: “P2, let us spare one another for a few turns.”
+  455. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:6→7 Y:2→3 Z:2→3 W:2→3]
+  456. 💬 P2 📢 ALL: “All hands against P4.”
+  457. P2 P[Y:7→5 Z:2→4 W:2→4]
+  458. P3 P[Y:4→5 Z:5→4]
+  459. 💬 P4 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  460. P4 P[Y:7→5]
+  461. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  462. P5 P[Y:4→5 Z:4→5 W:5→4]
+  463. P6 P[Y:4→3 Z:5→6]
+  464. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  465. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:7→6 Y:2→3 Z:7→6]
+  466. P8 P[Y:7→5 W:7→5]
+  467. P1 P[W:2→3]
+  468. P2 P[Y:7→5 W:2→4]
+  469. P3 P[Y:5→6 Z:4→3]
+  470. P4 P[Y:5→4]
+  471. P5 P[Y:5→6 Z:5→6 W:4→3]
+  472. P6 P[Z:5→6 W:4→3]
+  473. P7 P[Y:5→6 W:4→3]
+  474. P8 P[Y:7→5 W:7→5]
+  475. P1 P[Y:2→3]
+  476. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+  477. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:8→7 Y:7→6 Z:2→3]
+  478. ☠ DIPLOMACY: P2 betrayed P3
+  479. P3 P[Y:2→4 Z:7→5]
+  480. 💬 P4 📢 ALL: “All hands against P8.”
+  481. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:3→4 Y:7→6 W:2→3]
+  482. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  483. ✕ P5 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:7→8 Y:6→7 Z:6→7 W:3→2]
+  484. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:4→5 Z:6→7 W:3→2]
+  485. ✕ P7 ♝ ✕ ♝ P4 ♝ Bishop took Bishop! [Y:1→8 W:8→1]
+  486. P8 P[Y:7→5]
+  487. P1 P[Z:2→3]
+  488. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+  489. P2 P[Y:6→5 Z:3→4]
+  490. P3 P[Y:4→5 Z:5→4]
+  491. P4 P[Y:6→5 W:3→4]
+  492. ✕ P5 ♟ ✕ ♞ P4 ♟ Pawn took Knight! [X:8→7 Y:7→8 Z:7→8 W:2→1]
+  493. P5 ♟→♞
+  494. ✕ P6 ♟ ✕ ♝ P4 ♟ Pawn took Bishop! [X:5→6 Z:7→8 W:2→1]
+  495. P6 ♟→♛
+  496. P7 P[Z:7→5 W:7→5]
+  497. ✕ P8 ♛ ✕ ♟ P2 ♛ Queen took Pawn! [Z:8→3 W:8→3]
+  498. P1 P[W:2→4]
+  499. 💬 P2 📢 ALL: “P1, let us spare one another for a few turns.”
+  500. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:4→3 Y:6→5 Z:3→4]
+  501. ☠ DIPLOMACY: P2 betrayed P3
+  502. P3 P[Z:7→5 W:2→4]
+  503. ✕ P4 ♚ ✕ ♛ P6 ♚ King took Queen! [X:5→6]
+  504. ✕ P5 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:7→8 W:5→4]
+  505. P6 P[Y:5→4 W:5→4]
+  506. P7 P[W:7→5]
+  507. ✕ P8 ♛ ✕ ♟ P2 ♛ Queen took Pawn! [Y:8→6]
+  508. ✕ P1 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:7→8 W:3→4]
+  509. P2 P[Y:5→4 Z:4→5]
+  510. P3 P[Z:3→2]
+  511. 💬 P4 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  512. ✕ P4 ♚ ✕ ♞ P5 ♚ King took Knight! [X:6→7]
+  513. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+  514. ✕ P5 ♛ ✕ ♜ P1 ♛ Queen took Rook! [W:8→1]
+  515. P6 P[Y:4→3 W:4→3]
+  516. P7 P[Z:5→4 W:5→4]
+  517. ✕ P8 ♛ ✕ ♟ P1 ♛ Queen took Pawn! [X:4→7 Y:6→3]
+  518. ✕ P1 ♟ ✕ ♛ P8 ♟ Pawn took Queen! [X:8→7 Y:2→3 Z:2→3 W:2→3]
+  519. P2 P[Y:4→3 Z:5→6]
+  520. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:8→7 Y:2→3 Z:7→6]
+  521. 💬 P4 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  522. P4 P[Y:5→4 W:4→5]
+  523. ✕ P5 ♛ ✕ ♞ P1 ♛ Queen took Knight! [X:7→2]
+  524. ✕ P6 ♟ ✕ ♚ P1 ♟ Pawn took King! [X:6→5 Y:3→2 W:3→2]
+  ★ ★ P6 eliminated P1! +38pcs ▶ replay path
+  525. P7 P[Y:5→6 Z:4→3 W:4→3]
+  526. 💬 P8 → P2: “P2, let us spare one another for a few turns.”
+  527. P8 P[Y:5→4 Z:5→4 W:5→4]
+  528. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  529. P2 P[Y:5→4 W:4→5]
+  530. P3 P[Y:3→4 Z:6→5]
+  531. P4 P[Y:4→3 W:5→6]
+  532. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  533. ✕ P5 ♛ ✕ ♜ P6 ♛ Queen took Rook! [X:2→1]
+  534. ☠ DIPLOMACY: P5 betrayed P6
+  535. ✕ P6 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:7→8 Y:3→4 Z:3→4 W:3→4]
+  536. P7 P[Y:6→7 Z:3→2 W:3→2]
+  537. P8 P[Y:7→5]
+  538. P2 P[Y:5→4 Z:4→5 W:4→5]
+  539. P3 P[Y:4→5 Z:5→4]
+  540. P4 P[Y:3→2 W:6→7]
+  541. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  542. P5 P[W:7→5]
+  543. ✕ P6 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:3→2 W:4→5]
+  544. ☠ DIPLOMACY: P6 betrayed P5
+  545. ✕ P7 ♟ ✕ ♞ P6 ♟ Pawn took Knight! [X:4→5 Y:7→8 Z:2→1 W:2→1]
+  546. P7 ♟→♛
+  547. P8 P[Y:7→5 Z:7→5]
+  548. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  549. P2 P[Y:4→3 Z:5→6 W:5→6]
+  550. P3 P[Y:5→6 Z:4→3]
+  551. 💬 P4 → P2: “P2, let us spare one another for a few turns.”
+  552. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [Y:2→1 Z:8→7 W:7→8]
+  553. P4 ♟→♛
+  554. ✕ P5 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:3→2 W:6→5]
+  555. P6 K[Y:8→7 Z:1→2]
+  556. ✕ P7 ♞ ✕ ♛ P4 ♞ Knight took Queen! [X:2→4 Z:8→7]
+  557. P8 P[W:7→5]
+  558. ✕ P2 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:7→8 Y:3→2 Z:6→7 W:6→7]
+  559. P3 P[Z:7→5 W:2→4]
+  560. P4 P[Y:7→5 W:2→4]
+  561. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:3→2 Z:4→5 W:5→4]
+  562. P6 P[Y:2→4 W:2→4]
+  563. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:6→7 Y:4→5 W:5→4]
+  564. P8 P[Y:7→5 W:7→5]
+  565. 💬 P2 📢 ALL: “All hands against P6.”
+  566. ✕ P2 ♟ ✕ ♞ P7 ♟ Pawn took Knight! [X:8→7 Y:2→1 Z:7→8 W:7→8]
+  567. P2 ♟→♛
+  568. P3 P[Y:6→7 Z:3→2]
+  569. P4 P[Y:7→5 W:2→4]
+  570. P5 P[Z:5→6 W:4→3]
+  571. P6 P[Y:4→5 W:4→5]
+  572. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  573. ✕ P7 ♚ ✕ ♛ P2 ♚ King took Queen! [X:6→7]
+  574. P8 P[Y:7→5]
+  575. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  576. P2 P[Y:5→4 Z:4→5 W:4→5]
+  577. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:3→2 Z:7→6 W:2→3]
+  578. P4 P[Y:5→4 W:4→5]
+  579. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  580. ✕ P5 ♝ ✕ ♝ P3 ♝ Bishop took Bishop! [Z:1→8 W:8→1]
+  581. 💬 P6 → P2: “P2, let us spare one another for a few turns.”
+  582. P6 P[Y:5→6 W:5→6]
+  583. P7 P[Y:5→6 W:4→3]
+  584. P8 P[W:7→5]
+  585. P2 P[Y:4→3 Z:5→6 W:5→6]
+  586. 💬 P3 → P4: “Turn on P6; I will not trouble you meanwhile.”
+  587. ✕ P3 ♛ ✕ ♝ P5 ♛ Queen took Bishop! [X:4→3]
+  588. 💬 P4 📢 ALL: “All hands against P6.”
+  589. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:8→7 Y:7→6 W:2→3]
+  590. P5 P[Z:5→6 W:4→3]
+  591. 💬 P6 📢 ALL: “All hands against P8.”
+  592. P6 P[Y:6→7 W:6→7]
+  593. ✕ P7 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:7→8 Y:2→3 Z:7→6 W:7→6]
+  594. P8 P[Y:7→5]
+  595. P2 P[Y:4→3 W:5→6]
+  596. P3 P[Z:7→5 W:2→4]
+  597. P4 P[Y:4→3 W:5→6]
+  598. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:8→7 Y:2→3 W:7→6]
+  599. P6 P[Y:5→4 W:5→4]
+  600. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:7→6 Y:2→3 W:7→6]
+  601. 💬 P8 → P2: “P2, let us spare one another for a few turns.”
+  602. P8 P[Y:7→5 Z:7→5]
+  603. P2 P[Y:5→4 W:4→5]
+  604. 💬 P3 → P4: “Turn on P6; I will not trouble you meanwhile.”
+  605. P3 P[Y:7→8 Z:2→1]
+  606. P3 ♟→♞
+  607. P4 P[Z:5→4]
+  608. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:7→8 Y:3→4 W:6→5]
+  609. P6 P[Y:4→3 W:4→3]
+  610. 💬 P7 → P5: “Turn on P6; I will not trouble you meanwhile.”
+  611. P7 P[Y:3→4 W:6→5]
+  612. P8 P[Z:7→5]
+  613. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  614. ✕ P2 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:5→4 Z:3→4]
+  615. ☠ DIPLOMACY: P2 betrayed P4
+  616. P3 P[Y:2→4 Z:7→5 W:2→4]
+  617. 💬 P4 📢 ALL: “All hands against P6.”
+  618. ✕ P4 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:5→4 Z:5→4]
+  619. P5 P[Z:6→7 W:3→2]
+  620. ✕ P6 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [Y:3→2 Z:1→2 W:3→2]
+  621. 💬 P7 📢 ALL: “P2, let us spare one another for a few turns.”
+  622. P7 P[Y:4→5 W:5→4]
+  623. P8 P[W:7→5]
+  624. P2 P[Y:7→5 Z:2→4 W:2→4]
+  625. P3 P[Y:4→5 Z:5→4 W:4→5]
+  626. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:7→6 Y:6→5 W:3→4]
+  627. ✕ P5 ♟ ✕ ♛ P3 ♟ Pawn took Queen! [X:4→3 Z:7→8 W:2→1]
+  628. P5 ♟→♞
+  629. 💬 P6 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  630. P6 P[Y:2→1 W:2→1]
+  631. P6 ♟→♞
+  632. P7 P[Y:3→4 Z:6→5]
+  633. P8 P[Z:7→5]
+  634. P2 P[Y:5→4 Z:4→5]
+  635. 💬 P3 → P4: “P4, let us spare one another for a few turns.”
+  636. P3 P[Y:5→6 Z:4→3 W:5→6]
+  637. 💬 P4 → P3: “P3, let us spare one another for a few turns.”
+  638. P4 P[Y:5→4 W:4→5]
+  639. P5 P[Y:2→4 W:7→5]
+  640. ✕ P6 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:2→3 Y:7→6 Z:2→3 W:7→6]
+  641. P7 P[W:7→5]
+  642. P8 P[Y:7→5 Z:7→5]
+  643. P2 P[Y:4→3 Z:5→6]
+  644. 💬 P3 → P4: “P4, let us spare one another for a few turns.”
+  645. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:2→3 Y:2→3 Z:7→6]
+  646. P4 P[Y:4→3 W:5→6]
+  647. 💬 P5 📢 ALL: “All hands against P6.”
+  648. P5 P[Y:4→5 W:5→4]
+  649. 💬 P6 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  650. P6 P[Y:4→5 Z:4→5 W:4→5]
+  651. P7 P[Y:3→4 Z:6→5 W:6→5]
+  652. 💬 P8 → P2: “Turn on P6; I will not trouble you meanwhile.”
+  653. P8 P[Z:7→5 W:7→5]
+  654. P2 P[Y:7→5 Z:2→4]
+  655. P3 P[Y:3→4 Z:6→5]
+  656. P4 P[Y:3→2 W:6→7]
+  657. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  658. P5 P[Y:5→6 W:4→3]
+  659. P6 P[Y:5→6 Z:5→6 W:5→6]
+  660. P7 K[X:7→6 W:8→7]
+  661. P8 P[Z:5→4 W:5→4]
+  662. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:2→3 Y:5→4 Z:4→5]
+  663. P3 P[Z:6→5 W:3→4]
+  664. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [Y:2→1 Z:8→7 W:7→8]
+  665. P4 ♟→♛
+  666. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  667. P5 P[Y:4→5 W:5→4]
+  668. 💬 P6 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  669. P6 P[Y:6→7 Z:6→7 W:6→7]
+  670. ✕ P7 ♚ ✕ ♛ P4 ♚ King took Queen! [Z:8→7 W:7→8]
+  671. P8 P[Z:4→3 W:4→3]
+  672. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  673. ✕ P2 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:2→3 Z:2→3 W:2→3]
+  674. ☠ DIPLOMACY: P2 betrayed P8
+  675. P3 P[Z:2→1]
+  676. P3 ♟→♛
+  677. P4 P[Z:4→3]
+  678. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  679. ✕ P5 ♛ ✕ ♛ P3 ♛ Queen took Queen! [X:1→4]
+  680. ✕ P6 ♟ ✕ ♛ P5 ♟ Pawn took Queen! [X:5→4 Y:2→1 W:2→1]
+  681. P6 ♟→♞
+  682. ☠ DIPLOMACY: P6 betrayed P5
+  683. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  684. P7 P[Y:4→5 Z:5→4 W:5→4]
+  685. P8 P[Z:7→5]
+  686. ✕ P2 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→4 Z:2→3]
+  687. P3 P[Y:2→4 Z:7→5 W:2→4]
+  688. 💬 P4 → P3: “Turn on P6; I will not trouble you meanwhile.”
+  689. P4 P[Y:7→5 Z:7→5]
+  690. 💬 P5 📢 ALL: “All hands against P6.”
+  691. P5 P[Y:5→6 W:4→3]
+  692. 💬 P6 📢 ALL: “P2, let us spare one another for a few turns.”
+  693. ✕ P6 ♟ ✕ ♞ P8 ♟ Pawn took Knight! [X:8→7 Y:7→8 Z:7→8 W:7→8]
+  694. P6 ♟→♞
+  695. ☠ DIPLOMACY: P6 betrayed P8
+  696. 💬 P7 📢 ALL: “P2, let us spare one another for a few turns.”
+  697. P7 P[Y:5→6 Z:4→3 W:4→3]
+  698. ✕ P8 ♜ ✕ ♞ P6 ♜ Rook took Knight! [X:8→7]
+  699. P2 P[Y:4→3 Z:5→6]
+  700. ✕ P3 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:8→7 Y:4→5 Z:5→4 W:4→5]
+  701. ☠ DIPLOMACY: P3 betrayed P6
+  702. P4 P[Z:7→5 W:2→4]
+  703. P5 P[Y:6→7 W:3→2]
+  704. P6 P[Y:2→4 W:2→4]
+  705. P7 P[Y:6→7 Z:3→2 W:3→2]
+  706. P8 P[Z:7→5 W:7→5]
+  707. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  708. P2 P[Y:3→2 Z:6→7]
+  709. P3 P[Y:5→6 Z:4→3 W:5→6]
+  710. P4 P[Y:5→4 Z:5→4]
+  711. 💬 P5 📢 ALL: “All hands against P6.”
+  712. ✕ P5 ♟ ✕ ♞ P3 ♟ Pawn took Knight! [X:8→7 Y:7→8 W:2→1]
+  713. P5 ♟→♛
+  714. ✕ P6 ♛ ✕ ♛ P5 ♛ Queen took Queen! [Z:2→1 W:2→1]
+  715. 💬 P7 📢 ALL: “P2, let us spare one another for a few turns.”
+  716. ✕ P7 ♟ ✕ ♛ P6 ♟ Pawn took Queen! [X:8→7 Y:7→8 Z:2→1 W:2→1]
+  717. P7 ♟→♞
+  718. ☠ DIPLOMACY: P7 betrayed P6
+  719. P8 P[Z:7→5 W:7→5]
+  720. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  721. ✕ P2 ♟ ✕ ♞ P3 ♟ Pawn took Knight! [X:3→2 Y:2→1 Z:7→8]
+  722. P2 ♟→♛
+  723. ☠ DIPLOMACY: P2 betrayed P3
+  724. ✕ P3 ♜ ✕ ♛ P2 ♜ Rook took Queen! [X:1→2]
+  725. 💬 P4 → P2: “Turn on P6; I will not trouble you meanwhile.”
+  726. P4 P[Y:4→3 Z:4→3]
+  727. P5 P[Y:6→7 W:3→2]
+  728. 💬 P6 → P2: “P2, let us spare one another for a few turns.”
+  729. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:8→7 Y:2→3 Z:2→3]
+  730. P7 P[Y:2→4 Z:7→5]
+  731. P8 P[Z:5→4 W:5→4]
+  732. P2 P[Z:3→4]
+  733. ✕ P3 ♜ ✕ ♞ P5 ♜ Rook took Knight! [X:2→3]
+  734. P4 P[Y:5→4 Z:5→4]
+  735. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:7→8 Z:1→2 W:2→1]
+  736. P5 ♟→♛
+  737. 💬 P6 → P2: “P2, let us spare one another for a few turns.”
+  738. ✕ P6 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:8→7 Y:7→6 Z:2→3 W:7→6]
+  739. 💬 P7 📢 ALL: “P2, let us spare one another for a few turns.”
+  740. P7 P[Z:7→5 W:7→5]
+  741. P8 P[Z:4→3 W:4→3]
+  742. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  743. ✕ P2 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:8→7 Z:2→3 W:2→3]
+  744. ☠ DIPLOMACY: P2 betrayed P8
+  745. P3 P[W:2→3]
+  746. 💬 P4 📢 ALL: “All hands against P6.”
+  747. P4 P[Y:4→3 Z:4→3]
+  748. ✕ P5 ♛ ✕ ♞ P7 ♛ Queen took Knight! [Z:2→1]
+  749. ☠ DIPLOMACY: P5 betrayed P7
+  750. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:2→3 Y:2→3 Z:2→3]
+  751. 💬 P7 → P2: “P2, let us spare one another for a few turns.”
+  752. ✕ P7 ♛ ✕ ♛ P5 ♛ Queen took Queen! [X:5→7]
+  753. P8 P[Z:5→4 W:5→4]
+  754. ✕ P2 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:7→8 Z:3→4 W:3→4]
+  755. P3 P[Z:7→5]
+  756. P4 P[Y:5→4 Z:5→4]
+  757. P5 P[Y:2→4 Z:2→4 W:7→5]
+  758. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→2 Y:3→4 Z:3→4]
+  759. ✕ P7 ♛ ✕ ♜ P8 ♛ Queen took Rook! [Z:1→8 W:1→8]
+  760. P8 P[Y:7→5 Z:7→5 W:7→5]
+  761. P2 P[Z:4→5 W:4→5]
+  762. 💬 P3 → P4: “Turn on P6; I will not trouble you meanwhile.”
+  763. P3 P[Y:2→4 Z:7→5 W:2→4]
+  764. P4 P[Y:7→5 Z:7→5]
+  765. P5 P[Y:4→5 Z:4→5 W:5→4]
+  766. ✕ P6 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:6→7 Y:5→4 Z:4→5 W:5→4]
+  767. ✕ P7 ♛ ✕ ♝ P8 ♛ Queen took Bishop! [X:7→6]
+  768. P8 P[Z:7→5]
+  769. 💬 P2 📢 ALL: “All hands against P6.”
+  770. P2 P[Z:5→6 W:5→6]
+  771. P3 P[Y:2→4 Z:7→5 W:2→4]
+  772. P4 P[Y:5→4 Z:5→4]
+  773. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  774. P5 P[Y:5→6 Z:5→6 W:4→3]
+  775. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:7→8 Y:3→4 Z:3→4]
+  776. ✕ P7 ♛ ✕ ♝ P8 ♛ Queen took Bishop! [X:6→3]
+  777. 💬 P8 📢 ALL: “All hands against P6.”
+  778. P8 P[Y:7→5 W:7→5]
+  779. P2 P[Z:6→7 W:6→7]
+  780. P3 P[Y:4→5 Z:5→4 W:4→5]
+  781. ✕ P4 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:2→3 Y:7→6 Z:7→6 W:2→3]
+  782. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  783. P5 P[Y:2→4]
+  784. 💬 P6 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  785. ✕ P6 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:7→6 Y:6→5 Z:3→4 W:6→5]
+  786. ✕ P7 ♛ ✕ ♞ P8 ♛ Queen took Knight! [X:3→2]
+  787. ✕ P8 ♜ ✕ ♛ P7 ♜ Rook took Queen! [X:1→2]
+  788. ✕ P2 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [Y:8→7 Z:7→8 W:7→8]
+  789. P2 ♟→♛
+  790. P3 P[Y:2→3]
+  791. ✕ P4 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:6→5 Y:4→3]
+  792. ✕ P5 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:4→5 Y:4→5]
+  793. P6 P[Y:4→3 Z:5→6 W:4→3]
+  794. P7 P[Z:4→3 W:4→3]
+  795. P8 P[W:7→5]
+  796. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  797. ✕ P2 ♛ ✕ ♟ P8 ♛ Queen took Pawn! [X:8→6 Y:7→5]
+  798. ☠ DIPLOMACY: P2 betrayed P8
+  799. ✕ P3 ♚ ✕ ♟ P4 ♚ King took Pawn! [X:6→5 Y:2→3]
+  800. P4 P[Y:6→5 Z:6→5 W:3→4]
+  801. P5 P[Y:5→6]
+  802. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:8→7 Z:2→3 W:2→3]
+  803. P7 P[Z:5→4 W:5→4]
+  804. 💬 P8 → P4: “Turn on P6; I will not trouble you meanwhile.”
+  805. P8 P[Y:7→5 Z:7→5]
+  806. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  807. ✕ P2 ♛ ✕ ♟ P8 ♛ Queen took Pawn! [X:6→5]
+  808. P3 P[Y:2→4]
+  809. 💬 P4 → P2: “Turn on P6; I will not trouble you meanwhile.”
+  810. ✕ P4 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:5→4 Y:5→4]
+  811. 💬 P5 📢 ALL: “All hands against P6.”
+  812. ✕ P5 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:5→4 Y:6→7]
+  813. 💬 P6 → P2: “Turn on P8; I will not trouble you meanwhile.”
+  814. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:7→8 Z:3→4 W:3→4]
+  815. P7 P[Y:2→4 Z:7→5]
+  816. P8 P[Y:7→5]
+  817. ✕ P2 ♛ ✕ ♜ P8 ♛ Queen took Rook! [X:5→2 Y:5→8]
+  818. ✕ P3 ♚ ✕ ♟ P4 ♚ King took Pawn! [X:5→4 Y:3→4]
+  819. 💬 P4 → P2: “Turn on P6; I will not trouble you meanwhile.”
+  820. P4 P[Y:5→4 Z:5→4 W:4→5]
+  821. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  822. ✕ P5 ♟ ✕ ♝ P6 ♟ Pawn took Bishop! [X:4→3 Y:7→8]
+  823. P5 ♟→♛
+  824. ✕ P6 ♜ ✕ ♛ P5 ♜ Rook took Queen! [X:2→3]
+  825. P7 P[Y:2→4]
+  826. ✕ P8 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:4→5 Y:5→4]
+  827. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  828. P2 P[Z:4→5]
+  829. P3 P[W:2→3]
+  830. 💬 P4 📢 ALL: “All hands against P6.”
+  831. P4 P[Y:4→3 Z:4→3 W:5→6]
+  832. ✕ P5 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:2→3 Y:2→3 Z:2→3 W:7→6]
+  833. 💬 P6 → P2: “P2, let us spare one another for a few turns.”
+  834. P6 P[Y:3→2 Z:6→7 W:3→2]
+  835. P7 P[Y:5→6 Z:4→3]
+  836. P8 P[Y:4→3]
+  837. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  838. P2 P[Z:5→6]
+  839. P3 P[W:2→4]
+  840. ✕ P4 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:3→4 Z:7→6]
+  841. ☠ DIPLOMACY: P4 betrayed P2
+  842. P5 P[Y:3→4 Z:3→4 W:6→5]
+  843. ✕ P6 ♟ ✕ ♜ P3 ♟ Pawn took Rook! [X:7→8 Y:2→1 Z:7→8 W:2→1]
+  844. P6 ♟→♛
+  845. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:6→7 Y:6→7 Z:3→2]
+  846. ✕ P8 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:5→6 Y:3→2]
+  847. ✕ P2 ♛ ✕ ♟ P8 ♛ Queen took Pawn! [X:2→5 W:8→5]
+  848. ✕ P3 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:7→6 W:4→5]
+  849. 💬 P4 📢 ALL: “P2, let us spare one another for a few turns.”
+  850. P4 P[Z:6→5]
+  851. P5 P[Y:4→5 Z:4→5 W:5→4]
+  852. ✕ P6 ♛ ✕ ♞ P3 ♛ Queen took Knight! [X:8→7]
+  853. 💬 P7 → P5: “P5, let us spare one another for a few turns.”
+  854. ✕ P7 ♟ ✕ ♜ P6 ♟ Pawn took Rook! [X:7→8 Y:7→8 Z:2→1]
+  855. P7 ♟→♛
+  856. ✕ P8 ♟ ✕ ♚ P7 ♟ Pawn took King! [Y:2→1 Z:8→7]
+  857. P8 ♟→♛
+  ★ ★ P8 eliminated P7! +39pcs ▶ replay path
+  858. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  859. ✕ P2 ♛ ✕ ♟ P8 ♛ Queen took Pawn! [Y:8→5]
+  860. 💬 P3 → P2: “P2, let us spare one another for a few turns.”
+  861. ✕ P3 ♜ ✕ ♛ P6 ♜ Rook took Queen! [X:3→7]
+  862. P4 P[Z:5→4]
+  863. 💬 P5 📢 ALL: “All hands against P8.”
+  864. P5 P[Y:5→6 Z:5→6 W:4→3]
+  865. 💬 P6 → P2: “P2, let us spare one another for a few turns.”
+  866. P6 P[Y:4→5 Z:4→5]
+  867. ✕ P8 ♛ ✕ ♞ P6 ♛ Queen took Knight! [X:8→7]
+  868. 💬 P2 📢 ALL: “All hands against P8.”
+  869. ✕ P2 ♛ ✕ ♚ P8 ♛ Queen took King! [Y:5→7 W:5→7]
+  ★ ★ P2 eliminated P8! +78pcs ▶ replay path
+  870. P3 P[Z:7→5]
+  871. P4 P[Z:4→3]
+  872. P5 P[Y:6→7 Z:6→7 W:3→2]
+  873. 💬 P6 📢 ALL: “All hands against P2.”
+  874. ✕ P6 ♟ ✕ ♛ P2 ♟ Pawn took Queen! [X:6→7 Y:7→8 W:7→8]
+  875. P6 ♟→♛
+  876. ☠ DIPLOMACY: P6 betrayed P2
+  877. ✕ P2 ♛ ✕ ♚ P6 ♛ Queen took King! [Z:8→2]
+  ★ ★ P2 eliminated P6! +76pcs ▶ replay path
+  878. P3 P[Y:2→4 Z:7→5]
+  879. P4 P[Z:3→2]
+  880. 💬 P5 📢 ALL: “All hands against P2.”
+  881. ✕ P5 ♟ ✕ ♞ P4 ♟ Pawn took Knight! [X:3→2 Y:7→8 Z:7→8 W:2→1]
+  882. P5 ♟→♛
+  883. P2 P[Y:5→4]
+  884. P3 P[Z:5→4]
+  885. ✕ P4 ♜ ✕ ♛ P5 ♜ Rook took Queen! [X:1→2]
+  886. 💬 P5 📢 ALL: “All hands against P2.”
+  887. P5 P[Y:5→6 W:4→3]
+  888. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  889. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:6→7 Z:3→4]
+  890. ☠ DIPLOMACY: P2 betrayed P3
+  891. 💬 P3 → P4: “Turn on P2; I will not trouble you meanwhile.”
+  892. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:6→7 Z:5→4]
+  893. ✕ P4 ♜ ✕ ♝ P2 ♜ Rook took Bishop! [X:2→3]
+  894. ☠ DIPLOMACY: P4 betrayed P2
+  895. 💬 P5 📢 ALL: “All hands against P2.”
+  896. P5 P[Y:2→4 W:7→5]
+  897. 💬 P2 📢 ALL: “All hands against P5.”
+  898. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:2→1 Y:5→4 W:4→5]
+  899. ☠ DIPLOMACY: P2 betrayed P5
+  900. P3 P[W:5→6]
+  901. P4 P[Z:2→1]
+  902. P4 ♟→♛
+  903. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  904. P5 P[Y:2→4 W:7→5]
+  905. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:7→6 W:7→6]
+  906. P3 P[Z:7→5 W:2→4]
+  907. ✕ P4 ♛ ✕ ♟ P2 ♛ Queen took Pawn! [Y:8→4]
+  908. P5 P[Y:4→5 W:5→4]
+  909. ✕ P2 ♟ ✕ ♛ P4 ♟ Pawn took Queen! [X:3→4 Y:5→4]
+  910. P3 P[Z:5→4]
+  911. 💬 P4 📢 ALL: “All hands against P2.”
+  912. P4 P[Y:7→5 Z:7→5]
+  913. P5 P[Y:5→6 W:4→3]
+  914. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:1→2 Y:7→6 W:2→3]
+  915. P3 P[Z:4→3]
+  916. P4 P[Y:5→4 Z:5→4]
+  917. P5 P[Y:2→4 Z:2→4 W:7→5]
+  918. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:1→2 Z:2→3]
+  919. P3 P[Z:5→4]
+  920. P4 P[Y:7→5]
+  921. P5 P[Y:4→5 Z:4→5 W:5→4]
+  922. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:2→1 Z:3→4]
+  923. P3 P[W:2→4]
+  924. 💬 P4 → P3: “P3, let us spare one another for a few turns.”
+  925. P4 P[Y:4→3 Z:4→3]
+  926. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  927. P5 P[Y:5→6 Z:5→6 W:4→3]
+  928. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:4→3 W:5→4]
+  929. P3 P[Y:2→4]
+  930. ✕ P4 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:3→2 Z:3→2 W:1→2]
+  931. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  932. P5 P[Y:6→7 Z:6→7 W:3→2]
+  933. P2 P[Y:5→6 Z:5→6]
+  934. P3 P[Y:2→4]
+  935. ✕ P4 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:1→2 Y:2→1 Z:2→1]
+  936. P4 ♟→♛
+  937. ✕ P5 ♟ ✕ ♚ P4 ♟ Pawn took King! [X:8→7 Y:7→8 Z:7→8 W:2→1]
+  938. P5 ♟→♛
+  ★ ★ P5 eliminated P4! +32pcs ▶ replay path
+  939. ✕ P2 ♞ ✕ ♛ P5 ♞ Knight took Queen! [X:4→2 W:1→2]
+  940. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:3→2 Y:4→5]
+  941. 💬 P5 📢 ALL: “All hands against P2.”
+  942. P5 P[W:5→4]
+  943. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  944. P2 P[Y:3→4]
+  945. P3 P[Y:5→6]
+  946. 💬 P5 📢 ALL: “All hands against P2.”
+  947. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:1→2 Y:7→6]
+  948. P2 P[Y:5→4 W:5→4]
+  949. P3 P[Y:2→4 Z:7→5 W:2→4]
+  950. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  951. P5 P[W:4→3]
+  952. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  953. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:1→2 W:2→3]
+  954. ☠ DIPLOMACY: P2 betrayed P5
+  955. P3 P[Y:4→5 Z:5→4 W:4→5]
+  956. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  957. P5 P[Y:7→6]
+  958. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:3→2 Y:6→5 Z:3→4 W:6→5]
+  959. ☠ DIPLOMACY: P2 betrayed P3
+  960. P3 P[W:2→4]
+  961. P5 P[Y:6→5]
+  962. 💬 P2 📢 ALL: “All hands against P5.”
+  963. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:5→4 W:5→4]
+  964. 💬 P3 → P5: “P5, let us spare one another for a few turns.”
+  965. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:5→4 W:3→4]
+  966. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  967. P5 P[Y:7→6]
+  968. P2 P[Y:4→3 W:4→3]
+  969. P3 P[Y:2→4 Z:7→5 W:2→4]
+  970. P5 P[W:7→5]
+  971. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  972. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:2→1 Y:5→4 Z:4→5 W:5→4]
+  973. ☠ DIPLOMACY: P2 betrayed P3
+  974. P3 P[W:4→5]
+  975. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  976. P5 P[Z:7→5]
+  977. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  978. P2 P[Y:5→4]
+  979. P3 P[W:2→4]
+  980. P5 P[Y:7→5]
+  981. 💬 P2 📢 ALL: “All hands against P5.”
+  982. P2 P[Y:4→5]
+  983. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:7→8 Y:4→5]
+  984. P5 P[Y:7→5 Z:7→5 W:2→4]
+  985. 💬 P2 📢 ALL: “All hands against P5.”
+  986. P2 P[Y:5→6]
+  987. P3 P[W:3→4]
+  988. P5 P[Y:5→4 Z:5→4 W:4→5]
+  989. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  990. P2 P[Z:5→4 W:5→4]
+  991. P3 P[W:2→4]
+  992. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  993. P5 P[Z:7→5]
+  994. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  995. P2 P[Y:6→7]
+  996. P3 P[Z:5→4 W:4→5]
+  997. P5 P[Z:5→4]
+  998. 💬 P2 📢 ALL: “All hands against P5.”
+  999. P2 P[Y:4→3]
+  1000. 💬 P3 📢 ALL: “All hands against P2.”
+  1001. P3 P[Z:4→3 W:5→6]
+  1002. 💬 P5 📢 ALL: “All hands against P2.”
+  1003. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:1→2 Z:2→3 W:7→6]
+  1004. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1005. P2 P[Z:4→3 W:4→3]
+  1006. P3 P[Z:5→4 W:4→5]
+  1007. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  1008. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:2→1 Z:3→4 W:6→5]
+  1009. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1010. P2 P[W:3→4]
+  1011. P3 P[Z:5→4]
+  1012. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  1013. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:1→2 W:5→4]
+  1014. ☠ DIPLOMACY: P5 betrayed P2
+  1015. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:7→8 Z:3→4]
+  1016. ☠ DIPLOMACY: P2 betrayed P3
+  1017. P3 P[Z:4→3]
+  1018. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  1019. P5 P[W:4→3]
+  1020. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1021. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:8→7 Z:2→3]
+  1022. ☠ DIPLOMACY: P2 betrayed P3
+  1023. P3 P[Y:2→4]
+  1024. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:1→2 W:3→2]
+  1025. ☠ DIPLOMACY: P5 betrayed P2
+  1026. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1027. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:3→2 Y:3→2 W:3→2]
+  1028. ☠ DIPLOMACY: P2 betrayed P5
+  1029. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:1→2 Y:4→5]
+  1030. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:3→2 Y:6→5]
+  1031. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1032. P2 P[Y:2→1 W:2→1]
+  1033. P2 ♟→♞
+  1034. P3 P[Z:5→4 W:4→5]
+  1035. 💬 P5 📢 ALL: “All hands against P2.”
+  1036. P5 P[Z:4→3]
+  1037. 💬 P2 📢 ALL: “All hands against P5.”
+  1038. P2 P[Y:6→7 Z:6→7]
+  1039. P3 P[Z:4→3 W:5→6]
+  1040. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  1041. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:7→8 Z:2→3 W:7→6]
+  1042. ✕ P2 ♟ ✕ ♜ P5 ♟ Pawn took Rook! [X:2→3 Y:7→8 Z:7→8]
+  1043. P2 ♟→♞
+  1044. ☠ DIPLOMACY: P2 betrayed P5
+  1045. P3 P[Z:5→4 W:4→5]
+  1046. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  1047. ✕ P5 ♛ ✕ ♞ P2 ♛ Queen took Knight! [X:7→3]
+  1048. P2 P[Y:2→4]
+  1049. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:7→8 Z:4→3 W:5→6]
+  1050. 💬 P5 📢 ALL: “All hands against P2.”
+  1051. P5 P[Z:3→2]
+  1052. P2 P[Y:4→3 W:5→6]
+  1053. 💬 P3 → P5: “Turn on P2; I will not trouble you meanwhile.”
+  1054. P3 P[W:2→4]
+  1055. P5 P[Z:2→1]
+  1056. P5 ♟→♞
+  1057. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [Y:3→2 Z:1→2 W:6→7]
+  1058. P3 P[Y:2→3]
+  1059. P5 P[Z:4→5 W:5→4]
+  1060. 💬 P2 📢 ALL: “All hands against P5.”
+  1061. ✕ P2 ♟ ✕ ♜ P5 ♟ Pawn took Rook! [Y:2→1 Z:2→1 W:7→8]
+  1062. P2 ♟→♞
+  1063. P3 P[Y:4→5 Z:5→4]
+  1064. P5 P[Z:5→6 W:4→3]
+  1065. P2 P[Z:4→5]
+  1066. P3 P[Y:5→6 Z:4→3]
+  1067. P5 P[Z:6→7 W:3→2]
+  1068. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1069. P2 P[Z:5→6]
+  1070. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:6→7 Z:3→2 W:1→2]
+  1071. ☠ DIPLOMACY: P3 betrayed P2
+  1072. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  1073. P5 P[Y:4→3 Z:4→3 W:5→6]
+  1074. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [Z:6→7 W:1→2]
+  1075. ☠ DIPLOMACY: P2 betrayed P5
+  1076. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:1→2 Y:7→8 Z:2→1]
+  1077. P3 ♟→♛
+  1078. P5 P[Y:3→2 Z:3→2 W:6→7]
+  1079. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1080. ✕ P2 ♚ ✕ ♛ P3 ♚ King took Queen! [X:3→2 Y:7→8]
+  1081. ☠ DIPLOMACY: P2 betrayed P3
+  1082. ✕ P3 ♜ ✕ ♟ P2 ♜ Rook took Pawn! [Z:8→3]
+  1083. 💬 P5 📢 ALL: “All hands against P2.”
+  1084. P5 P[Z:7→5]
+  1085. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1086. ✕ P2 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [Y:1→2 Z:7→8]
+  1087. P2 ♟→♞
+  1088. ☠ DIPLOMACY: P2 betrayed P3
+  1089. ✕ P3 ♜ ✕ ♞ P2 ♜ Rook took Knight! [Z:3→2]
+  1090. P5 P[Y:6→7 W:3→2]
+  1091. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1092. P2 P[Z:4→5]
+  1093. ✕ P3 ♜ ✕ ♟ P2 ♜ Rook took Pawn! [X:7→2]
+  1094. ☠ DIPLOMACY: P3 betrayed P2
+  1095. 💬 P5 📢 ALL: “P2, let us spare one another for a few turns.”
+  1096. P5 P[Y:7→8 W:2→1]
+  1097. P5 ♟→♞
+  1098. 💬 P2 📢 ALL: “P3, let us spare one another for a few turns.”
+  1099. ✕ P2 ♚ ✕ ♞ P5 ♚ King took Knight! [X:2→3 W:2→1]
+  1100. ☠ DIPLOMACY: P2 betrayed P5
+  1101. ✕ P3 ♜ ✕ ♞ P2 ♜ Rook took Knight! [Z:2→1]
+  1102. ☠ DIPLOMACY: P3 betrayed P2
+  1103. ✕ P5 ♛ ✕ ♚ P2 ♛ Queen took King! [Z:8→1]
+  ★ ★ P5 eliminated P2! +160pcs ▶ replay path
+  1104. ✕ P3 ♜ ✕ ♞ P5 ♜ Rook took Knight! [W:1→2]
+  1105. 💬 P5 📢 ALL: “P3, let us spare one another for a few turns.”
+  1106. P5 P[Z:5→6]
+  1107. ✕ P3 ♜ ✕ ♞ P5 ♜ Rook took Knight! [W:2→8]
+  1108. 💬 P5 📢 ALL: “P3, let us spare one another for a few turns.”
+  1109. ✕ P5 ♟ ✕ ♜ P3 ♟ Pawn took Rook! [X:1→2 Y:2→1 Z:2→1 W:7→8]
+  1110. P5 ♟→♞
+  1111. P3 P[Y:2→3]
+  1112. P5 P[Z:6→7]
+  1113. P3 P[Y:2→4 W:2→4]
+  1114. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:6→5 Y:5→4 W:5→4]
+  1115. 💬 P3 → P5: “P5, let us spare one another for a few turns.”
+  1116. P3 P[Y:3→4]
+  1117. 💬 P5 📢 ALL: “All hands against P3.”
+  1118. P5 P[Z:7→8]
+  1119. P5 ♟→♞
+  1120. P3 P[Y:2→4 W:2→4]
+  1121. 💬 P5 → P3: “P3, let us spare one another for a few turns.”
+  1122. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:7→6 Y:5→4 W:5→4]
+  1123. P3 P[Y:2→4 W:2→4]
+  1124. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:8→7 Y:5→4 W:5→4]
+  1125. P3 P[W:5→6]
+  1126. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:3→4 W:7→6]
+  1127. P3 P[Y:2→4 W:2→4]
+  1128. P5 P[Y:4→3 Z:5→6 W:4→3]
+  1129. P3 P[Y:4→5 W:4→5]
+  1130. 💬 P5 → P3: “P3, let us spare one another for a few turns.”
+  1131. P5 P[Y:3→2 Z:6→7 W:3→2]
+  1132. P3 P[Y:5→6 W:5→6]
+  1133. 💬 P5 → P3: “P3, let us spare one another for a few turns.”
+  1134. P5 P[Y:2→1 Z:7→8 W:2→1]
+  1135. P5 ♟→♞
+  1136. P3 P[Y:6→7 W:6→7]
+  1137. P5 P[Y:2→4]
+  1138. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [Y:7→8 Z:8→7 W:7→8]
+  1139. P3 ♟→♛
+  1140. P5 P[Y:4→5 Z:4→5]
+  1141. ✕ P3 ♛ ✕ ♟ P5 ♛ Queen took Pawn! [Y:8→2 Z:7→1]
+  1142. ✕ P5 ♜ ✕ ♛ P3 ♜ Rook took Queen! [Y:1→2]
+  1143. P3 P[W:4→5]
+  1144. 💬 P5 → P3: “P3, let us spare one another for a few turns.”
+  1145. P5 P[W:4→3]
+  1146. P3 P[Y:2→3 W:2→3]
+  1147. P5 P[Y:5→6 Z:5→6]
+  1148. 💬 P3 → P5: “P5, let us spare one another for a few turns.”
+  1149. P3 P[W:4→5]
+  1150. 💬 P5 → P3: “Turn on P3; I will not trouble you meanwhile.”
+  1151. P5 P[Y:6→7 Z:6→7]
+  1152. 💬 P3 📢 ALL: “P5, let us spare one another for a few turns.”
+  1153. P3 P[W:5→6]
+  1154. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:1→2 W:7→6]
+  1155. P3 P[Y:2→3 W:2→3]
+  1156. 💬 P5 → P3: “Turn on P3; I will not trouble you meanwhile.”
+  1157. P5 P[W:3→2]
+  1158. P3 P[Y:2→3 W:2→3]
+  1159. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:5→4 Y:4→3 W:4→3]
+  1160. P3 P[W:4→5]
+  1161. P5 P[Y:2→4 Z:2→4]
+  1162. P3 P[W:5→6]
+  1163. 💬 P5 📢 ALL: “All hands against P3.”
+  1164. P5 P[Y:3→2 W:3→2]
+  1165. 💬 P3 → P5: “P5, let us spare one another for a few turns.”
+  1166. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [Y:1→2 W:6→7]
+  1167. P5 P[W:2→1]
+  1168. P5 ♟→♞
+  1169. 💬 P3 → P5: “P5, let us spare one another for a few turns.”
+  1170. ✕ P3 ♟ ✕ ♜ P5 ♟ Pawn took Rook! [Y:2→1 W:7→8]
+  1171. P3 ♟→♛
+  1172. 💬 P5 → P3: “P3, let us spare one another for a few turns.”
+  1173. ✕ P5 ♜ ✕ ♛ P3 ♜ Rook took Queen! [X:1→8]
+  1174. P3 P[W:4→5]
+  1175. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:2→1 W:6→5]
+  1176. P3 P[Y:5→6]
+  1177. 💬 P5 📢 ALL: “P3, let us spare one another for a few turns.”
+  1178. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:7→8 Y:7→6]
+  1179. P3 P[Y:4→5]
+  1180. P5 P[Y:2→1 W:2→1]
+  1181. P5 ♟→♞
+  1182. P3 P[Y:3→4]
+  1183. 💬 P5 📢 ALL: “P3, let us spare one another for a few turns.”
+  1184. P5 P[Y:4→5 Z:4→5]
+  1185. P3 P[Y:3→4 W:3→4]
+  1186. 💬 P5 → P3: “P3, let us spare one another for a few turns.”
+  1187. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:3→2 Y:5→4 W:5→4]
+  1188. 💬 P3 → P5: “P5, let us spare one another for a few turns.”
+  1189. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:3→2 Y:3→4 W:3→4]
+  1190. 💬 P5 → P3: “Turn on P3; I will not trouble you meanwhile.”
+  1191. P5 P[Y:5→6 Z:5→6]
+  1192. 💬 P3 → P5: “P5, let us spare one another for a few turns.”
+  1193. P3 K[Z:8→7 W:1→2]
+  1194. 💬 P5 → P3: “P3, let us spare one another for a few turns.”
+  1195. P5 P[Y:6→7 Z:6→7]
+  1196. P3 K[X:4→5 W:2→3]
+  1197. P5 P[Y:7→8 Z:7→8]
+  1198. P5 ♟→♞
+  1199. P3 K[X:5→6 Z:7→6]
+  1200. P5 P[Z:4→5 W:4→5]
+  1201. P3 K[Y:4→3 W:3→4]
+  1202. P5 P[Z:2→4 W:2→4]
+  1203. P3 K[X:6→5 Z:6→7]
+  1204. P5 P[Z:5→6 W:5→6]
+  1205. P3 K[Z:7→6 W:4→5]
+  1206. P5 P[Z:6→7 W:6→7]
+  1207. P3 K[Z:6→5 W:5→6]
+  1208. 💬 P5 → P3: “P3, let us spare one another for a few turns.”
+  1209. P5 P[W:7→5]
+  1210. P3 K[Y:3→2 W:6→7]
+  1211. P5 P[Z:4→5 W:4→5]
+  1212. ✕ P3 ♚ ✕ ♟ P5 ♚ King took Pawn! [Y:2→1 W:7→8]
+  1213. ✕ P5 ♞ ✕ ♚ P3 ♞ Knight took King! [X:4→5 Z:7→5]
+  ★ ★ P5 eliminated P3! +5pcs ▶ replay path
+
+────────────────────────────────────────
+Communications Transcript:
+    1. TURN 3 P4 → P1 [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+    2. TURN 4 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+    3. TURN 8 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+    4. TURN 9 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+    5. TURN 11 P4 → P2 [HUMAN:PSALMS]: "Turn on P5; I will not trouble you meanwhile."
+    6. TURN 21 P6 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+    7. TURN 32 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P5."
+    8. TURN 35 P4 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+    9. TURN 41 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+   10. TURN 49 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   11. TURN 50 P3 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   12. TURN 52 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   13. TURN 54 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   14. TURN 59 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+   15. TURN 68 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   16. TURN 70 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   17. TURN 72 P1 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   18. TURN 76 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   19. TURN 81 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   20. TURN 86 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   21. TURN 91 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   22. TURN 92 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   23. TURN 99 P4 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   24. TURN 100 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   25. TURN 105 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P5."
+   26. TURN 107 P4 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   27. TURN 118 P7 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   28. TURN 121 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   29. TURN 123 P4 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   30. TURN 124 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   31. TURN 127 P8 → P4 [HUMAN:PSALMS]: "P4, let us spare one another for a few turns."
+   32. TURN 129 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   33. TURN 136 P1 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   34. TURN 137 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   35. TURN 139 P4 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   36. TURN 141 P6 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   37. TURN 145 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   38. TURN 152 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+   39. TURN 153 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   40. TURN 158 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   41. TURN 168 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   42. TURN 170 P3 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   43. TURN 172 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   44. TURN 174 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   45. TURN 178 P3 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   46. TURN 180 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   47. TURN 185 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   48. TURN 186 P3 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   49. TURN 187 P4 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+   50. TURN 194 P3 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   51. TURN 195 P4 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   52. TURN 198 P7 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   53. TURN 199 P8 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   54. TURN 200 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+   55. TURN 201 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   56. TURN 202 P3 → P7 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   57. TURN 203 P4 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   58. TURN 210 P3 → P1 [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   59. TURN 213 P6 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   60. TURN 216 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   61. TURN 217 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   62. TURN 220 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   63. TURN 223 P8 → P2 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+   64. TURN 228 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   65. TURN 232 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   66. TURN 235 P4 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   67. TURN 240 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   68. TURN 243 P4 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   69. TURN 244 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   70. TURN 246 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   71. TURN 250 P3 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   72. TURN 252 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   73. TURN 253 P6 → P5 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   74. TURN 256 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   75. TURN 259 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   76. TURN 260 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   77. TURN 262 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   78. TURN 268 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   79. TURN 270 P7 → P5 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   80. TURN 276 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   81. TURN 277 P6 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   82. TURN 288 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   83. TURN 289 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+   84. TURN 292 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   85. TURN 295 P8 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   86. TURN 296 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   87. TURN 299 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   88. TURN 301 P6 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   89. TURN 304 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   90. TURN 312 P1 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   91. TURN 314 P3 → P1 [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   92. TURN 317 P6 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   93. TURN 318 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+   94. TURN 320 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+   95. TURN 323 P4 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   96. TURN 326 P7 → P5 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+   97. TURN 327 P8 → P2 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+   98. TURN 328 P1 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+   99. TURN 329 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  100. TURN 331 P4 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+  101. TURN 332 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  102. TURN 334 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  103. TURN 345 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  104. TURN 347 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  105. TURN 348 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  106. TURN 353 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  107. TURN 361 P2 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  108. TURN 371 P4 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+  109. TURN 372 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  110. TURN 379 P4 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+  111. TURN 383 P8 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  112. TURN 384 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  113. TURN 387 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  114. TURN 394 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  115. TURN 398 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  116. TURN 400 P4 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  117. TURN 412 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  118. TURN 417 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  119. TURN 419 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  120. TURN 422 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  121. TURN 423 P6 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  122. TURN 427 P3 → P4 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  123. TURN 428 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  124. TURN 430 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  125. TURN 439 P8 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  126. TURN 441 P3 → P4 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  127. TURN 445 P7 → P5 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  128. TURN 447 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  129. TURN 449 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  130. TURN 452 P7 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  131. TURN 458 P6 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+  132. TURN 462 P3 → P4 [HUMAN:PSALMS]: "P4, let us spare one another for a few turns."
+  133. TURN 463 P4 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  134. TURN 469 P3 → P4 [HUMAN:PSALMS]: "P4, let us spare one another for a few turns."
+  135. TURN 471 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  136. TURN 472 P6 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+  137. TURN 474 P8 → P2 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  138. TURN 478 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  139. TURN 485 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  140. TURN 486 P6 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+  141. TURN 489 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  142. TURN 492 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  143. TURN 494 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  144. TURN 498 P4 → P3 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  145. TURN 499 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  146. TURN 500 P6 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  147. TURN 501 P7 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  148. TURN 510 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  149. TURN 513 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  150. TURN 515 P7 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  151. TURN 517 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  152. TURN 519 P4 → P2 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  153. TURN 521 P6 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  154. TURN 528 P6 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  155. TURN 529 P7 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  156. TURN 531 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  157. TURN 533 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  158. TURN 536 P7 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  159. TURN 546 P3 → P4 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  160. TURN 552 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  161. TURN 555 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  162. TURN 558 P8 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  163. TURN 562 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  164. TURN 563 P6 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+  165. TURN 573 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  166. TURN 579 P8 → P4 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  167. TURN 580 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  168. TURN 582 P4 → P2 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  169. TURN 583 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  170. TURN 584 P6 → P2 [HUMAN:PSALMS]: "Turn on P8; I will not trouble you meanwhile."
+  171. TURN 589 P4 → P2 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  172. TURN 590 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  173. TURN 594 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  174. TURN 596 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+  175. TURN 598 P6 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  176. TURN 601 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  177. TURN 610 P4 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  178. TURN 613 P7 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  179. TURN 615 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  180. TURN 616 P3 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  181. TURN 618 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  182. TURN 619 P6 → P2 [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  183. TURN 621 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  184. TURN 625 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  185. TURN 629 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  186. TURN 633 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  187. TURN 634 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  188. TURN 635 P3 → P4 [HUMAN:PSALMS]: "Turn on P2; I will not trouble you meanwhile."
+  189. TURN 637 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  190. TURN 638 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P5."
+  191. TURN 641 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  192. TURN 648 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  193. TURN 660 P4 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  194. TURN 661 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  195. TURN 665 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  196. TURN 672 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  197. TURN 673 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  198. TURN 675 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  199. TURN 678 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  200. TURN 679 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  201. TURN 681 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  202. TURN 685 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P5."
+  203. TURN 686 P3 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  204. TURN 687 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  205. TURN 691 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  206. TURN 693 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  207. TURN 694 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  208. TURN 697 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P5."
+  209. TURN 700 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P5."
+  210. TURN 703 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  211. TURN 705 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  212. TURN 706 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  213. TURN 709 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P5."
+  214. TURN 710 P3 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  215. TURN 711 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  216. TURN 712 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  217. TURN 714 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  218. TURN 715 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  219. TURN 717 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  220. TURN 720 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  221. TURN 721 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  222. TURN 724 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  223. TURN 727 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  224. TURN 729 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  225. TURN 730 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P5."
+  226. TURN 732 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  227. TURN 735 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  228. TURN 738 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  229. TURN 740 P3 → P5 [HUMAN:PSALMS]: "Turn on P2; I will not trouble you meanwhile."
+  230. TURN 745 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P5."
+  231. TURN 751 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  232. TURN 753 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  233. TURN 757 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  234. TURN 759 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+  235. TURN 760 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  236. TURN 763 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  237. TURN 765 P5 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+  238. TURN 766 P2 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  239. TURN 770 P5 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  240. TURN 772 P5 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  241. TURN 777 P3 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  242. TURN 778 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+  243. TURN 780 P5 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  244. TURN 788 P5 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  245. TURN 790 P5 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  246. TURN 798 P5 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  247. TURN 801 P3 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  248. TURN 802 P5 → P3 [HUMAN:PSALMS]: "Turn on P3; I will not trouble you meanwhile."
+  249. TURN 803 P3 📢 ALL [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  250. TURN 806 P5 → P3 [HUMAN:PSALMS]: "Turn on P3; I will not trouble you meanwhile."
+  251. TURN 812 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+  252. TURN 813 P3 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  253. TURN 815 P3 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  254. TURN 816 P5 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  255. TURN 820 P5 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  256. TURN 824 P5 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  257. TURN 826 P5 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  258. TURN 827 P3 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  259. TURN 828 P5 → P3 [HUMAN:PSALMS]: "Turn on P3; I will not trouble you meanwhile."
+  260. TURN 829 P3 → P5 [HUMAN:PSALMS]: "P5, let us spare one another for a few turns."
+  261. TURN 830 P5 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+  262. TURN 842 P5 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+
+────────────────────────────────────────
+Final Standings:
+  P 5 kills:3 caps:62 pieces:215
+  P 2 kills:2 caps:56 pieces:0
+  P 6 kills:1 caps:36 pieces:0
+  P 8 kills:1 caps:16 pieces:0
+  P 3 kills:0 caps:43 pieces:0
+  P 7 kills:0 caps:31 pieces:0
+  P 4 kills:0 caps:27 pieces:0
+  P 1 kills:0 caps:26 pieces:0
+
+────────────────────────────────────────
+8D Chess & Games — Copyright Taylor, 2003

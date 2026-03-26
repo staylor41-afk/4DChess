@@ -1,0 +1,2016 @@
+8D Chess & Games — Move Record
+© Samuel M G Taylor, 2003
+────────────────────────────────────────
+Game: 4D Chess
+Date: 2026-03-18 23:30:05
+Players: 8 | Dimensions: 4D
+
+Players:
+  P 1 PHILIP
+       Aggression:5 Foresight:7 Defensiveness:7 Patience:6
+       Regicide:4 Vendetta:3 Greed:5 Chaos:1 Attention:8  Nemesis:P4
+  P 2 ALECTO
+       Aggression:7 Foresight:6 Defensiveness:6 Patience:4
+       Regicide:8 Vendetta:3 Greed:3 Chaos:3 Attention:8  Nemesis:P3
+  P 3 AJAX
+       Aggression:8 Foresight:4 Defensiveness:5 Patience:5
+       Regicide:7 Vendetta:6 Greed:5 Chaos:4 Attention:7  Nemesis:P4
+  P 4 BALDR
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:8
+       Regicide:6 Vendetta:3 Greed:4 Chaos:1 Attention:7  Nemesis:P7
+  P 5 ERIS
+       Aggression:5 Foresight:6 Defensiveness:4 Patience:5
+       Regicide:4 Vendetta:3 Greed:5 Chaos:8 Attention:5  Nemesis:P3
+  P 6 URIEL
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:5 Vendetta:3 Greed:4 Chaos:1 Attention:7  Nemesis:P7
+  P 7 FREYR
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:2 Greed:8 Chaos:1 Attention:8  Nemesis:P6
+  P 8 CADMUS
+       Aggression:6 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:6 Vendetta:2 Greed:6 Chaos:5 Attention:8  Nemesis:P4
+
+────────────────────────────────────────
+Snapshot: Final
+Current Turn: P7
+Move Log:
+
+    1. 💬 P1 📢 ALL: “P2, let us spare one another for a few turns.”
+    2. P1 P[W:2→4]
+    3. 💬 P2 → P1: “Turn on P3; I will not trouble you meanwhile.”
+    4. P2 P[Y:7→5]
+    5. P3 P[Z:7→5]
+    6. P4 P[Y:7→5 Z:7→5]
+    7. 💬 P5 📢 ALL: “All hands against P2.”
+    8. P5 P[W:7→5]
+    9. P6 P[Y:7→5 W:7→5]
+   10. P7 P[Z:7→5 W:7→5]
+   11. P8 P[Y:7→5 Z:7→5 W:7→5]
+   12. ✕ P1 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:5→6 W:4→5]
+   13. P2 P[Y:7→5 W:2→4]
+   14. P3 P[Y:2→4 Z:7→5]
+   15. 💬 P4 → P1: “Turn on P2; I will not trouble you meanwhile.”
+   16. P4 P[Y:7→5 Z:7→5 W:2→4]
+   17. 💬 P5 📢 ALL: “P1, let us spare one another for a few turns.”
+   18. P5 P[W:7→5]
+   19. 💬 P6 📢 ALL: “All hands against P2.”
+   20. P6 P[Y:7→5 Z:2→4 W:7→5]
+   21. P7 P[Y:2→4 Z:7→5 W:7→5]
+   22. P8 P[Y:5→4 Z:5→4 W:5→4]
+   23. 💬 P1 📢 ALL: “P3 is the board leader. Bring them down.”
+   24. P1 P[Y:2→3]
+   25. P2 P[Y:7→5]
+   26. 💬 P3 📢 ALL: “P1, let us spare one another for a few turns.”
+   27. P3 P[Z:7→5 W:2→4]
+   28. 💬 P4 → P3: “P3, let us spare one another for a few turns.”
+   29. P4 P[Y:7→5 Z:7→5]
+   30. P5 P[W:5→4]
+   31. 💬 P6 📢 ALL: “P4 is the board leader. Bring them down.”
+   32. P6 P[Y:7→5 W:7→5]
+   33. P7 P[Z:7→5 W:7→5]
+   34. P8 P[Y:4→3 Z:4→3 W:4→3]
+   35. 💬 P1 📢 ALL: “All hands against P6.”
+   36. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:4→5 Y:2→3 Z:2→3 W:2→3]
+   37. P2 P[Y:7→5]
+   38. P3 P[Z:7→5]
+   39. P4 P[Y:7→5 Z:7→5]
+   40. P5 P[W:4→3]
+   41. 💬 P6 📢 ALL: “All hands against P7.”
+   42. P6 P[Y:7→5 W:7→5]
+   43. P7 P[Z:7→5 W:7→5]
+   44. P8 P[Y:7→5 Z:7→5 W:7→5]
+   45. 💬 P1 📢 ALL: “P2 is the board leader. Bring them down.”
+   46. ✕ P1 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:4→5 W:2→3]
+   47. P2 P[Y:7→5 W:2→4]
+   48. 💬 P3 📢 ALL: “P1, I propose a brief truce while the board opens.”
+   49. P3 P[Z:7→5]
+   50. P4 P[Y:7→5 Z:7→5 W:2→4]
+   51. P5 P[Z:2→3 W:7→6]
+   52. 💬 P6 📢 ALL: “P1, let us spare one another for a few turns.”
+   53. P6 P[Y:7→5 Z:2→4 W:7→5]
+   54. P7 P[Z:7→5]
+   55. P8 P[Y:5→4 Z:5→4 W:5→4]
+   56. 💬 P1 📢 ALL: “All hands against P7.”
+   57. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:5→4 Y:3→4 Z:3→4 W:3→4]
+   58. 💬 P2 → P1: “P1, let us spare one another for a few turns.”
+   59. P2 P[Y:7→5 Z:2→4]
+   60. 💬 P3 📢 ALL: “All hands against P7.”
+   61. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:5→6 Y:4→5 Z:5→4]
+   62. P4 P[Z:7→5]
+   63. 💬 P5 📢 ALL: “All hands against P1.”
+   64. P5 P[Z:2→4 W:7→5]
+   65. P6 P[Y:7→5]
+   66. P7 P[Y:2→4 Z:7→5 W:7→5]
+   67. 💬 P8 📢 ALL: “P1, let us spare one another for a few turns.”
+   68. P8 P[Y:7→5 Z:7→5 W:7→5]
+   69. 💬 P1 📢 ALL: “Common threat: P3.”
+   70. P1 P[W:3→4]
+   71. P2 P[Y:7→5 Z:2→4]
+   72. ✕ P3 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:5→6 Z:5→4 W:4→5]
+   73. 💬 P4 → P6: “Turn on P7; I will not trouble you meanwhile.”
+   74. P4 P[Y:7→5 Z:7→5 W:2→4]
+   75. 💬 P5 📢 ALL: “All hands against P3.”
+   76. ✕ P5 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:5→6 Z:3→4 W:6→5]
+   77. P6 P[W:7→5]
+   78. P7 P[Y:2→4 Z:7→5 W:7→5]
+   79. P8 P[Y:7→5 Z:7→5 W:7→5]
+   80. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:4→3 Y:4→5 Z:4→5 W:4→5]
+   81. P2 P[Y:5→4 Z:4→5]
+   82. P3 P[Z:5→4]
+   83. P4 P[Y:7→5]
+   84. P5 P[Y:2→4 W:7→5]
+   85. P6 P[Y:7→5 Z:2→4 W:7→5]
+   86. P7 P[Z:7→5 W:7→5]
+   87. P8 P[Y:7→5 Z:7→5]
+   88. 💬 P1 📢 ALL: “Common threat: P6.”
+   89. P1 P[W:4→5]
+   90. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:5→6 Y:5→4 W:4→5]
+   91. P3 P[Z:4→3]
+   92. P4 P[Y:7→5 W:2→4]
+   93. P5 P[Y:2→4 W:7→5]
+   94. P6 P[Y:7→5 Z:2→4]
+   95. P7 P[W:7→5]
+   96. P8 P[Y:7→5 W:7→5]
+   97. 💬 P1 📢 ALL: “P7 is the board leader. Bring them down.”
+   98. ✕ P1 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:4→5 Z:2→3]
+   99. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:4→5 Y:5→4 W:4→5]
+  100. P3 P[Y:2→4 Z:7→5]
+  101. P4 P[Z:7→5 W:2→4]
+  102. 💬 P5 📢 ALL: “P1 is the board leader. Bring them down.”
+  103. P5 P[Y:2→4 W:7→5]
+  104. 💬 P6 📢 ALL: “P7 is the board leader. Bring them down.”
+  105. P6 P[Y:7→5 W:7→5]
+  106. P7 P[Z:5→4 W:5→4]
+  107. 💬 P8 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  108. P8 P[Z:7→5 W:7→5]
+  109. 💬 P1 📢 ALL: “P4 is the board leader. Bring them down.”
+  110. P1 P[W:5→6]
+  111. 💬 P2 📢 ALL: “All hands against P4.”
+  112. P2 P[Y:4→3 Z:5→6]
+  113. 💬 P3 📢 ALL: “P1, peace for now; we both have larger threats.”
+  114. ✕ P3 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:4→5 Y:2→3 Z:7→6]
+  115. P4 P[Y:7→5]
+  116. 💬 P5 📢 ALL: “All hands against P4.”
+  117. ✕ P5 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→5 W:7→6]
+  118. 💬 P6 📢 ALL: “All hands against P4.”
+  119. P6 P[Z:2→3 W:7→6]
+  120. 💬 P7 📢 ALL: “All hands against P4.”
+  121. P7 P[Z:4→3 W:4→3]
+  122. P8 P[Y:7→5 Z:7→5 W:7→5]
+  123. ✕ P1 ♛ ✕ ♛ P5 ♛ Queen took Queen! [W:1→8]
+  124. P2 P[Y:4→3 W:5→6]
+  125. 💬 P3 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  126. P3 P[Z:5→4]
+  127. P4 P[Y:7→5 Z:7→5]
+  128. 💬 P5 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  129. ✕ P5 ♚ ✕ ♛ P1 ♚ King took Queen! [X:5→4]
+  130. P6 P[Y:7→5]
+  131. ✕ P7 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [Y:1→2 Z:3→2 W:3→2]
+  132. P8 P[Y:7→5 W:7→5]
+  133. P1 K[W:1→2]
+  134. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [Y:3→2 Z:1→2 W:6→7]
+  135. 💬 P3 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  136. ✕ P3 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→5 Z:4→3]
+  137. 💬 P4 → P3: “P3, I propose a brief truce while the board opens.”
+  138. P4 P[Y:5→4 Z:5→4 W:4→5]
+  139. 💬 P5 📢 ALL: “If nobody checks P2, they run away with this.”
+  140. ✕ P5 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:5→6 W:6→5]
+  141. 💬 P6 📢 ALL: “If nobody checks P7, they run away with this.”
+  142. P6 P[Y:7→5 Z:2→4 W:7→5]
+  143. ✕ P7 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [Y:2→3 Z:2→1 W:2→1]
+  144. P7 ♟→♞
+  145. P8 P[Z:7→5 W:7→5]
+  146. 💬 P1 📢 ALL: “P2, hold fire and we can survive this middle game.”
+  147. ✕ P1 ♟ ✕ ♞ P7 ♟ Pawn took Knight! [X:6→5 Y:2→3]
+  148. ☠ DIPLOMACY: P1 betrayed P7
+  149. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:5→4 Y:2→1 W:7→8]
+  150. P2 ♟→♞
+  151. 💬 P3 📢 ALL: “P1, keep your pieces off me and I will return the favor.”
+  152. ✕ P3 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [Z:3→2 W:1→2]
+  153. ☠ DIPLOMACY: P3 betrayed P1
+  154. P4 P[Y:4→3 Z:4→3 W:5→6]
+  155. ✕ P5 ♚ ✕ ♞ P2 ♚ King took Knight! [Z:1→2]
+  156. P6 P[Y:7→5 Z:2→4]
+  157. P7 P[Z:7→5 W:7→5]
+  158. P8 P[Y:7→5 Z:7→5]
+  159. P1 P[Z:2→4]
+  160. P2 P[Y:5→4]
+  161. 💬 P3 📢 ALL: “P1, let us spare one another for a few turns.”
+  162. ✕ P3 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [Y:1→2 Z:2→1]
+  163. P3 ♟→♞
+  164. ✕ P4 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [X:5→4 Y:3→2 Z:3→2 W:6→7]
+  165. P5 P[Z:2→4 W:7→5]
+  166. 💬 P6 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  167. P6 P[Y:5→4 W:5→4]
+  168. 💬 P7 📢 ALL: “P4 is the board leader. Bring them down.”
+  169. P7 P[Y:2→4 Z:7→5 W:7→5]
+  170. P8 P[Y:7→5 Z:7→5]
+  171. ✕ P1 ♚ ✕ ♞ P3 ♚ King took Knight! [Y:1→2]
+  172. 💬 P2 → P1: “P1, I propose a brief truce while the board opens.”
+  173. ✕ P2 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:6→5 Y:4→3]
+  174. ☠ DIPLOMACY: P2 betrayed P1
+  175. 💬 P3 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  176. ✕ P3 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:6→5 Z:5→4]
+  177. 💬 P4 📢 ALL: “All hands against P6.”
+  178. ✕ P4 ♟ ✕ ♝ P5 ♟ Pawn took Bishop! [X:4→3 Y:2→1 Z:2→1 W:7→8]
+  179. P4 ♟→♞
+  180. ✕ P5 ♚ ✕ ♞ P4 ♚ King took Knight! [X:4→3 Z:2→1]
+  181. 💬 P6 📢 ALL: “Focus pressure on P7.”
+  182. P6 P[Y:4→3 W:4→3]
+  183. P7 P[Y:2→4 Z:7→5 W:7→5]
+  184. P8 P[Y:5→4 Z:5→4 W:5→4]
+  185. 💬 P1 📢 ALL: “P2, I propose a brief truce while the board opens.”
+  186. ✕ P1 ♚ ✕ ♟ P2 ♚ King took Pawn! [Y:2→3 W:2→1]
+  187. ☠ DIPLOMACY: P1 betrayed P2
+  188. P2 P[Y:7→5 W:2→4]
+  189. 💬 P3 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  190. ✕ P3 ♛ ✕ ♟ P2 ♛ Queen took Pawn! [Y:1→7 Z:8→2]
+  191. P4 P[Y:5→4 Z:5→4 W:4→5]
+  192. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [X:7→6 Y:4→5 W:5→4]
+  193. ✕ P6 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:5→4 Y:3→2 W:3→2]
+  194. 💬 P7 📢 ALL: “Common threat: P6.”
+  195. P7 P[Y:2→4 W:7→5]
+  196. P8 P[Y:4→3 Z:4→3 W:4→3]
+  197. 💬 P1 📢 ALL: “Common threat: P7.”
+  198. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:7→6 Y:2→3 Z:2→3 W:2→3]
+  199. ✕ P2 ♛ ✕ ♛ P3 ♛ Queen took Queen! [Y:8→7 Z:1→2]
+  200. P3 P[Y:3→4 Z:6→5]
+  201. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:5→4 Y:5→4 W:4→5]
+  202. 💬 P5 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  203. P5 P[Y:2→3 W:7→6]
+  204. ✕ P6 ♟ ✕ ♝ P1 ♟ Pawn took Bishop! [X:4→3 Y:2→1 W:2→1]
+  205. P6 ♟→♞
+  206. 💬 P7 📢 ALL: “Common threat: P4.”
+  207. P7 P[Y:2→4 W:7→5]
+  208. P8 P[Y:5→4 Z:5→4 W:5→4]
+  209. 💬 P1 📢 ALL: “P6 is the board leader. Bring them down.”
+  210. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:6→7 Y:3→4 Z:3→4 W:3→4]
+  211. P2 P[Y:5→4]
+  212. 💬 P3 📢 ALL: “P1, peace for now; we both have larger threats.”
+  213. P3 P[Z:4→3]
+  214. 💬 P4 → P3: “Pressure P6; their position is ripening.”
+  215. P4 P[Y:4→3 Z:4→3 W:5→6]
+  216. ✕ P5 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→4 Y:2→3 Z:2→3 W:7→6]
+  217. P6 P[Y:5→4 W:5→4]
+  218. 💬 P7 📢 ALL: “All hands against P6.”
+  219. P7 P[Y:4→5 W:5→4]
+  220. P8 P[Y:7→5 Z:7→5 W:7→5]
+  221. 💬 P1 📢 ALL: “All hands against P3.”
+  222. ✕ P1 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:6→5 Z:2→3]
+  223. 💬 P2 → P4: “P4, let us spare one another for a few turns.”
+  224. P2 P[Y:7→5]
+  225. P3 P[Y:4→5 Z:5→4]
+  226. P4 P[Y:7→5 Z:7→5]
+  227. P5 P[Y:3→4 W:6→5]
+  228. 💬 P6 📢 ALL: “Common threat: P7.”
+  229. P6 P[Y:4→3 W:4→3]
+  230. P7 P[Y:5→6 W:4→3]
+  231. P8 P[Y:7→5 W:7→5]
+  232. 💬 P1 📢 ALL: “If nobody checks P7, they run away with this.”
+  233. ✕ P1 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:3→4 Y:2→3 W:2→3]
+  234. P2 P[Y:4→3 W:5→6]
+  235. P3 P[Y:5→6 Z:4→3]
+  236. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:6→5 Y:7→6 W:2→3]
+  237. P5 P[Y:5→6 W:4→3]
+  238. P6 P[Y:7→5 W:7→5]
+  239. 💬 P7 📢 ALL: “Focus pressure on P4.”
+  240. P7 P[Z:7→5]
+  241. P8 P[W:7→5]
+  242. 💬 P1 📢 ALL: “If nobody checks P6, they run away with this.”
+  243. P1 P[Y:5→6 Z:5→6 W:5→6]
+  244. ✕ P2 ♟ ✕ ♟ P5 ♟ Pawn took Pawn! [Y:3→2 Z:1→2 W:6→7]
+  245. 💬 P3 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  246. ✕ P3 ♟ ✕ ♛ P2 ♟ Pawn took Queen! [X:5→4 Y:6→7 Z:3→2]
+  247. P4 P[Y:5→4 Z:5→4 W:4→5]
+  248. 💬 P5 📢 ALL: “P4 is the board leader. Bring them down.”
+  249. ✕ P5 ♟ ✕ ♟ P2 ♟ Pawn took Pawn! [Y:6→7 Z:1→2 W:3→2]
+  250. P6 P[Y:5→4 W:5→4]
+  251. P7 P[Y:4→5 Z:5→4 W:5→4]
+  252. P8 P[Z:7→5 W:7→5]
+  253. 💬 P1 📢 ALL: “If nobody checks P3, they run away with this.”
+  254. ✕ P1 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:4→3 Y:3→4 W:3→4]
+  255. ✕ P2 ♟ ✕ ♝ P5 ♟ Pawn took Bishop! [Y:2→1 Z:2→1 W:7→8]
+  256. P2 ♟→♛
+  257. ✕ P3 ♟ ✕ ♚ P2 ♟ Pawn took King! [X:4→5 Y:7→8 Z:2→1]
+  258. P3 ♟→♛
+  ★ ★ P3 eliminated P2! +55pcs ▶ replay path
+  259. P4 P[Y:4→3 Z:4→3 W:5→6]
+  260. 💬 P5 📢 ALL: “If nobody checks P3, they run away with this.”
+  261. ✕ P5 ♟ ✕ ♝ P3 ♟ Pawn took Bishop! [Y:7→8 Z:2→1 W:2→1]
+  262. P5 ♟→♛
+  263. P6 P[Y:7→5 Z:2→4]
+  264. P7 P[Y:5→6 Z:4→3 W:4→3]
+  265. 💬 P8 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  266. P8 P[Y:7→5]
+  267. 💬 P1 📢 ALL: “Focus pressure on P3.”
+  268. P1 P[Y:6→7 Z:6→7 W:6→7]
+  269. 💬 P3 📢 ALL: “P1, keep your pieces off me and I will return the favor.”
+  270. ✕ P3 ♛ ✕ ♚ P5 ♛ Queen took King! [X:6→3]
+  ★ ★ P3 eliminated P5! +51pcs ▶ replay path
+  271. ☠ DIPLOMACY: P3 betrayed P5
+  272. 💬 P4 → P3: “P3, neither of us gains by fighting immediately.”
+  273. ✕ P4 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:6→7 Y:3→2 Z:3→2 W:6→7]
+  274. ☠ DIPLOMACY: P4 betrayed P3
+  275. P6 P[Y:7→5 Z:2→4 W:7→5]
+  276. 💬 P7 📢 ALL: “All hands against P3.”
+  277. ✕ P7 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:6→5 Y:6→7 Z:3→2 W:3→2]
+  278. ☠ DIPLOMACY: P7 betrayed P3
+  279. P8 P[Y:5→4 W:5→4]
+  280. 💬 P1 📢 ALL: “P3 is the board leader. Bring them down.”
+  281. ✕ P1 ♟ ✕ ♛ P8 ♟ Pawn took Queen! [X:3→4 Y:7→8 Z:7→8 W:7→8]
+  282. P1 ♟→♛
+  283. 💬 P3 📢 ALL: “P1, let us spare one another for a few turns.”
+  284. ✕ P3 ♛ ✕ ♝ P1 ♛ Queen took Bishop! [Y:8→1]
+  285. 💬 P4 → P1: “Turn on P3; I will not trouble you meanwhile.”
+  286. ✕ P4 ♟ ✕ ♜ P3 ♟ Pawn took Rook! [X:7→8 Y:2→1 Z:2→1 W:7→8]
+  287. P4 ♟→♞
+  288. 💬 P6 📢 ALL: “All hands against P3.”
+  289. P6 P[Z:2→4 W:7→5]
+  290. P7 P[Y:4→5 Z:5→4 W:5→4]
+  291. ✕ P8 ♚ ✕ ♛ P1 ♚ King took Queen! [X:5→4]
+  292. 💬 P1 📢 ALL: “P3, I propose a brief truce while the board opens.”
+  293. P1 P[Z:3→4]
+  294. 💬 P3 📢 ALL: “All hands against P6.”
+  295. ✕ P3 ♛ ✕ ♞ P6 ♛ Queen took Knight! [X:6→3]
+  296. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:5→6 Z:5→4 W:4→5]
+  297. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:5→6 Z:3→4 W:6→5]
+  298. 💬 P7 📢 ALL: “Common threat: P3.”
+  299. P7 P[Y:5→6 Z:4→3 W:4→3]
+  300. P8 P[Y:4→3 W:4→3]
+  301. 💬 P1 📢 ALL: “P3, let us spare one another for a few turns.”
+  302. P1 P[Z:4→5]
+  303. ✕ P3 ♛ ✕ ♞ P1 ♛ Queen took Knight! [X:3→7]
+  304. P4 P[Y:6→5 W:3→4]
+  305. P6 P[Z:2→4 W:7→5]
+  306. 💬 P7 📢 ALL: “P3 is the board leader. Bring them down.”
+  307. ✕ P7 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:5→4 Y:6→7 Z:3→2 W:3→2]
+  308. ✕ P8 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [Y:3→2 Z:8→7 W:3→2]
+  309. 💬 P1 📢 ALL: “P3 is gaining too much ground; collapse on them.”
+  310. ✕ P1 ♜ ✕ ♛ P3 ♜ Rook took Queen! [X:8→7]
+  311. 💬 P3 📢 ALL: “P7 is the board leader. Bring them down.”
+  312. P3 K[Y:1→2 Z:8→7]
+  313. P4 P[Y:5→4 W:4→5]
+  314. P6 P[Y:5→4 Z:4→5 W:5→4]
+  315. ✕ P7 ♟ ✕ ♛ P3 ♟ Pawn took Queen! [X:4→5 Y:7→8 Z:2→1 W:2→1]
+  316. P7 ♟→♞
+  317. P8 P[Y:2→1 W:2→1]
+  318. P8 ♟→♛
+  319. P1 P[Y:4→5 Z:4→5 W:4→5]
+  320. 💬 P3 📢 ALL: “All hands against P4.”
+  321. ✕ P3 ♚ ✕ ♛ P8 ♚ King took Queen! [Y:2→1]
+  322. 💬 P4 → P1: “Pressure P3; their position is ripening.”
+  323. P4 P[Y:4→3 W:5→6]
+  324. 💬 P6 📢 ALL: “P3 is the board leader. Bring them down.”
+  325. P6 P[Y:4→3 Z:5→6 W:4→3]
+  326. 💬 P7 📢 ALL: “If nobody checks P3, they run away with this.”
+  327. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:6→5 Y:2→3 W:7→6]
+  328. P8 P[Y:7→5 Z:7→5 W:7→5]
+  329. P1 P[Y:5→6 Z:5→6 W:5→6]
+  330. ✕ P3 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:6→5 Y:2→3 Z:7→6 W:2→3]
+  331. ✕ P4 ♝ ✕ ♝ P7 ♝ Bishop took Bishop! [Y:8→1 W:1→8]
+  332. P6 P[Y:5→4 Z:4→5 W:5→4]
+  333. ✕ P7 ♚ ✕ ♝ P4 ♚ King took Bishop! [X:5→6]
+  334. P8 P[Y:7→5 W:7→5]
+  335. 💬 P1 📢 ALL: “P3, neither of us gains by fighting immediately.”
+  336. P1 P[Y:6→7 Z:6→7 W:6→7]
+  337. ✕ P3 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:5→6 Y:3→4 Z:6→5 W:3→4]
+  338. 💬 P4 → P1: “If we concentrate on P3, the board opens for both of us.”
+  339. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:4→5 Y:4→3 W:5→6]
+  340. 💬 P6 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  341. ✕ P6 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:7→6 Y:5→4 Z:4→5 W:5→4]
+  342. P7 P[Y:4→5 Z:5→4 W:5→4]
+  343. P8 P[Y:7→5 W:7→5]
+  344. ✕ P1 ♟ ✕ ♜ P8 ♟ Pawn took Rook! [X:7→8 Y:7→8 Z:7→8 W:7→8]
+  345. P1 ♟→♛
+  346. P3 P[Y:5→6 Z:4→3]
+  347. P4 P[Y:3→2 W:6→7]
+  348. P6 P[Y:4→3 Z:5→6 W:4→3]
+  349. P7 K[X:6→5 W:8→7]
+  350. P8 P[Z:7→5 W:7→5]
+  351. 💬 P1 📢 ALL: “All hands against P3.”
+  352. ✕ P1 ♛ ✕ ♞ P8 ♛ Queen took Knight! [X:8→7]
+  353. 💬 P3 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  354. ✕ P3 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:7→6 Y:2→3 Z:7→6 W:2→3]
+  355. ✕ P4 ♟ ✕ ♛ P7 ♟ Pawn took Queen! [X:5→4 Y:2→1 W:7→8]
+  356. P4 ♟→♞
+  357. P6 P[Y:7→5 Z:2→4 W:7→5]
+  358. ✕ P7 ♚ ✕ ♞ P4 ♚ King took Knight! [X:5→4 W:7→8]
+  359. P8 P[Y:7→5 Z:7→5]
+  360. 💬 P1 📢 ALL: “P3 is the board leader. Bring them down.”
+  361. ✕ P1 ♛ ✕ ♝ P8 ♛ Queen took Bishop! [X:7→6]
+  362. P3 P[Y:6→7 Z:3→2]
+  363. P4 P[Y:7→5]
+  364. 💬 P6 📢 ALL: “If nobody checks P3, they run away with this.”
+  365. P6 P[Y:7→5 Z:2→4]
+  366. 💬 P7 📢 ALL: “Focus pressure on P3.”
+  367. P7 P[Y:5→6 Z:4→3 W:4→3]
+  368. P8 K[Z:8→7 W:8→7]
+  369. ✕ P1 ♛ ✕ ♝ P8 ♛ Queen took Bishop! [X:6→3]
+  370. 💬 P3 📢 ALL: “P4 is the board leader. Bring them down.”
+  371. ✕ P3 ♟ ✕ ♞ P7 ♟ Pawn took Knight! [X:6→5 Y:7→8 Z:2→1]
+  372. P3 ♟→♞
+  373. P4 P[Y:7→5 W:2→4]
+  374. P6 P[W:7→5]
+  375. ✕ P7 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:4→3 Y:6→7 Z:3→2 W:3→2]
+  376. P8 P[Y:7→5 Z:7→5]
+  377. 💬 P1 📢 ALL: “Common threat: P3.”
+  378. ✕ P1 ♛ ✕ ♞ P8 ♛ Queen took Knight! [X:3→2]
+  379. P3 P[Y:4→5 W:5→4]
+  380. P4 P[Y:5→4 W:4→5]
+  381. P6 P[Z:2→4 W:7→5]
+  382. 💬 P7 📢 ALL: “P3 is gaining too much ground; collapse on them.”
+  383. ✕ P7 ♟ ✕ ♞ P3 ♟ Pawn took Knight! [X:3→2 Y:7→8 Z:2→1 W:2→1]
+  384. P7 ♟→♛
+  385. ✕ P8 ♜ ✕ ♛ P1 ♜ Rook took Queen! [X:1→2]
+  386. 💬 P1 📢 ALL: “If nobody checks P3, they run away with this.”
+  387. P1 P[Y:2→3]
+  388. 💬 P3 📢 ALL: “Common threat: P7.”
+  389. ✕ P3 ♜ ✕ ♛ P7 ♜ Rook took Queen! [X:1→2]
+  390. P4 P[Y:4→3 W:5→6]
+  391. 💬 P6 📢 ALL: “Common threat: P3.”
+  392. P6 P[Y:7→5 W:7→5]
+  393. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→4 Y:2→3 W:7→6]
+  394. P8 P[W:7→5]
+  395. 💬 P1 📢 ALL: “P3, peace for now; we both have larger threats.”
+  396. ✕ P1 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:4→5 Y:3→4]
+  397. 💬 P3 📢 ALL: “P1, peace for now; we both have larger threats.”
+  398. ✕ P3 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→5 Y:5→4]
+  399. P4 P[Y:7→5 Z:7→5 W:2→4]
+  400. ✕ P6 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:2→3 Y:5→4 W:5→4]
+  401. ☠ DIPLOMACY: P6 betrayed P1
+  402. P7 P[Y:4→5 Z:5→4 W:5→4]
+  403. P8 P[Y:7→5 Z:7→5 W:7→5]
+  404. 💬 P1 📢 ALL: “Common threat: P3.”
+  405. P1 P[Z:2→4]
+  406. 💬 P3 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  407. P3 P[Y:5→6 W:4→3]
+  408. P4 P[Y:5→4 Z:5→4 W:4→5]
+  409. P6 P[Y:4→3 W:4→3]
+  410. 💬 P7 📢 ALL: “Common threat: P3.”
+  411. P7 P[Y:5→6 Z:4→3 W:4→3]
+  412. P8 P[Z:7→5 W:7→5]
+  413. ✕ P1 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:2→3 Y:2→3 W:2→3]
+  414. ✕ P3 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:2→3 Y:7→6 Z:2→3 W:2→3]
+  415. 💬 P4 📢 ALL: “All hands against P3.”
+  416. ✕ P4 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:3→4 Y:4→3 Z:4→3 W:5→6]
+  417. 💬 P6 📢 ALL: “P1, peace for now; we both have larger threats.”
+  418. P6 P[Y:7→5 Z:2→4 W:7→5]
+  419. P7 P[W:7→5]
+  420. P8 P[Y:7→5 W:7→5]
+  421. 💬 P1 📢 ALL: “P3, hold fire and we can survive this middle game.”
+  422. P1 P[W:2→4]
+  423. P3 P[Y:6→7 W:3→2]
+  424. 💬 P4 → P1: “P3 is exposed. Strike there first.”
+  425. P4 P[Y:3→2 Z:3→2 W:6→7]
+  426. 💬 P6 📢 ALL: “P1, keep your pieces off me and I will return the favor.”
+  427. P6 P[Y:5→4 Z:4→5 W:5→4]
+  428. P7 P[W:7→5]
+  429. P8 P[Y:5→4 W:5→4]
+  430. P1 P[Y:2→3]
+  431. 💬 P3 📢 ALL: “If nobody checks P7, they run away with this.”
+  432. P3 P[Y:7→8 W:2→1]
+  433. P3 ♟→♞
+  434. ✕ P4 ♟ ✕ ♛ P3 ♟ Pawn took Queen! [X:4→3 Y:2→1 Z:2→1 W:7→8]
+  435. P4 ♟→♞
+  436. P6 P[Y:4→3 Z:5→6 W:4→3]
+  437. 💬 P7 📢 ALL: “All hands against P3.”
+  438. ✕ P7 ♟ ✕ ♞ P3 ♟ Pawn took Knight! [X:5→4 Y:7→8 Z:2→1 W:2→1]
+  439. P7 ♟→♛
+  440. P8 P[Y:7→5]
+  441. P1 P[Z:2→4]
+  442. ✕ P3 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:3→4 Y:2→3 Z:7→6 W:2→3]
+  443. P4 P[Z:7→5]
+  444. 💬 P6 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  445. P6 P[Y:5→4 Z:4→5 W:5→4]
+  446. ✕ P7 ♛ ✕ ♞ P3 ♛ Queen took Knight! [X:4→5]
+  447. P8 P[Y:4→3 W:4→3]
+  448. 💬 P1 📢 ALL: “P3, keep your pieces off me and I will return the favor.”
+  449. P1 P[W:2→3]
+  450. ✕ P3 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:4→3 Y:3→4 Z:6→5 W:3→4]
+  451. 💬 P4 → P1: “Leave me be and hit P3; they are the urgent threat.”
+  452. P4 P[Y:7→5]
+  453. ✕ P6 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [X:2→3 Y:5→4 Z:4→5 W:5→4]
+  454. 💬 P7 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  455. ✕ P7 ♛ ✕ ♝ P3 ♛ Queen took Bishop! [X:5→3]
+  456. ✕ P8 ♟ ✕ ♟ P3 ♟ Pawn took Pawn! [Y:3→2 Z:8→7 W:3→2]
+  457. 💬 P1 📢 ALL: “P3, peace for now; we both have larger threats.”
+  458. P1 P[Y:2→3 Z:2→3]
+  459. ✕ P3 ♜ ✕ ♛ P7 ♜ Rook took Queen! [X:2→3]
+  460. 💬 P4 → P1: “P1, I propose a brief truce while the board opens.”
+  461. P4 P[Z:7→6 W:2→3]
+  462. 💬 P6 📢 ALL: “P1, let us spare one another for a few turns.”
+  463. P6 P[Y:4→3 Z:5→6 W:4→3]
+  464. P7 P[Z:5→4]
+  465. ✕ P8 ♟ ✕ ♚ P3 ♟ Pawn took King! [X:4→5 Y:2→1 W:2→1]
+  466. P8 ♟→♛
+  ★ ★ P8 eliminated P3! +145pcs ▶ replay path
+  467. P1 P[Y:2→4]
+  468. P4 P[Y:7→5 Z:7→5 W:2→4]
+  469. ✕ P6 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:3→2 Y:3→2 Z:6→7 W:3→2]
+  470. P7 P[Y:2→4 Z:7→5 W:7→5]
+  471. ✕ P8 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:3→2 Y:5→4]
+  472. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:3→2 Y:3→4]
+  473. P4 P[Y:5→4 Z:5→4 W:4→5]
+  474. 💬 P6 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  475. ✕ P6 ♟ ✕ ♜ P8 ♟ Pawn took Rook! [X:2→1 Y:2→1 Z:7→8 W:2→1]
+  476. P6 ♟→♞
+  477. ☠ DIPLOMACY: P6 betrayed P8
+  478. P7 P[Y:4→5 Z:5→4 W:5→4]
+  479. ✕ P8 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:3→2 Y:6→5 Z:3→4 W:3→4]
+  480. 💬 P1 📢 ALL: “All hands against P8.”
+  481. P1 P[W:2→4]
+  482. P4 P[Y:4→3 Z:4→3 W:5→6]
+  483. P6 P[W:7→5]
+  484. P7 P[Y:2→4 Z:7→5 W:7→5]
+  485. ✕ P8 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:6→7 W:5→4]
+  486. 💬 P1 📢 ALL: “P8 is the board leader. Bring them down.”
+  487. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:6→7 W:3→4]
+  488. ✕ P4 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:7→8 Y:3→2 Z:3→2 W:6→7]
+  489. P6 P[Y:7→5 Z:2→4 W:7→5]
+  490. P7 P[Z:7→5 W:7→5]
+  491. P8 P[Y:4→5 Z:5→4]
+  492. 💬 P1 📢 ALL: “Common threat: P8.”
+  493. P1 P[Y:2→4]
+  494. ✕ P4 ♟ ✕ ♞ P8 ♟ Pawn took Knight! [X:8→7 Y:2→1 Z:2→1 W:7→8]
+  495. P4 ♟→♞
+  496. 💬 P6 📢 ALL: “P1, peace for now; we both have larger threats.”
+  497. P6 P[W:7→5]
+  498. 💬 P7 📢 ALL: “P8 is the board leader. Bring them down.”
+  499. ✕ P7 ♝ ✕ ♟ P4 ♝ Bishop took Pawn! [Y:1→7 W:8→2]
+  500. 💬 P8 → P7: “Pressure P4; their position is ripening.”
+  501. P8 P[Y:5→6 Z:4→3]
+  502. 💬 P1 📢 ALL: “If nobody checks P8, they run away with this.”
+  503. P1 P[Y:2→4 Z:2→4]
+  504. ✕ P4 ♝ ✕ ♝ P7 ♝ Bishop took Bishop! [Y:8→7 W:1→2]
+  505. P6 P[Z:2→4]
+  506. 💬 P7 📢 ALL: “P1, peace for now; we both have larger threats.”
+  507. P7 P[Z:7→5 W:7→5]
+  508. P8 P[Y:6→7 Z:3→2]
+  509. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:2→3 Y:4→5 Z:4→5]
+  510. P4 P[Y:7→5 Z:7→5 W:2→4]
+  511. P6 P[Z:2→4 W:7→5]
+  512. 💬 P7 📢 ALL: “P1, let us spare one another for a few turns.”
+  513. P7 P[Y:2→4 Z:7→5 W:7→5]
+  514. ✕ P8 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:2→1 Y:5→4 Z:4→5 W:4→5]
+  515. ☠ DIPLOMACY: P8 betrayed P7
+  516. 💬 P1 📢 ALL: “P8 is gaining too much ground; collapse on them.”
+  517. P1 P[Y:5→6 Z:5→6]
+  518. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:2→3 Y:7→6 Z:7→6]
+  519. P6 P[Z:2→4 W:7→5]
+  520. 💬 P7 📢 ALL: “All hands against P8.”
+  521. P7 P[Y:2→4 W:7→5]
+  522. P8 P[Y:7→8 Z:2→1]
+  523. P8 ♟→♞
+  524. P1 P[Y:2→4 Z:2→4]
+  525. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→3 Y:5→4 Z:5→4]
+  526. P6 P[Y:7→5]
+  527. P7 P[Y:2→3 Z:7→6]
+  528. P8 P[Z:4→5 W:5→4]
+  529. P1 P[Y:2→4 Z:2→4 W:2→4]
+  530. P4 P[Y:4→3 Z:4→3]
+  531. P6 P[Y:7→5]
+  532. P7 P[Y:2→4 Z:7→5]
+  533. ✕ P8 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:2→3 Y:5→4 Z:5→4 W:5→4]
+  534. 💬 P1 📢 ALL: “Focus pressure on P8.”
+  535. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:4→3 Y:2→3 Z:2→3]
+  536. P4 P[Y:6→5 Z:6→5]
+  537. 💬 P6 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  538. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:6→7 Y:5→4 Z:4→5]
+  539. ☠ DIPLOMACY: P6 betrayed P7
+  540. P7 P[Z:7→5]
+  541. P8 P[Y:7→6]
+  542. P1 P[Y:2→4]
+  543. ✕ P4 ♞ ✕ ♟ P8 ♞ Knight took Pawn! [X:7→5 Y:1→2]
+  544. P6 P[Y:5→4]
+  545. 💬 P7 📢 ALL: “Common threat: P8.”
+  546. P7 P[Y:2→4 W:7→5]
+  547. P8 P[Z:7→6]
+  548. 💬 P1 📢 ALL: “P4, let us spare one another for a few turns.”
+  549. P1 P[Y:2→4 Z:2→4 W:2→4]
+  550. P4 P[Z:7→5]
+  551. P6 P[Y:4→3]
+  552. P7 P[Z:7→5 W:7→5]
+  553. ✕ P8 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:6→5 Y:2→3]
+  554. P1 P[Y:4→5 Z:4→5 W:4→5]
+  555. P4 P[Z:7→5]
+  556. P6 P[Y:4→3 Z:5→6]
+  557. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:6→7 Y:2→3 Z:7→6]
+  558. P8 P[Z:5→6 W:4→3]
+  559. P1 P[Y:5→6 Z:5→6 W:5→6]
+  560. 💬 P4 📢 ALL: “All hands against P8.”
+  561. ✕ P4 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [Y:8→3 W:1→6]
+  562. P6 P[Z:2→4]
+  563. 💬 P7 📢 ALL: “Focus pressure on P8.”
+  564. P7 K[Z:8→7 W:8→7]
+  565. 💬 P8 📢 ALL: “P1, peace for now; we both have larger threats.”
+  566. P8 P[Y:4→3 Z:4→3 W:4→3]
+  567. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:2→3 Y:2→3 Z:2→3 W:2→3]
+  568. P4 P[Y:7→5 Z:7→5 W:2→4]
+  569. P6 P[Y:7→5 W:7→5]
+  570. P7 P[W:7→5]
+  571. P8 P[Z:4→5 W:5→4]
+  572. P1 P[Y:6→7 Z:6→7 W:6→7]
+  573. P4 P[Y:7→5 Z:7→5 W:2→4]
+  574. P6 P[W:7→5]
+  575. 💬 P7 📢 ALL: “If nobody checks P8, they run away with this.”
+  576. P7 P[Y:3→4 Z:6→5]
+  577. P8 P[Y:2→4 Z:7→5]
+  578. 💬 P1 📢 ALL: “P4, peace for now; we both have larger threats.”
+  579. P1 P[Y:7→8 Z:7→8 W:7→8]
+  580. P1 ♟→♛
+  581. P4 P[Y:5→4 Z:5→4 W:4→5]
+  582. P6 P[Z:2→4 W:7→5]
+  583. P7 P[W:7→5]
+  584. ✕ P8 ♜ ✕ ♛ P1 ♜ Rook took Queen! [X:2→6]
+  585. 💬 P1 📢 ALL: “P4, I propose a brief truce while the board opens.”
+  586. P1 P[Y:3→4 Z:3→4 W:3→4]
+  587. P4 P[Y:4→3 Z:4→3 W:5→6]
+  588. 💬 P6 📢 ALL: “All hands against P8.”
+  589. P6 P[Y:7→5 W:7→5]
+  590. 💬 P7 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  591. P7 P[Z:7→5]
+  592. P8 P[Y:4→5 Z:5→4]
+  593. 💬 P1 📢 ALL: “P4, hold fire and we can survive this middle game.”
+  594. P1 P[Y:4→5 Z:4→5 W:4→5]
+  595. P4 P[Y:3→2 Z:3→2 W:6→7]
+  596. P6 P[W:7→5]
+  597. 💬 P7 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  598. P7 P[Y:2→4 Z:7→5]
+  599. P8 P[Y:5→6 Z:4→3]
+  600. P1 P[Y:5→6 Z:5→6 W:5→6]
+  601. P4 P[Z:7→6 W:2→3]
+  602. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:3→2 Y:5→4 Z:4→5]
+  603. 💬 P7 📢 ALL: “P1, keep your pieces off me and I will return the favor.”
+  604. P7 P[Z:7→5]
+  605. P8 P[W:7→6]
+  606. P1 P[Y:6→7 Z:6→7 W:6→7]
+  607. P4 P[Z:7→6 W:2→3]
+  608. P6 P[Y:4→3 Z:5→6]
+  609. 💬 P7 📢 ALL: “P8 is gaining too much ground; collapse on them.”
+  610. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:3→2 Y:2→3 Z:7→6]
+  611. P8 P[Z:5→6 W:4→3]
+  612. 💬 P1 📢 ALL: “All hands against P8.”
+  613. P1 P[Y:7→8 Z:7→8 W:7→8]
+  614. P1 ♟→♛
+  615. P4 P[Z:7→5]
+  616. 💬 P6 📢 ALL: “P8 is the board leader. Bring them down.”
+  617. P6 P[Y:7→5 Z:2→4]
+  618. 💬 P7 📢 ALL: “P1, let us spare one another for a few turns.”
+  619. P7 P[Y:2→4 W:7→5]
+  620. ✕ P8 ♜ ✕ ♛ P1 ♜ Rook took Queen! [X:6→3]
+  621. P1 P[W:2→4]
+  622. ✕ P4 ♛ ✕ ♟ P8 ♛ Queen took Pawn! [Y:3→5 W:6→8]
+  623. P6 P[Z:2→4 W:7→5]
+  624. 💬 P7 📢 ALL: “All hands against P8.”
+  625. P7 P[W:7→5]
+  626. P8 P[Y:7→6]
+  627. 💬 P1 📢 ALL: “Focus pressure on P8.”
+  628. P1 P[W:2→4]
+  629. ✕ P4 ♛ ✕ ♟ P8 ♛ Queen took Pawn! [Z:8→5]
+  630. P6 P[Y:7→5]
+  631. 💬 P7 📢 ALL: “If nobody checks P8, they run away with this.”
+  632. P7 P[Y:2→3 Z:7→6]
+  633. 💬 P8 📢 ALL: “All hands against P4.”
+  634. P8 P[Z:7→5]
+  635. P1 P[Z:2→4]
+  636. ✕ P4 ♛ ✕ ♟ P6 ♛ Queen took Pawn! [X:4→5 Z:5→4]
+  637. 💬 P6 📢 ALL: “If nobody checks P8, they run away with this.”
+  638. P6 K[Z:1→2 W:8→7]
+  639. P7 P[Y:2→4]
+  640. 💬 P8 → P7: “P7, peace for now; we both have larger threats.”
+  641. ✕ P8 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:7→8 Z:5→4]
+  642. 💬 P1 📢 ALL: “P8 is the board leader. Bring them down.”
+  643. P1 P[Z:2→4]
+  644. 💬 P4 📢 ALL: “If nobody checks P8, they run away with this.”
+  645. ✕ P4 ♛ ✕ ♟ P8 ♛ Queen took Pawn! [Z:4→5]
+  646. 💬 P6 📢 ALL: “Common threat: P8.”
+  647. P6 P[Z:2→4]
+  648. 💬 P7 📢 ALL: “Common threat: P8.”
+  649. ✕ P7 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:4→5 Y:4→5]
+  650. P8 P[Z:4→3]
+  651. 💬 P1 📢 ALL: “Common threat: P8.”
+  652. ✕ P1 ♟ ✕ ♟ P8 ♟ Pawn took Pawn! [X:7→8 Z:2→3]
+  653. 💬 P4 → P1: “P1, let us spare one another for a few turns.”
+  654. ✕ P4 ♛ ✕ ♟ P8 ♛ Queen took Pawn! [Y:5→8 W:8→5]
+  655. P6 P[Z:2→4]
+  656. P7 P[Y:3→4 Z:6→5]
+  657. P8 P[Y:2→4 W:7→5]
+  658. ✕ P1 ♜ ✕ ♞ P8 ♜ Rook took Knight! [Z:1→8]
+  659. ✕ P4 ♛ ✕ ♟ P8 ♛ Queen took Pawn! [X:5→4]
+  660. 💬 P6 📢 ALL: “Focus pressure on P8.”
+  661. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:4→5 Y:5→4 Z:4→5]
+  662. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:4→5 Y:3→4 Z:6→5]
+  663. ✕ P8 ♜ ✕ ♜ P1 ♜ Rook took Rook! [X:8→7]
+  664. 💬 P1 📢 ALL: “If nobody checks P8, they run away with this.”
+  665. P1 P[Y:2→4]
+  666. ✕ P4 ♛ ✕ ♚ P8 ♛ Queen took King! [Z:5→7 W:5→7]
+  ★ ★ P4 eliminated P8! +180pcs ▶ replay path
+  667. ✕ P6 ♞ ✕ ♟ P4 ♞ Knight took Pawn! [X:1→3 Y:1→2]
+  668. P7 K[X:4→5 Y:1→2]
+  669. P1 P[Y:2→4 Z:2→4]
+  670. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:7→8 Y:5→4 Z:5→4]
+  671. ✕ P6 ♞ ✕ ♟ P4 ♞ Knight took Pawn! [X:3→5 W:1→2]
+  672. 💬 P7 📢 ALL: “P4 is the board leader. Bring them down.”
+  673. P7 P[Y:4→5 Z:5→4]
+  674. 💬 P1 📢 ALL: “Common threat: P4.”
+  675. P1 P[Y:2→4 Z:2→4]
+  676. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:6→7 Y:5→4 Z:5→4]
+  677. ✕ P6 ♞ ✕ ♟ P4 ♞ Knight took Pawn! [X:5→7 W:2→1]
+  678. 💬 P7 📢 ALL: “Focus pressure on P4.”
+  679. P7 P[Y:5→6 Z:4→3]
+  680. P1 P[Y:2→4 Z:2→4]
+  681. 💬 P4 → P1: “Turn on P6; I will not trouble you meanwhile.”
+  682. ✕ P4 ♝ ✕ ♞ P6 ♝ Bishop took Knight! [X:6→7 Y:1→2]
+  683. P6 P[W:7→5]
+  684. P7 P[Y:5→6]
+  685. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:6→5 Y:4→5 Z:4→5]
+  686. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:6→5 Y:7→6]
+  687. P6 P[Y:7→5]
+  688. 💬 P7 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  689. P7 P[W:7→5]
+  690. P1 P[Y:5→6 Z:5→6]
+  691. P4 P[Y:3→4]
+  692. 💬 P6 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  693. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:6→5 Y:5→4]
+  694. 💬 P7 📢 ALL: “P1, peace for now; we both have larger threats.”
+  695. P7 P[Y:6→7 Z:3→2]
+  696. 💬 P1 📢 ALL: “All hands against P4.”
+  697. P1 P[Y:6→7 Z:6→7]
+  698. P4 P[Y:4→3 Z:4→3]
+  699. P6 P[Y:4→3]
+  700. ✕ P7 ♟ ✕ ♛ P6 ♟ Pawn took Queen! [X:5→4 Y:7→8 Z:2→1]
+  701. P7 ♟→♛
+  702. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Y:7→8 Z:7→8 W:1→2]
+  703. P1 ♟→♛
+  704. ✕ P4 ♚ ✕ ♛ P1 ♚ King took Queen! [W:1→2]
+  705. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Y:3→2 Z:1→2]
+  706. ✕ P7 ♛ ✕ ♝ P6 ♛ Queen took Bishop! [X:4→6]
+  707. 💬 P1 📢 ALL: “P4 is the board leader. Bring them down.”
+  708. P1 P[W:2→4]
+  709. P4 P[Y:3→2 Z:3→2]
+  710. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:5→6 Y:2→1]
+  711. P6 ♟→♛
+  712. ✕ P7 ♛ ✕ ♝ P6 ♛ Queen took Bishop! [X:6→3]
+  713. P1 P[Z:2→3 W:2→3]
+  714. 💬 P4 📢 ALL: “All hands against P7.”
+  715. ✕ P4 ♞ ✕ ♛ P6 ♞ Knight took Queen! [X:8→6 Z:1→2]
+  716. P6 P[Y:7→5 Z:2→4]
+  717. 💬 P7 📢 ALL: “All hands against P4.”
+  718. ✕ P7 ♛ ✕ ♞ P6 ♛ Queen took Knight! [X:3→7]
+  719. P1 P[Y:3→4 W:3→4]
+  720. P4 P[Y:2→1 Z:2→1]
+  721. P4 ♟→♞
+  722. 💬 P6 📢 ALL: “If nobody checks P4, they run away with this.”
+  723. ✕ P6 ♜ ✕ ♛ P7 ♜ Rook took Queen! [X:8→7]
+  724. 💬 P7 📢 ALL: “Common threat: P4.”
+  725. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:7→8 Y:4→5 Z:5→4]
+  726. P1 P[Y:4→5 W:4→5]
+  727. 💬 P4 → P1: “P1, peace for now; we both have larger threats.”
+  728. P4 P[W:7→6]
+  729. 💬 P6 📢 ALL: “P4 is the board leader. Bring them down.”
+  730. P6 P[Y:7→5 Z:2→4]
+  731. 💬 P7 📢 ALL: “If nobody checks P4, they run away with this.”
+  732. P7 P[Y:5→6 Z:4→3]
+  733. 💬 P1 📢 ALL: “P4, keep your pieces off me and I will return the favor.”
+  734. P1 P[Y:5→6 W:5→6]
+  735. P4 P[Y:4→5 W:5→4]
+  736. P6 P[Y:5→4 Z:4→5]
+  737. P7 P[Y:6→7 Z:3→2]
+  738. P1 P[Y:6→7 W:6→7]
+  739. P4 P[Y:5→6 W:4→3]
+  740. P6 P[Y:4→3 Z:5→6]
+  741. ✕ P7 ♟ ✕ ♜ P6 ♟ Pawn took Rook! [X:8→7 Y:7→8 Z:2→1]
+  742. P7 ♟→♛
+  743. 💬 P1 📢 ALL: “If nobody checks P4, they run away with this.”
+  744. ✕ P1 ♟ ✕ ♞ P6 ♟ Pawn took Knight! [X:3→2 Y:7→8 W:7→8]
+  745. P1 ♟→♛
+  746. P4 P[Y:2→1 Z:2→1 W:7→8]
+  747. P4 ♟→♞
+  748. ✕ P6 ♜ ✕ ♛ P1 ♜ Rook took Queen! [X:1→2]
+  749. ✕ P7 ♛ ✕ ♜ P6 ♛ Queen took Rook! [X:7→2]
+  750. P1 P[Z:2→3 W:2→3]
+  751. P4 P[Y:7→5 W:2→4]
+  752. 💬 P6 📢 ALL: “All hands against P4.”
+  753. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:7→8 Y:3→2 Z:6→7]
+  754. 💬 P7 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  755. ✕ P7 ♛ ✕ ♞ P1 ♛ Queen took Knight! [Y:8→1 W:8→1]
+  756. 💬 P1 📢 ALL: “Focus pressure on P4.”
+  757. ✕ P1 ♜ ✕ ♛ P7 ♜ Rook took Queen! [X:1→2]
+  758. P4 P[Y:5→4 W:4→5]
+  759. ✕ P6 ♟ ✕ ♞ P7 ♟ Pawn took Knight! [X:8→7 Y:2→1 Z:7→8]
+  760. P6 ♟→♛
+  761. 💬 P7 📢 ALL: “All hands against P4.”
+  762. ✕ P7 ♜ ✕ ♛ P6 ♜ Rook took Queen! [X:8→7]
+  763. 💬 P1 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  764. ✕ P1 ♜ ✕ ♞ P4 ♜ Rook took Knight! [X:2→7]
+  765. ✕ P4 ♜ ✕ ♜ P1 ♜ Rook took Rook! [Z:8→1]
+  766. P6 P[W:7→5]
+  767. 💬 P7 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  768. P7 P[Z:5→4]
+  769. 💬 P1 📢 ALL: “All hands against P4.”
+  770. P1 P[Y:2→3 W:2→3]
+  771. P4 P[Y:4→3 W:5→6]
+  772. 💬 P6 📢 ALL: “Common threat: P4.”
+  773. P6 P[Y:7→5]
+  774. 💬 P7 📢 ALL: “P1, keep your pieces off me and I will return the favor.”
+  775. P7 P[Z:4→3]
+  776. P1 P[Y:2→3 W:2→3]
+  777. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:5→6 Z:2→3]
+  778. 💬 P6 📢 ALL: “Focus pressure on P4.”
+  779. P6 P[Y:5→4 W:5→4]
+  780. 💬 P7 📢 ALL: “P4 is the board leader. Bring them down.”
+  781. P7 P[Z:7→5]
+  782. ✕ P1 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:7→6 Y:3→4 W:3→4]
+  783. P4 P[Y:3→2 W:6→7]
+  784. ✕ P6 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:7→6 Y:5→4 W:5→4]
+  785. 💬 P7 📢 ALL: “Common threat: P4.”
+  786. P7 P[Z:5→4 W:5→4]
+  787. P1 P[Y:2→4 Z:2→4]
+  788. 💬 P4 → P1: “Pressure P7; their position is ripening.”
+  789. P4 P[Y:2→1 W:7→8]
+  790. P4 ♟→♞
+  791. P6 P[Y:7→5]
+  792. 💬 P7 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  793. P7 P[Z:5→4 W:5→4]
+  794. 💬 P1 📢 ALL: “P4 is the board leader. Bring them down.”
+  795. P1 P[Z:2→3 W:2→3]
+  796. P4 P[Y:2→3]
+  797. P6 P[Y:7→5 Z:2→4]
+  798. ✕ P7 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:6→7 Z:4→3 W:4→3]
+  799. 💬 P1 📢 ALL: “Common threat: P4.”
+  800. ✕ P1 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:8→7 Z:2→3 W:2→3]
+  801. P4 P[Y:4→3 Z:4→3]
+  802. P6 P[Y:5→4 W:5→4]
+  803. P7 P[Z:5→4 W:5→4]
+  804. 💬 P1 📢 ALL: “P4, neither of us gains by fighting immediately.”
+  805. ✕ P1 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:7→8 Z:3→4 W:3→4]
+  806. ☠ DIPLOMACY: P1 betrayed P7
+  807. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [Y:3→2 Z:3→2 W:1→2]
+  808. ☠ DIPLOMACY: P4 betrayed P1
+  809. P6 P[Y:4→3 W:4→3]
+  810. 💬 P7 📢 ALL: “If nobody checks P4, they run away with this.”
+  811. ✕ P7 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:7→8 Z:5→4 W:5→4]
+  812. 💬 P1 📢 ALL: “P4, let us spare one another for a few turns.”
+  813. P1 P[Z:3→4 W:3→4]
+  814. P4 P[Y:2→1 Z:2→1]
+  815. P4 ♟→♞
+  816. P6 P[W:5→4]
+  817. 💬 P7 📢 ALL: “Focus pressure on P4.”
+  818. P7 P[Z:4→3 W:4→3]
+  819. P1 P[Z:4→5 W:4→5]
+  820. P4 P[W:7→6]
+  821. P6 P[W:4→3]
+  822. 💬 P7 📢 ALL: “P1, let us spare one another for a few turns.”
+  823. P7 P[Z:3→2 W:3→2]
+  824. 💬 P1 📢 ALL: “Focus pressure on P4.”
+  825. P1 P[Z:5→6 W:5→6]
+  826. 💬 P4 📢 ALL: “P7 is the board leader. Bring them down.”
+  827. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:6→5 W:2→3]
+  828. 💬 P6 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  829. P6 P[W:5→4]
+  830. ✕ P7 ♟ ✕ ♜ P4 ♟ Pawn took Rook! [X:8→7 Z:2→1 W:2→1]
+  831. P7 ♟→♛
+  832. 💬 P1 📢 ALL: “P4, hold fire and we can survive this middle game.”
+  833. ✕ P1 ♚ ✕ ♟ P4 ♚ King took Pawn! [Y:3→4]
+  834. 💬 P4 📢 ALL: “If nobody checks P6, they run away with this.”
+  835. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:5→6 W:3→4]
+  836. 💬 P6 📢 ALL: “All hands against P4.”
+  837. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:7→6 W:5→4]
+  838. 💬 P7 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  839. ✕ P7 ♛ ✕ ♞ P4 ♛ Queen took Knight! [Y:1→8 Z:1→8]
+  840. 💬 P1 📢 ALL: “P4, peace for now; we both have larger threats.”
+  841. P1 P[Z:6→7 W:6→7]
+  842. ✕ P4 ♜ ✕ ♛ P7 ♜ Rook took Queen! [X:8→7]
+  843. P6 P[Z:2→4]
+  844. ✕ P7 ♚ ✕ ♟ P1 ♚ King took Pawn! [X:5→6 Y:2→1]
+  845. 💬 P1 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  846. P1 P[Z:2→3 W:2→3]
+  847. P4 P[W:7→6]
+  848. P6 P[Y:5→4 Z:4→5 W:5→4]
+  849. 💬 P7 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  850. ✕ P7 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→3 Z:4→3 W:4→3]
+  851. 💬 P1 📢 ALL: “If nobody checks P4, they run away with this.”
+  852. ✕ P1 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:2→3 Z:2→3 W:2→3]
+  853. P4 P[Y:2→4 W:7→5]
+  854. 💬 P6 📢 ALL: “Common threat: P4.”
+  855. P6 P[Y:4→3 Z:5→6 W:4→3]
+  856. P7 P[Z:5→4 W:5→4]
+  857. ✕ P1 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:3→2 Z:3→4 W:3→4]
+  858. P4 P[Y:4→5 W:5→4]
+  859. P6 P[W:4→3]
+  860. 💬 P7 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  861. ✕ P7 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:1→2 Z:5→4 W:5→4]
+  862. P1 P[Z:3→4 W:3→4]
+  863. 💬 P4 → P6: “If we concentrate on P7, the board opens for both of us.”
+  864. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:5→6 W:2→3]
+  865. P6 P[Z:2→4]
+  866. 💬 P7 📢 ALL: “If nobody checks P4, they run away with this.”
+  867. ✕ P7 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:3→4 Z:5→4 W:5→4]
+  868. 💬 P1 📢 ALL: “Common threat: P4.”
+  869. P1 P[Z:2→4 W:2→4]
+  870. 💬 P4 → P7: “If we concentrate on P6, the board opens for both of us.”
+  871. P4 P[Y:5→6 W:4→3]
+  872. 💬 P6 📢 ALL: “P4 is the board leader. Bring them down.”
+  873. P6 P[Z:4→5 W:5→4]
+  874. P7 P[Z:4→3 W:4→3]
+  875. P1 P[Z:4→5 W:4→5]
+  876. P4 P[Z:2→4 W:7→5]
+  877. P6 P[Y:5→4 Z:4→5 W:5→4]
+  878. 💬 P7 📢 ALL: “All hands against P4.”
+  879. P7 P[Z:3→2 W:3→2]
+  880. 💬 P1 📢 ALL: “All hands against P4.”
+  881. P1 P[Z:5→6 W:5→6]
+  882. P4 P[Z:4→5 W:5→4]
+  883. P6 P[Y:4→3 Z:5→6 W:4→3]
+  884. 💬 P7 📢 ALL: “P4 is the board leader. Bring them down.”
+  885. P7 P[Z:2→1 W:2→1]
+  886. P7 ♟→♛
+  887. 💬 P1 📢 ALL: “P4 is the board leader. Bring them down.”
+  888. P1 P[Z:6→7 W:6→7]
+  889. P4 P[Z:5→6 W:4→3]
+  890. P6 P[Z:2→4]
+  891. 💬 P7 📢 ALL: “P1, peace for now; we both have larger threats.”
+  892. P7 P[Z:4→3 W:4→3]
+  893. 💬 P1 📢 ALL: “If nobody checks P4, they run away with this.”
+  894. ✕ P1 ♟ ✕ ♞ P7 ♟ Pawn took Knight! [X:1→2 Z:7→8 W:7→8]
+  895. P1 ♟→♛
+  896. P4 P[Y:3→4 Z:6→5 W:3→4]
+  897. P6 P[Y:5→4 W:5→4]
+  898. ✕ P7 ♜ ✕ ♛ P1 ♜ Rook took Queen! [X:7→2]
+  899. 💬 P1 📢 ALL: “Focus pressure on P4.”
+  900. P1 P[Z:5→6]
+  901. P4 P[Y:4→5 Z:5→4 W:4→5]
+  902. P6 P[Y:4→3 W:4→3]
+  903. 💬 P7 📢 ALL: “Common threat: P4.”
+  904. P7 P[Z:3→2 W:3→2]
+  905. P1 P[W:4→5]
+  906. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:8→7 W:6→5]
+  907. ✕ P6 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [Y:3→2 Z:1→2 W:3→2]
+  908. 💬 P7 📢 ALL: “Focus pressure on P4.”
+  909. P7 P[Z:2→1 W:2→1]
+  910. P7 ♟→♞
+  911. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:8→7 W:4→5]
+  912. 💬 P4 → P6: “P7 is exposed. Strike there first.”
+  913. P4 P[Y:5→6 Z:4→3 W:5→6]
+  914. 💬 P6 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  915. P6 P[Y:2→1 W:2→1]
+  916. P6 ♟→♛
+  917. 💬 P7 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  918. ✕ P7 ♛ ✕ ♟ P1 ♛ Queen took Pawn! [X:4→7 Y:1→4]
+  919. 💬 P1 📢 ALL: “P4, I propose a brief truce while the board opens.”
+  920. P1 K[Z:1→2 W:1→2]
+  921. P4 P[Z:3→4]
+  922. ✕ P6 ♛ ✕ ♞ P7 ♛ Queen took Knight! [X:1→2 Z:2→1]
+  923. ✕ P7 ♛ ✕ ♜ P4 ♛ Queen took Rook! [X:7→3 Y:4→8]
+  924. 💬 P1 📢 ALL: “P4, keep your pieces off me and I will return the favor.”
+  925. P1 P[Y:2→4 W:2→4]
+  926. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:6→5 Z:4→5]
+  927. ✕ P6 ♛ ✕ ♜ P7 ♛ Queen took Rook! [Z:1→8 W:1→8]
+  928. ✕ P7 ♜ ✕ ♛ P6 ♜ Rook took Queen! [X:1→2]
+  929. 💬 P1 📢 ALL: “P4 is the board leader. Bring them down.”
+  930. P1 P[Y:4→5 W:4→5]
+  931. P4 P[Y:6→5]
+  932. P6 P[Z:4→5 W:5→4]
+  933. 💬 P7 📢 ALL: “P4 is the board leader. Bring them down.”
+  934. ✕ P7 ♛ ✕ ♞ P4 ♛ Queen took Knight! [X:3→6]
+  935. 💬 P1 📢 ALL: “All hands against P4.”
+  936. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:8→7 Y:4→5]
+  937. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:8→7 Y:6→5]
+  938. 💬 P6 📢 ALL: “P1, keep your pieces off me and I will return the favor.”
+  939. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:4→3 Z:5→6 W:4→3]
+  940. 💬 P7 📢 ALL: “Common threat: P4.”
+  941. ✕ P7 ♛ ✕ ♞ P4 ♛ Queen took Knight! [X:6→7]
+  942. P1 P[Y:5→6 W:5→6]
+  943. 💬 P4 → P1: “P1, hold fire and we can survive this middle game.”
+  944. ✕ P4 ♜ ✕ ♛ P7 ♜ Rook took Queen! [X:8→7]
+  945. 💬 P6 📢 ALL: “Focus pressure on P4.”
+  946. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→2 Z:6→7 W:3→2]
+  947. 💬 P7 📢 ALL: “P1, peace for now; we both have larger threats.”
+  948. P7 P[Y:2→4]
+  949. 💬 P1 📢 ALL: “P4, neither of us gains by fighting immediately.”
+  950. P1 P[Y:6→7 W:6→7]
+  951. P4 P[Y:5→4]
+  952. ✕ P6 ♟ ✕ ♜ P4 ♟ Pawn took Rook! [X:2→1 Z:7→8 W:2→1]
+  953. P6 ♟→♛
+  954. P7 P[W:7→5]
+  955. ✕ P1 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [Y:7→8 Z:1→2 W:7→8]
+  956. P1 ♟→♛
+  957. ☠ DIPLOMACY: P1 betrayed P6
+  958. P4 P[Y:4→3]
+  959. ✕ P6 ♛ ✕ ♞ P4 ♛ Queen took Knight! [X:1→2]
+  960. 💬 P7 📢 ALL: “All hands against P4.”
+  961. P7 P[Y:2→4 W:7→5]
+  962. P1 P[W:4→5]
+  963. ✕ P4 ♜ ✕ ♛ P6 ♜ Rook took Queen! [X:7→2]
+  964. P6 P[Z:4→5 W:5→4]
+  965. 💬 P7 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  966. P7 P[Y:4→5 Z:5→4 W:5→4]
+  967. 💬 P1 📢 ALL: “P4, let us spare one another for a few turns.”
+  968. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→2 W:5→6]
+  969. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:1→2 W:7→6]
+  970. 💬 P6 📢 ALL: “If nobody checks P4, they run away with this.”
+  971. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→4 Z:5→6 W:4→3]
+  972. 💬 P7 📢 ALL: “P1, let us spare one another for a few turns.”
+  973. P7 P[Y:5→6 Z:4→3 W:4→3]
+  974. P1 P[Z:4→5]
+  975. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:8→7 Y:7→6 Z:2→3 W:2→3]
+  976. 💬 P6 📢 ALL: “All hands against P4.”
+  977. P6 P[Z:4→5 W:5→4]
+  978. P7 P[Y:4→5 Z:5→4 W:5→4]
+  979. P1 P[W:4→5]
+  980. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:3→2 W:6→5]
+  981. P6 P[Z:5→6 W:4→3]
+  982. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:8→7 Y:5→6 Z:4→3 W:4→3]
+  983. 💬 P1 📢 ALL: “P4, peace for now; we both have larger threats.”
+  984. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:1→2 W:4→5]
+  985. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:1→2 Z:7→6 W:2→3]
+  986. P6 P[Z:4→5 W:5→4]
+  987. P7 P[Y:2→4]
+  988. 💬 P1 📢 ALL: “P4, I propose a brief truce while the board opens.”
+  989. P1 P[Z:4→5]
+  990. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:3→2 Z:6→5]
+  991. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:1→2 Z:5→6 W:4→3]
+  992. 💬 P7 📢 ALL: “All hands against P4.”
+  993. P7 P[Y:4→5]
+  994. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:1→2 Z:4→5]
+  995. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:5→6 Y:6→5]
+  996. P6 P[Z:6→7 W:3→2]
+  997. 💬 P7 📢 ALL: “P4 is the board leader. Bring them down.”
+  998. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:5→6 Y:4→5]
+  999. 💬 P1 📢 ALL: “P4, let us spare one another for a few turns.”
+  1000. P1 P[Z:5→6]
+  1001. 💬 P4 → P1: “P1, keep your pieces off me and I will return the favor.”
+  1002. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:2→3 Z:7→6]
+  1003. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Y:8→7 Z:7→8 W:2→1]
+  1004. P6 ♟→♛
+  1005. P7 P[Y:5→6]
+  1006. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:2→3 Z:5→6]
+  1007. 💬 P4 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  1008. ✕ P4 ♜ ✕ ♛ P6 ♜ Rook took Queen! [Y:8→7]
+  1009. P6 P[Z:6→7 W:3→2]
+  1010. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:6→7 Y:6→7]
+  1011. 💬 P1 📢 ALL: “P4, peace for now; we both have larger threats.”
+  1012. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Z:6→7 W:1→2]
+  1013. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:4→3 Z:6→7 W:3→2]
+  1014. P6 P[Z:7→8 W:2→1]
+  1015. P6 ♟→♛
+  1016. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Y:7→8 W:8→7]
+  1017. P7 ♟→♛
+  1018. P1 P[Y:4→5]
+  1019. ✕ P4 ♚ ✕ ♛ P6 ♚ King took Queen! [X:5→4 W:2→1]
+  1020. P6 P[W:5→4]
+  1021. 💬 P7 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  1022. ✕ P7 ♛ ✕ ♝ P4 ♛ Queen took Bishop! [Y:8→2 W:7→1]
+  1023. 💬 P1 📢 ALL: “If nobody checks P4, they run away with this.”
+  1024. P1 P[Y:5→6]
+  1025. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:1→2 Y:7→6]
+  1026. P6 P[W:4→3]
+  1027. ✕ P7 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [Y:2→8 Z:8→2]
+  1028. 💬 P1 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  1029. P1 P[Y:4→5]
+  1030. ✕ P4 ♜ ✕ ♛ P7 ♜ Rook took Queen! [Z:1→2]
+  1031. 💬 P6 📢 ALL: “P1, let us spare one another for a few turns.”
+  1032. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Z:1→2 W:3→2]
+  1033. 💬 P7 📢 ALL: “P1, keep your pieces off me and I will return the favor.”
+  1034. P7 P[Z:7→5]
+  1035. 💬 P1 📢 ALL: “Common threat: P4.”
+  1036. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:1→2 Y:5→6]
+  1037. P4 P[Y:3→2]
+  1038. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:4→5 W:2→1]
+  1039. P6 ♟→♛
+  1040. P7 P[Z:7→5]
+  1041. 💬 P1 📢 ALL: “P4, I propose a brief truce while the board opens.”
+  1042. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Y:6→7 Z:1→2]
+  1043. 💬 P4 → P1: “P6 is exposed. Strike there first.”
+  1044. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:3→2 Y:6→7 Z:3→2]
+  1045. 💬 P6 📢 ALL: “P4 is the board leader. Bring them down.”
+  1046. ✕ P6 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [Y:8→2 Z:2→8]
+  1047. P7 P[Y:2→4]
+  1048. P1 P[Z:3→4]
+  1049. ✕ P4 ♛ ✕ ♛ P6 ♛ Queen took Queen! [Y:1→2 Z:7→8]
+  1050. P6 P[Z:4→5 W:5→4]
+  1051. 💬 P7 📢 ALL: “Common threat: P4.”
+  1052. P7 P[Z:4→3]
+  1053. 💬 P1 📢 ALL: “P4, hold fire and we can survive this middle game.”
+  1054. P1 P[Y:3→4 Z:3→4]
+  1055. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:3→4 Z:2→3]
+  1056. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:7→6 Z:5→6 W:4→3]
+  1057. 💬 P7 📢 ALL: “If nobody checks P4, they run away with this.”
+  1058. P7 P[Z:5→4]
+  1059. P1 P[Z:6→7]
+  1060. 💬 P4 → P6: “P6, let us spare one another for a few turns.”
+  1061. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:4→3 Z:3→4]
+  1062. 💬 P6 📢 ALL: “If nobody checks P4, they run away with this.”
+  1063. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:6→7 Z:6→7 W:3→2]
+  1064. 💬 P7 📢 ALL: “P1, let us spare one another for a few turns.”
+  1065. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:2→3 Z:5→4]
+  1066. ✕ P1 ♟ ✕ ♛ P4 ♟ Pawn took Queen! [Y:1→2 Z:7→8]
+  1067. P1 ♟→♞
+  1068. P4 P[Y:2→1]
+  1069. P4 ♟→♞
+  1070. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Y:8→7 Z:7→8 W:2→1]
+  1071. P6 ♟→♛
+  1072. ✕ P7 ♜ ✕ ♟ P4 ♜ Rook took Pawn! [Z:8→2]
+  1073. ✕ P1 ♞ ✕ ♝ P4 ♞ Knight took Bishop! [X:5→3 Y:2→1]
+  1074. ✕ P4 ♜ ✕ ♛ P6 ♜ Rook took Queen! [X:2→7]
+  1075. P6 P[Z:5→6 W:4→3]
+  1076. 💬 P7 📢 ALL: “Focus pressure on P4.”
+  1077. ✕ P7 ♜ ✕ ♞ P4 ♜ Rook took Knight! [X:2→6]
+  1078. 💬 P1 📢 ALL: “P4 is the board leader. Bring them down.”
+  1079. P1 P[Y:4→5 Z:4→5]
+  1080. ✕ P4 ♞ ✕ ♜ P7 ♞ Knight took Rook! [X:8→6 Z:1→2]
+  1081. 💬 P6 📢 ALL: “Common threat: P4.”
+  1082. P6 P[Z:6→7 W:3→2]
+  1083. 💬 P7 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  1084. P7 P[W:5→4]
+  1085. P1 P[Y:5→6 Z:5→6]
+  1086. P4 P[Z:5→6]
+  1087. 💬 P6 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  1088. P6 P[Z:7→8 W:2→1]
+  1089. P6 ♟→♛
+  1090. P7 P[W:4→3]
+  1091. P1 P[Y:6→7 Z:6→7]
+  1092. P4 K[Z:8→7 W:1→2]
+  1093. ✕ P6 ♛ ✕ ♜ P4 ♛ Queen took Rook! [X:6→7 Y:8→7]
+  1094. 💬 P7 📢 ALL: “If nobody checks P4, they run away with this.”
+  1095. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Z:8→7 W:3→2]
+  1096. 💬 P1 📢 ALL: “P4, keep your pieces off me and I will return the favor.”
+  1097. P1 P[Y:7→8 Z:7→8]
+  1098. P1 ♟→♞
+  1099. P4 P[Z:2→3 W:7→6]
+  1100. ✕ P6 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [X:7→5 Y:7→5]
+  1101. 💬 P7 📢 ALL: “All hands against P4.”
+  1102. P7 P[W:2→1]
+  1103. P7 ♟→♛
+  1104. P1 P[Z:4→5]
+  1105. ✕ P4 ♞ ✕ ♛ P7 ♞ Knight took Queen! [X:2→4 Z:8→7]
+  1106. ✕ P6 ♛ ✕ ♞ P1 ♛ Queen took Knight! [Y:5→8]
+  1107. 💬 P7 📢 ALL: “P4 is the board leader. Bring them down.”
+  1108. P7 P[Y:2→3 Z:7→6]
+  1109. P1 P[Z:5→6]
+  1110. P4 P[Z:3→4 W:6→5]
+  1111. ✕ P6 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [Z:8→5]
+  1112. 💬 P7 📢 ALL: “Focus pressure on P4.”
+  1113. P7 P[W:5→4]
+  1114. ✕ P1 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Z:6→7 W:1→2]
+  1115. ✕ P4 ♟ ✕ ♟ P1 ♟ Pawn took Pawn! [X:7→8 Z:6→7 W:3→2]
+  1116. ✕ P6 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [X:5→4]
+  1117. P7 P[W:4→3]
+  1118. 💬 P1 📢 ALL: “P4, neither of us gains by fighting immediately.”
+  1119. P1 P[Y:4→5 Z:4→5]
+  1120. 💬 P4 → P1: “P6 is overextended. Push there now.”
+  1121. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:6→5 W:2→3]
+  1122. ✕ P6 ♛ ✕ ♜ P4 ♛ Queen took Rook! [X:4→7 Z:5→2]
+  1123. P7 P[W:5→4]
+  1124. 💬 P1 📢 ALL: “All hands against P4.”
+  1125. P1 P[Y:5→6 Z:5→6]
+  1126. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:5→6 W:3→4]
+  1127. ✕ P6 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [X:7→6 W:1→2]
+  1128. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:7→6 W:5→4]
+  1129. P1 P[Y:3→4 Z:3→4]
+  1130. P4 P[Y:5→4 Z:5→4]
+  1131. ✕ P6 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [Y:8→2 Z:2→8]
+  1132. 💬 P7 📢 ALL: “Common threat: P4.”
+  1133. P7 P[W:4→3]
+  1134. 💬 P1 📢 ALL: “Focus pressure on P4.”
+  1135. ✕ P1 ♛ ✕ ♟ P6 ♛ Queen took Pawn! [X:1→3 Z:2→4]
+  1136. 💬 P4 📢 ALL: “Common threat: P7.”
+  1137. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:5→6 W:2→3]
+  1138. ✕ P6 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [Y:2→1 Z:8→7]
+  1139. 💬 P7 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  1140. P7 K[X:6→5 Z:7→6]
+  1141. 💬 P1 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  1142. ✕ P1 ♛ ✕ ♟ P6 ♛ Queen took Pawn! [X:3→4]
+  1143. 💬 P4 📢 ALL: “Common threat: P6.”
+  1144. ✕ P4 ♞ ✕ ♛ P6 ♞ Knight took Queen! [X:4→6 W:1→2]
+  1145. P6 P[Y:5→4]
+  1146. ✕ P7 ♚ ✕ ♟ P4 ♚ King took Pawn! [W:7→8]
+  1147. 💬 P1 📢 ALL: “Common threat: P4.”
+  1148. ✕ P1 ♛ ✕ ♟ P6 ♛ Queen took Pawn! [X:4→5]
+  1149. P4 P[Y:4→3 Z:4→3]
+  1150. P6 P[W:5→4]
+  1151. P7 P[Y:2→4]
+  1152. ✕ P1 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [Z:4→7]
+  1153. 💬 P4 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  1154. ✕ P4 ♛ ✕ ♛ P1 ♛ Queen took Queen! [X:4→5 W:7→8]
+  1155. P6 P[W:4→3]
+  1156. P7 P[Y:4→5]
+  1157. ✕ P1 ♞ ✕ ♟ P4 ♞ Knight took Pawn! [X:3→1 Z:8→7]
+  1158. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:2→3 W:2→3]
+  1159. P6 P[W:5→4]
+  1160. 💬 P7 📢 ALL: “P1, peace for now; we both have larger threats.”
+  1161. P7 P[Y:5→6]
+  1162. ✕ P1 ♞ ✕ ♟ P4 ♞ Knight took Pawn! [X:1→3 W:1→2]
+  1163. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:3→2 W:3→4]
+  1164. 💬 P6 📢 ALL: “P4 is the board leader. Bring them down.”
+  1165. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:1→2 W:5→4]
+  1166. 💬 P7 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  1167. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:7→8 Y:6→7]
+  1168. ✕ P1 ♞ ✕ ♟ P4 ♞ Knight took Pawn! [X:3→1 Y:1→2]
+  1169. P4 P[Z:4→5 W:5→4]
+  1170. 💬 P6 📢 ALL: “All hands against P4.”
+  1171. P6 P[W:4→3]
+  1172. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Y:7→8 W:8→7]
+  1173. P7 ♟→♛
+  1174. ✕ P1 ♞ ✕ ♟ P4 ♞ Knight took Pawn! [X:1→3 Z:7→8]
+  1175. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:3→2 W:2→3]
+  1176. P6 P[Y:3→2 Z:6→7 W:3→2]
+  1177. 💬 P7 📢 ALL: “P4 is the board leader. Bring them down.”
+  1178. ✕ P7 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [X:8→3 W:7→2]
+  1179. 💬 P1 📢 ALL: “P4, let us spare one another for a few turns.”
+  1180. ✕ P1 ♞ ✕ ♟ P6 ♞ Knight took Pawn! [X:3→1 Z:8→7]
+  1181. ✕ P4 ♚ ✕ ♛ P7 ♚ King took Queen! [X:4→3 Z:7→8]
+  1182. P6 P[Y:5→4]
+  1183. P7 P[Y:2→4]
+  1184. 💬 P1 📢 ALL: “Common threat: P4.”
+  1185. P1 K[W:2→3]
+  1186. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:4→3 Y:3→4]
+  1187. 💬 P6 📢 ALL: “P1, keep your pieces off me and I will return the favor.”
+  1188. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:2→3 Y:5→4]
+  1189. P7 P[Z:4→3]
+  1190. P1 K[W:3→4]
+  1191. P4 P[Y:2→4 Z:2→4]
+  1192. P6 P[Y:4→3]
+  1193. 💬 P7 📢 ALL: “P4 is gaining too much ground; collapse on them.”
+  1194. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Y:1→2 Z:3→2]
+  1195. ✕ P1 ♚ ✕ ♟ P6 ♚ King took Pawn! [X:5→6 Z:2→1]
+  1196. 💬 P4 → P1: “Leave me be and hit P7; they are the urgent threat.”
+  1197. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:3→4 Y:2→3]
+  1198. ✕ P6 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→4 Y:4→3]
+  1199. 💬 P7 📢 ALL: “P1, keep your pieces off me and I will return the favor.”
+  1200. ✕ P7 ♟ ✕ ♞ P4 ♟ Pawn took Knight! [Y:2→1 Z:2→1]
+  1201. P7 ♟→♛
+  1202. 💬 P1 📢 ALL: “P4, hold fire and we can survive this middle game.”
+  1203. P1 K[X:6→5 Y:4→5]
+  1204. ✕ P4 ♞ ✕ ♛ P7 ♞ Knight took Queen! [X:5→3 Y:2→1]
+  1205. P6 P[Y:3→2]
+  1206. P7 P[Y:4→5 W:5→4]
+  1207. 💬 P1 📢 ALL: “All hands against P4.”
+  1208. P1 P[Y:3→4 W:3→4]
+  1209. P4 P[W:3→4]
+  1210. ✕ P6 ♟ ✕ ♞ P4 ♟ Pawn took Knight! [X:4→3 Y:2→1]
+  1211. P6 ♟→♛
+  1212. P7 P[Y:5→6 W:4→3]
+  1213. 💬 P1 📢 ALL: “If nobody checks P4, they run away with this.”
+  1214. P1 P[Y:4→5 W:4→5]
+  1215. 💬 P4 → P6: “P6, I propose a brief truce while the board opens.”
+  1216. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:1→2 Y:7→6 W:2→3]
+  1217. ✕ P6 ♛ ✕ ♞ P4 ♛ Queen took Knight! [X:3→7]
+  1218. P7 P[Y:4→5 W:5→4]
+  1219. P1 P[Y:5→6 W:5→6]
+  1220. 💬 P4 → P7: “P7, let us spare one another for a few turns.”
+  1221. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:2→1 Y:6→5 W:3→4]
+  1222. ✕ P6 ♛ ✕ ♞ P4 ♛ Queen took Knight! [X:7→6 Z:1→2]
+  1223. P7 P[Y:4→5 W:5→4]
+  1224. P1 P[Y:6→7 W:6→7]
+  1225. P4 P[W:4→5]
+  1226. ✕ P6 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [Y:1→2]
+  1227. 💬 P7 📢 ALL: “All hands against P4.”
+  1228. P7 P[Y:5→6 W:4→3]
+  1229. 💬 P1 📢 ALL: “P4 is the board leader. Bring them down.”
+  1230. P1 P[Y:7→8 W:7→8]
+  1231. P1 ♟→♛
+  1232. ✕ P4 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:8→7 Y:7→6 W:2→3]
+  1233. ✕ P6 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [Y:2→3 Z:2→3]
+  1234. P7 P[Y:4→5 W:5→4]
+  1235. 💬 P1 📢 ALL: “Focus pressure on P4.”
+  1236. ✕ P1 ♛ ✕ ♟ P6 ♛ Queen took Pawn! [Z:1→4]
+  1237. 💬 P4 📢 ALL: “P7 is gaining too much ground; collapse on them.”
+  1238. ✕ P4 ♟ ✕ ♛ P6 ♟ Pawn took Queen! [X:7→6 Y:2→3 Z:2→3]
+  1239. P6 P[Y:5→4]
+  1240. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:8→7 Y:5→6 W:4→3]
+  1241. ✕ P1 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [X:6→3 Z:4→7]
+  1242. ✕ P4 ♜ ✕ ♛ P1 ♜ Rook took Queen! [Z:8→7]
+  1243. 💬 P6 📢 ALL: “P1, let us spare one another for a few turns.”
+  1244. P6 P[Y:4→3]
+  1245. 💬 P7 📢 ALL: “P1, neither of us gains by fighting immediately.”
+  1246. P7 P[W:5→4]
+  1247. 💬 P1 📢 ALL: “If nobody checks P4, they run away with this.”
+  1248. P1 K[Y:5→6 Z:1→2]
+  1249. 💬 P4 → P1: “P1, let us spare one another for a few turns.”
+  1250. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:8→7 Y:2→3]
+  1251. P6 P[Y:5→4]
+  1252. P7 P[W:4→3]
+  1253. 💬 P1 📢 ALL: “P4, hold fire and we can survive this middle game.”
+  1254. P1 K[Z:2→3 W:4→5]
+  1255. ✕ P4 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:7→8 Y:3→4]
+  1256. 💬 P6 📢 ALL: “P1, I propose a brief truce while the board opens.”
+  1257. P6 P[Y:5→4 Z:4→5]
+  1258. 💬 P7 📢 ALL: “P1, let us spare one another for a few turns.”
+  1259. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [X:3→4 W:3→2]
+  1260. ✕ P1 ♚ ✕ ♟ P4 ♚ King took Pawn! [X:5→6 W:5→6]
+  1261. P4 P[W:5→6]
+  1262. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:2→1 Y:4→3 Z:5→6]
+  1263. ✕ P7 ♟ ✕ ♟ P4 ♟ Pawn took Pawn! [Y:1→2 W:2→1]
+  1264. P7 ♟→♛
+  1265. 💬 P1 📢 ALL: “P4, peace for now; we both have larger threats.”
+  1266. P1 K[X:6→5 Y:6→7]
+  1267. P4 P[Y:4→5 Z:4→5]
+  1268. P6 P[Y:3→2 Z:6→7]
+  1269. 💬 P7 📢 ALL: “Common threat: P4.”
+  1270. ✕ P7 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [Y:2→8 Z:8→2]
+  1271. 💬 P1 📢 ALL: “P4, keep your pieces off me and I will return the favor.”
+  1272. P1 K[Z:3→4 W:6→7]
+  1273. P4 P[Y:5→6 Z:5→6]
+  1274. P6 P[Y:2→1 Z:7→8]
+  1275. P6 ♟→♛
+  1276. ✕ P7 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [X:4→5 W:1→2]
+  1277. P1 K[Y:7→8 Z:4→5]
+  1278. P4 P[Y:6→7 Z:6→7]
+  1279. 💬 P6 📢 ALL: “P1, hold fire and we can survive this middle game.”
+  1280. P6 K[Z:2→3]
+  1281. ✕ P7 ♛ ✕ ♟ P4 ♛ Queen took Pawn! [X:5→3]
+  1282. P1 K[X:5→4 Z:5→6]
+  1283. 💬 P4 → P6: “Turn on P7; I will not trouble you meanwhile.”
+  1284. ✕ P4 ♟ ✕ ♚ P1 ♟ Pawn took King! [Z:7→6 W:8→7]
+  ★ ★ P4 eliminated P1! +6pcs ▶ replay path
+  1285. P6 P[Y:5→4 Z:4→5]
+  1286. ✕ P7 ♛ ✕ ♚ P4 ♛ Queen took King! [Z:2→8]
+  ★ ★ P7 eliminated P4! +152pcs ▶ replay path
+  1287. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [X:1→2 Y:4→3 Z:5→6]
+  1288. P7 P[W:6→7]
+  1289. 💬 P6 📢 ALL: “P7, let us spare one another for a few turns.”
+  1290. P6 P[Y:3→2 Z:6→7]
+  1291. 💬 P7 → P6: “Turn on P6; I will not trouble you meanwhile.”
+  1292. P7 P[W:7→8]
+  1293. P7 ♟→♞
+  1294. P6 P[Y:2→1 Z:7→8]
+  1295. P6 ♟→♞
+  1296. 💬 P7 → P6: “P6, let us spare one another for a few turns.”
+  1297. P7 P[Z:7→8 W:2→1]
+  1298. P7 ♟→♞
+  1299. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [Z:8→5]
+  1300. P7 P[Y:7→8 Z:2→1]
+  1301. P7 ♟→♞
+  1302. 💬 P6 → P7: “Pressure P7; their position is ripening.”
+  1303. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [X:1→7]
+  1304. 💬 P7 → P6: “Pressure P6; their position is ripening.”
+  1305. P7 P[Z:7→5]
+  1306. 💬 P6 → P7: “Turn on P7; I will not trouble you meanwhile.”
+  1307. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [X:7→3 W:8→4]
+  1308. 💬 P7 📢 ALL: “P6, I propose a brief truce while the board opens.”
+  1309. P7 P[Z:5→4]
+  1310. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [Y:1→5 W:4→8]
+  1311. 💬 P7 📢 ALL: “P6 is the board leader. Bring them down.”
+  1312. P7 P[Z:4→3]
+  1313. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [X:3→7]
+  1314. P7 P[Z:3→2]
+  1315. 💬 P6 → P7: “If we concentrate on P7, the board opens for both of us.”
+  1316. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [Z:5→8 W:8→5]
+  1317. 💬 P7 → P6: “If we concentrate on P6, the board opens for both of us.”
+  1318. P7 P[Z:2→1]
+  1319. P7 ♟→♞
+  1320. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [X:7→6]
+  1321. P7 P[Y:7→8 Z:7→8]
+  1322. P7 ♟→♞
+  1323. 💬 P6 → P7: “P7 is exposed. Strike there first.”
+  1324. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [X:6→2 Y:5→1]
+  1325. P7 P[Y:4→3 Z:5→6 W:5→6]
+  1326. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [Y:1→4 W:5→8]
+  1327. 💬 P7 → P6: “P6, peace for now; we both have larger threats.”
+  1328. P7 P[Y:3→2 Z:6→7 W:6→7]
+  1329. 💬 P6 → P7: “P7 is overextended. Push there now.”
+  1330. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [X:2→3]
+  1331. ✕ P7 ♟ ✕ ♞ P6 ♟ Pawn took Knight! [X:1→2 Y:2→1 Z:7→8 W:7→8]
+  1332. P7 ♟→♞
+  1333. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [X:3→1 Y:4→2]
+  1334. P7 P[Y:7→5]
+  1335. ✕ P6 ♛ ✕ ♞ P7 ♛ Queen took Knight! [X:1→2 Y:2→1]
+  1336. P7 P[Y:5→4]
+  1337. 💬 P6 → P7: “Leave me be and hit P7; they are the urgent threat.”
+  1338. ✕ P6 ♛ ✕ ♞ P7 ♛ Queen took Knight! [Z:8→1]
+  1339. ✕ P7 ♜ ✕ ♛ P6 ♜ Rook took Queen! [X:1→2]
+  1340. P6 P[Y:5→4]
+  1341. P7 P[Y:4→3]
+  1342. P6 P[Y:4→3]
+  1343. 💬 P7 → P6: “P6, hold fire and we can survive this middle game.”
+  1344. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:2→1 Y:2→3]
+  1345. P6 P[W:5→4]
+  1346. P7 P[Y:3→2]
+  1347. P6 P[Z:4→5]
+  1348. P7 P[Y:2→1]
+  1349. P7 ♟→♞
+  1350. P6 P[Z:5→6]
+  1351. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:6→7 Z:7→6]
+  1352. P6 P[W:4→3]
+  1353. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:7→8 W:2→3]
+  1354. P6 P[Z:4→5 W:5→4]
+  1355. P7 P[Y:5→4 Z:5→4 W:5→4]
+  1356. P6 P[Z:5→6 W:4→3]
+  1357. P7 P[Y:4→3 Z:4→3 W:4→3]
+  1358. P6 P[Z:4→5]
+  1359. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:7→8 Z:6→5]
+  1360. P6 P[Z:4→5]
+  1361. P7 P[Y:3→2 Z:3→2 W:3→2]
+  1362. 💬 P6 → P7: “Turn on P7; I will not trouble you meanwhile.”
+  1363. ✕ P6 ♟ ✕ ♟ P7 ♟ Pawn took Pawn! [Y:3→2 Z:1→2 W:3→2]
+  1364. P7 P[Y:2→4 W:2→4]
+  1365. 💬 P6 → P7: “P7 is exposed. Strike there first.”
+  1366. ✕ P6 ♟ ✕ ♞ P7 ♟ Pawn took Knight! [Y:2→1 Z:2→1 W:2→1]
+  1367. P6 ♟→♛
+  1368. 💬 P7 📢 ALL: “P6, neither of us gains by fighting immediately.”
+  1369. P7 P[Y:4→5 W:4→5]
+  1370. ✕ P6 ♛ ✕ ♞ P7 ♛ Queen took Knight! [Z:1→8]
+  1371. P7 P[Y:5→6 W:5→6]
+  1372. 💬 P6 📢 ALL: “All hands against P7.”
+  1373. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [Z:8→2 W:1→7]
+  1374. P7 P[Y:6→7 W:6→7]
+  1375. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [W:7→8]
+  1376. P7 P[Y:7→8 W:7→8]
+  1377. P7 ♟→♞
+  1378. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [Z:2→5]
+  1379. 💬 P7 → P6: “P6, keep your pieces off me and I will return the favor.”
+  1380. P7 P[Y:7→5 Z:2→4]
+  1381. 💬 P6 → P7: “Pressure P7; their position is ripening.”
+  1382. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [Z:5→8 W:8→5]
+  1383. P7 P[Y:5→4 Z:4→5]
+  1384. ✕ P6 ♛ ✕ ♟ P7 ♛ Queen took Pawn! [X:8→6 W:5→3]
+  1385. ✕ P7 ♟ ✕ ♛ P6 ♟ Pawn took Queen! [X:7→6 W:2→3]
+  1386. P6 P[Z:5→6]
+  1387. ✕ P7 ♟ ✕ ♟ P6 ♟ Pawn took Pawn! [X:1→2 Z:7→6]
+  1388. 💬 P6 → P7: “P7, peace for now; we both have larger threats.”
+  1389. P6 K[Y:8→7 W:7→8]
+  1390. 💬 P7 📢 ALL: “P6, I propose a brief truce while the board opens.”
+  1391. P7 P[Y:4→3 Z:5→6]
+  1392. P6 K[Y:7→6 Z:3→4]
+  1393. 💬 P7 → P6: “Leave me be and hit P6; they are the urgent threat.”
+  1394. P7 P[Y:7→5 Z:2→4]
+  1395. 💬 P6 📢 ALL: “P7 is the board leader. Bring them down.”
+  1396. P6 K[Y:6→5 Z:4→5]
+  1397. P7 P[Y:5→4 Z:4→5]
+  1398. P6 K[Z:5→6]
+  1399. P7 P[Y:4→3 Z:5→6]
+  1400. P6 K[X:5→6 Y:5→4]
+  1401. P7 P[Y:7→5 Z:7→5]
+  1402. 💬 P6 → P7: “If we concentrate on P7, the board opens for both of us.”
+  1403. P6 K[X:6→5 Y:4→3]
+  1404. P7 P[Y:5→4 Z:5→4]
+  1405. P6 K[X:5→4]
+  1406. 💬 P7 → P6: “P6 is exposed. Strike there first.”
+  1407. P7 P[Y:4→3 Z:4→3]
+  1408. 💬 P6 → P7: “P7, I propose a brief truce while the board opens.”
+  1409. P6 K[X:4→5]
+  1410. 💬 P7 → P6: “P6, let us spare one another for a few turns.”
+  1411. P7 P[Y:3→2 Z:3→2]
+  1412. P6 K[X:5→6]
+  1413. P7 P[Y:2→1 Z:2→1]
+  1414. P7 ♟→♞
+  1415. P6 K[X:6→5]
+  1416. P7 P[Z:7→5 W:2→4]
+  1417. P6 K[X:5→6]
+  1418. 💬 P7 → P6: “P6, neither of us gains by fighting immediately.”
+  1419. P7 P[Z:5→4 W:4→5]
+  1420. 💬 P6 📢 ALL: “P7, hold fire and we can survive this middle game.”
+  1421. P6 K[X:6→5]
+  1422. 💬 P7 → P6: “P6, peace for now; we both have larger threats.”
+  1423. P7 P[Z:4→3 W:5→6]
+  1424. P6 K[W:8→7]
+  1425. P7 P[Z:3→2 W:6→7]
+  1426. P6 K[X:5→6 W:7→8]
+  1427. P7 P[Z:2→1 W:7→8]
+  1428. P7 ♟→♞
+  1429. 💬 P6 → P7: “P7, neither of us gains by fighting immediately.”
+  1430. P6 K[X:6→5]
+  1431. P7 P[Z:2→4]
+  1432. P6 K[X:5→4]
+  1433. P7 P[Z:4→5]
+  1434. P6 K[X:4→5]
+  1435. 💬 P7 → P6: “P6 is overextended. Push there now.”
+  1436. P7 P[Z:5→6]
+  1437. P6 K[X:5→6 Z:6→5]
+  1438. 💬 P7 → P6: “Turn on P6; I will not trouble you meanwhile.”
+  1439. P7 P[Z:6→7]
+  1440. P6 K[X:6→5 Z:5→6]
+  1441. 💬 P7 → P6: “P6, hold fire and we can survive this middle game.”
+  1442. P7 P[Z:7→8]
+  1443. P7 ♟→♞
+  1444. 💬 P6 → P7: “P7 is overextended. Push there now.”
+  1445. P6 K[W:8→7]
+  1446. 💬 P7 📢 ALL: “P6, keep your pieces off me and I will return the favor.”
+  1447. P7 P[Z:7→5 W:2→4]
+  1448. P6 K[W:7→8]
+  1449. P7 P[Z:5→4 W:4→5]
+  1450. P6 K[W:8→7]
+  1451. 💬 P7 → P6: “Pressure P6; their position is ripening.”
+  1452. P7 P[Z:4→3 W:5→6]
+  1453. 💬 P6 → P7: “P7, keep your pieces off me and I will return the favor.”
+  1454. P6 K[W:7→8]
+  1455. 💬 P7 → P6: “P6, let us spare one another for a few turns.”
+  1456. P7 P[W:3→4]
+  1457. 💬 P6 → P7: “Leave me be and hit P7; they are the urgent threat.”
+  1458. P6 K[X:5→6]
+  1459. P7 P[W:4→5]
+  1460. P6 K[X:6→5]
+  1461. P7 P[W:5→6]
+  1462. 💬 P6 → P7: “Turn on P7; I will not trouble you meanwhile.”
+  1463. P6 K[W:8→7]
+  1464. 💬 P7 → P6: “If we concentrate on P6, the board opens for both of us.”
+  1465. P7 P[W:6→7]
+  1466. P6 K[W:7→8]
+  1467. P7 P[W:7→8]
+  1468. P7 ♟→♞
+  1469. 💬 P6 → P7: “Pressure P7; their position is ripening.”
+  1470. P6 K[Z:6→5]
+  1471. P7 P[Y:5→4 Z:5→4 W:4→5]
+  1472. P6 K[Z:5→6]
+  1473. 💬 P7 📢 ALL: “Common threat: P6.”
+  1474. P7 P[Y:4→3 Z:4→3 W:5→6]
+  1475. 💬 P6 → P7: “P7 is overextended. Push there now.”
+  1476. P6 K[X:5→6]
+  1477. P7 P[W:2→4]
+  1478. P6 K[X:6→5]
+  1479. 💬 P7 → P6: “P6 is exposed. Strike there first.”
+  1480. P7 P[W:4→5]
+  1481. 💬 P6 → P7: “P7 is exposed. Strike there first.”
+  1482. P6 K[X:5→4]
+  1483. 💬 P7 → P6: “P6, I propose a brief truce while the board opens.”
+  1484. P7 P[Z:2→4 W:7→5]
+  1485. 💬 P6 → P7: “P7, I propose a brief truce while the board opens.”
+  1486. P6 K[X:4→5]
+  1487. 💬 P7 → P6: “P6, hold fire and we can survive this middle game.”
+  1488. P7 P[Z:4→5 W:5→4]
+  1489. P6 K[X:5→4]
+  1490. P7 P[Z:5→6 W:4→3]
+  1491. P6 K[X:4→5]
+  1492. P7 P[Y:5→4]
+  1493. 💬 P6 → P7: “P7, let us spare one another for a few turns.”
+  1494. P6 K[W:8→7]
+  1495. P7 P[Y:4→3]
+  1496. P6 K[W:7→8]
+  1497. P7 P[W:5→6]
+  1498. 💬 P6 📢 ALL: “Common threat: P7.”
+  1499. P6 K[W:8→7]
+  1500. 💬 P7 → P6: “Leave me be and hit P6; they are the urgent threat.”
+  1501. P7 P[W:6→7]
+  1502. P6 K[W:7→8]
+  1503. 💬 P7 → P6: “P6, peace for now; we both have larger threats.”
+  1504. P7 P[W:7→8]
+  1505. P7 ♟→♞
+  1506. P6 K[X:5→4]
+  1507. P7 P[Y:5→4 Z:5→4 W:4→5]
+  1508. 💬 P6 → P7: “P7, hold fire and we can survive this middle game.”
+  1509. P6 K[X:4→5]
+  1510. 💬 P7 → P6: “P6 is overextended. Push there now.”
+  1511. P7 P[Y:4→3 Z:4→3 W:5→6]
+  1512. P6 K[Z:6→5]
+  1513. 💬 P7 → P6: “Turn on P6; I will not trouble you meanwhile.”
+  1514. P7 P[Y:3→4 Z:3→4]
+  1515. P6 K[Z:5→6]
+  1516. 💬 P7 → P6: “P6, let us spare one another for a few turns.”
+  1517. P7 P[Y:4→5 Z:4→5]
+  1518. 💬 P6 → P7: “P7, neither of us gains by fighting immediately.”
+  1519. P6 K[X:5→6]
+  1520. P7 P[Y:5→6 Z:5→6]
+  1521. P6 K[Y:3→2 Z:6→7]
+  1522. P7 P[Y:6→7 Z:6→7]
+  1523. ✕ P6 ♚ ✕ ♞ P7 ♚ King took Knight! [Y:2→1 Z:7→8]
+  1524. 💬 P7 → P6: “P6, I propose a brief truce while the board opens.”
+  1525. P7 P[Y:7→8 Z:7→8]
+  1526. P7 ♟→♞
+  1527. 💬 P6 → P7: “Pressure P7; their position is ripening.”
+  1528. ✕ P6 ♚ ✕ ♞ P7 ♚ King took Knight! [X:6→7]
+  1529. P7 P[Y:2→4]
+  1530. ✕ P6 ♚ ✕ ♞ P7 ♚ King took Knight! [X:7→8]
+  1531. P7 P[Y:4→5]
+  1532. ✕ P6 ♚ ✕ ♟ P7 ♚ King took Pawn! [Y:1→2]
+  1533. P7 P[Y:5→6]
+  1534. P6 K[X:8→7 Y:2→1]
+  1535. P7 P[W:2→4]
+  1536. P6 K[X:7→6]
+  1537. P7 P[W:4→5]
+  1538. P6 K[X:6→5]
+  1539. P7 P[W:5→6]
+  1540. P6 K[X:5→4]
+  1541. P7 P[W:2→4]
+  1542. P6 K[X:4→5]
+  1543. 💬 P7 → P6: “Pressure P6; their position is ripening.”
+  1544. P7 P[W:6→7]
+  1545. 💬 P6 → P7: “P7, peace for now; we both have larger threats.”
+  1546. P6 K[Y:1→2]
+  1547. 💬 P7 → P6: “If we concentrate on P6, the board opens for both of us.”
+  1548. P7 P[W:7→8]
+  1549. P7 ♟→♞
+  1550. P6 K[Y:2→1]
+  1551. P7 P[W:4→5]
+  1552. P6 K[X:5→4]
+  1553. 💬 P7 📢 ALL: “P6, neither of us gains by fighting immediately.”
+  1554. P7 P[W:5→6]
+  1555. ✕ P6 ♚ ✕ ♞ P7 ♚ King took Knight! [X:4→3]
+  1556. 💬 P7 → P6: “Turn on P6; I will not trouble you meanwhile.”
+  1557. ✕ P7 ♝ ✕ ♚ P6 ♝ Bishop took King! [Y:7→1 W:2→8]
+  ★ ★ P7 eliminated P6! +2pcs ▶ replay path
+
+────────────────────────────────────────
+Communications Transcript:
+    1. TURN 0 P1 📢 ALL [HUMAN:PSALMS]: "P2, let us spare one another for a few turns."
+    2. TURN 1 P2 → P1 [HUMAN:PSALMS]: "Turn on P3; I will not trouble you meanwhile."
+    3. TURN 4 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+    4. TURN 11 P4 → P1 [HUMAN:PSALMS]: "Turn on P2; I will not trouble you meanwhile."
+    5. TURN 12 P5 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+    6. TURN 13 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P2."
+    7. TURN 16 P1 📢 ALL [HUMAN:PSALMS]: "P3 is the board leader. Bring them down."
+    8. TURN 18 P3 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+    9. TURN 19 P4 → P3 [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+   10. TURN 21 P6 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+   11. TURN 24 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+   12. TURN 29 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P7."
+   13. TURN 32 P1 📢 ALL [HUMAN:PSALMS]: "P2 is the board leader. Bring them down."
+   14. TURN 34 P3 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+   15. TURN 37 P6 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   16. TURN 40 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P7."
+   17. TURN 41 P2 → P1 [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   18. TURN 42 P3 📢 ALL [HUMAN:PSALMS]: "All hands against P7."
+   19. TURN 44 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P1."
+   20. TURN 47 P8 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   21. TURN 48 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P3."
+   22. TURN 51 P4 → P6 [HUMAN:PSALMS]: "Turn on P7; I will not trouble you meanwhile."
+   23. TURN 52 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+   24. TURN 64 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P6."
+   25. TURN 72 P1 📢 ALL [HUMAN:PSALMS]: "P7 is the board leader. Bring them down."
+   26. TURN 76 P5 📢 ALL [HUMAN:PSALMS]: "P1 is the board leader. Bring them down."
+   27. TURN 77 P6 📢 ALL [HUMAN:PSALMS]: "P7 is the board leader. Bring them down."
+   28. TURN 79 P8 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+   29. TURN 80 P1 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+   30. TURN 81 P2 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+   31. TURN 82 P3 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+   32. TURN 84 P5 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+   33. TURN 85 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+   34. TURN 86 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+   35. TURN 90 P3 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+   36. TURN 92 P5 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+   37. TURN 98 P3 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+   38. TURN 99 P4 → P3 [HUMAN:PSALMS]: "P3, I propose a brief truce while the board opens."
+   39. TURN 100 P5 📢 ALL [HUMAN:PSALMS]: "If nobody checks P2, they run away with this."
+   40. TURN 101 P6 📢 ALL [HUMAN:PSALMS]: "If nobody checks P7, they run away with this."
+   41. TURN 104 P1 📢 ALL [HUMAN:PSALMS]: "P2, hold fire and we can survive this middle game."
+   42. TURN 106 P3 📢 ALL [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+   43. TURN 114 P3 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   44. TURN 117 P6 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+   45. TURN 118 P7 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+   46. TURN 121 P2 → P1 [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+   47. TURN 122 P3 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+   48. TURN 123 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+   49. TURN 125 P6 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P7."
+   50. TURN 128 P1 📢 ALL [HUMAN:PSALMS]: "P2, I propose a brief truce while the board opens."
+   51. TURN 130 P3 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+   52. TURN 134 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P6."
+   53. TURN 136 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P7."
+   54. TURN 140 P5 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+   55. TURN 142 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+   56. TURN 144 P1 📢 ALL [HUMAN:PSALMS]: "P6 is the board leader. Bring them down."
+   57. TURN 146 P3 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+   58. TURN 147 P4 → P3 [HUMAN:PSALMS]: "Pressure P6; their position is ripening."
+   59. TURN 150 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+   60. TURN 152 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+   61. TURN 153 P2 → P4 [HUMAN:PSALMS]: "P4, let us spare one another for a few turns."
+   62. TURN 157 P6 📢 ALL [HUMAN:PSALMS]: "Common threat: P7."
+   63. TURN 160 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P7, they run away with this."
+   64. TURN 166 P7 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+   65. TURN 168 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P6, they run away with this."
+   66. TURN 170 P3 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+   67. TURN 172 P5 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+   68. TURN 176 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P3, they run away with this."
+   69. TURN 180 P5 📢 ALL [HUMAN:PSALMS]: "If nobody checks P3, they run away with this."
+   70. TURN 183 P8 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+   71. TURN 184 P1 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P3."
+   72. TURN 185 P3 📢 ALL [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+   73. TURN 186 P4 → P3 [HUMAN:PSALMS]: "P3, neither of us gains by fighting immediately."
+   74. TURN 188 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+   75. TURN 190 P1 📢 ALL [HUMAN:PSALMS]: "P3 is the board leader. Bring them down."
+   76. TURN 191 P3 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+   77. TURN 192 P4 → P1 [HUMAN:PSALMS]: "Turn on P3; I will not trouble you meanwhile."
+   78. TURN 193 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+   79. TURN 196 P1 📢 ALL [HUMAN:PSALMS]: "P3, I propose a brief truce while the board opens."
+   80. TURN 197 P3 📢 ALL [HUMAN:PSALMS]: "All hands against P6."
+   81. TURN 200 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P3."
+   82. TURN 202 P1 📢 ALL [HUMAN:PSALMS]: "P3, let us spare one another for a few turns."
+   83. TURN 206 P7 📢 ALL [HUMAN:PSALMS]: "P3 is the board leader. Bring them down."
+   84. TURN 208 P1 📢 ALL [HUMAN:PSALMS]: "P3 is gaining too much ground; collapse on them."
+   85. TURN 209 P3 📢 ALL [HUMAN:PSALMS]: "P7 is the board leader. Bring them down."
+   86. TURN 215 P3 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+   87. TURN 216 P4 → P1 [HUMAN:PSALMS]: "Pressure P3; their position is ripening."
+   88. TURN 217 P6 📢 ALL [HUMAN:PSALMS]: "P3 is the board leader. Bring them down."
+   89. TURN 218 P7 📢 ALL [HUMAN:PSALMS]: "If nobody checks P3, they run away with this."
+   90. TURN 226 P1 📢 ALL [HUMAN:PSALMS]: "P3, neither of us gains by fighting immediately."
+   91. TURN 228 P4 → P1 [HUMAN:PSALMS]: "If we concentrate on P3, the board opens for both of us."
+   92. TURN 229 P6 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+   93. TURN 238 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+   94. TURN 239 P3 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+   95. TURN 244 P1 📢 ALL [HUMAN:PSALMS]: "P3 is the board leader. Bring them down."
+   96. TURN 247 P6 📢 ALL [HUMAN:PSALMS]: "If nobody checks P3, they run away with this."
+   97. TURN 248 P7 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P3."
+   98. TURN 251 P3 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+   99. TURN 256 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P3."
+  100. TURN 260 P7 📢 ALL [HUMAN:PSALMS]: "P3 is gaining too much ground; collapse on them."
+  101. TURN 262 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P3, they run away with this."
+  102. TURN 263 P3 📢 ALL [HUMAN:PSALMS]: "Common threat: P7."
+  103. TURN 265 P6 📢 ALL [HUMAN:PSALMS]: "Common threat: P3."
+  104. TURN 268 P1 📢 ALL [HUMAN:PSALMS]: "P3, peace for now; we both have larger threats."
+  105. TURN 269 P3 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  106. TURN 274 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P3."
+  107. TURN 275 P3 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+  108. TURN 278 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P3."
+  109. TURN 282 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+  110. TURN 283 P6 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  111. TURN 286 P1 📢 ALL [HUMAN:PSALMS]: "P3, hold fire and we can survive this middle game."
+  112. TURN 288 P4 → P1 [HUMAN:PSALMS]: "P3 is exposed. Strike there first."
+  113. TURN 289 P6 📢 ALL [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+  114. TURN 293 P3 📢 ALL [HUMAN:PSALMS]: "If nobody checks P7, they run away with this."
+  115. TURN 296 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P3."
+  116. TURN 301 P6 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+  117. TURN 304 P1 📢 ALL [HUMAN:PSALMS]: "P3, keep your pieces off me and I will return the favor."
+  118. TURN 306 P4 → P1 [HUMAN:PSALMS]: "Leave me be and hit P3; they are the urgent threat."
+  119. TURN 308 P7 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  120. TURN 310 P1 📢 ALL [HUMAN:PSALMS]: "P3, peace for now; we both have larger threats."
+  121. TURN 312 P4 → P1 [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  122. TURN 313 P6 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  123. TURN 323 P6 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  124. TURN 326 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  125. TURN 331 P1 📢 ALL [HUMAN:PSALMS]: "P8 is the board leader. Bring them down."
+  126. TURN 336 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P8."
+  127. TURN 338 P6 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  128. TURN 339 P7 📢 ALL [HUMAN:PSALMS]: "P8 is the board leader. Bring them down."
+  129. TURN 340 P8 → P7 [HUMAN:PSALMS]: "Pressure P4; their position is ripening."
+  130. TURN 341 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P8, they run away with this."
+  131. TURN 344 P7 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  132. TURN 349 P7 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  133. TURN 351 P1 📢 ALL [HUMAN:PSALMS]: "P8 is gaining too much ground; collapse on them."
+  134. TURN 354 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  135. TURN 366 P1 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P8."
+  136. TURN 368 P6 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+  137. TURN 374 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P8."
+  138. TURN 376 P1 📢 ALL [HUMAN:PSALMS]: "P4, let us spare one another for a few turns."
+  139. TURN 387 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  140. TURN 389 P7 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P8."
+  141. TURN 390 P8 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  142. TURN 399 P7 📢 ALL [HUMAN:PSALMS]: "If nobody checks P8, they run away with this."
+  143. TURN 401 P1 📢 ALL [HUMAN:PSALMS]: "P4, peace for now; we both have larger threats."
+  144. TURN 406 P1 📢 ALL [HUMAN:PSALMS]: "P4, I propose a brief truce while the board opens."
+  145. TURN 408 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  146. TURN 409 P7 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+  147. TURN 411 P1 📢 ALL [HUMAN:PSALMS]: "P4, hold fire and we can survive this middle game."
+  148. TURN 414 P7 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+  149. TURN 419 P7 📢 ALL [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+  150. TURN 424 P7 📢 ALL [HUMAN:PSALMS]: "P8 is gaining too much ground; collapse on them."
+  151. TURN 426 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  152. TURN 428 P6 📢 ALL [HUMAN:PSALMS]: "P8 is the board leader. Bring them down."
+  153. TURN 429 P7 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  154. TURN 434 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P8."
+  155. TURN 436 P1 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P8."
+  156. TURN 439 P7 📢 ALL [HUMAN:PSALMS]: "If nobody checks P8, they run away with this."
+  157. TURN 440 P8 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  158. TURN 443 P6 📢 ALL [HUMAN:PSALMS]: "If nobody checks P8, they run away with this."
+  159. TURN 445 P8 → P7 [HUMAN:PSALMS]: "P7, peace for now; we both have larger threats."
+  160. TURN 446 P1 📢 ALL [HUMAN:PSALMS]: "P8 is the board leader. Bring them down."
+  161. TURN 447 P4 📢 ALL [HUMAN:PSALMS]: "If nobody checks P8, they run away with this."
+  162. TURN 448 P6 📢 ALL [HUMAN:PSALMS]: "Common threat: P8."
+  163. TURN 449 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P8."
+  164. TURN 451 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P8."
+  165. TURN 452 P4 → P1 [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  166. TURN 458 P6 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P8."
+  167. TURN 461 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P8, they run away with this."
+  168. TURN 468 P7 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  169. TURN 469 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  170. TURN 472 P7 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  171. TURN 474 P4 → P1 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  172. TURN 480 P7 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  173. TURN 483 P6 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+  174. TURN 484 P7 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  175. TURN 485 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  176. TURN 493 P1 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  177. TURN 498 P4 📢 ALL [HUMAN:PSALMS]: "All hands against P7."
+  178. TURN 500 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  179. TURN 503 P6 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  180. TURN 504 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  181. TURN 506 P4 → P1 [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  182. TURN 507 P6 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  183. TURN 508 P7 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  184. TURN 509 P1 📢 ALL [HUMAN:PSALMS]: "P4, keep your pieces off me and I will return the favor."
+  185. TURN 517 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  186. TURN 523 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  187. TURN 524 P7 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  188. TURN 525 P1 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  189. TURN 528 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  190. TURN 529 P1 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  191. TURN 532 P7 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+  192. TURN 533 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  193. TURN 535 P6 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  194. TURN 536 P7 📢 ALL [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+  195. TURN 539 P6 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  196. TURN 540 P7 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  197. TURN 544 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  198. TURN 546 P4 → P1 [HUMAN:PSALMS]: "Pressure P7; their position is ripening."
+  199. TURN 548 P7 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+  200. TURN 549 P1 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  201. TURN 553 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  202. TURN 557 P1 📢 ALL [HUMAN:PSALMS]: "P4, neither of us gains by fighting immediately."
+  203. TURN 560 P7 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  204. TURN 561 P1 📢 ALL [HUMAN:PSALMS]: "P4, let us spare one another for a few turns."
+  205. TURN 564 P7 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  206. TURN 568 P7 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  207. TURN 569 P1 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  208. TURN 570 P4 📢 ALL [HUMAN:PSALMS]: "P7 is the board leader. Bring them down."
+  209. TURN 571 P6 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  210. TURN 573 P1 📢 ALL [HUMAN:PSALMS]: "P4, hold fire and we can survive this middle game."
+  211. TURN 574 P4 📢 ALL [HUMAN:PSALMS]: "If nobody checks P6, they run away with this."
+  212. TURN 575 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  213. TURN 576 P7 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  214. TURN 577 P1 📢 ALL [HUMAN:PSALMS]: "P4, peace for now; we both have larger threats."
+  215. TURN 581 P1 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  216. TURN 584 P7 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  217. TURN 585 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  218. TURN 587 P6 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  219. TURN 592 P7 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+  220. TURN 594 P4 → P6 [HUMAN:PSALMS]: "If we concentrate on P7, the board opens for both of us."
+  221. TURN 596 P7 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  222. TURN 597 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  223. TURN 598 P4 → P7 [HUMAN:PSALMS]: "If we concentrate on P6, the board opens for both of us."
+  224. TURN 599 P6 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  225. TURN 604 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  226. TURN 605 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  227. TURN 608 P7 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  228. TURN 609 P1 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  229. TURN 612 P7 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  230. TURN 613 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  231. TURN 617 P1 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  232. TURN 620 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  233. TURN 624 P7 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  234. TURN 626 P4 → P6 [HUMAN:PSALMS]: "P7 is exposed. Strike there first."
+  235. TURN 627 P6 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  236. TURN 628 P7 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  237. TURN 629 P1 📢 ALL [HUMAN:PSALMS]: "P4, I propose a brief truce while the board opens."
+  238. TURN 633 P1 📢 ALL [HUMAN:PSALMS]: "P4, keep your pieces off me and I will return the favor."
+  239. TURN 637 P1 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  240. TURN 640 P7 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  241. TURN 641 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  242. TURN 643 P6 📢 ALL [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+  243. TURN 644 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  244. TURN 646 P4 → P1 [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+  245. TURN 647 P6 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  246. TURN 648 P7 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  247. TURN 649 P1 📢 ALL [HUMAN:PSALMS]: "P4, neither of us gains by fighting immediately."
+  248. TURN 656 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  249. TURN 660 P7 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  250. TURN 661 P1 📢 ALL [HUMAN:PSALMS]: "P4, let us spare one another for a few turns."
+  251. TURN 663 P6 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  252. TURN 664 P7 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  253. TURN 667 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  254. TURN 673 P1 📢 ALL [HUMAN:PSALMS]: "P4, peace for now; we both have larger threats."
+  255. TURN 677 P1 📢 ALL [HUMAN:PSALMS]: "P4, I propose a brief truce while the board opens."
+  256. TURN 680 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  257. TURN 684 P7 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  258. TURN 685 P1 📢 ALL [HUMAN:PSALMS]: "P4, let us spare one another for a few turns."
+  259. TURN 686 P4 → P1 [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+  260. TURN 690 P4 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+  261. TURN 693 P1 📢 ALL [HUMAN:PSALMS]: "P4, peace for now; we both have larger threats."
+  262. TURN 700 P7 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+  263. TURN 701 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  264. TURN 705 P1 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  265. TURN 707 P6 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  266. TURN 708 P7 📢 ALL [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+  267. TURN 709 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  268. TURN 713 P1 📢 ALL [HUMAN:PSALMS]: "P4, I propose a brief truce while the board opens."
+  269. TURN 714 P4 → P1 [HUMAN:PSALMS]: "P6 is exposed. Strike there first."
+  270. TURN 715 P6 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  271. TURN 720 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  272. TURN 721 P1 📢 ALL [HUMAN:PSALMS]: "P4, hold fire and we can survive this middle game."
+  273. TURN 724 P7 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  274. TURN 726 P4 → P6 [HUMAN:PSALMS]: "P6, let us spare one another for a few turns."
+  275. TURN 727 P6 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  276. TURN 728 P7 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  277. TURN 736 P7 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  278. TURN 737 P1 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  279. TURN 739 P6 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  280. TURN 740 P7 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  281. TURN 743 P6 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  282. TURN 748 P7 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  283. TURN 749 P1 📢 ALL [HUMAN:PSALMS]: "P4, keep your pieces off me and I will return the favor."
+  284. TURN 752 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  285. TURN 756 P7 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  286. TURN 760 P7 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  287. TURN 765 P1 📢 ALL [HUMAN:PSALMS]: "P4, neither of us gains by fighting immediately."
+  288. TURN 766 P4 → P1 [HUMAN:PSALMS]: "P6 is overextended. Push there now."
+  289. TURN 769 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  290. TURN 776 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  291. TURN 777 P1 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  292. TURN 778 P4 📢 ALL [HUMAN:PSALMS]: "Common threat: P7."
+  293. TURN 780 P7 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  294. TURN 781 P1 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  295. TURN 782 P4 📢 ALL [HUMAN:PSALMS]: "Common threat: P6."
+  296. TURN 785 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  297. TURN 790 P4 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  298. TURN 796 P7 📢 ALL [HUMAN:PSALMS]: "P1, peace for now; we both have larger threats."
+  299. TURN 799 P6 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  300. TURN 800 P7 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+  301. TURN 803 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  302. TURN 808 P7 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  303. TURN 809 P1 📢 ALL [HUMAN:PSALMS]: "P4, let us spare one another for a few turns."
+  304. TURN 813 P1 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  305. TURN 815 P6 📢 ALL [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+  306. TURN 820 P7 📢 ALL [HUMAN:PSALMS]: "P4 is gaining too much ground; collapse on them."
+  307. TURN 822 P4 → P1 [HUMAN:PSALMS]: "Leave me be and hit P7; they are the urgent threat."
+  308. TURN 824 P7 📢 ALL [HUMAN:PSALMS]: "P1, keep your pieces off me and I will return the favor."
+  309. TURN 825 P1 📢 ALL [HUMAN:PSALMS]: "P4, hold fire and we can survive this middle game."
+  310. TURN 829 P1 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  311. TURN 833 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  312. TURN 834 P4 → P6 [HUMAN:PSALMS]: "P6, I propose a brief truce while the board opens."
+  313. TURN 838 P4 → P7 [HUMAN:PSALMS]: "P7, let us spare one another for a few turns."
+  314. TURN 844 P7 📢 ALL [HUMAN:PSALMS]: "All hands against P4."
+  315. TURN 845 P1 📢 ALL [HUMAN:PSALMS]: "P4 is the board leader. Bring them down."
+  316. TURN 849 P1 📢 ALL [HUMAN:PSALMS]: "Focus pressure on P4."
+  317. TURN 850 P4 📢 ALL [HUMAN:PSALMS]: "P7 is gaining too much ground; collapse on them."
+  318. TURN 855 P6 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  319. TURN 856 P7 📢 ALL [HUMAN:PSALMS]: "P1, neither of us gains by fighting immediately."
+  320. TURN 857 P1 📢 ALL [HUMAN:PSALMS]: "If nobody checks P4, they run away with this."
+  321. TURN 858 P4 → P1 [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  322. TURN 861 P1 📢 ALL [HUMAN:PSALMS]: "P4, hold fire and we can survive this middle game."
+  323. TURN 863 P6 📢 ALL [HUMAN:PSALMS]: "P1, I propose a brief truce while the board opens."
+  324. TURN 864 P7 📢 ALL [HUMAN:PSALMS]: "P1, let us spare one another for a few turns."
+  325. TURN 869 P1 📢 ALL [HUMAN:PSALMS]: "P4, peace for now; we both have larger threats."
+  326. TURN 872 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P4."
+  327. TURN 873 P1 📢 ALL [HUMAN:PSALMS]: "P4, keep your pieces off me and I will return the favor."
+  328. TURN 879 P6 📢 ALL [HUMAN:PSALMS]: "P1, hold fire and we can survive this middle game."
+  329. TURN 882 P4 → P6 [HUMAN:PSALMS]: "Turn on P7; I will not trouble you meanwhile."
+  330. TURN 887 P6 📢 ALL [HUMAN:PSALMS]: "P7, let us spare one another for a few turns."
+  331. TURN 888 P7 → P6 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  332. TURN 890 P7 → P6 [HUMAN:PSALMS]: "P6, let us spare one another for a few turns."
+  333. TURN 893 P6 → P7 [HUMAN:PSALMS]: "Pressure P7; their position is ripening."
+  334. TURN 894 P7 → P6 [HUMAN:PSALMS]: "Pressure P6; their position is ripening."
+  335. TURN 895 P6 → P7 [HUMAN:PSALMS]: "Turn on P7; I will not trouble you meanwhile."
+  336. TURN 896 P7 📢 ALL [HUMAN:PSALMS]: "P6, I propose a brief truce while the board opens."
+  337. TURN 898 P7 📢 ALL [HUMAN:PSALMS]: "P6 is the board leader. Bring them down."
+  338. TURN 901 P6 → P7 [HUMAN:PSALMS]: "If we concentrate on P7, the board opens for both of us."
+  339. TURN 902 P7 → P6 [HUMAN:PSALMS]: "If we concentrate on P6, the board opens for both of us."
+  340. TURN 905 P6 → P7 [HUMAN:PSALMS]: "P7 is exposed. Strike there first."
+  341. TURN 908 P7 → P6 [HUMAN:PSALMS]: "P6, peace for now; we both have larger threats."
+  342. TURN 909 P6 → P7 [HUMAN:PSALMS]: "P7 is overextended. Push there now."
+  343. TURN 915 P6 → P7 [HUMAN:PSALMS]: "Leave me be and hit P7; they are the urgent threat."
+  344. TURN 920 P7 → P6 [HUMAN:PSALMS]: "P6, hold fire and we can survive this middle game."
+  345. TURN 937 P6 → P7 [HUMAN:PSALMS]: "Turn on P7; I will not trouble you meanwhile."
+  346. TURN 939 P6 → P7 [HUMAN:PSALMS]: "P7 is exposed. Strike there first."
+  347. TURN 940 P7 📢 ALL [HUMAN:PSALMS]: "P6, neither of us gains by fighting immediately."
+  348. TURN 943 P6 📢 ALL [HUMAN:PSALMS]: "All hands against P7."
+  349. TURN 948 P7 → P6 [HUMAN:PSALMS]: "P6, keep your pieces off me and I will return the favor."
+  350. TURN 949 P6 → P7 [HUMAN:PSALMS]: "Pressure P7; their position is ripening."
+  351. TURN 955 P6 → P7 [HUMAN:PSALMS]: "P7, peace for now; we both have larger threats."
+  352. TURN 956 P7 📢 ALL [HUMAN:PSALMS]: "P6, I propose a brief truce while the board opens."
+  353. TURN 958 P7 → P6 [HUMAN:PSALMS]: "Leave me be and hit P6; they are the urgent threat."
+  354. TURN 959 P6 📢 ALL [HUMAN:PSALMS]: "P7 is the board leader. Bring them down."
+  355. TURN 965 P6 → P7 [HUMAN:PSALMS]: "If we concentrate on P7, the board opens for both of us."
+  356. TURN 968 P7 → P6 [HUMAN:PSALMS]: "P6 is exposed. Strike there first."
+  357. TURN 969 P6 → P7 [HUMAN:PSALMS]: "P7, I propose a brief truce while the board opens."
+  358. TURN 970 P7 → P6 [HUMAN:PSALMS]: "P6, let us spare one another for a few turns."
+  359. TURN 976 P7 → P6 [HUMAN:PSALMS]: "P6, neither of us gains by fighting immediately."
+  360. TURN 977 P6 📢 ALL [HUMAN:PSALMS]: "P7, hold fire and we can survive this middle game."
+  361. TURN 978 P7 → P6 [HUMAN:PSALMS]: "P6, peace for now; we both have larger threats."
+  362. TURN 983 P6 → P7 [HUMAN:PSALMS]: "P7, neither of us gains by fighting immediately."
+  363. TURN 988 P7 → P6 [HUMAN:PSALMS]: "P6 is overextended. Push there now."
+  364. TURN 990 P7 → P6 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  365. TURN 992 P7 → P6 [HUMAN:PSALMS]: "P6, hold fire and we can survive this middle game."
+  366. TURN 993 P6 → P7 [HUMAN:PSALMS]: "P7 is overextended. Push there now."
+  367. TURN 994 P7 📢 ALL [HUMAN:PSALMS]: "P6, keep your pieces off me and I will return the favor."
+  368. TURN 998 P7 → P6 [HUMAN:PSALMS]: "Pressure P6; their position is ripening."
+  369. TURN 999 P6 → P7 [HUMAN:PSALMS]: "P7, keep your pieces off me and I will return the favor."
+  370. TURN 1000 P7 → P6 [HUMAN:PSALMS]: "P6, let us spare one another for a few turns."
+  371. TURN 1001 P6 → P7 [HUMAN:PSALMS]: "Leave me be and hit P7; they are the urgent threat."
+  372. TURN 1005 P6 → P7 [HUMAN:PSALMS]: "Turn on P7; I will not trouble you meanwhile."
+  373. TURN 1006 P7 → P6 [HUMAN:PSALMS]: "If we concentrate on P6, the board opens for both of us."
+  374. TURN 1009 P6 → P7 [HUMAN:PSALMS]: "Pressure P7; their position is ripening."
+  375. TURN 1012 P7 📢 ALL [HUMAN:PSALMS]: "Common threat: P6."
+  376. TURN 1013 P6 → P7 [HUMAN:PSALMS]: "P7 is overextended. Push there now."
+  377. TURN 1016 P7 → P6 [HUMAN:PSALMS]: "P6 is exposed. Strike there first."
+  378. TURN 1017 P6 → P7 [HUMAN:PSALMS]: "P7 is exposed. Strike there first."
+  379. TURN 1018 P7 → P6 [HUMAN:PSALMS]: "P6, I propose a brief truce while the board opens."
+  380. TURN 1019 P6 → P7 [HUMAN:PSALMS]: "P7, I propose a brief truce while the board opens."
+  381. TURN 1020 P7 → P6 [HUMAN:PSALMS]: "P6, hold fire and we can survive this middle game."
+  382. TURN 1025 P6 → P7 [HUMAN:PSALMS]: "P7, let us spare one another for a few turns."
+  383. TURN 1029 P6 📢 ALL [HUMAN:PSALMS]: "Common threat: P7."
+  384. TURN 1030 P7 → P6 [HUMAN:PSALMS]: "Leave me be and hit P6; they are the urgent threat."
+  385. TURN 1032 P7 → P6 [HUMAN:PSALMS]: "P6, peace for now; we both have larger threats."
+  386. TURN 1035 P6 → P7 [HUMAN:PSALMS]: "P7, hold fire and we can survive this middle game."
+  387. TURN 1036 P7 → P6 [HUMAN:PSALMS]: "P6 is overextended. Push there now."
+  388. TURN 1038 P7 → P6 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+  389. TURN 1040 P7 → P6 [HUMAN:PSALMS]: "P6, let us spare one another for a few turns."
+  390. TURN 1041 P6 → P7 [HUMAN:PSALMS]: "P7, neither of us gains by fighting immediately."
+  391. TURN 1046 P7 → P6 [HUMAN:PSALMS]: "P6, I propose a brief truce while the board opens."
+  392. TURN 1047 P6 → P7 [HUMAN:PSALMS]: "Pressure P7; their position is ripening."
+  393. TURN 1062 P7 → P6 [HUMAN:PSALMS]: "Pressure P6; their position is ripening."
+  394. TURN 1063 P6 → P7 [HUMAN:PSALMS]: "P7, peace for now; we both have larger threats."
+  395. TURN 1064 P7 → P6 [HUMAN:PSALMS]: "If we concentrate on P6, the board opens for both of us."
+  396. TURN 1068 P7 📢 ALL [HUMAN:PSALMS]: "P6, neither of us gains by fighting immediately."
+  397. TURN 1070 P7 → P6 [HUMAN:PSALMS]: "Turn on P6; I will not trouble you meanwhile."
+
+────────────────────────────────────────
+Final Standings:
+  P 4 kills:2 caps:84 pieces:0
+  P 7 kills:2 caps:75 pieces:142
+  P 3 kills:2 caps:25 pieces:0
+  P 8 kills:1 caps:15 pieces:0
+  P 6 kills:0 caps:84 pieces:0
+  P 1 kills:0 caps:69 pieces:0
+  P 5 kills:0 caps:10 pieces:0
+  P 2 kills:0 caps:8 pieces:0
+
+────────────────────────────────────────
+8D Chess & Games — Copyright Taylor, 2003

@@ -213,7 +213,11 @@ const PIECE_SYM  = {P:'♟', R:'♜', N:'♞', B:'♝', Q:'♛', K:'♚'};
 const TYPE_MAP   = {Pawn:'P',Rook:'R',Knight:'N',Bishop:'B',Queen:'Q',King:'K',
                     P:'P',R:'R',N:'N',B:'B',Q:'Q',K:'K'};
 const PIECE_TYPES = ['P','R','N','B','Q','K'];
-const SM = Math.sqrt(128/NP);  // size multiplier: 1× at 128 players, 8× at 2 players
+const SM_raw = Math.sqrt(128/NP);  // larger for fewer players
+// Cap: pieces must not exceed ~20% of the board's world extent.
+// At 8D MAX_EXT≈987 the cap is huge (irrelevant); at 3D MAX_EXT=7 it keeps
+// pieces to ~1.4 world units instead of the uncapped ~34 that flood the camera.
+const SM = Math.min(SM_raw, Math.max(0.15, MAX_EXT * 0.20 / 6.0));
 const PIECE_SIZE = {P:2.2*SM, R:3.2*SM, N:3.2*SM, B:3.2*SM, Q:4.8*SM, K:6.0*SM};
 const TYPE_MAX   = {P:Math.min(130000,NP*1020), R:Math.min(2000,NP*16),
                     N:Math.min(2000,NP*16), B:Math.min(2000,NP*16),

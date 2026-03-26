@@ -24,6 +24,13 @@ const fs     = require('fs');
 const http   = require('http');
 const { spawn } = require('child_process');
 
+// ─── Redirect all Electron/Chromium data to F drive ──────────────────────────
+// Keeps the C drive (internal SSD) free; all game state lives in the project.
+const F_DATA = path.join('F:\\', '8d chess', 'electron-data');
+app.setPath('userData',  F_DATA);
+app.setPath('logs',      path.join(F_DATA, 'logs'));
+app.setPath('crashDumps', path.join(F_DATA, 'crashes'));
+
 // ─── Paths ────────────────────────────────────────────────────────────────────
 
 // In packaged mode resources live at process.resourcesPath;

@@ -1,0 +1,35 @@
+
+> nd-chess@47.0.0 start
+> electron . --enable-logging
+
+
+[electron] File server → http://127.0.0.1:3000/
+[electron] C++ engine: F:\8d chess\chess_engine.exe
+[electron] C++ engine ready.
+[electron] Python engine: F:\8d chess\engine_py.py :8769
+[electron] Waiting for Python engine…
+[8d-py] [8d-py] 8D Chess Engine v3.0 � port 8769
+[8d-py] Board: 8^8 hypercube | axes: X Y Z W V U T S | 128 players
+[8d-py] AI: 8 parallel workers � 16 enemies each
+[8d-py] [8d-py] Parallel pool: 8 workers ready
+[electron] Python engine ready :8769
+[electron] puzzle_engine not found — puzzle mode unavailable.
+[24320:0325/201148.700:INFO:CONSOLE(2)] "%cElectron Security Warning (Insecure Content-Security-Policy) font-weight: bold; This renderer process has either no Content Security
+  Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+  this app to unnecessary security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.", source: node:electron/js2c/sandbox_bundle (2)
+[24320:0325/201237.587:INFO:CONSOLE(2)] "%cElectron Security Warning (Insecure Content-Security-Policy) font-weight: bold; This renderer process has either no Content Security
+  Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+  this app to unnecessary security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.", source: node:electron/js2c/sandbox_bundle (2)
+[8d-py] [8d-py] new_game  id=vis3d  dims=3  players=4  pieces=128
+[cpp] exit null
+[8d-py] exit null

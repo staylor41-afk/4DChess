@@ -1,0 +1,682 @@
+8D Chess & Games — Move Record
+© Samuel M G Taylor, 2003
+────────────────────────────────────────
+Game: 8D Chess
+Date: 2026-03-22 00:56:35
+Players: 128 | Dimensions: 8D
+
+Players:
+  P 1 JOAB
+       Aggression:8 Foresight:5 Defensiveness:5 Patience:3
+       Regicide:7 Vendetta:6 Greed:5 Chaos:6 Attention:8
+  P 2 BARAK
+       Aggression:8 Foresight:4 Defensiveness:5 Patience:4
+       Regicide:7 Vendetta:7 Greed:4 Chaos:5 Attention:8
+  P 3 LOKI
+       Aggression:5 Foresight:4 Defensiveness:5 Patience:5
+       Regicide:5 Vendetta:3 Greed:4 Chaos:7 Attention:5
+  P 4 THOR
+       Aggression:8 Foresight:6 Defensiveness:4 Patience:5
+       Regicide:6 Vendetta:6 Greed:6 Chaos:5 Attention:7
+  P 5 AEGIR
+       Aggression:6 Foresight:7 Defensiveness:7 Patience:7
+       Regicide:7 Vendetta:3 Greed:4 Chaos:5 Attention:8
+  P 6 JOSIAH
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:2 Greed:4 Chaos:1 Attention:8
+  P 7 NEMESIS
+       Aggression:7 Foresight:5 Defensiveness:6 Patience:6
+       Regicide:8 Vendetta:3 Greed:3 Chaos:1 Attention:7
+  P 8 THESEUS
+       Aggression:7 Foresight:8 Defensiveness:5 Patience:5
+       Regicide:3 Vendetta:4 Greed:5 Chaos:3 Attention:7
+  P 9 MIRANDA
+       Aggression:5 Foresight:7 Defensiveness:6 Patience:7
+       Regicide:4 Vendetta:4 Greed:5 Chaos:2 Attention:6
+  P10 SOLOMON
+       Aggression:5 Foresight:8 Defensiveness:5 Patience:6
+       Regicide:4 Vendetta:3 Greed:8 Chaos:3 Attention:8
+  P11 LOKI
+       Aggression:4 Foresight:7 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:6 Greed:4 Chaos:2 Attention:8
+  P12 ODYSSEUS
+       Aggression:7 Foresight:7 Defensiveness:5 Patience:5
+       Regicide:4 Vendetta:4 Greed:4 Chaos:3 Attention:7
+  P13 MATTHEW
+       Aggression:4 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:4 Vendetta:1 Greed:8 Chaos:2 Attention:8
+  P14 PAUL
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:5 Vendetta:1 Greed:3 Chaos:2 Attention:8
+  P15 DEMETER
+       Aggression:4 Foresight:7 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:7 Chaos:2 Attention:8
+  P16 ENYO
+       Aggression:7 Foresight:6 Defensiveness:4 Patience:4
+       Regicide:6 Vendetta:7 Greed:5 Chaos:6 Attention:8
+  P17 ANDREW
+       Aggression:7 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:3 Vendetta:4 Greed:5 Chaos:2 Attention:6
+  P18 HERA
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:1 Greed:3 Chaos:2 Attention:8
+  P19 PARANOID
+       Aggression:6 Foresight:7 Defensiveness:5 Patience:5
+       Regicide:5 Vendetta:7 Greed:3 Chaos:4 Attention:7
+  P20 MICHAEL
+       Aggression:8 Foresight:7 Defensiveness:4 Patience:4
+       Regicide:7 Vendetta:5 Greed:4 Chaos:3 Attention:7
+  P21 ORPHEUS
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:6 Vendetta:3 Greed:6 Chaos:4 Attention:8
+  P22 CHLOE
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:4 Vendetta:2 Greed:8 Chaos:1 Attention:8
+  P23 CHARYBDIS
+       Aggression:4 Foresight:5 Defensiveness:4 Patience:5
+       Regicide:4 Vendetta:5 Greed:5 Chaos:8 Attention:4
+  P24 ULLR
+       Aggression:7 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:6 Vendetta:3 Greed:5 Chaos:4 Attention:8
+  P25 TAMAR
+       Aggression:5 Foresight:6 Defensiveness:7 Patience:7
+       Regicide:6 Vendetta:5 Greed:3 Chaos:2 Attention:7
+  P26 ANNA
+       Aggression:5 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:5 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P27 PERSEUS
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:3 Greed:4 Chaos:3 Attention:8
+  P28 LUKE
+       Aggression:4 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:6 Vendetta:1 Greed:3 Chaos:1 Attention:8
+  P29 ABNER
+       Aggression:7 Foresight:5 Defensiveness:4 Patience:5
+       Regicide:6 Vendetta:8 Greed:6 Chaos:5 Attention:6
+  P30 DOLOS
+       Aggression:4 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:5 Greed:3 Chaos:4 Attention:7
+  P31 THEMIS
+       Aggression:4 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:5 Vendetta:1 Greed:4 Chaos:1 Attention:8
+  P32 MIMIR
+       Aggression:7 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:5 Vendetta:4 Greed:6 Chaos:5 Attention:7
+  P33 VENICE
+       Aggression:3 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:4 Vendetta:3 Greed:8 Chaos:2 Attention:7
+  P34 DEBORAH
+       Aggression:4 Foresight:7 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:2 Greed:2 Chaos:1 Attention:8
+  P35 EZRA
+       Aggression:4 Foresight:7 Defensiveness:8 Patience:8
+       Regicide:6 Vendetta:1 Greed:3 Chaos:1 Attention:8
+  P36 ACHILLES
+       Aggression:6 Foresight:6 Defensiveness:6 Patience:5
+       Regicide:8 Vendetta:4 Greed:4 Chaos:1 Attention:8
+  P37 SARIEL
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:8
+       Regicide:7 Vendetta:1 Greed:2 Chaos:1 Attention:8
+  P38 BALDR
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:8
+       Regicide:6 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P39 HERMES
+       Aggression:7 Foresight:8 Defensiveness:5 Patience:6
+       Regicide:6 Vendetta:4 Greed:5 Chaos:6 Attention:8
+  P40 JASON
+       Aggression:6 Foresight:6 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:4 Chaos:1 Attention:7
+  P41 SAVAGE
+       Aggression:8 Foresight:5 Defensiveness:4 Patience:4
+       Regicide:6 Vendetta:7 Greed:5 Chaos:5 Attention:7
+  P42 JOSEPH
+       Aggression:3 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:4 Vendetta:2 Greed:8 Chaos:3 Attention:8
+  P43 TYR
+       Aggression:7 Foresight:5 Defensiveness:6 Patience:5
+       Regicide:8 Vendetta:4 Greed:2 Chaos:2 Attention:8
+  P44 THOR
+       Aggression:6 Foresight:7 Defensiveness:6 Patience:5
+       Regicide:8 Vendetta:3 Greed:3 Chaos:3 Attention:7
+  P45 ELIJAH
+       Aggression:6 Foresight:7 Defensiveness:7 Patience:8
+       Regicide:7 Vendetta:2 Greed:5 Chaos:4 Attention:8
+  P46 SOLOMON
+       Aggression:4 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P47 NJORD
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:6 Vendetta:2 Greed:5 Chaos:6 Attention:8
+  P48 REGICIDAL
+       Aggression:7 Foresight:6 Defensiveness:5 Patience:5
+       Regicide:8 Vendetta:4 Greed:3 Chaos:2 Attention:7
+  P49 CADMUS
+       Aggression:6 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:4 Vendetta:2 Greed:5 Chaos:2 Attention:7
+  P50 SIMEON
+       Aggression:4 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:7 Vendetta:1 Greed:3 Chaos:1 Attention:8
+  P51 RAPHAEL
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:2 Greed:3 Chaos:2 Attention:8
+  P52 DIOMEDES
+       Aggression:7 Foresight:5 Defensiveness:5 Patience:5
+       Regicide:7 Vendetta:6 Greed:4 Chaos:4 Attention:8
+  P53 SIGURD
+       Aggression:7 Foresight:5 Defensiveness:5 Patience:4
+       Regicide:6 Vendetta:7 Greed:6 Chaos:4 Attention:8
+  P54 HERACLES
+       Aggression:6 Foresight:6 Defensiveness:5 Patience:6
+       Regicide:8 Vendetta:5 Greed:4 Chaos:2 Attention:6
+  P55 CUNNING
+       Aggression:6 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:3 Greed:4 Chaos:2 Attention:7
+  P56 LYDIA
+       Aggression:5 Foresight:8 Defensiveness:5 Patience:6
+       Regicide:3 Vendetta:3 Greed:8 Chaos:3 Attention:8
+  P57 RUTH
+       Aggression:4 Foresight:8 Defensiveness:5 Patience:8
+       Regicide:5 Vendetta:1 Greed:8 Chaos:2 Attention:8
+  P58 CADMUS
+       Aggression:6 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:6 Vendetta:2 Greed:6 Chaos:5 Attention:8
+  P59 TRICKSTER
+       Aggression:6 Foresight:5 Defensiveness:3 Patience:3
+       Regicide:4 Vendetta:5 Greed:4 Chaos:8 Attention:5
+  P60 DAVID
+       Aggression:8 Foresight:5 Defensiveness:4 Patience:4
+       Regicide:5 Vendetta:8 Greed:6 Chaos:5 Attention:6
+  P61 ARTEMIS
+       Aggression:8 Foresight:6 Defensiveness:4 Patience:4
+       Regicide:8 Vendetta:5 Greed:3 Chaos:3 Attention:7
+  P62 HESTIA
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:4 Vendetta:1 Greed:8 Chaos:3 Attention:8
+  P63 MARTHA
+       Aggression:5 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:5 Vendetta:3 Greed:8 Chaos:2 Attention:7
+  P64 PHOEBE
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:5 Vendetta:1 Greed:7 Chaos:1 Attention:8
+  P65 JOSHUA
+       Aggression:8 Foresight:5 Defensiveness:3 Patience:5
+       Regicide:7 Vendetta:6 Greed:5 Chaos:5 Attention:7
+  P66 ORION
+       Aggression:6 Foresight:7 Defensiveness:5 Patience:5
+       Regicide:8 Vendetta:4 Greed:3 Chaos:3 Attention:8
+  P67 TIMOTHY
+       Aggression:6 Foresight:7 Defensiveness:5 Patience:7
+       Regicide:5 Vendetta:2 Greed:4 Chaos:2 Attention:7
+  P68 NEMESIS
+       Aggression:4 Foresight:7 Defensiveness:6 Patience:7
+       Regicide:5 Vendetta:7 Greed:4 Chaos:3 Attention:6
+  P69 RAHAB
+       Aggression:6 Foresight:8 Defensiveness:5 Patience:5
+       Regicide:4 Vendetta:7 Greed:4 Chaos:4 Attention:7
+  P70 STEADY
+       Aggression:4 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P71 SCYLLA
+       Aggression:6 Foresight:6 Defensiveness:4 Patience:3
+       Regicide:4 Vendetta:4 Greed:4 Chaos:7 Attention:5
+  P72 ECONOMIST
+       Aggression:4 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:4 Vendetta:2 Greed:8 Chaos:2 Attention:8
+  P73 BARNABAS
+       Aggression:7 Foresight:6 Defensiveness:6 Patience:5
+       Regicide:5 Vendetta:4 Greed:4 Chaos:2 Attention:6
+  P74 METIS
+       Aggression:6 Foresight:6 Defensiveness:6 Patience:5
+       Regicide:6 Vendetta:7 Greed:3 Chaos:3 Attention:6
+  P75 BOAZ
+       Aggression:4 Foresight:7 Defensiveness:7 Patience:8
+       Regicide:5 Vendetta:1 Greed:8 Chaos:1 Attention:8
+  P76 VIDAR
+       Aggression:8 Foresight:4 Defensiveness:4 Patience:3
+       Regicide:7 Vendetta:8 Greed:5 Chaos:5 Attention:6
+  P77 GABRIEL
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:6 Vendetta:3 Greed:3 Chaos:2 Attention:8
+  P78 CIRCE
+       Aggression:5 Foresight:7 Defensiveness:5 Patience:7
+       Regicide:6 Vendetta:5 Greed:3 Chaos:3 Attention:7
+  P79 GIDEON
+       Aggression:8 Foresight:6 Defensiveness:5 Patience:5
+       Regicide:7 Vendetta:5 Greed:4 Chaos:2 Attention:6
+  P80 BEZALEL
+       Aggression:5 Foresight:7 Defensiveness:7 Patience:6
+       Regicide:6 Vendetta:3 Greed:3 Chaos:1 Attention:7
+  P81 MORDECAI
+       Aggression:5 Foresight:7 Defensiveness:8 Patience:6
+       Regicide:7 Vendetta:3 Greed:3 Chaos:1 Attention:7
+  P82 FREYR
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:2 Greed:8 Chaos:1 Attention:8
+  P83 SKADI
+       Aggression:8 Foresight:7 Defensiveness:5 Patience:4
+       Regicide:8 Vendetta:4 Greed:3 Chaos:1 Attention:7
+  P84 FRIGG
+       Aggression:4 Foresight:7 Defensiveness:8 Patience:7
+       Regicide:7 Vendetta:2 Greed:2 Chaos:1 Attention:8
+  P85 NEHEMIAH
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:3 Greed:4 Chaos:2 Attention:8
+  P86 PHINEHAS
+       Aggression:6 Foresight:6 Defensiveness:6 Patience:6
+       Regicide:8 Vendetta:3 Greed:2 Chaos:1 Attention:8
+  P87 ESTHER
+       Aggression:4 Foresight:8 Defensiveness:8 Patience:8
+       Regicide:6 Vendetta:1 Greed:4 Chaos:1 Attention:8
+  P88 FENRIR
+       Aggression:5 Foresight:5 Defensiveness:3 Patience:5
+       Regicide:5 Vendetta:3 Greed:4 Chaos:8 Attention:5
+  P89 JOSEPH
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:5 Vendetta:2 Greed:4 Chaos:1 Attention:8
+  P90 HEIMDALL
+       Aggression:4 Foresight:8 Defensiveness:8 Patience:6
+       Regicide:6 Vendetta:1 Greed:3 Chaos:2 Attention:8
+  P91 EXPLORER
+       Aggression:6 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:6 Vendetta:3 Greed:5 Chaos:5 Attention:8
+  P92 JAEL
+       Aggression:8 Foresight:5 Defensiveness:5 Patience:4
+       Regicide:8 Vendetta:5 Greed:3 Chaos:2 Attention:6
+  P93 MIRIAM
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:4 Vendetta:2 Greed:4 Chaos:3 Attention:7
+  P94 SIF
+       Aggression:5 Foresight:8 Defensiveness:8 Patience:6
+       Regicide:6 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P95 METIS
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:8
+       Regicide:6 Vendetta:1 Greed:2 Chaos:1 Attention:8
+  P96 BELLEROPHON
+       Aggression:5 Foresight:7 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P97 MICHAL
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:5 Vendetta:5 Greed:4 Chaos:3 Attention:7
+  P98 URIEL
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:5 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P99 ALECTO
+       Aggression:7 Foresight:6 Defensiveness:6 Patience:4
+       Regicide:8 Vendetta:3 Greed:3 Chaos:3 Attention:8
+  P100 ACHILLES
+       Aggression:8 Foresight:6 Defensiveness:3 Patience:3
+       Regicide:5 Vendetta:8 Greed:6 Chaos:6 Attention:7
+  P101 JOHN
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:4 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P102 DANIEL
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:3 Chaos:2 Attention:8
+  P103 PHILIP
+       Aggression:5 Foresight:7 Defensiveness:7 Patience:6
+       Regicide:4 Vendetta:3 Greed:5 Chaos:1 Attention:8
+  P104 URIEL
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:3 Greed:4 Chaos:2 Attention:8
+  P105 JONATHAN
+       Aggression:6 Foresight:6 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:3 Greed:3 Chaos:2 Attention:8
+  P106 MICHAEL
+       Aggression:4 Foresight:7 Defensiveness:8 Patience:8
+       Regicide:7 Vendetta:1 Greed:3 Chaos:1 Attention:8
+  P107 JASON
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:7 Vendetta:2 Greed:4 Chaos:4 Attention:8
+  P108 AJAX
+       Aggression:8 Foresight:4 Defensiveness:5 Patience:5
+       Regicide:7 Vendetta:6 Greed:5 Chaos:4 Attention:7
+  P109 ARES
+       Aggression:8 Foresight:5 Defensiveness:3 Patience:3
+       Regicide:6 Vendetta:8 Greed:5 Chaos:6 Attention:7
+  P110 BENAIAH
+       Aggression:8 Foresight:6 Defensiveness:4 Patience:3
+       Regicide:6 Vendetta:7 Greed:5 Chaos:4 Attention:7
+  P111 PAUL
+       Aggression:7 Foresight:8 Defensiveness:5 Patience:6
+       Regicide:5 Vendetta:4 Greed:6 Chaos:6 Attention:8
+  P112 JUDITH
+       Aggression:7 Foresight:7 Defensiveness:5 Patience:6
+       Regicide:8 Vendetta:3 Greed:4 Chaos:2 Attention:7
+  P113 FORSETI
+       Aggression:4 Foresight:8 Defensiveness:8 Patience:6
+       Regicide:7 Vendetta:1 Greed:3 Chaos:2 Attention:8
+  P114 JEHU
+       Aggression:7 Foresight:6 Defensiveness:4 Patience:6
+       Regicide:8 Vendetta:3 Greed:3 Chaos:2 Attention:7
+  P115 ATHENA
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:5 Vendetta:3 Greed:3 Chaos:2 Attention:8
+  P116 ATE
+       Aggression:5 Foresight:5 Defensiveness:5 Patience:3
+       Regicide:5 Vendetta:3 Greed:4 Chaos:8 Attention:6
+  P117 DAEDALUS
+       Aggression:7 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:7 Vendetta:4 Greed:5 Chaos:5 Attention:7
+  P118 ARIADNE
+       Aggression:6 Foresight:7 Defensiveness:7 Patience:5
+       Regicide:5 Vendetta:2 Greed:4 Chaos:3 Attention:8
+  P119 ABIGAIL
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:3 Vendetta:3 Greed:8 Chaos:2 Attention:7
+  P120 SAMSON
+       Aggression:7 Foresight:6 Defensiveness:5 Patience:4
+       Regicide:6 Vendetta:6 Greed:5 Chaos:6 Attention:7
+  P121 ABIGAIL
+       Aggression:7 Foresight:8 Defensiveness:6 Patience:5
+       Regicide:4 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P122 PAN
+       Aggression:6 Foresight:6 Defensiveness:3 Patience:3
+       Regicide:3 Vendetta:5 Greed:5 Chaos:8 Attention:5
+  P123 EZEKIEL
+       Aggression:6 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:7 Vendetta:2 Greed:5 Chaos:6 Attention:8
+  P124 ANNA
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P125 ODYSSEUS
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:6 Vendetta:3 Greed:5 Chaos:6 Attention:8
+  P126 NESTOR
+       Aggression:6 Foresight:8 Defensiveness:5 Patience:8
+       Regicide:7 Vendetta:2 Greed:5 Chaos:5 Attention:8
+  P127 ENOCH
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:6 Vendetta:4 Greed:6 Chaos:5 Attention:7
+  P128 CROESUS
+       Aggression:4 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:1 Greed:8 Chaos:3 Attention:8
+
+────────────────────────────────────────
+Snapshot: Midgame
+Current Turn: P23
+Move Log:
+
+    1. ✕ P1 ♜ × ♜ P5 ♜ Rook took Rook! [W:1→8]
+    2. ✕ P2 ♜ × ♜ P66 ♜ Rook took Rook! [S:1→8]
+    3. ✕ P3 ♜ × ♜ P11 ♜ Rook took Rook! [V:1→8]
+    4. ✕ P4 ♜ × ♜ P68 ♜ Rook took Rook! [S:1→8]
+    5. ✕ P5 ♛ × ♛ P21 ♛ Queen took Queen! [U:1→8]
+    6. ✕ P6 ♜ × ♜ P14 ♜ Rook took Rook! [V:1→8]
+    7. ✕ P7 ♜ × ♜ P23 ♜ Rook took Rook! [U:1→8]
+    8. ✕ P8 ♜ × ♜ P40 ♜ Rook took Rook! [T:1→8]
+    9. ✕ P9 ♜ × ♜ P25 ♜ Rook took Rook! [U:1→8]
+   10. ✕ P10 ♜ × ♜ P26 ♜ Rook took Rook! [U:1→8]
+   11. ✕ P11 ♛ × ♛ P107 ♛ Queen took Queen! [T:1→8 S:1→8]
+   12. ✕ P12 ♜ × ♜ P3 ♜ Rook took Rook! [Y:8→1]
+   13. ✕ P13 ♜ × ♜ P29 ♜ Rook took Rook! [U:1→8]
+   14. ✕ P14 ♛ × ♛ P6 ♛ Queen took Queen! [V:8→1]
+   15. ✕ P15 ♜ × ♜ P12 ♜ Rook took Rook! [W:8→1]
+   16. ✕ P16 ♜ × ♜ P6 ♜ Rook took Rook! [Z:8→1]
+   17. ✕ P17 ♜ × ♜ P9 ♜ Rook took Rook! [V:1→8]
+   18. ✕ P18 ♜ × ♜ P10 ♜ Rook took Rook! [V:1→8]
+   19. ✕ P19 ♜ × ♜ P20 ♜ Rook took Rook! [Y:1→8]
+   20. ✕ P20 ♛ × ♛ P4 ♛ Queen took Queen! [U:8→1]
+   21. P21 ♚ [Y:1→2 U:8→7]
+   22. ✕ P22 ♜ × ♜ P54 ♜ Rook took Rook! [T:1→8]
+   23. P23 ♟ [Y:2→4 Z:7→5 W:7→5 V:2→4 U:7→5 T:2→4 S:2→4]
+   24. ✕ P24 ♜ × ♜ P32 ♜ Rook took Rook! [V:1→8]
+   25. ✕ P25 ♝ × ♝ P19 ♝ Bishop took Bishop! [Z:1→8 V:8→1]
+   26. ✕ P26 ♜ × ♜ P18 ♜ Rook took Rook! [V:8→1]
+   27. ✕ P27 ♜ × ♜ P59 ♜ Rook took Rook! [T:1→8]
+   28. ✕ P28 ♜ × ♜ P19 ♜ Rook took Rook! [V:8→1]
+   29. ✕ P29 ♝ × ♝ P15 ♝ Bishop took Bishop! [Z:1→8 U:8→1]
+   30. ✕ P30 ♜ × ♜ P16 ♜ Rook took Rook! [U:8→1]
+   31. ✕ P31 ♛ × ♛ P27 ♛ Queen took Queen! [W:8→1]
+   32. ✕ P32 ♝ × ♝ P56 ♝ Bishop took Bishop! [V:8→1 T:1→8]
+   33. ✕ P33 ♜ × ♜ P37 ♜ Rook took Rook! [W:1→8]
+   34. ✕ P34 ♜ × ♜ P38 ♜ Rook took Rook! [W:1→8]
+   35. ✕ P35 ♛ × ♛ P51 ♛ Queen took Queen! [U:1→8]
+   36. ✕ P36 ♜ × ♜ P44 ♜ Rook took Rook! [V:1→8]
+   37. ✕ P37 ♛ × ♛ P53 ♛ Queen took Queen! [U:1→8]
+   38. ✕ P38 ♛ × ♛ P14 ♛ Queen took Queen! [T:8→1]
+   39. ✕ P39 ♜ × ♜ P47 ♜ Rook took Rook! [V:1→8]
+   40. ✕ P40 ♝ × ♝ P46 ♝ Bishop took Bishop! [Z:8→1 V:1→8]
+   41. ✕ P41 ♛ × ♛ P34 ♛ Queen took Queen! [Y:1→8 V:8→1]
+   42. ✕ P42 ♜ × ♜ P41 ♜ Rook took Rook! [Y:8→1]
+   43. ✕ P43 ♜ × ♜ P36 ♜ Rook took Rook! [Y:1→8]
+   44. ✕ P44 ♛ × ♛ P60 ♛ Queen took Queen! [U:1→8]
+   45. ✕ P45 ♜ × ♜ P46 ♜ Rook took Rook! [Y:1→8]
+   46. ✕ P46 ♛ × ♛ P64 ♛ Queen took Queen! [Z:1→8 U:1→8]
+   47. ✕ P47 ♜ × ♜ P39 ♜ Rook took Rook! [V:8→1]
+   48. ✕ P48 ♜ × ♜ P43 ♜ Rook took Rook! [W:8→1]
+   49. ✕ P49 ♜ × ♜ P53 ♜ Rook took Rook! [W:1→8]
+   50. ✕ P50 ♜ × ♜ P52 ♜ Rook took Rook! [Z:1→8]
+   51. P51 ♚ [W:1→2 U:8→7]
+   52. ✕ P52 ♛ × ♛ P36 ♛ Queen took Queen! [U:8→1]
+   53. P53 ♚ [Z:1→2 S:1→2]
+   54. ✕ P54 ♛ × ♛ P18 ♛ Queen took Queen! [W:8→1 T:8→1]
+   55. ✕ P55 ♜ × ♜ P56 ♜ Rook took Rook! [Y:1→8]
+   56. ✕ P56 ♛ × ♛ P23 ♛ Queen took Queen! [Y:8→1 T:8→1]
+   57. ✕ P57 ♜ × ♜ P17 ♜ Rook took Rook! [T:8→1]
+   58. ✕ P58 ♜ × ♜ P57 ♜ Rook took Rook! [Y:8→1]
+   59. ✕ P59 ♝ × ♝ P121 ♝ Bishop took Bishop! [Z:8→1 S:1→8]
+   60. P60 ♚ [Y:8→7 V:8→7]
+   61. ✕ P61 ♜ × ♜ P125 ♜ Rook took Rook! [S:1→8]
+   62. ✕ P62 ♜ × ♜ P126 ♜ Rook took Rook! [S:1→8]
+   63. ✕ P63 ♜ × ♜ P39 ♜ Rook took Rook! [U:8→1]
+   64. P64 ♚ [W:8→7 V:8→7]
+   65. ✕ P65 ♜ × ♜ P97 ♜ Rook took Rook! [T:1→8]
+   66. ✕ P66 ♛ × ♛ P41 ♛ Queen took Queen! [T:1→8 S:8→1]
+   67. ✕ P67 ♝ × ♝ P91 ♝ Bishop took Bishop! [V:1→8 U:1→8]
+   68. P68 ♟ [Y:7→5 Z:7→5 W:2→4 V:2→4 U:2→4 T:2→4 S:7→5]
+   69. ✕ P69 ♛ × ♛ P1 ♛ Queen took Queen! [W:8→1 S:8→1]
+   70. ✕ P70 ♝ × ♝ P88 ♝ Bishop took Bishop! [Z:1→8 U:1→8]
+   71. ✕ P71 ♜ × ♜ P67 ♜ Rook took Rook! [W:8→1]
+   72. P72 ♟ [Y:7→5 Z:7→5 W:7→5 V:2→4 U:2→4 T:2→4 S:7→5]
+   73. ✕ P73 ♜ × ♜ P105 ♜ Rook took Rook! [T:1→8]
+   74. ✕ P74 ♜ × ♜ P78 ♜ Rook took Rook! [W:1→8]
+   75. ✕ P75 ♜ × ♜ P71 ♜ Rook took Rook! [V:8→1]
+   76. ✕ P76 ♜ × ♜ P92 ♜ Rook took Rook! [U:1→8]
+   77. ✕ P77 ♜ × ♜ P78 ♜ Rook took Rook! [Y:1→8]
+   78. ✕ P78 ♝ × ♝ P30 ♝ Bishop took Bishop! [U:1→8 S:8→1]
+   79. ✕ P79 ♜ × ♜ P111 ♜ Rook took Rook! [T:1→8]
+   80. ✕ P80 ♜ × ♜ P72 ♜ Rook took Rook! [V:8→1]
+   81. ✕ P81 ♝ × ♝ P121 ♝ Bishop took Bishop! [V:1→8 T:1→8]
+   82. ✕ P82 ♜ × ♜ P2 ♜ Rook took Rook! [U:8→1]
+   83. ✕ P83 ♛ × ♛ P92 ♛ Queen took Queen! [Y:1→8 V:1→8]
+   84. ✕ P84 ♛ × ♛ P24 ♛ Queen took Queen! [W:1→8 S:8→1]
+   85. ✕ P85 ♜ × ♜ P86 ♜ Rook took Rook! [Y:1→8]
+   86. ✕ P86 ♛ × ♛ P54 ♛ Queen took Queen! [W:8→1 S:8→1]
+   87. ✕ P87 ♜ × ♜ P23 ♜ Rook took Rook! [S:8→1]
+   88. P88 ♟ [Y:7→5 Z:7→5 W:7→5 V:2→4 U:7→5 T:2→4 S:7→5]
+   89. ✕ P89 ♝ × ♝ P57 ♝ Bishop took Bishop! [T:1→8 S:8→1]
+   90. ✕ P90 ♜ × ♜ P122 ♜ Rook took Rook! [T:1→8]
+   91. ✕ P91 ♜ × ♜ P76 ♜ Rook took Rook! [Y:1→8]
+   92. P92 ♚ [Z:8→7 U:8→7]
+   93. ✕ P93 ♛ × ♛ P25 ♛ Queen took Queen! [W:8→1 S:8→1]
+   94. ✕ P94 ♛ × ♛ P96 ♛ Queen took Queen! [Z:1→8]
+   95. ✕ P95 ♛ × ♛ P88 ♛ Queen took Queen! [Y:1→8 V:8→1]
+   96. P96 ♚ [V:8→7 T:1→2]
+   97. ✕ P97 ♝ × ♝ P59 ♝ Bishop took Bishop! [V:1→8 U:1→8]
+   98. P98 ♟ [Y:7→5 Z:2→4 W:2→4 V:2→4 U:2→4 T:7→5 S:7→5]
+   99. ✕ P99 ♜ × ♜ P103 ♜ Rook took Rook! [W:1→8]
+  100. ✕ P100 ♜ × ♜ P116 ♜ Rook took Rook! [U:1→8]
+  101. ✕ P101 ♛ × ♛ P37 ♛ Queen took Queen! [U:1→8 S:8→1]
+  102. ✕ P102 ♜ × ♜ P101 ♜ Rook took Rook! [Y:8→1]
+  103. ✕ P103 ♜ × ♜ P104 ♜ Rook took Rook! [Y:1→8]
+  104. P104 ♟ [Y:7→5 Z:7→5 W:7→5 V:2→4 U:2→4 T:7→5 S:7→5]
+  105. P105 ♟ [Y:2→4 Z:2→4 W:2→4 V:7→5 U:2→4 T:7→5 S:7→5]
+  106. P106 ♟ [Y:7→5 Z:2→4 W:2→4 V:7→5 U:2→4 T:7→5 S:7→5]
+  107. P107 ♚ [Y:1→2 U:1→2]
+  108. ✕ P108 ♜ × ♜ P107 ♜ Rook took Rook! [Y:8→1]
+  109. ✕ P109 ♛ × ♛ P73 ♛ Queen took Queen! [W:8→1 T:8→1]
+  110. ✕ P110 ♝ × ♝ P14 ♝ Bishop took Bishop! [T:8→1 S:8→1]
+  111. ✕ P111 ♜ × ♜ P79 ♜ Rook took Rook! [T:8→1]
+  112. ✕ P112 ♜ × ♜ P110 ♜ Rook took Rook! [Z:8→1]
+  113. ✕ P113 ♛ × ♛ P97 ♛ Queen took Queen! [U:8→1]
+  114. ✕ P114 ♜ × ♜ P98 ♜ Rook took Rook! [U:8→1]
+  115. P115 ♚ [V:1→2 U:8→7]
+  116. P116 ♟ [Y:7→5 Z:7→5 W:2→4 V:2→4 U:7→5 T:7→5 S:7→5]
+  117. ✕ P117 ♜ × ♜ P49 ♜ Rook took Rook! [S:8→1]
+  118. ✕ P118 ♜ × ♜ P22 ♜ Rook took Rook! [S:8→1]
+  119. ✕ P119 ♛ × ♛ P128 ♛ Queen took Queen! [Y:1→8 V:1→8]
+  120. ✕ P120 ♜ × ♜ P119 ♜ Rook took Rook! [Y:8→1]
+  121. P121 ♟ [Y:2→4 Z:2→4 W:2→4 V:7→5 U:7→5 T:7→5 S:7→5]
+  122. ✕ P122 ♛ × ♛ P125 ♛ Queen took Queen! [Y:8→1 W:1→8]
+  123. ✕ P123 ♝ × ♝ P83 ♝ Bishop took Bishop! [V:8→1 T:8→1]
+  124. ✕ P124 ♛ × ♛ P120 ♛ Queen took Queen! [W:1→8 V:8→1]
+  125. P125 ♚ [Z:1→2 U:8→7]
+  126. ✕ P126 ♝ × ♝ P106 ♝ Bishop took Bishop! [W:8→1 U:8→1]
+  127. P127 ♚ [Y:1→2 W:8→7]
+  128. P128 ♚ [Y:8→7 V:8→7]
+  129. P1 ♚ [Z:1→2 S:1→2]
+  130. ✕ P2 ♛ × ♛ P8 ♛ Queen took Queen! [Z:1→8 W:1→8]
+  131. ✕ P3 ♛ × ♛ P33 ♛ Queen took Queen! [Z:8→1 T:1→8]
+  132. P4 ♚ [V:1→2 U:1→2]
+  133. ✕ P5 ♝ × ♝ P101 ♝ Bishop took Bishop! [T:1→8 S:1→8]
+  134. P6 ♚ [Y:8→7 Z:1→2]
+  135. ✕ P7 ♛ × ♛ P71 ♛ Queen took Queen! [S:1→8]
+  136. P8 ♚ [Z:8→7 S:1→2]
+  137. ✕ P9 ♛ × ♛ P15 ♛ Queen took Queen! [Z:1→8 W:1→8]
+  138. ✕ P10 ♛ × ♛ P76 ♛ Queen took Queen! [Z:1→8 S:1→8]
+  139. ✕ P11 ♝ × ♝ P16 ♝ Bishop took Bishop! [Y:1→8 W:1→8]
+  140. ✕ P12 ♛ × ♛ P43 ♛ Queen took Queen! [Y:8→1 T:1→8]
+  141. ✕ P13 ♝ × ♝ P79 ♝ Bishop took Bishop! [Z:1→8 S:1→8]
+  142. ✕ P14 ♝ × ♝ P2 ♝ Bishop took Bishop! [W:8→1 V:8→1]
+  143. P15 ♚ [U:1→2 T:1→2]
+  144. ✕ P16 ♛ × ♛ P78 ♛ Queen took Queen! [Z:8→1 S:1→8]
+  145. ✕ P17 ♛ × ♛ P89 ♛ Queen took Queen! [V:1→8 S:1→8]
+  146. P18 ♚ [T:1→2 S:1→2]
+  147. ✕ P19 ♛ × ♛ P84 ♛ Queen took Queen! [Y:1→8 W:1→8]
+  148. ✕ P20 ♛ × ♛ P10 ♛ Queen took Queen! [V:1→8 S:1→8]
+  149. ✕ P21 ♜ × ♜ P117 ♜ Rook took Rook! [T:1→8]
+  150. ✕ P22 ♛ × ♛ P29 ♛ Queen took Queen! [Y:8→1 V:1→8]
+
+────────────────────────────────────────
+Final Standings:
+  P 1 kills:0 caps:0 pieces:15
+  P 2 kills:0 caps:0 pieces:14
+  P 3 kills:0 caps:0 pieces:15
+  P 4 kills:0 caps:0 pieces:15
+  P 5 kills:0 caps:0 pieces:15
+  P 6 kills:0 caps:0 pieces:14
+  P 7 kills:0 caps:0 pieces:16
+  P 8 kills:0 caps:0 pieces:15
+  P 9 kills:0 caps:0 pieces:15
+  P10 kills:0 caps:0 pieces:14
+  P11 kills:0 caps:0 pieces:15
+  P12 kills:0 caps:0 pieces:15
+  P13 kills:0 caps:0 pieces:16
+  P14 kills:0 caps:0 pieces:13
+  P15 kills:0 caps:0 pieces:14
+  P16 kills:0 caps:0 pieces:14
+  P17 kills:0 caps:0 pieces:15
+  P18 kills:0 caps:0 pieces:14
+  P19 kills:0 caps:0 pieces:14
+  P20 kills:0 caps:0 pieces:15
+  P21 kills:0 caps:0 pieces:15
+  P22 kills:0 caps:0 pieces:15
+  P23 kills:0 caps:0 pieces:13
+  P24 kills:0 caps:0 pieces:15
+  P25 kills:0 caps:0 pieces:14
+  P26 kills:0 caps:0 pieces:15
+  P27 kills:0 caps:0 pieces:15
+  P28 kills:0 caps:0 pieces:16
+  P29 kills:0 caps:0 pieces:14
+  P30 kills:0 caps:0 pieces:15
+  P31 kills:0 caps:0 pieces:16
+  P32 kills:0 caps:0 pieces:15
+  P33 kills:0 caps:0 pieces:15
+  P34 kills:0 caps:0 pieces:15
+  P35 kills:0 caps:0 pieces:16
+  P36 kills:0 caps:0 pieces:14
+  P37 kills:0 caps:0 pieces:14
+  P38 kills:0 caps:0 pieces:15
+  P39 kills:0 caps:0 pieces:14
+  P40 kills:0 caps:0 pieces:15
+  P41 kills:0 caps:0 pieces:14
+  P42 kills:0 caps:0 pieces:16
+  P43 kills:0 caps:0 pieces:14
+  P44 kills:0 caps:0 pieces:15
+  P45 kills:0 caps:0 pieces:16
+  P46 kills:0 caps:0 pieces:14
+  P47 kills:0 caps:0 pieces:15
+  P48 kills:0 caps:0 pieces:16
+  P49 kills:0 caps:0 pieces:15
+  P50 kills:0 caps:0 pieces:16
+  P51 kills:0 caps:0 pieces:15
+  P52 kills:0 caps:0 pieces:15
+  P53 kills:0 caps:0 pieces:14
+  P54 kills:0 caps:0 pieces:14
+  P55 kills:0 caps:0 pieces:16
+  P56 kills:0 caps:0 pieces:14
+  P57 kills:0 caps:0 pieces:14
+  P58 kills:0 caps:0 pieces:16
+  P59 kills:0 caps:0 pieces:14
+  P60 kills:0 caps:0 pieces:15
+  P61 kills:0 caps:0 pieces:16
+  P62 kills:0 caps:0 pieces:16
+  P63 kills:0 caps:0 pieces:16
+  P64 kills:0 caps:0 pieces:15
+  P65 kills:0 caps:0 pieces:16
+  P66 kills:0 caps:0 pieces:15
+  P67 kills:0 caps:0 pieces:15
+  P68 kills:0 caps:0 pieces:15
+  P69 kills:0 caps:0 pieces:16
+  P70 kills:0 caps:0 pieces:16
+  P71 kills:0 caps:0 pieces:14
+  P72 kills:0 caps:0 pieces:15
+  P73 kills:0 caps:0 pieces:15
+  P74 kills:0 caps:0 pieces:16
+  P75 kills:0 caps:0 pieces:16
+  P76 kills:0 caps:0 pieces:14
+  P77 kills:0 caps:0 pieces:16
+  P78 kills:0 caps:0 pieces:13
+  P79 kills:0 caps:0 pieces:14
+  P80 kills:0 caps:0 pieces:16
+  P81 kills:0 caps:0 pieces:16
+  P82 kills:0 caps:0 pieces:16
+  P83 kills:0 caps:0 pieces:15
+  P84 kills:0 caps:0 pieces:15
+  P85 kills:0 caps:0 pieces:16
+  P86 kills:0 caps:0 pieces:15
+  P87 kills:0 caps:0 pieces:16
+  P88 kills:0 caps:0 pieces:14
+  P89 kills:0 caps:0 pieces:15
+  P90 kills:0 caps:0 pieces:16
+  P91 kills:0 caps:0 pieces:15
+  P92 kills:0 caps:0 pieces:14
+  P93 kills:0 caps:0 pieces:16
+  P94 kills:0 caps:0 pieces:16
+  P95 kills:0 caps:0 pieces:16
+  P96 kills:0 caps:0 pieces:15
+  P97 kills:0 caps:0 pieces:14
+  P98 kills:0 caps:0 pieces:15
+  P99 kills:0 caps:0 pieces:16
+  P100 kills:0 caps:0 pieces:16
+  P101 kills:0 caps:0 pieces:14
+  P102 kills:0 caps:0 pieces:16
+  P103 kills:0 caps:0 pieces:15
+  P104 kills:0 caps:0 pieces:15
+  P105 kills:0 caps:0 pieces:15
+  P106 kills:0 caps:0 pieces:15
+  P107 kills:0 caps:0 pieces:14
+  P108 kills:0 caps:0 pieces:16
+  P109 kills:0 caps:0 pieces:16
+  P110 kills:0 caps:0 pieces:15
+  P111 kills:0 caps:0 pieces:15
+  P112 kills:0 caps:0 pieces:16
+  P113 kills:0 caps:0 pieces:16
+  P114 kills:0 caps:0 pieces:16
+  P115 kills:0 caps:0 pieces:16
+  P116 kills:0 caps:0 pieces:15
+  P117 kills:0 caps:0 pieces:15
+  P118 kills:0 caps:0 pieces:16
+  P119 kills:0 caps:0 pieces:15
+  P120 kills:0 caps:0 pieces:15
+  P121 kills:0 caps:0 pieces:14
+  P122 kills:0 caps:0 pieces:15
+  P123 kills:0 caps:0 pieces:16
+  P124 kills:0 caps:0 pieces:16
+  P125 kills:0 caps:0 pieces:14
+  P126 kills:0 caps:0 pieces:15
+  P127 kills:0 caps:0 pieces:16
+  P128 kills:0 caps:0 pieces:15
+
+────────────────────────────────────────
+8D Chess & Games — Copyright Taylor, 2003

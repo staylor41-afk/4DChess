@@ -1,0 +1,1091 @@
+8D Chess & Games — Move Record
+© Samuel M G Taylor, 2003
+────────────────────────────────────────
+Game: 8D Chess
+Date: 2026-03-20 04:04:53
+Players: 128 | Dimensions: 8D
+
+Players:
+  P 1 DAVID
+       Aggression:8 Foresight:5 Defensiveness:4 Patience:4
+       Regicide:5 Vendetta:8 Greed:6 Chaos:5 Attention:6
+  P 2 DAEDALUS
+       Aggression:7 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:7 Vendetta:4 Greed:5 Chaos:5 Attention:7
+  P 3 METIS
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:8
+       Regicide:6 Vendetta:1 Greed:2 Chaos:1 Attention:8
+  P 4 JOSEPH
+       Aggression:3 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:4 Vendetta:2 Greed:8 Chaos:3 Attention:8
+  P 5 MIMIR
+       Aggression:7 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:5 Vendetta:4 Greed:6 Chaos:5 Attention:7
+  P 6 TYR
+       Aggression:7 Foresight:5 Defensiveness:6 Patience:5
+       Regicide:8 Vendetta:4 Greed:2 Chaos:2 Attention:8
+  P 7 BARNABAS
+       Aggression:7 Foresight:6 Defensiveness:6 Patience:5
+       Regicide:5 Vendetta:4 Greed:4 Chaos:2 Attention:6
+  P 8 EXPLORER
+       Aggression:6 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:6 Vendetta:3 Greed:5 Chaos:5 Attention:8
+  P 9 SARIEL
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:8
+       Regicide:7 Vendetta:1 Greed:2 Chaos:1 Attention:8
+  P10 CUNNING
+       Aggression:6 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:3 Greed:4 Chaos:2 Attention:7
+  P11 ECONOMIST
+       Aggression:4 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:4 Vendetta:2 Greed:8 Chaos:2 Attention:8
+  P12 LUKE
+       Aggression:4 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:6 Vendetta:1 Greed:3 Chaos:1 Attention:8
+  P13 OBSESSIVE
+       Aggression:5 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:5 Vendetta:6 Greed:3 Chaos:3 Attention:7
+  P14 ABNER
+       Aggression:7 Foresight:5 Defensiveness:4 Patience:5
+       Regicide:6 Vendetta:8 Greed:6 Chaos:5 Attention:6
+  P15 RUTH
+       Aggression:4 Foresight:8 Defensiveness:5 Patience:8
+       Regicide:5 Vendetta:1 Greed:8 Chaos:2 Attention:8
+  P16 JOAB
+       Aggression:8 Foresight:5 Defensiveness:5 Patience:3
+       Regicide:7 Vendetta:6 Greed:5 Chaos:6 Attention:8
+  P17 LOKI
+       Aggression:5 Foresight:4 Defensiveness:5 Patience:5
+       Regicide:5 Vendetta:3 Greed:4 Chaos:7 Attention:5
+  P18 SKADI
+       Aggression:8 Foresight:7 Defensiveness:5 Patience:4
+       Regicide:8 Vendetta:4 Greed:3 Chaos:1 Attention:7
+  P19 CADMUS
+       Aggression:6 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:6 Vendetta:2 Greed:6 Chaos:5 Attention:8
+  P20 CROESUS
+       Aggression:4 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:1 Greed:8 Chaos:3 Attention:8
+  P21 ACHILLES
+       Aggression:6 Foresight:6 Defensiveness:6 Patience:5
+       Regicide:8 Vendetta:4 Greed:4 Chaos:1 Attention:8
+  P22 JOSIAH
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:2 Greed:4 Chaos:1 Attention:8
+  P23 TIMOTHY
+       Aggression:6 Foresight:7 Defensiveness:5 Patience:7
+       Regicide:5 Vendetta:2 Greed:4 Chaos:2 Attention:7
+  P24 BELLEROPHON
+       Aggression:5 Foresight:7 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P25 NEMESIS
+       Aggression:7 Foresight:5 Defensiveness:6 Patience:6
+       Regicide:8 Vendetta:3 Greed:3 Chaos:1 Attention:7
+  P26 ARTEMIS
+       Aggression:8 Foresight:6 Defensiveness:4 Patience:4
+       Regicide:8 Vendetta:5 Greed:3 Chaos:3 Attention:7
+  P27 MARTHA
+       Aggression:5 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:5 Vendetta:3 Greed:8 Chaos:2 Attention:7
+  P28 DEBORAH
+       Aggression:4 Foresight:7 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:2 Greed:2 Chaos:1 Attention:8
+  P29 GIDEON
+       Aggression:8 Foresight:6 Defensiveness:5 Patience:5
+       Regicide:7 Vendetta:5 Greed:4 Chaos:2 Attention:6
+  P30 MORDECAI
+       Aggression:5 Foresight:7 Defensiveness:8 Patience:6
+       Regicide:7 Vendetta:3 Greed:3 Chaos:1 Attention:7
+  P31 JEHU
+       Aggression:7 Foresight:6 Defensiveness:4 Patience:6
+       Regicide:8 Vendetta:3 Greed:3 Chaos:2 Attention:7
+  P32 ODYSSEUS
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:6 Vendetta:3 Greed:5 Chaos:6 Attention:8
+  P33 ELIJAH
+       Aggression:6 Foresight:7 Defensiveness:7 Patience:8
+       Regicide:7 Vendetta:2 Greed:5 Chaos:4 Attention:8
+  P34 ABIGAIL
+       Aggression:7 Foresight:8 Defensiveness:6 Patience:5
+       Regicide:4 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P35 REGICIDAL
+       Aggression:7 Foresight:6 Defensiveness:5 Patience:5
+       Regicide:8 Vendetta:4 Greed:3 Chaos:2 Attention:7
+  P36 CALYPSO
+       Aggression:6 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:7 Greed:4 Chaos:3 Attention:6
+  P37 URIEL
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:5 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P38 HERMES
+       Aggression:7 Foresight:8 Defensiveness:5 Patience:6
+       Regicide:6 Vendetta:4 Greed:5 Chaos:6 Attention:8
+  P39 JOHN
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:4 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P40 ODYSSEUS
+       Aggression:7 Foresight:7 Defensiveness:5 Patience:5
+       Regicide:4 Vendetta:4 Greed:4 Chaos:3 Attention:7
+  P41 FREYR
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:2 Greed:8 Chaos:1 Attention:8
+  P42 ORION
+       Aggression:6 Foresight:7 Defensiveness:5 Patience:5
+       Regicide:8 Vendetta:4 Greed:3 Chaos:3 Attention:8
+  P43 EHUD
+       Aggression:4 Foresight:7 Defensiveness:7 Patience:7
+       Regicide:6 Vendetta:5 Greed:2 Chaos:2 Attention:8
+  P44 THOR
+       Aggression:8 Foresight:6 Defensiveness:4 Patience:5
+       Regicide:6 Vendetta:6 Greed:6 Chaos:5 Attention:7
+  P45 THEMIS
+       Aggression:4 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:5 Vendetta:1 Greed:4 Chaos:1 Attention:8
+  P46 EZEKIEL
+       Aggression:6 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:7 Vendetta:2 Greed:5 Chaos:6 Attention:8
+  P47 ANNA
+       Aggression:5 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:5 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P48 BEZALEL
+       Aggression:5 Foresight:7 Defensiveness:7 Patience:6
+       Regicide:6 Vendetta:3 Greed:3 Chaos:1 Attention:7
+  P49 PHINEHAS
+       Aggression:6 Foresight:6 Defensiveness:6 Patience:6
+       Regicide:8 Vendetta:3 Greed:2 Chaos:1 Attention:8
+  P50 CHLOE
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:4 Vendetta:2 Greed:8 Chaos:1 Attention:8
+  P51 BENAIAH
+       Aggression:8 Foresight:6 Defensiveness:4 Patience:3
+       Regicide:6 Vendetta:7 Greed:5 Chaos:4 Attention:7
+  P52 BALDR
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:8
+       Regicide:6 Vendetta:3 Greed:4 Chaos:1 Attention:7
+  P53 AJAX
+       Aggression:8 Foresight:4 Defensiveness:5 Patience:5
+       Regicide:7 Vendetta:6 Greed:5 Chaos:4 Attention:7
+  P54 DEMETER
+       Aggression:4 Foresight:7 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:7 Chaos:2 Attention:8
+  P55 AEGIR
+       Aggression:6 Foresight:7 Defensiveness:7 Patience:7
+       Regicide:7 Vendetta:3 Greed:4 Chaos:5 Attention:8
+  P56 JUDITH
+       Aggression:7 Foresight:7 Defensiveness:5 Patience:6
+       Regicide:8 Vendetta:3 Greed:4 Chaos:2 Attention:7
+  P57 BOAZ
+       Aggression:4 Foresight:7 Defensiveness:7 Patience:8
+       Regicide:5 Vendetta:1 Greed:8 Chaos:1 Attention:8
+  P58 JASON
+       Aggression:6 Foresight:6 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:4 Chaos:1 Attention:7
+  P59 SIGURD
+       Aggression:7 Foresight:5 Defensiveness:5 Patience:4
+       Regicide:6 Vendetta:7 Greed:6 Chaos:4 Attention:8
+  P60 MICHAEL
+       Aggression:4 Foresight:7 Defensiveness:8 Patience:8
+       Regicide:7 Vendetta:1 Greed:3 Chaos:1 Attention:8
+  P61 SAMSON
+       Aggression:7 Foresight:6 Defensiveness:5 Patience:4
+       Regicide:6 Vendetta:6 Greed:5 Chaos:6 Attention:7
+  P62 ORPHEUS
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:6 Vendetta:3 Greed:6 Chaos:4 Attention:8
+  P63 HERA
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:1 Greed:3 Chaos:2 Attention:8
+  P64 MOMUS
+       Aggression:6 Foresight:4 Defensiveness:4 Patience:3
+       Regicide:5 Vendetta:5 Greed:4 Chaos:8 Attention:4
+  P65 MIRANDA
+       Aggression:5 Foresight:7 Defensiveness:6 Patience:7
+       Regicide:4 Vendetta:4 Greed:5 Chaos:2 Attention:6
+  P66 ULLR
+       Aggression:7 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:6 Vendetta:3 Greed:5 Chaos:4 Attention:8
+  P67 ESTHER
+       Aggression:4 Foresight:8 Defensiveness:8 Patience:8
+       Regicide:6 Vendetta:1 Greed:4 Chaos:1 Attention:8
+  P68 FENRIR
+       Aggression:5 Foresight:5 Defensiveness:3 Patience:5
+       Regicide:5 Vendetta:3 Greed:4 Chaos:8 Attention:5
+  P69 CADMUS
+       Aggression:6 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:4 Vendetta:2 Greed:5 Chaos:2 Attention:7
+  P70 HEL
+       Aggression:4 Foresight:6 Defensiveness:5 Patience:4
+       Regicide:4 Vendetta:3 Greed:4 Chaos:8 Attention:5
+  P71 PHOEBE
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:5 Vendetta:1 Greed:7 Chaos:1 Attention:8
+  P72 ALECTO
+       Aggression:7 Foresight:6 Defensiveness:6 Patience:4
+       Regicide:8 Vendetta:3 Greed:3 Chaos:3 Attention:8
+  P73 EZRA
+       Aggression:4 Foresight:7 Defensiveness:8 Patience:8
+       Regicide:6 Vendetta:1 Greed:3 Chaos:1 Attention:8
+  P74 NJORD
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:6 Vendetta:2 Greed:5 Chaos:6 Attention:8
+  P75 SIMEON
+       Aggression:4 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:7 Vendetta:1 Greed:3 Chaos:1 Attention:8
+  P76 DIOMEDES
+       Aggression:7 Foresight:5 Defensiveness:5 Patience:5
+       Regicide:7 Vendetta:6 Greed:4 Chaos:4 Attention:8
+  P77 FORSETI
+       Aggression:4 Foresight:8 Defensiveness:8 Patience:6
+       Regicide:7 Vendetta:1 Greed:3 Chaos:2 Attention:8
+  P78 FRIGG
+       Aggression:4 Foresight:7 Defensiveness:8 Patience:7
+       Regicide:7 Vendetta:2 Greed:2 Chaos:1 Attention:8
+  P79 URIEL
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:3 Greed:4 Chaos:2 Attention:8
+  P80 ANDREW
+       Aggression:7 Foresight:7 Defensiveness:6 Patience:6
+       Regicide:3 Vendetta:4 Greed:5 Chaos:2 Attention:6
+  P81 ENYO
+       Aggression:7 Foresight:6 Defensiveness:4 Patience:4
+       Regicide:6 Vendetta:7 Greed:5 Chaos:6 Attention:8
+  P82 SOLOMON
+       Aggression:4 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P83 ANNA
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P84 PARANOID
+       Aggression:6 Foresight:7 Defensiveness:5 Patience:5
+       Regicide:5 Vendetta:7 Greed:3 Chaos:4 Attention:7
+  P85 SIF
+       Aggression:5 Foresight:8 Defensiveness:8 Patience:6
+       Regicide:6 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P86 GABRIEL
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:6 Vendetta:3 Greed:3 Chaos:2 Attention:8
+  P87 VIDAR
+       Aggression:8 Foresight:4 Defensiveness:4 Patience:3
+       Regicide:7 Vendetta:8 Greed:5 Chaos:5 Attention:6
+  P88 BARAK
+       Aggression:8 Foresight:4 Defensiveness:5 Patience:4
+       Regicide:7 Vendetta:7 Greed:4 Chaos:5 Attention:8
+  P89 ABIGAIL
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:7
+       Regicide:3 Vendetta:3 Greed:8 Chaos:2 Attention:7
+  P90 ATE
+       Aggression:5 Foresight:5 Defensiveness:5 Patience:3
+       Regicide:5 Vendetta:3 Greed:4 Chaos:8 Attention:6
+  P91 THOR
+       Aggression:6 Foresight:7 Defensiveness:6 Patience:5
+       Regicide:8 Vendetta:3 Greed:3 Chaos:3 Attention:7
+  P92 METIS
+       Aggression:6 Foresight:6 Defensiveness:6 Patience:5
+       Regicide:6 Vendetta:7 Greed:3 Chaos:3 Attention:6
+  P93 ATHENA
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:5 Vendetta:3 Greed:3 Chaos:2 Attention:8
+  P94 LYDIA
+       Aggression:5 Foresight:8 Defensiveness:5 Patience:6
+       Regicide:3 Vendetta:3 Greed:8 Chaos:3 Attention:8
+  P95 PAUL
+       Aggression:7 Foresight:8 Defensiveness:5 Patience:6
+       Regicide:5 Vendetta:4 Greed:6 Chaos:6 Attention:8
+  P96 ARES
+       Aggression:8 Foresight:5 Defensiveness:3 Patience:3
+       Regicide:6 Vendetta:8 Greed:5 Chaos:6 Attention:7
+  P97 RAPHAEL
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:2 Greed:3 Chaos:2 Attention:8
+  P98 JACOB
+       Aggression:4 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:5 Vendetta:6 Greed:3 Chaos:4 Attention:8
+  P99 ARIADNE
+       Aggression:6 Foresight:7 Defensiveness:7 Patience:5
+       Regicide:5 Vendetta:2 Greed:4 Chaos:3 Attention:8
+  P100 JORMUNGANDR
+       Aggression:6 Foresight:5 Defensiveness:4 Patience:4
+       Regicide:3 Vendetta:5 Greed:5 Chaos:8 Attention:4
+  P101 JAEL
+       Aggression:8 Foresight:5 Defensiveness:5 Patience:4
+       Regicide:8 Vendetta:5 Greed:3 Chaos:2 Attention:6
+  P102 PHILIP
+       Aggression:5 Foresight:7 Defensiveness:7 Patience:6
+       Regicide:4 Vendetta:3 Greed:5 Chaos:1 Attention:8
+  P103 RATATOSKR
+       Aggression:5 Foresight:4 Defensiveness:5 Patience:4
+       Regicide:5 Vendetta:4 Greed:3 Chaos:8 Attention:6
+  P104 ENOCH
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:6 Vendetta:4 Greed:6 Chaos:5 Attention:7
+  P105 MICHAEL
+       Aggression:8 Foresight:7 Defensiveness:4 Patience:4
+       Regicide:7 Vendetta:5 Greed:4 Chaos:3 Attention:7
+  P106 NESTOR
+       Aggression:6 Foresight:8 Defensiveness:5 Patience:8
+       Regicide:7 Vendetta:2 Greed:5 Chaos:5 Attention:8
+  P107 PAUL
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:5 Vendetta:1 Greed:3 Chaos:2 Attention:8
+  P108 VENICE
+       Aggression:3 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:4 Vendetta:3 Greed:8 Chaos:2 Attention:7
+  P109 MATTHEW
+       Aggression:4 Foresight:8 Defensiveness:6 Patience:8
+       Regicide:4 Vendetta:1 Greed:8 Chaos:2 Attention:8
+  P110 THESEUS
+       Aggression:7 Foresight:8 Defensiveness:5 Patience:5
+       Regicide:3 Vendetta:4 Greed:5 Chaos:3 Attention:7
+  P111 LOKI
+       Aggression:4 Foresight:7 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:6 Greed:4 Chaos:2 Attention:8
+  P112 STEADY
+       Aggression:4 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:6 Vendetta:2 Greed:3 Chaos:1 Attention:8
+  P113 HESTIA
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:4 Vendetta:1 Greed:8 Chaos:3 Attention:8
+  P114 JOSEPH
+       Aggression:3 Foresight:8 Defensiveness:8 Patience:7
+       Regicide:5 Vendetta:2 Greed:4 Chaos:1 Attention:8
+  P115 SAVAGE
+       Aggression:8 Foresight:5 Defensiveness:4 Patience:4
+       Regicide:6 Vendetta:7 Greed:5 Chaos:5 Attention:7
+  P116 JASON
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:8
+       Regicide:7 Vendetta:2 Greed:4 Chaos:4 Attention:8
+  P117 PERSEUS
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:3 Greed:4 Chaos:3 Attention:8
+  P118 NEHEMIAH
+       Aggression:5 Foresight:8 Defensiveness:6 Patience:6
+       Regicide:4 Vendetta:3 Greed:4 Chaos:2 Attention:8
+  P119 DANIEL
+       Aggression:3 Foresight:8 Defensiveness:7 Patience:7
+       Regicide:5 Vendetta:2 Greed:3 Chaos:2 Attention:8
+  P120 CIRCE
+       Aggression:5 Foresight:7 Defensiveness:5 Patience:7
+       Regicide:6 Vendetta:5 Greed:3 Chaos:3 Attention:7
+  P121 JONATHAN
+       Aggression:6 Foresight:6 Defensiveness:7 Patience:6
+       Regicide:5 Vendetta:3 Greed:3 Chaos:2 Attention:8
+  P122 SOLOMON
+       Aggression:5 Foresight:8 Defensiveness:5 Patience:6
+       Regicide:4 Vendetta:3 Greed:8 Chaos:3 Attention:8
+  P123 PAN
+       Aggression:6 Foresight:6 Defensiveness:3 Patience:3
+       Regicide:3 Vendetta:5 Greed:5 Chaos:8 Attention:5
+  P124 HEIMDALL
+       Aggression:4 Foresight:8 Defensiveness:8 Patience:6
+       Regicide:6 Vendetta:1 Greed:3 Chaos:2 Attention:8
+  P125 ACHILLES
+       Aggression:8 Foresight:6 Defensiveness:3 Patience:3
+       Regicide:5 Vendetta:8 Greed:6 Chaos:6 Attention:7
+  P126 MIRIAM
+       Aggression:5 Foresight:8 Defensiveness:7 Patience:6
+       Regicide:4 Vendetta:2 Greed:4 Chaos:3 Attention:7
+  P127 HERACLES
+       Aggression:6 Foresight:6 Defensiveness:5 Patience:6
+       Regicide:8 Vendetta:5 Greed:4 Chaos:2 Attention:6
+  P128 JOSHUA
+       Aggression:8 Foresight:5 Defensiveness:3 Patience:5
+       Regicide:7 Vendetta:6 Greed:5 Chaos:5 Attention:7
+
+────────────────────────────────────────
+Snapshot: Midgame
+Current Turn: P48
+Move Log:
+
+    1. P1 P[Y:2→4 V:2→4 T:2→4]
+    2. P2 P[Z:2→4 W:2→4 S:2→4]
+    3. P3 P[W:2→4 U:2→4 T:2→4]
+    4. P4 P[Y:7→5 Z:7→5 V:2→4 T:2→4]
+    5. P5 P[Y:2→4 Z:2→4 V:2→4]
+    6. P6 P[Y:7→5 Z:2→4 W:7→5 V:2→4 U:2→4 S:2→4]
+    7. P7 P[Y:2→4 V:2→4]
+    8. P8 P[W:7→5 S:2→4]
+    9. P9 P[Z:2→4 V:7→5 U:2→4]
+   10. P10 P[Z:2→4 U:2→4 T:2→4]
+   11. P11 P[W:2→4 V:7→5 U:2→4 S:2→4]
+   12. P12 P[Z:7→5 W:2→4 V:7→5]
+   13. P13 P[Y:2→4 W:7→5 V:7→5 U:2→4 S:2→4]
+   14. P14 P[Z:2→4 W:7→5 V:7→5 U:2→4 S:2→4]
+   15. P15 P[Y:2→4 Z:7→5 T:2→4 S:2→4]
+   16. P16 P[W:7→5 V:7→5 U:2→4 S:2→4]
+   17. P17 P[Y:2→4 V:2→4 U:7→5 S:2→4]
+   18. P18 P[Y:7→5]
+   19. P19 P[Y:2→4 Z:7→5 S:2→4]
+   20. P20 P[Y:7→5 W:2→4 S:2→4]
+   21. P21 P[Y:2→4 T:2→4]
+   22. P22 P[Y:7→5 U:7→5 T:2→4]
+   23. P23 P[Z:7→5 U:7→5]
+   24. P24 P[Y:7→5 Z:7→5]
+   25. P25 P[T:2→4 S:2→4]
+   26. P26 P[Y:7→5 V:7→5]
+   27. P27 P[Y:2→4 Z:7→5 V:7→5]
+   28. P28 P[Y:7→5 W:2→4 V:7→5 U:7→5 T:2→4 S:2→4]
+   29. P29 P[Y:2→4 W:7→5 V:7→5 S:2→4]
+   30. P30 P[Y:7→5 V:7→5]
+   31. P31 P[Z:7→5 V:7→5]
+   32. P32 P[Z:7→5 W:7→5 V:7→5 T:2→4]
+   33. P33 P[Z:2→4 V:2→4]
+   34. P34 P[Y:7→5 Z:2→4 V:2→4 S:2→4]
+   35. P35 P[Z:7→5 W:2→4 S:2→4]
+   36. P36 P[U:2→4 T:7→5 S:2→4]
+   37. P37 P[Y:2→4 W:7→5 V:2→4 T:7→5]
+   38. P38 P[Z:2→4 W:7→5 V:2→4 U:2→4]
+   39. P39 P[Z:7→5 W:7→5 V:2→4 U:2→4 T:7→5]
+   40. P40 P[Y:7→5 W:7→5 T:7→5 S:2→4]
+   41. P41 P[Y:2→4 Z:2→4 T:7→5]
+   42. P42 P[Y:7→5 Z:2→4 V:7→5 U:2→4]
+   43. P43 P[Z:7→5 U:2→4 T:7→5 S:2→4]
+   44. P44 P[W:2→4 U:2→4 S:2→4]
+   45. P45 P[Z:2→4 W:7→5 S:2→4]
+   46. P46 P[V:7→5 U:2→4 T:7→5 S:2→4]
+   47. P47 P[U:2→4]
+   48. P48 P[Y:7→5 Z:7→5 W:7→5 V:7→5 U:2→4 S:2→4]
+   49. P49 P[Z:2→4 V:2→4 U:7→5 T:7→5]
+   50. P50 P[Z:2→4 V:2→4 U:7→5 S:2→4]
+   51. P51 P[Z:7→5 V:2→4]
+   52. P52 P[W:2→4 V:2→4 U:7→5]
+   53. P53 P[Y:2→4 U:7→5 T:7→5]
+   54. P54 P[V:2→4 U:7→5 S:2→4]
+   55. P55 P[Y:2→4 Z:7→5 W:7→5 V:2→4 T:7→5]
+   56. P56 P[Z:7→5 V:2→4 S:2→4]
+   57. P57 P[Y:2→4 Z:2→4 W:2→4 V:7→5 U:7→5]
+   58. P58 P[Y:7→5 W:2→4 T:7→5 S:2→4]
+   59. P59 P[Y:2→4 W:2→4 V:7→5 T:7→5 S:2→4]
+   60. P60 P[W:2→4 V:7→5 U:7→5 S:2→4]
+   61. P61 P[Y:2→4 Z:2→4 W:7→5 U:7→5 T:7→5]
+   62. P62 P[Y:7→5 Z:2→4 U:7→5 T:7→5]
+   63. P63 P[Z:7→5 W:7→5 V:7→5 U:7→5 T:7→5]
+   64. P64 P[S:2→4]
+   65. P65 P[V:2→4 U:2→4 T:2→4]
+   66. P66 P[Z:2→4 W:2→4 V:2→4 U:2→4 T:2→4 S:7→5]
+   67. P67 P[Y:2→4 Z:7→5 U:2→4 S:7→5]
+   68. P68 P[Z:7→5 W:2→4]
+   69. P69 P[Y:2→4 Z:2→4 W:7→5]
+   70. P70 P[Z:2→4 V:2→4 T:2→4 S:7→5]
+   71. P71 P[Y:2→4 Z:7→5 T:2→4 S:7→5]
+   72. P72 P[Y:7→5 Z:7→5 U:2→4]
+   73. P73 P[Y:2→4 V:7→5 S:7→5]
+   74. P74 P[Y:7→5 Z:2→4 U:2→4 T:2→4 S:7→5]
+   75. P75 P[Z:7→5 W:2→4 T:2→4 S:7→5]
+   76. P76 P[Y:7→5 Z:7→5 W:2→4 V:7→5 U:2→4 T:2→4 S:7→5]
+   77. P77 P[Y:2→4 Z:2→4 V:7→5 U:2→4 T:2→4]
+   78. P78 P[Y:7→5 W:7→5 S:7→5]
+   79. P79 P[W:7→5 V:7→5 U:2→4 T:2→4]
+   80. P80 P[Z:7→5 W:7→5 V:7→5]
+   81. P81 P[Y:2→4 W:2→4 U:7→5 S:7→5]
+   82. P82 P[Z:2→4 U:7→5 T:2→4]
+   83. P83 P[T:2→4 S:7→5]
+   84. P84 P[Y:7→5 W:2→4 V:2→4 U:7→5 T:2→4 S:7→5]
+   85. P85 P[S:7→5]
+   86. P86 P[W:7→6]
+   87. P87 P[W:7→5 V:2→4]
+   88. P88 P[T:2→4 S:7→5]
+   89. P89 P[Y:2→4 Z:2→4 W:2→4 S:7→5]
+   90. P90 P[Y:7→5 W:2→4]
+   91. P91 P[T:2→4 S:7→5]
+   92. P92 P[Y:7→5 W:2→4 U:7→5]
+   93. P93 P[Z:2→4 V:7→5 S:7→5]
+   94. P94 P[Y:7→5 V:7→5]
+   95. P95 P[Z:7→5 W:7→5 V:7→5]
+   96. P96 P[Y:7→5 W:7→5 S:7→5]
+   97. P97 P[Y:2→4 V:2→4 U:2→4 S:7→5]
+   98. P98 P[Y:7→5 Z:2→4 V:2→4 U:2→4 T:7→5 S:7→5]
+   99. P99 P[Z:7→5 V:2→4 U:2→4 T:7→5]
+  100. P100 P[Y:7→5 Z:7→5 W:2→4 U:2→4 S:7→5]
+  101. P101 P[V:2→4 T:7→5]
+  102. P102 P[Z:2→4 V:2→4 U:2→4 S:7→5]
+  103. P103 P[U:2→4]
+  104. P104 P[W:7→5 V:2→4 T:7→5]
+  105. P105 P[Y:2→4 T:7→5 S:7→5]
+  106. P106 P[Y:7→5 Z:2→4 W:2→4 U:2→4]
+  107. P107 P[Y:2→4 W:2→4 V:7→5 U:2→4 T:7→5]
+  108. P108 P[W:2→4 V:7→5 T:7→5 S:7→5]
+  109. P109 P[Y:2→4 W:7→5 V:7→5 U:2→4]
+  110. P110 P[Z:2→4 W:7→5 S:7→5]
+  111. P111 P[V:7→5 T:7→5 S:7→5]
+  112. P112 P[Y:7→5 W:7→5 V:7→5 U:2→4 T:7→5]
+  113. P113 P[Y:2→4 V:2→4 U:7→5 T:7→5]
+  114. P114 P[Y:7→5 Z:2→4 U:7→5]
+  115. P115 P[Z:7→5 W:2→4 U:7→5 T:7→5]
+  116. P116 P[Z:7→5 W:2→4 V:2→4 U:7→5 S:7→5]
+  117. P117 P[W:7→5 V:2→4 U:7→5]
+  118. P118 P[Y:7→5 Z:2→4 W:7→5 T:7→5]
+  119. P119 P[Z:7→5 U:7→5 S:7→5]
+  120. P120 P[Y:7→5 W:7→5 U:7→5 T:7→5]
+  121. P121 P[Z:2→4 W:2→4 V:7→5 U:7→5 T:7→5]
+  122. P122 P[Y:7→5 Z:2→4 W:2→4 V:7→5 U:7→5]
+  123. P123 P[V:7→5 T:7→5]
+  124. P124 P[Y:7→5 Z:7→5 V:7→5]
+  125. P125 P[Y:2→4 W:7→5 U:7→5 T:7→5 S:7→5]
+  126. P126 P[Y:7→5 Z:2→4 V:7→5 U:7→5 S:7→5]
+  127. P127 P[Z:7→5 V:7→5 T:7→5 S:7→5]
+  128. P128 P[V:7→5]
+  129. P1 P[Z:2→4 V:2→4 U:2→4 T:2→4]
+  130. P2 P[Y:7→5 W:2→4 U:2→4]
+  131. P3 P[Y:2→4 Z:7→5 S:2→4]
+  132. P4 P[Y:7→5]
+  133. P5 P[Y:2→4 Z:2→4 W:7→5 T:2→4]
+  134. P6 P[T:2→4 S:2→4]
+  135. P7 P[Z:7→5 W:7→5 U:2→4]
+  136. P8 P[Y:7→5 Z:7→5 W:7→5 U:2→4]
+  137. P9 P[Y:2→4 Z:2→4 W:2→4 V:7→5]
+  138. P10 P[V:7→5 T:2→4]
+  139. P11 P[T:2→4 S:2→4]
+  140. P12 P[Z:7→5 W:2→4 S:2→4]
+  141. P13 P[U:2→4]
+  142. P14 P[W:7→5 V:7→5 U:2→4 T:2→4 S:2→4]
+  143. P15 P[Y:2→4 Z:7→5 U:2→4 S:2→4]
+  144. P16 P[Z:7→5 V:7→5 U:2→4 S:2→4]
+  145. P17 P[Y:2→4 Z:2→4 T:2→4 S:2→4]
+  146. P18 P[V:2→4 S:2→4]
+  147. P19 P[Z:7→5 W:2→4 V:2→4 T:2→4 S:2→4]
+  148. P20 P[U:7→5 S:2→4]
+  149. P21 P[Y:2→4 Z:2→4 S:2→4]
+  150. P22 P[Z:2→4]
+  151. P23 P[Y:2→4 W:7→5 V:2→4 T:2→4 S:2→4]
+  152. P24 P[W:7→5 V:2→4 U:7→5 S:2→4]
+  153. P25 P[W:2→4 V:7→5 T:2→4]
+  154. P26 P[W:2→4 V:7→5 U:7→5 T:2→4 S:2→4]
+  155. P27 P[Z:7→5 V:7→5 U:7→5 T:2→4 S:2→4]
+  156. P28 P[Y:7→5 W:2→4 U:7→5 T:2→4]
+  157. P29 P[Y:2→4 W:7→5 V:7→5 U:7→5 T:2→4]
+  158. P30 P[Y:7→5 W:7→5 V:7→5]
+  159. P31 P[Y:2→4 W:7→5 V:7→5 U:7→5]
+  160. P32 P[Z:7→5 T:2→4]
+  161. P33 P[Y:2→4 Z:2→4 U:2→4 S:2→4]
+  162. P34 P[Y:7→5 W:2→4 V:2→4 U:2→4 T:7→5 S:2→4]
+  163. P35 P[Y:2→4 W:2→4 V:2→4 T:7→5 S:2→4]
+  164. P36 P[V:2→4 U:2→4 S:2→4]
+  165. P37 P[Z:2→4 W:7→5 U:2→4 T:7→5]
+  166. P38 P[U:2→4]
+  167. P39 P[Y:2→4]
+  168. P40 P[Y:7→5 Z:7→5 V:2→4 U:2→4 T:7→5 S:2→4]
+  169. P41 P[Y:2→4 W:2→4 V:7→5 T:7→5 S:2→4]
+  170. P42 P[Y:7→5 Z:2→4 W:2→4 S:2→4]
+  171. P43 P[Y:2→4 V:7→5 U:2→4 T:7→5]
+  172. P44 P[Z:7→5 W:2→4 V:7→5]
+  173. P45 P[W:7→5 U:2→4 S:2→4]
+  174. P46 P[Y:7→5 V:7→5 U:2→4 T:7→5 S:2→4]
+  175. P47 P[Y:2→4 W:7→5 U:2→4]
+  176. P48 P[Z:7→5 W:7→5 S:2→4]
+  177. P49 P[S:2→4]
+  178. P50 P[Y:7→5 W:2→4 U:7→5]
+  179. P51 P[Y:2→4 W:2→4 V:2→4 T:7→5 S:2→4]
+  180. P52 P[Y:7→5 T:7→5 S:2→4]
+  181. P53 P[Y:2→4 Z:2→4 W:7→5 S:2→4]
+  182. P54 P[Y:7→5 W:7→5 T:7→5]
+  183. P55 P[W:7→5 V:2→4 U:7→5 T:7→5 S:2→4]
+  184. P56 P[V:2→4 U:7→5 T:7→5 S:2→4]
+  185. P57 P[Y:2→4 Z:2→4 W:2→4 V:7→5]
+  186. P58 P[Y:7→5 Z:2→4 V:7→5]
+  187. P59 P[Y:2→4 Z:7→5 W:2→4 V:7→5 U:7→5]
+  188. P60 P[Y:7→5 Z:7→5 W:2→4 T:7→5 S:2→4]
+  189. P61 P[Y:2→4 W:7→5 S:2→4]
+  190. P62 P[W:7→5 S:2→4]
+  191. P63 P[Y:2→4 U:7→5 S:2→4]
+  192. P64 P[Z:7→5 U:7→5 T:7→5]
+  193. P65 P[Y:2→4 Z:2→4 T:2→4 S:7→5]
+  194. P66 P[Z:2→4 V:2→4 T:2→4]
+  195. P67 P[Y:2→4 Z:7→5 U:2→4 T:2→4]
+  196. P68 P[Y:7→5 Z:7→5 V:2→4 T:2→4 S:7→5]
+  197. P69 P[Y:2→4 Z:2→4 W:7→5 U:2→4 T:2→4]
+  198. P70 P[Y:7→5 Z:2→4 W:7→5 V:2→4 S:7→5]
+  199. P71 P[V:2→4 U:2→4]
+  200. P72 P[Z:7→5 W:7→5 T:2→4 S:7→5]
+  201. P73 P[Y:2→4 S:7→5]
+  202. P74 P[Y:7→5 V:7→5 S:7→5]
+  203. P75 P[Z:7→5 W:2→4 T:2→4 S:7→5]
+  204. P76 P[Z:7→5 V:7→5 U:2→4 T:2→4]
+  205. P77 P[V:7→5 S:7→5]
+  206. P78 P[Y:7→5 S:7→5]
+  207. P79 P[W:7→5 V:7→5 U:2→4 T:2→4 S:7→5]
+  208. P80 P[V:7→5 U:2→4]
+  209. P81 P[Z:2→4 V:2→4 T:2→4]
+  210. P82 P[W:2→4 T:2→4]
+  211. P83 P[V:2→4 U:7→5]
+  212. P84 P[U:7→5 T:2→4 S:7→5]
+  213. P85 P[V:2→4 U:7→5]
+  214. P86 P[Y:7→5 V:2→4 U:7→5 T:2→4 S:7→5]
+  215. P87 P[Y:2→4 Z:7→5 W:7→5 U:7→5 T:2→4 S:7→5]
+  216. P88 P[Z:7→5 W:7→5 V:2→4 T:2→4]
+  217. P89 P[W:2→4 V:7→5 U:7→5 S:7→5]
+  218. P90 P[U:7→6]
+  219. P91 P[T:2→4]
+  220. P92 P[Y:7→5 U:7→5 S:7→5]
+  221. P93 P[Z:2→4 W:7→5 V:7→5 U:7→5 T:2→4]
+  222. P94 P[V:7→5 U:7→5 S:7→5]
+  223. P95 P[Y:2→4 Z:7→5]
+  224. P96 P[Y:7→5 Z:7→5 W:7→5 T:2→4]
+  225. P97 P[Y:2→4 Z:2→4 W:2→4 V:2→4 T:7→5]
+  226. P98 P[Y:7→5 V:2→4 S:7→5]
+  227. P99 P[Y:2→4 W:2→4 T:7→5]
+  228. P100 P[W:2→4 T:7→5]
+  229. P101 P[Y:2→4 W:7→5 V:2→4 U:2→4]
+  230. P102 P[Y:7→5 Z:2→4 W:7→5 U:2→4]
+  231. P103 P[Y:2→4 Z:7→5]
+  232. P104 P[Z:7→5 V:2→4 T:7→5 S:7→5]
+  233. P105 P[Y:2→4 Z:2→4 W:2→4 V:7→5 T:7→5]
+  234. P106 P[Z:2→4 W:2→4 V:7→5 S:7→5]
+  235. P107 P[Y:2→4 Z:7→5 U:2→4 T:7→5 S:7→5]
+  236. P108 P[Y:7→5 Z:7→5 W:2→4 U:2→4 T:7→5 S:7→5]
+  237. P109 P[T:7→6]
+  238. P110 P[S:7→5]
+  239. P111 P[Y:2→4 Z:7→5 W:7→5 V:7→5 U:2→4 T:7→5]
+  240. P112 P[Y:7→5 W:7→5 U:2→4 T:7→5]
+  241. P113 P[Z:2→4 W:2→4 V:2→4 U:7→5]
+  242. P114 P[Y:7→5 V:2→4 U:7→5 T:7→5 S:7→5]
+  243. P115 P[Y:2→4 W:2→4 V:2→4 T:7→5 S:7→5]
+  244. P116 P[Z:7→5 W:2→4 T:7→5 S:7→5]
+  245. P117 P[Y:2→4 W:7→5 V:2→4 U:7→5 T:7→5 S:7→5]
+  246. P118 P[W:7→5 V:2→4 U:7→5]
+  247. P119 P[Z:7→5 V:2→4 S:7→5]
+  248. P120 P[Z:7→5 U:7→5]
+  249. P121 P[W:2→4 V:7→5 T:7→5]
+  250. P122 P[Y:7→5 V:7→5 U:7→5 T:7→5 S:7→5]
+  251. P123 P[Y:2→4 W:2→4 V:7→5 U:7→5]
+  252. P124 P[Y:7→5 W:2→4 U:7→5]
+  253. P125 P[Y:2→4 Z:2→4 W:7→5 U:7→5 T:7→5 S:7→5]
+  254. P126 P[Y:7→5 Z:2→4 W:7→5 V:7→5 U:7→5 S:7→5]
+  255. P127 P[Y:2→4 W:7→5 V:7→5 T:7→5]
+  256. P128 P[V:7→5 U:7→5 S:7→5]
+  257. P1 P[W:2→4 S:2→4]
+  258. P2 P[Z:2→4 W:2→4 U:2→4]
+  259. P3 P[W:2→4 V:2→4 U:2→4 T:2→4 S:2→4]
+  260. P4 P[Y:7→5 Z:7→5 W:2→4 V:2→4 U:2→4 T:2→4 S:2→4]
+  261. P5 P[Y:2→4 W:7→5 V:2→4 T:2→4]
+  262. P6 P[T:2→4]
+  263. P7 P[Z:7→5 T:2→4]
+  264. P8 P[W:7→5 V:2→4 U:2→4 T:2→4]
+  265. P9 P[Y:2→4 Z:2→4 T:2→4 S:2→4]
+  266. P10 P[Y:7→5 Z:2→4 V:7→5 U:2→4]
+  267. P11 P[Y:2→4 W:2→4 V:7→5 U:2→4 T:2→4]
+  268. P12 P[Y:7→5 Z:7→5 W:2→4 T:2→4 S:2→4]
+  269. P13 P[Z:2→4 W:7→5 U:2→4]
+  270. P14 P[Z:2→4 U:2→4 T:2→4 S:2→4]
+  271. P15 P[Y:2→4 Z:7→5 T:2→4 S:2→4]
+  272. P16 P[Y:7→5 V:7→5 T:2→4 S:2→4]
+  273. P17 P[Y:2→4 Z:2→4 U:7→5]
+  274. P18 P[Z:2→4 W:2→4 U:7→5]
+  275. P19 P[Z:7→5 W:2→4 V:2→4 T:2→4]
+  276. P20 P[T:2→4 S:2→4]
+  277. P21 P[Y:2→4 Z:2→4]
+  278. P22 P[Y:7→5 Z:2→4 V:2→4 S:2→4]
+  279. P23 P[Z:7→5 V:2→4 U:7→5 T:2→4]
+  280. P24 P[Z:7→5 V:2→4 T:2→4]
+  281. P25 P[Y:2→4 Z:2→4 V:7→5 U:7→5]
+  282. P26 P[Z:2→4 V:7→5 S:2→4]
+  283. P27 P[Y:2→4 Z:7→5 V:7→5 U:7→5]
+  284. P28 P[W:2→4 V:7→5 S:2→4]
+  285. P29 P[U:7→5 T:2→4]
+  286. P30 P[Z:2→4 W:7→5 S:2→4]
+  287. P31 P[Y:2→4 Z:7→5 W:7→5 U:7→5 S:2→4]
+  288. P32 P[Y:7→5 Z:7→5 W:7→5 V:7→5 U:7→5 T:2→4]
+  289. P33 P[Y:2→4 U:2→4]
+  290. P34 P[Z:2→4 W:2→4 V:2→4 T:7→5 S:2→4]
+  291. P35 P[Z:7→5 W:2→4 T:7→5 S:2→4]
+  292. P36 P[Y:7→5 Z:7→5 V:2→4 U:2→4 S:2→4]
+  293. P37 P[Y:2→4 Z:2→4 S:2→4]
+  294. P38 P[Y:7→5 Z:2→4 W:7→5 U:2→4]
+  295. P39 P[Y:2→4 V:2→4 U:2→4 T:7→5]
+  296. P40 P[Y:7→5 V:2→4 U:2→4 T:7→5 S:2→4]
+  297. P41 P[Y:2→4 T:7→5]
+  298. P42 P[Y:7→5 Z:2→4 W:2→4 U:2→4 T:7→5]
+  299. P43 P[S:2→4]
+  300. P44 P[V:7→5 T:7→5]
+  301. P45 P[Y:2→4 Z:2→4 W:7→5]
+  302. P46 P[Z:2→4 W:7→5 V:7→5 T:7→5]
+  303. P47 P[Y:2→4 Z:7→5 W:7→5 V:7→5]
+  304. P48 P[Y:7→5 Z:7→5 W:7→5 S:2→4]
+  305. P49 P[W:2→4 T:7→5]
+  306. P50 P[Y:7→5 Z:2→4 V:2→4]
+  307. P51 P[T:7→5]
+  308. P52 P[Y:7→5 V:2→4 U:7→5 T:7→5 S:2→4]
+  309. P53 P[Y:2→4 Z:2→4 W:7→5 V:2→4 U:7→5 T:7→5 S:2→4]
+  310. P54 P[Z:2→4 W:7→5 V:2→4 U:7→5 T:7→5 S:2→4]
+  311. P55 P[V:2→4 U:7→5 T:7→5 S:2→4]
+  312. P56 P[Y:7→5 Z:7→5 U:7→5 S:2→4]
+  313. P57 P[Y:2→4 Z:2→4 U:7→5]
+  314. P58 P[Z:2→4 W:2→4 U:7→5 S:2→4]
+  315. P59 P[Y:2→4 V:7→5 T:7→5]
+  316. P60 P[Y:7→5 Z:7→5]
+  317. P61 P[Z:2→4 W:7→5 U:7→5 T:7→5]
+  318. P62 P[Y:7→5 W:7→5 U:7→5 S:2→4]
+  319. P63 P[Y:2→4 T:7→5]
+  320. P64 P[T:7→5]
+  321. P65 P[Y:2→4 Z:2→4 V:2→4 S:7→5]
+  322. P66 P[Z:2→4 V:2→4]
+  323. P67 P[Z:7→5 W:2→4 V:2→4 S:7→5]
+  324. P68 P[Z:7→5 W:2→4 T:2→4 S:7→5]
+  325. P69 P[Y:2→4 W:7→5 V:2→4 U:2→4 T:2→4 S:7→5]
+  326. P70 P[Y:7→5 Z:2→4 U:2→4]
+  327. P71 P[Y:2→4 Z:7→5 V:2→4 U:2→4]
+  328. P72 P[Y:7→5 Z:7→5 V:2→4 U:2→4 T:2→4]
+  329. P73 P[Y:2→4 Z:2→4 W:2→4 U:2→4 S:7→5]
+  330. P74 P[Y:7→5 Z:2→4 W:2→4 T:2→4]
+  331. P75 P[Z:7→5 V:7→5 T:2→4 S:7→5]
+  332. P76 P[W:2→4 U:2→4 T:2→4 S:7→5]
+  333. P77 P[Y:2→4 Z:2→4 V:7→5 U:2→4 S:7→5]
+  334. P78 P[Y:7→5 W:7→5]
+  335. P79 P[Y:2→4 W:7→5 V:7→5]
+  336. P80 P[Y:7→5 Z:7→5 W:7→5 U:2→4 T:2→4]
+  337. P81 P[Z:2→4 W:2→4]
+  338. P82 P[W:2→4 T:2→4 S:7→5]
+  339. P83 P[Z:7→5 W:2→4 V:2→4 U:7→5]
+  340. P84 P[Y:7→5 Z:7→5 T:2→4 S:7→5]
+  341. P85 P[Z:2→4 V:2→4 U:7→5 T:2→4]
+  342. P86 P[Y:7→5 Z:2→4 W:7→5 V:2→4 T:2→4]
+  343. P87 P[W:7→5 V:2→4 U:7→5 T:2→4]
+  344. P88 P[W:7→5 S:7→5]
+  345. P89 P[Z:2→4 V:7→5 U:7→5]
+  346. P90 P[Y:7→5 V:7→5]
+  347. P91 P[Y:2→4 W:2→4 V:7→5 U:7→5 S:7→5]
+  348. P92 P[Y:7→5 V:7→5 U:7→5 T:2→4]
+  349. P93 P[V:7→5 T:2→4]
+  350. P94 P[V:7→5 U:7→5]
+  351. P95 P[Y:2→4 U:7→5 S:7→5]
+  352. P96 P[Z:7→5 V:7→5 S:7→5]
+  353. P97 P[W:2→4 V:2→4 T:7→5]
+  354. P98 P[Z:2→4 U:2→4]
+  355. P99 P[W:2→4 T:7→5 S:7→5]
+  356. P100 P[Y:7→5 W:2→4 T:7→5]
+  357. P101 P[Y:2→4 U:2→4 S:7→5]
+  358. P102 P[W:7→5 T:7→5 S:7→5]
+  359. P103 P[Y:2→4 U:2→4]
+  360. P104 P[Y:7→5 Z:7→5 W:7→5 T:7→5 S:7→5]
+  361. P105 P[Y:2→4 W:2→4 V:7→5 U:2→4 T:7→5]
+  362. P106 P[Z:2→4 W:2→4 V:7→5 T:7→5 S:7→5]
+  363. P107 P[Z:7→5 W:2→4 U:2→4]
+  364. P108 P[Z:7→5 W:2→4 V:7→5 U:2→4 T:7→5]
+  365. P109 P[Z:2→4 W:7→5 V:7→5 U:2→4 T:7→5 S:7→5]
+  366. P110 P[Z:2→4 V:7→5 S:7→5]
+  367. P111 P[Y:2→4 U:2→4 S:7→5]
+  368. P112 P[V:7→5 U:2→4 S:7→5]
+  369. P113 P[Y:2→4 W:2→4 V:2→4 U:7→5 T:7→5]
+  370. P114 P[W:2→4 S:7→5]
+  371. P115 P[U:7→5 S:7→5]
+  372. P116 P[Z:7→5]
+  373. P117 P[Z:2→4 U:7→5]
+  374. P118 P[Y:7→5 Z:2→4 W:7→5]
+  375. P119 P[Y:2→4 Z:7→5 W:7→5 V:2→4 T:7→5]
+  376. P120 P[Y:7→5 Z:7→5 W:7→5 V:2→4 S:7→5]
+  377. P121 P[Y:2→4 T:7→5]
+  378. P122 P[Y:7→5 W:2→4 T:7→5]
+  379. P123 P[Z:7→5 V:7→5 U:7→5 T:7→5]
+  380. P124 P[Z:7→5 W:2→4 U:7→5]
+  381. P125 P[Y:2→4 W:7→5 T:7→5]
+  382. P126 P[Z:2→4 W:7→5 V:7→5 T:7→5 S:7→5]
+  383. P127 P[Y:2→4 U:7→5 T:7→5]
+  384. P128 P[Z:7→5 W:7→5 U:7→5 T:7→5]
+  385. P1 P[Y:2→4 W:2→4 V:2→4 S:2→4]
+  386. P2 P[V:2→4]
+  387. P3 P[Y:2→4 Z:7→5 W:2→4 V:2→4]
+  388. P4 P[U:2→4 T:2→4 S:2→4]
+  389. P5 P[Y:2→4 Z:2→4 W:7→5 V:2→4 U:2→4 S:2→4]
+  390. P6 P[Z:2→4]
+  391. P7 P[Z:7→5 V:2→4 T:2→4 S:2→4]
+  392. P8 P[Y:7→5 Z:7→5 V:2→4 U:2→4 T:2→4 S:2→4]
+  393. P9 P[Y:2→4 Z:2→4 W:2→4 V:7→5 U:2→4]
+  394. P10 P[W:2→4 T:2→4]
+  395. P11 P[Z:7→5 W:2→4 T:2→4]
+  396. P12 P[Z:7→5 U:2→4 S:2→4]
+  397. P13 P[Y:2→4 Z:2→4 V:7→5 U:2→4]
+  398. P14 P[Y:7→5 Z:2→4 W:7→5 T:2→4 S:2→4]
+  399. P15 P[V:7→5 U:2→4 T:2→4]
+  400. P16 P[Z:7→5 V:7→5 U:2→4 T:2→4]
+  401. P17 P[Y:2→4 W:2→4 U:7→5]
+  402. P18 P[W:2→4 V:2→4 S:2→4]
+  403. P19 P[V:2→4 T:2→4 S:2→4]
+  404. P20 P[Z:7→5 U:7→5]
+  405. P21 P[Y:2→4 W:7→5 T:2→4 S:2→4]
+  406. P22 P[U:7→5]
+  407. P23 P[W:7→5 U:7→5 T:2→4 S:2→4]
+  408. P24 P[Y:7→5 Z:7→5 W:7→5 V:2→4 T:2→4 S:2→4]
+  409. P25 P[Y:2→4 Z:2→4 W:2→4 U:7→5 S:2→4]
+  410. P26 P[Y:7→5 Z:2→4 W:2→4 V:7→5 T:2→4]
+  411. P27 P[Y:2→4 U:7→5 T:2→4]
+  412. P28 P[W:2→4 V:7→5 U:7→5 T:2→4 S:2→4]
+  413. P29 P[Y:2→4 V:7→5 S:2→4]
+  414. P30 P[S:2→4]
+  415. P31 P[V:7→5]
+  416. P32 P[Y:7→5 Z:7→5 U:7→5 T:2→4]
+  417. P33 P[Y:2→4 Z:2→4 W:2→4 V:2→4 U:2→4 T:7→5 S:2→4]
+  418. P34 P[Z:2→4 V:2→4]
+  419. P35 P[W:2→4]
+  420. P36 P[W:2→4 V:2→4 U:2→4]
+  421. P37 P[Y:2→4 W:7→5]
+  422. P38 P[Z:2→4 W:7→5 V:2→4]
+  423. P39 P[Y:2→4 V:2→4 T:7→5]
+  424. P40 P[Y:7→5 W:7→5 V:2→4 S:2→4]
+  425. P41 P[Y:2→4 W:2→4 U:2→4 T:7→5 S:2→4]
+  426. P42 P[V:7→5 U:2→4 T:7→5]
+  427. P43 P[U:2→4]
+  428. P44 P[W:2→4 V:7→5 T:7→5]
+  429. P45 P[Z:2→4 W:7→5 V:7→5 U:2→4 T:7→5 S:2→4]
+  430. P46 P[Y:7→5 Z:2→4 T:7→5 S:2→4]
+  431. P47 P[Y:2→4 T:7→5]
+  432. P48 P[Y:7→5 V:7→5]
+  433. P49 P[Y:2→4 U:7→5]
+  434. P50 P[Y:7→5 Z:2→4 V:2→4 U:7→5]
+  435. P51 P[Y:2→4 Z:7→5 T:7→5 S:2→4]
+  436. P52 P[Z:7→5 V:2→4 U:7→5 T:7→5 S:2→4]
+  437. P53 P[W:7→5 V:2→4 T:7→5 S:2→4]
+  438. P54 P[Y:7→5 Z:2→4 W:7→5 V:2→4 U:7→5 T:7→5 S:2→4]
+  439. P55 P[Y:2→4 V:2→4 U:7→5 S:2→4]
+  440. P56 P[W:7→5 T:7→5 S:2→4]
+  441. P57 P[Y:2→4 W:2→4 V:7→5 T:7→5]
+  442. P58 P[Z:2→4 U:7→5 T:7→5 S:2→4]
+  443. P59 P[Z:7→5 V:7→5]
+  444. P60 P[Z:7→5 W:2→4 U:7→5 S:2→4]
+  445. P61 P[W:7→5 V:7→5 S:2→4]
+  446. P62 P[Z:2→4 W:7→5 U:7→5]
+  447. P63 P[Y:2→4 Z:7→5 W:7→5 V:7→5 S:2→4]
+  448. P64 P[Y:7→5 W:7→5 V:7→5 U:7→5 T:7→5 S:2→4]
+  449. P65 P[Y:2→4 V:2→4 T:2→4 S:7→5]
+  450. P66 P[W:2→4 V:2→4 U:2→4 T:2→4 S:7→5]
+  451. P67 P[Y:2→4 Z:7→5 V:2→4 U:2→4]
+  452. P68 P[S:7→5]
+  453. P69 P[W:7→5 U:2→4 T:2→4 S:7→5]
+  454. P70 P[W:7→5 V:2→4 U:2→4 T:2→4]
+  455. P71 P[Y:2→4 Z:7→5 T:2→4 S:7→5]
+  456. P72 P[Y:7→5 Z:7→5 W:7→5 S:7→5]
+  457. P73 P[T:2→4 S:7→5]
+  458. P74 P[Y:7→5 Z:2→4 W:2→4 V:7→5 U:2→4 T:2→4 S:7→5]
+  459. P75 P[V:7→5 U:2→4]
+  460. P76 P[W:2→4 V:7→5 S:7→5]
+  461. P77 P[V:7→5 T:2→4]
+  462. P78 P[Y:7→5 Z:2→4 V:7→5 U:2→4]
+  463. P79 P[Y:2→4 V:7→5]
+  464. P80 P[Y:7→5 W:7→5 V:7→5 U:2→4 T:2→4]
+  465. P81 P[Z:2→4 T:2→4 S:7→5]
+  466. P82 P[Y:7→5 V:2→4 T:2→4]
+  467. P83 P[Y:2→4 V:2→4 U:7→5]
+  468. P84 P[W:2→4 U:7→5 T:2→4]
+  469. P85 P[Y:2→4 W:7→5 U:7→5]
+  470. P86 P[Y:7→5 V:2→4 S:7→5]
+  471. P87 P[W:7→5 V:2→4 T:2→4]
+  472. P88 P[Y:7→5 U:7→5]
+  473. P89 P[Y:2→4 Z:2→4 T:2→4]
+  474. P90 P[V:7→5]
+  475. P91 P[Y:2→4 Z:7→5 W:2→4 U:7→5 S:7→5]
+  476. P92 P[Y:7→5]
+  477. P93 P[Y:2→4 W:7→5 T:2→4 S:7→5]
+  478. P94 P[Z:2→4 W:7→5 V:7→5 T:2→4]
+  479. P95 P[Y:2→4 Z:7→5 W:7→5 V:7→5 U:7→5 T:2→4]
+  480. P96 P[Z:7→5 V:7→5 T:2→4 S:7→5]
+  481. P97 P[Z:2→4 T:7→5]
+  482. P98 P[Y:7→5 U:2→4 T:7→5 S:7→5]
+  483. P99 P[Y:2→4 T:7→5 S:7→5]
+  484. P100 P[T:7→5 S:7→5]
+  485. P101 P[Y:2→4 W:7→5]
+  486. P102 P[W:7→5 V:2→4 U:2→4 T:7→5 S:7→5]
+  487. P103 P[W:7→5 V:2→4 T:7→5 S:7→5]
+  488. P104 P[Y:7→5 V:2→4 S:7→5]
+  489. P105 P[W:2→4 V:7→5 U:2→4 S:7→5]
+  490. P106 P[Y:7→5 W:2→4 V:7→5 U:2→4 T:7→5]
+  491. P107 P[W:2→4]
+  492. P108 P[W:2→4 V:7→5 T:7→5 S:7→5]
+  493. P109 P[Y:2→4 Z:2→4 V:7→5]
+  494. P110 P[V:7→5 T:7→5]
+  495. P111 P[W:7→5 U:2→4 S:7→5]
+  496. P112 P[Z:7→5 W:7→5 U:2→4 S:7→5]
+  497. P113 P[Z:2→4 W:2→4 V:2→4 T:7→5]
+  498. P114 P[Z:2→4 W:2→4 U:7→5]
+  499. P115 P[V:2→4 T:7→5]
+  500. P116 P[Y:7→5 W:2→4 V:2→4 U:7→5]
+  501. P117 P[W:7→5 V:2→4 U:7→5]
+  502. P118 P[Y:7→5 Z:2→4 W:7→5 V:2→4]
+  503. P119 P[Y:2→4 Z:7→5 U:7→5]
+  504. P120 P[Y:7→5 Z:7→5 W:7→5 V:2→4 U:7→5 T:7→5 S:7→5]
+  505. P121 P[Z:2→4 V:7→5 U:7→5 S:7→5]
+  506. P122 P[Y:7→5]
+  507. P123 P[Y:2→4 Z:7→5 U:7→5]
+  508. P124 P[Y:7→5 Z:7→5 V:7→5 U:7→5 T:7→5 S:7→5]
+  509. P125 P[Y:2→4 Z:2→4 V:7→5]
+  510. P126 P[Y:7→5 Z:2→4 V:7→5]
+  511. P127 P[Y:2→4 Z:7→5 T:7→5 S:7→5]
+  512. P128 P[Z:7→5 V:7→5 T:7→5]
+  513. P1 P[Y:2→4 W:2→4 T:2→4 S:2→4]
+  514. P2 P[Y:7→5 Z:2→4 V:2→4 U:2→4 S:2→4]
+  515. P3 P[W:2→4 V:2→4 T:2→4 S:2→4]
+  516. P4 P[Y:7→5 Z:7→5 W:2→4 V:2→4 U:2→4 T:2→4]
+  517. P5 P[Y:2→4 Z:2→4 W:7→5 T:2→4]
+  518. P6 P[Y:7→5 Z:2→4 V:2→4 U:2→4]
+  519. P7 P[Y:2→4 V:2→4 T:2→4]
+  520. P8 P[Z:7→5 W:7→5 V:2→4]
+  521. P9 P[Z:2→4 V:7→5]
+  522. P10 P[W:2→4 V:7→5 T:2→4 S:2→4]
+  523. P11 P[U:2→4 T:2→4 S:2→4]
+  524. P12 P[V:7→5 T:2→4]
+  525. P13 P[Z:2→4 W:7→5 V:7→5 U:2→4]
+  526. P14 P[Y:7→5 S:2→4]
+  527. P15 P[Z:7→5 V:7→5 T:2→4 S:2→4]
+  528. P16 P[Y:7→5 V:7→5 U:2→4 S:2→4]
+  529. P17 P[Y:2→4 Z:2→4 W:2→4 T:2→4 S:2→4]
+  530. P18 P[Z:2→4 V:2→4 S:2→4]
+  531. P19 P[Y:2→4 Z:7→5 V:2→4 S:2→4]
+  532. P20 P[W:2→4 V:2→4 U:7→5 T:2→4]
+  533. P21 P[Z:2→4 W:7→5 U:7→5 T:2→4 S:2→4]
+  534. P22 P[Y:7→5 Z:2→4 W:7→5 V:2→4 U:7→5 T:2→4 S:2→4]
+  535. P23 P[Y:2→4 Z:7→5 W:7→5 V:2→4 U:7→5]
+  536. P24 P[Y:7→5 V:2→4 U:7→5 S:2→4]
+  537. P25 P[Y:2→4 Z:2→4 U:7→5]
+  538. P26 P[W:2→4 V:7→5 U:7→5 S:2→4]
+  539. P27 P[Y:2→4 Z:7→5 U:7→5 T:2→4 S:2→4]
+  540. P28 P[W:2→4 V:7→5 T:2→4 S:2→4]
+  541. P29 P[Z:2→4 U:7→5 T:2→4 S:2→4]
+  542. P30 P[Y:7→5 Z:2→4]
+  543. P31 P[W:7→5 V:7→5 S:2→4]
+  544. P32 P[Z:7→5 W:7→5 U:7→5]
+  545. P33 P[Z:2→4 T:7→5]
+  546. P34 P[U:2→4 S:2→4]
+  547. P35 P[W:2→4 V:2→4 T:7→5 S:2→4]
+  548. P36 P[Y:7→5 Z:7→5 V:2→4]
+  549. P37 P[Y:2→4 W:7→5 V:2→4 T:7→5 S:2→4]
+  550. P38 P[Y:7→5 T:7→5]
+  551. P39 P[Y:2→4 Z:7→5 T:7→5 S:2→4]
+  552. P40 P[Z:7→5 W:7→5 V:2→4 S:2→4]
+  553. P41 P[W:2→4 T:7→5 S:2→4]
+  554. P42 P[Z:2→4 S:2→4]
+  555. P43 P[Y:2→4 T:7→5 S:2→4]
+  556. P44 P[Y:7→5 W:2→4 V:7→5 U:2→4 T:7→5]
+  557. P45 P[Y:2→4 W:7→5 U:2→4]
+  558. P46 P[Y:7→5 Z:2→4 W:7→5]
+  559. P47 P[Y:2→4 W:7→5 V:7→5 T:7→5 S:2→4]
+
+────────────────────────────────────────
+Final Standings:
+  P 1 kills:0 caps:0 pieces:1024
+  P 2 kills:0 caps:0 pieces:1024
+  P 3 kills:0 caps:0 pieces:1024
+  P 4 kills:0 caps:0 pieces:1024
+  P 5 kills:0 caps:0 pieces:1024
+  P 6 kills:0 caps:0 pieces:1024
+  P 7 kills:0 caps:0 pieces:1024
+  P 8 kills:0 caps:0 pieces:1024
+  P 9 kills:0 caps:0 pieces:1024
+  P10 kills:0 caps:0 pieces:1024
+  P11 kills:0 caps:0 pieces:1024
+  P12 kills:0 caps:0 pieces:1024
+  P13 kills:0 caps:0 pieces:1024
+  P14 kills:0 caps:0 pieces:1024
+  P15 kills:0 caps:0 pieces:1024
+  P16 kills:0 caps:0 pieces:1024
+  P17 kills:0 caps:0 pieces:1024
+  P18 kills:0 caps:0 pieces:1024
+  P19 kills:0 caps:0 pieces:1024
+  P20 kills:0 caps:0 pieces:1024
+  P21 kills:0 caps:0 pieces:1024
+  P22 kills:0 caps:0 pieces:1024
+  P23 kills:0 caps:0 pieces:1024
+  P24 kills:0 caps:0 pieces:1024
+  P25 kills:0 caps:0 pieces:1024
+  P26 kills:0 caps:0 pieces:1024
+  P27 kills:0 caps:0 pieces:1024
+  P28 kills:0 caps:0 pieces:1024
+  P29 kills:0 caps:0 pieces:1024
+  P30 kills:0 caps:0 pieces:1024
+  P31 kills:0 caps:0 pieces:1024
+  P32 kills:0 caps:0 pieces:1024
+  P33 kills:0 caps:0 pieces:1024
+  P34 kills:0 caps:0 pieces:1024
+  P35 kills:0 caps:0 pieces:1024
+  P36 kills:0 caps:0 pieces:1024
+  P37 kills:0 caps:0 pieces:1024
+  P38 kills:0 caps:0 pieces:1024
+  P39 kills:0 caps:0 pieces:1024
+  P40 kills:0 caps:0 pieces:1024
+  P41 kills:0 caps:0 pieces:1024
+  P42 kills:0 caps:0 pieces:1024
+  P43 kills:0 caps:0 pieces:1024
+  P44 kills:0 caps:0 pieces:1024
+  P45 kills:0 caps:0 pieces:1024
+  P46 kills:0 caps:0 pieces:1024
+  P47 kills:0 caps:0 pieces:1024
+  P48 kills:0 caps:0 pieces:1024
+  P49 kills:0 caps:0 pieces:1024
+  P50 kills:0 caps:0 pieces:1024
+  P51 kills:0 caps:0 pieces:1024
+  P52 kills:0 caps:0 pieces:1024
+  P53 kills:0 caps:0 pieces:1024
+  P54 kills:0 caps:0 pieces:1024
+  P55 kills:0 caps:0 pieces:1024
+  P56 kills:0 caps:0 pieces:1024
+  P57 kills:0 caps:0 pieces:1024
+  P58 kills:0 caps:0 pieces:1024
+  P59 kills:0 caps:0 pieces:1024
+  P60 kills:0 caps:0 pieces:1024
+  P61 kills:0 caps:0 pieces:1024
+  P62 kills:0 caps:0 pieces:1024
+  P63 kills:0 caps:0 pieces:1024
+  P64 kills:0 caps:0 pieces:1024
+  P65 kills:0 caps:0 pieces:1024
+  P66 kills:0 caps:0 pieces:1024
+  P67 kills:0 caps:0 pieces:1024
+  P68 kills:0 caps:0 pieces:1024
+  P69 kills:0 caps:0 pieces:1024
+  P70 kills:0 caps:0 pieces:1024
+  P71 kills:0 caps:0 pieces:1024
+  P72 kills:0 caps:0 pieces:1024
+  P73 kills:0 caps:0 pieces:1024
+  P74 kills:0 caps:0 pieces:1024
+  P75 kills:0 caps:0 pieces:1024
+  P76 kills:0 caps:0 pieces:1024
+  P77 kills:0 caps:0 pieces:1024
+  P78 kills:0 caps:0 pieces:1024
+  P79 kills:0 caps:0 pieces:1024
+  P80 kills:0 caps:0 pieces:1024
+  P81 kills:0 caps:0 pieces:1024
+  P82 kills:0 caps:0 pieces:1024
+  P83 kills:0 caps:0 pieces:1024
+  P84 kills:0 caps:0 pieces:1024
+  P85 kills:0 caps:0 pieces:1024
+  P86 kills:0 caps:0 pieces:1024
+  P87 kills:0 caps:0 pieces:1024
+  P88 kills:0 caps:0 pieces:1024
+  P89 kills:0 caps:0 pieces:1024
+  P90 kills:0 caps:0 pieces:1024
+  P91 kills:0 caps:0 pieces:1024
+  P92 kills:0 caps:0 pieces:1024
+  P93 kills:0 caps:0 pieces:1024
+  P94 kills:0 caps:0 pieces:1024
+  P95 kills:0 caps:0 pieces:1024
+  P96 kills:0 caps:0 pieces:1024
+  P97 kills:0 caps:0 pieces:1024
+  P98 kills:0 caps:0 pieces:1024
+  P99 kills:0 caps:0 pieces:1024
+  P100 kills:0 caps:0 pieces:1024
+  P101 kills:0 caps:0 pieces:1024
+  P102 kills:0 caps:0 pieces:1024
+  P103 kills:0 caps:0 pieces:1024
+  P104 kills:0 caps:0 pieces:1024
+  P105 kills:0 caps:0 pieces:1024
+  P106 kills:0 caps:0 pieces:1024
+  P107 kills:0 caps:0 pieces:1024
+  P108 kills:0 caps:0 pieces:1024
+  P109 kills:0 caps:0 pieces:1024
+  P110 kills:0 caps:0 pieces:1024
+  P111 kills:0 caps:0 pieces:1024
+  P112 kills:0 caps:0 pieces:1024
+  P113 kills:0 caps:0 pieces:1024
+  P114 kills:0 caps:0 pieces:1024
+  P115 kills:0 caps:0 pieces:1024
+  P116 kills:0 caps:0 pieces:1024
+  P117 kills:0 caps:0 pieces:1024
+  P118 kills:0 caps:0 pieces:1024
+  P119 kills:0 caps:0 pieces:1024
+  P120 kills:0 caps:0 pieces:1024
+  P121 kills:0 caps:0 pieces:1024
+  P122 kills:0 caps:0 pieces:1024
+  P123 kills:0 caps:0 pieces:1024
+  P124 kills:0 caps:0 pieces:1024
+  P125 kills:0 caps:0 pieces:1024
+  P126 kills:0 caps:0 pieces:1024
+  P127 kills:0 caps:0 pieces:1024
+  P128 kills:0 caps:0 pieces:1024
+
+────────────────────────────────────────
+8D Chess & Games — Copyright Taylor, 2003

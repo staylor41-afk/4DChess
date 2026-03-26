@@ -19,11 +19,12 @@
       "preload.js"
     ],
     "extraResources": [
-      { "from": "../start.html",      "to": "start.html"      },
-      { "from": "../visualizer.html", "to": "visualizer.html" },
-      { "from": "../engine_py.py",    "to": "engine_py.py"    },
-      { "from": "../render",          "to": "render"          },
-      { "from": "../puzzle.html",     "to": "puzzle.html"     }
+      { "from": "../start.html",        "to": "start.html"        },
+      { "from": "../chess-classic.html","to": "chess-classic.html"},
+      { "from": "../visualizer.html",   "to": "visualizer.html"   },
+      { "from": "../engine_py.py",      "to": "engine_py.py"      },
+      { "from": "../render",            "to": "render"            },
+      { "from": "../puzzle.html",       "to": "puzzle.html"       }
     ],
     "mac": {
       "category": "public.app-category.games",

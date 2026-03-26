@@ -250,19 +250,19 @@ select#human-count:focus { border-color: var(--cyan); }
     <div class="card-syms">♚♛♟</div>
     <div class="card-players">16 players</div>
   </div>
-  <div class="card d6" data-dims="6" data-np="32">
+  <div class="card d6" data-dims="6" data-np="32" style="border-color:rgba(62,207,207,.15)">
     <div class="card-dim">6D</div>
     <div class="card-layout">One building<br>6 axes</div>
     <div class="card-syms">♚♛♟</div>
     <div class="card-players">32 players</div>
   </div>
-  <div class="card d7" data-dims="7" data-np="64">
+  <div class="card d7" data-dims="7" data-np="64" style="border-color:rgba(62,207,207,.15)">
     <div class="card-dim">7D</div>
     <div class="card-layout">8-building strip<br>7 axes</div>
     <div class="card-syms">♚♛♟</div>
     <div class="card-players">64 players</div>
   </div>
-  <div class="card d8" data-dims="8" data-np="128">
+  <div class="card d8" data-dims="8" data-np="128" style="border-color:rgba(62,207,207,.15)">
     <div class="card-dim">8D</div>
     <div class="card-layout">8×8 city<br>64 buildings</div>
     <div class="card-syms">♚♛♟</div>
@@ -331,7 +331,7 @@ select#human-count:focus { border-color: var(--cyan); }
 
 <!-- ── Legend ─────────────────────────────────────────────── -->
 <div class="legend" id="game-legend">
-  ↑↓←→ strafe &nbsp;·&nbsp; Z/X up/down &nbsp;·&nbsp; R toggle orbit &nbsp;·&nbsp; T/Y/U zoom levels<br>
+  2D – 5D &nbsp;·&nbsp; classic canvas renderer &nbsp;&nbsp;|&nbsp;&nbsp; 6D – 8D &nbsp;·&nbsp; Three.js city visualizer<br>
   Human: click piece → legal moves highlight → click destination &nbsp;·&nbsp; Capture a King to inherit all their pieces
 </div>
 <div class="legend" id="puzzle-legend" style="display:none">
@@ -373,7 +373,11 @@ function rebuildDropdown(np) {
 
 launchBtn.addEventListener('click', () => {
   if (!selectedDims) return;
-  window.location.href = `visualizer.html?dims=${selectedDims}&humans=${parseInt(humanSel.value)}`;
+  const humans = parseInt(humanSel.value);
+  // 2D–5D: classic canvas renderer (old game, great for low dims)
+  // 6D–8D: Three.js visualizer (designed for high-dim city-scale boards)
+  const target = selectedDims <= 5 ? 'chess-classic.html' : 'visualizer.html';
+  window.location.href = `${target}?dims=${selectedDims}&humans=${humans}`;
 });
 
 document.addEventListener('keydown', e => {
